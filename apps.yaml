@@ -5940,9 +5940,15 @@ nheko:
 
 fluffychat:
   flatpak: im.fluffychat.Fluffychat
+  aliases: [fluffy-chat]
+  
+element:
+  flatpak: im.riot.Riot
+  aliases: [elementio, element-matrix]
 
 dino:
   flatpak: im.dino.Dino
+  aliases: [dino-xmpp]
 
 nostalgia:
   flatpak: im.bernard.Nostalgia
