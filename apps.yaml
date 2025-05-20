@@ -232,7 +232,11 @@ certbot-dns-gehirn:
 
 cloudstats:
   snap: cloudstats
-
+  
+vscode:
+  snap: code
+  aliases: [visualstudio, visual-studio, visual-studio-code]
+  
 candid:
   snap: candid
 
