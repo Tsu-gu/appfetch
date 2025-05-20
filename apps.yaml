@@ -4,6 +4,7 @@ update:
 vlc:
   snap: vlc
   flatpak: org.videolan.VLC
+  aliases: [videoplayer, videolan]
 
 qbittorrent:
   flatpak: org.qbittorrent.qBittorrent
@@ -16,6 +17,7 @@ geopard:
   
 reaper:
   custom: mkdir -p ~/Applications && wget https://www.reaper.fm/files/7.x/reaper739_linux_x86_64.tar.xz -O /tmp/reaper.tar.xz && tar -xf /tmp/reaper.tar.xz -C ~/Applications
+  aliases: [reaperfm]
 
 gimp:
   flatpak: org.gimp.GIMP
@@ -23,4 +25,4 @@ gimp:
 obsidian:
   snap: obsidian
   flatpak: md.obsidian.Obsidian
-
+  aliases: [obsidianmd]
