@@ -1,3 +1,6 @@
+update:
+  custom: cd /usr/local/bin/ && wget thisrepo/appfetch.sh && wget thisrepo/apps.yaml
+
 vlc:
   snap: vlc
   flatpak: org.videolan.VLC
