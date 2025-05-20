@@ -68,8 +68,7 @@ brave:
   snap: brave
 
 blender:
-  snap: blender
-  flatpak: 
+  custom: snap install blender --classic
 
 bw:
   snap: bw
@@ -234,7 +233,7 @@ cloudstats:
   snap: cloudstats
   
 vscode:
-  snap: code
+  custom: snap install code --classic
   aliases: [visualstudio, visual-studio, visual-studio-code]
   
 candid:
