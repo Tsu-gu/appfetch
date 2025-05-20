@@ -19,6 +19,10 @@ reaper:
   custom: mkdir -p ~/Applications && wget https://www.reaper.fm/files/7.x/reaper739_linux_x86_64.tar.xz -O /tmp/reaper.tar.xz && tar -xf /tmp/reaper.tar.xz -C ~/Applications
   aliases: [reaperfm]
 
+flashpoint:
+  custom: echo "This is meant to work on Ubuntu 22 and 24 LTS!" && wget -q https://raw.githubusercontent.com/Tsu-gu/flashpoint-ubuntu-install/main/flashpoint-ubuntu-installer.sh && chmod +x flashpoint-ubuntu-installer.sh && ./flashpoint-ubuntu-installer.sh
+  aliases: [bluemaxima, bluemaxima-flashpoint]
+
 gimp:
   flatpak: org.gimp.GIMP
 
@@ -65,6 +69,7 @@ brave:
 
 blender:
   snap: blender
+  flatpak: 
 
 bw:
   snap: bw
