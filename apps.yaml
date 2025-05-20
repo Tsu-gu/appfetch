@@ -1,0 +1,21 @@
+vlc:
+  snap: vlc
+  flatpak: org.videolan.VLC
+
+qbittorrent:
+  flatpak: org.qbittorrent.qBittorrent
+  
+solanum:
+  flatpak: org.gnome.Solanum
+
+geopard:
+  flatpak: com.ranfdev.Geopard
+  
+reaper:
+  custom: wget https://tsugu.xyz/index.html
+
+gimp:
+  flatpak: org.gimp.GIMP
+
+
+
