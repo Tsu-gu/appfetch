@@ -3807,6 +3807,10 @@ borg-er-0:
 vesctool:
   flatpak: com.vesc_project.VescTool
 
+steam:
+  custom: wget -O $HOME/Downloads/steam.deb https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb && sudo apt install $HOME/Downloads/steam.deb
+  aliases: [valve]
+
 steam-link:
   flatpak: com.valvesoftware.SteamLink
 
