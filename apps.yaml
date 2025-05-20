@@ -1,5 +1,5 @@
 update:
-  custom: wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh && cp apps.yaml $HOME/Documents/apps.yaml && cp appfetch.sh /usr/local/bin/appfetch && rm apps.yaml appfetch.sh
+  custom: wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh && sudo cp apps.yaml $HOME/Documents/apps.yaml && sudo cp appfetch.sh /usr/local/bin/appfetch && rm apps.yaml appfetch.sh
 
 vlc:
   snap: vlc
