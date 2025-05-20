@@ -2782,6 +2782,7 @@ kicad:
 
 keepassxc:
   flatpak: org.keepassxc.KeePassXC
+  aliases: [keepass]
 
 subtitle-composer:
   flatpak: org.kde.subtitlecomposer
@@ -4180,12 +4181,14 @@ qbittorrent:
 
 prism-launcher:
   flatpak: org.prismlauncher.PrismLauncher
+  aliases: [minecraft, mc]
 
 trguing:
   flatpak: org.openscopeproject.TrguiNG
 
 onlyoffice-desktop-editors:
   flatpak: org.onlyoffice.desktopeditors
+  aliases: [onlyoffice, only-office]
 
 tagger:
   flatpak: org.nickvision.tagger
@@ -4330,6 +4333,7 @@ document-viewer:
 
 web:
   flatpak: org.gnome.Epiphany
+  aliases: [gnome-web, epiphany]
 
 crosswords:
   flatpak: org.gnome.Crosswords
@@ -4342,6 +4346,7 @@ gnome-chess:
 
 boxes:
   flatpak: org.gnome.Boxes
+  aliases: [gnome-boxes]
 
 firedragon:
   flatpak: org.garudalinux.firedragon
