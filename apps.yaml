@@ -82,6 +82,9 @@ bluemail:
 branch-diff:
   snap: branch-diff
 
+xfburn:
+  custom: sudo apt install xfburn
+
 bcc:
   snap: bcc
 
