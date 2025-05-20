@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONFIG_FILE="apps.yaml"
+CONFIG_FILE="$HOME/Documents/apps.yaml"
 
 # Check if an install method is available
 method_available() {
