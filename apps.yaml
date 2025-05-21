@@ -18,6 +18,10 @@ flashpoint:
   custom: echo "This is meant to work on Ubuntu 22 and 24 LTS!" && wget -q https://raw.githubusercontent.com/Tsu-gu/flashpoint-ubuntu-install/main/flashpoint-ubuntu-installer.sh && chmod +x flashpoint-ubuntu-installer.sh && ./flashpoint-ubuntu-installer.sh
   aliases: [bluemaxima, bluemaxima-flashpoint]
 
+yt-dlp:
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp
+  aliases: [ytdlp, yt]
+  
 gimp:
   flatpak: org.gimp.GIMP
   
@@ -898,9 +902,11 @@ nhc:
 
 opera:
   snap: opera
+  aliases: [opera-browser]
 
 onlyoffice-desktopeditors:
   snap: onlyoffice-desktopeditors
+  aliases: [onlyoffice, only-office]
 
 ora:
   snap: ora
