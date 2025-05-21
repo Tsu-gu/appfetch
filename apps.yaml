@@ -43,6 +43,9 @@ amazon-ssm-agent:
 awswickrgov:
   snap: awswickrgov
 
+monero:
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xvjf monero-gui-*.tar.bz2
+  aliases: [monero-wallet, monero-gui-wallet]
 ant:
   snap: ant
 
@@ -568,6 +571,7 @@ kata-containers:
 
 krita:
   snap: krita
+  flatpak: org.kde.krita
 
 kstars:
   snap: kstars
@@ -751,6 +755,7 @@ katomic:
 
 kdenlive:
   snap: kdenlive
+  flatpak: org.kde.kdenlive
 
 kasts:
   snap: kasts
@@ -2522,9 +2527,6 @@ firefox:
 kwave:
   flatpak: org.kde.kwave
 
-kdenlive:
-  flatpak: org.kde.kdenlive
-
 jamovi:
   flatpak: org.jamovi.jamovi
 
@@ -4259,9 +4261,6 @@ kuiviewer:
 
 ktorrent:
   flatpak: org.kde.ktorrent
-
-krita:
-  flatpak: org.kde.krita
 
 kpatience:
   flatpak: org.kde.kpat
