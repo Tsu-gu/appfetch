@@ -34,6 +34,10 @@ obsidian:
   flatpak: md.obsidian.Obsidian
   aliases: [obsidianmd]
 
+monero:
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xvjf monero-gui-*.tar.bz2 && rm monero-gui-*.tar.bz2
+  aliases: [monero-wallet, monero-gui-wallet]
+  
 aws-cli:
   snap: aws-cli
 
@@ -43,9 +47,6 @@ amazon-ssm-agent:
 awswickrgov:
   snap: awswickrgov
 
-monero:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xvjf monero-gui-*.tar.bz2
-  aliases: [monero-wallet, monero-gui-wallet]
 ant:
   snap: ant
 
