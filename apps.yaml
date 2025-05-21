@@ -1232,9 +1232,11 @@ stackit:
 
 telegram-desktop:
   snap: telegram-desktop
+  aliases: [telegram]
 
 termius-app:
   snap: termius-app
+  aliases: [termius]
 
 travis:
   snap: travis
@@ -1281,6 +1283,7 @@ webfortran:
 
 xkcd-webserver:
   snap: xkcd-webserver
+  aliases: [xkcd]
 
 xinyi-pc-classic:
   snap: xinyi-pc-classic
@@ -1413,6 +1416,7 @@ bluebubbles:
 
 audio-player:
   flatpak: org.gnome.Decibels
+  aliases: [decibels]
 
 acronym-decoder:
   flatpak: net.zdechov.app.AcronymDecoder
