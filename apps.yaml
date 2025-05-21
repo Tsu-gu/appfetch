@@ -21,6 +21,10 @@ flashpoint:
 yt-dlp:
   custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp
   aliases: [ytdlp, yt]
+
+homebrew:
+  custom: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  aliases: [brew]
   
 gimp:
   flatpak: org.gimp.GIMP
