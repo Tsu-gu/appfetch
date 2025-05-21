@@ -35,7 +35,7 @@ obsidian:
   aliases: [obsidianmd]
   
 mullvad:
-  custom: wget -O $HOME/Downloads/MullvadVPN.deb https://mullvad.net/en/download/app/deb/latest && sudo apt install $HOME/Downloads/MullvadVPN.deb
+  custom: wget -O $HOME/Downloads/MullvadVPN.deb https://mullvad.net/en/download/app/deb/latest && sudo apt install -y $HOME/Downloads/MullvadVPN.deb
   aliases: [mull, mullvad-vpn]
   
 monero:
@@ -3822,7 +3822,7 @@ vesctool:
   flatpak: com.vesc_project.VescTool
 
 steam:
-  custom: wget -O $HOME/Downloads/steam.deb https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb && sudo apt install $HOME/Downloads/steam.deb
+  custom: wget -O $HOME/Downloads/steam.deb https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb && sudo apt install -y $HOME/Downloads/steam.deb
   aliases: [valve]
 
 steam-link:
