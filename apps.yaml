@@ -22,7 +22,7 @@ gimp:
   flatpak: org.gimp.GIMP
   
 openttd:
-  custom: wget https://cdn.openttd.org/openttd-releases/14.1/openttd-14.1-linux-generic-amd64.tar.xz -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications
+  custom: mkdir -p ~/Applications && wget https://cdn.openttd.org/openttd-releases/14.1/openttd-14.1-linux-generic-amd64.tar.xz -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications
   aliases: [ttd]
   
 obsidian:
