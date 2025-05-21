@@ -9,6 +9,7 @@ vlc:
 qbittorrent:
   flatpak: org.qbittorrent.qBittorrent
   aliases: [qbit, torrent]
+
 reaper:
   custom: mkdir -p ~/Applications && wget https://www.reaper.fm/files/7.x/reaper739_linux_x86_64.tar.xz -O /tmp/reaper.tar.xz && tar -xf /tmp/reaper.tar.xz -C ~/Applications
   aliases: [reaperfm]
@@ -417,9 +418,6 @@ gazebo:
 gnome-contacts:
   snap: gnome-contacts
 
-gnome-boxes:
-  snap: gnome-boxes
-
 gcompris:
   snap: gcompris
 
@@ -503,9 +501,6 @@ headscale:
 
 hello-world:
   snap: hello-world
-
-hello:
-  snap: hello
 
 inkscape:
   snap: inkscape
