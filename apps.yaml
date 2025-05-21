@@ -33,7 +33,11 @@ obsidian:
   snap: obsidian
   flatpak: md.obsidian.Obsidian
   aliases: [obsidianmd]
-
+  
+mullvad:
+  custom: wget -O $HOME/Downloads/MullvadVPN.deb https://mullvad.net/en/download/app/deb/latest && sudo apt install $HOME/Downloads/MullvadVPN.deb
+  aliases: [mull, mullvad-vpn]
+  
 monero:
   custom: mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xvjf monero-gui-*.tar.bz2 && rm monero-gui-*.tar.bz2
   aliases: [monero-wallet, monero-gui-wallet]
@@ -833,6 +837,7 @@ lxd:
 
 libreoffice:
   snap: libreoffice
+  flatpak: org.libreoffice.LibreOffice
 
 labplot:
   snap: labplot
@@ -4217,9 +4222,6 @@ tiled:
 
 linux-show-player:
   flatpak: org.linuxshowplayer.LinuxShowPlayer
-
-libreoffice:
-  flatpak: org.libreoffice.LibreOffice
 
 leocad:
   flatpak: org.leocad.LeoCAD
