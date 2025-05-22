@@ -9,10 +9,12 @@ vlc:
   flatpak: org.videolan.VLC
   aliases: [videoplayer, videolan]
   comment: The most popular video player
+  comment: VLC media player, the open-source multimedia player
 
 qbittorrent:
   flatpak: org.qbittorrent.qBittorrent
   aliases: [qbit, torrent]
+  comment: An open-source Bittorrent client
 
 reaper:
   custom: mkdir -p ~/Applications && wget https://www.reaper.fm/files/7.x/reaper739_linux_x86_64.tar.xz -O /tmp/reaper.tar.xz && tar -xf /tmp/reaper.tar.xz -C ~/Applications && cd ~/Applications && ./install-reaper.sh
@@ -43,6 +45,7 @@ obsidian:
   snap: obsidian
   flatpak: md.obsidian.Obsidian
   aliases: [obsidianmd]
+  comment: Markdown-based knowledge base
 
 mullvad:
   custom: wget -O $HOME/Downloads/MullvadVPN.deb https://mullvad.net/en/download/app/deb/latest && sudo apt install -y $HOME/Downloads/MullvadVPN.deb
@@ -77,6 +80,7 @@ adguard-home:
 artikulate:
   snap: artikulate
   flatpak: org.kde.artikulate
+  comment: Artikulate Pronunciation Trainer
 
 all-remixes:
   snap: all-remixes
@@ -84,14 +88,17 @@ all-remixes:
 audiotube:
   snap: audiotube
   flatpak: org.kde.audiotube
+  comment: YouTube Music app
 
 ark:
   snap: ark
   flatpak: org.kde.ark  
+  comment: Archiving Tool
 
 bitwarden:
   snap: bitwarden
   flatpak: com.bitwarden.desktop
+  comment: A secure and free password manager for all of your devices
 
 brave:
   snap: brave
@@ -121,6 +128,7 @@ bcc:
 bomber:
   snap: bomber
   flatpak: org.kde.bomber
+  comment: Arcade Bombing Game
   
 bluez:
   snap: bluez
@@ -372,6 +380,7 @@ flutter:
 firefox:
   snap: firefox
   flatpak: org.mozilla.firefox
+  comment: Fast, Private & Safe Web Browser
 
 full-discography:
   snap: full-discography
@@ -379,6 +388,7 @@ full-discography:
 falkon:
   snap: falkon
   flatpak: org.kde.falkon  
+  comment: Web Browser
 
 filmographer:
   snap: filmographer
@@ -467,14 +477,17 @@ granatier:
 ghostwriter:
   snap: ghostwriter
   flatpak: org.kde.ghostwriter
+  comment: Distraction-free text editor for Markdown
 
 gedit:
   snap: gedit
   flatpak: org.gnome.gedit
+  comment: Text editor
 
 gwenview:
   snap: gwenview
   flatpak: org.kde.gwenview
+  comment: Image Viewer
 
 glaxnimate:
   snap: glaxnimate
@@ -596,6 +609,7 @@ kata-containers:
 krita:
   snap: krita
   flatpak: org.kde.krita
+  comment: Digital Painting, Creative Freedom
 
 kstars:
   snap: kstars
@@ -606,6 +620,7 @@ keepalived:
 kolourpaint:
   snap: kolourpaint
   flatpak: org.kde.kolourpaint
+  comment: Paint Program
 
 kturtle:
   snap: kturtle
@@ -619,6 +634,7 @@ klettres:
 konversation:
   snap: konversation
   flatpak: org.kde.konversation
+  comment: IRC client
 
 kgeography:
   snap: kgeography
@@ -782,6 +798,7 @@ katomic:
 kdenlive:
   snap: kdenlive
   flatpak: org.kde.kdenlive
+  comment: Video editor
 
 kasts:
   snap: kasts
@@ -834,6 +851,7 @@ konqueror:
 ktorrent:
   snap: ktorrent
   flatpak: org.kde.ktorrent
+  comment: BitTorrent Client
 
 k3b:
   snap: k3b
@@ -842,6 +860,7 @@ k3b:
 konsole:
   snap: konsole
   flatpak: org.kde.konsole
+  comment: Use the command line interface
 
 kdialog:
   snap: kdialog
@@ -861,6 +880,7 @@ lxd:
 libreoffice:
   snap: libreoffice
   flatpak: org.libreoffice.LibreOffice
+  comment: The LibreOffice productivity suite
 
 labplot:
   snap: labplot
@@ -925,6 +945,7 @@ nats:
 neochat:
   snap: neochat
   flatpak: org.kde.neochat
+  comment: Chat on Matrix
 
 netbeans:
   snap: netbeans
@@ -973,6 +994,7 @@ octave:
 okular:
   snap: okular
   flatpak: org.kde.okular
+  comment: View and annotate documents
 
 organize-my-files:
   snap: organize-my-files
@@ -1144,6 +1166,7 @@ remmina:
   snap: remmina
   flatpak: org.remmina.Remmina
   aliases: [remina]
+  comment: Remote Desktop Client
   
 rocketchat-desktop:
   snap: rocketchat-desktop
@@ -1353,5178 +1376,6901 @@ hypernotes:
 
 ear-tag:
   flatpak: app.drey.EarTag
+  comment: Edit audio file tags
 
 ssh-mitm:
   flatpak: at.ssh_mitm.server
+  comment: SSH-MITM - ssh audits made simple
 
 go2tv:
   flatpak: app.go2tv.go2tv
+  comment: Stream media to TVs and devices
 
 elastic:
   flatpak: app.drey.Elastic
+  comment: Design spring animations
 
 biblioteca:
   flatpak: app.drey.Biblioteca
+  comment: Read GNOME documentation offline
 
 manuals:
   flatpak: app.devsuite.Manuals
+  comment: Read developer documentation
 
 opencomic:
   flatpak: app.opencomic.OpenComic
+  comment: Comic and Manga reader
 
 tauno-serial-plotter:
   flatpak: art.taunoerik.tauno-serial-plotter
+  comment: Simple serial plotter for Arduino and others similar devices.
 
 vup-cloud-storage:
   flatpak: app.vup.Vup
+  comment: Open-source end-to-end-encrypted cloud storage app with integrated media server
 
 rednotebook:
   flatpak: app.rednotebook.RedNotebook
+  comment: Graphical diary and journal
 
 nestful:
   flatpak: app.nestful.Nestful
+  comment: The single place for all your lists and tasks
 
 clipboard:
   flatpak: app.getclipboard.Clipboard
+  comment: Cut, copy, and paste anything, anytime, anywhere
 
 fotema:
   flatpak: app.fotema.Fotema
+  comment: Admire your photos
 
 warp:
   flatpak: app.drey.Warp
+  comment: Fast and secure file transfer
 
 key-rack:
   flatpak: app.drey.KeyRack
+  comment: View and edit passwords
 
 damask:
   flatpak: app.drey.Damask
+  comment: Automatic wallpapers from the Internet
 
 blackboard-sync:
   flatpak: app.bbsync.BlackboardSync
+  comment: Automatic Syncing Of Your Blackboard Content
 
 cambalache:
   flatpak: ar.xjuan.Cambalache
+  comment: Create GTK 4 user interfaces
 
 zen:
   flatpak: app.zen_browser.zen
+  comment: Stay focused, browse faster
 
 tauno-monitor:
   flatpak: art.taunoerik.tauno-monitor
+  comment: Serial port monitor.
 
 xemu:
   flatpak: app.xemu.xemu
+  comment: Original Xbox Emulator
 
 polychromatic:
   flatpak: app.polychromatic.controller
+  comment: RGB lighting management software for OpenRazer
 
 pianocheetah:
   flatpak: app.pianocheetah.pianocheetah
+  comment: a better way to play it
 
 organic-maps:
   flatpak: app.organicmaps.desktop
+  comment: Free offline maps for everyone
 
 openbubbles:
   flatpak: app.openbubbles.OpenBubbles
+  comment: OpenBubbles client for Linux
 
 lith:
   flatpak: app.lith.Lith
+  comment: WeeChat Relay Client
 
 freelens:
   flatpak: app.freelens.Freelens
+  comment: Free IDE for Kubernetes
 
 feeddeck:
   flatpak: app.feeddeck.feeddeck
+  comment: Feed reader
 
 geteduroam:
   flatpak: app.eduroam.geteduroam
+  comment: A geteduroam client for Linux. Geteduroam simplifies the process of connecting to eduroam
 
 multiplication-puzzle:
   flatpak: app.drey.MultiplicationPuzzle
+  comment: Solve a math mystery
 
 dialect:
   flatpak: app.drey.Dialect
+  comment: Translate between languages
 
 blurble:
   flatpak: app.drey.Blurble
+  comment: Word guessing game
 
 schemes:
   flatpak: app.devsuite.Schemes
+  comment: Create syntax highlighting schemes
 
 ptyxis:
   flatpak: app.devsuite.Ptyxis
+  comment: Container-oriented terminal
 
 cantara:
   flatpak: app.cantara.Cantara
+  comment: Song Presentation in Churches
 
 bluebubbles:
   flatpak: app.bluebubbles.BlueBubbles
+  comment: BlueBubbles client for Linux
 
 audio-player:
   flatpak: org.gnome.Decibels
   aliases: [decibels]
+  comment: Play audio files
 
 acronym-decoder:
   flatpak: net.zdechov.app.AcronymDecoder
+  comment: Search acronym meanings
 
 amberol:
   flatpak: io.bassi.Amberol
+  comment: Plays music, and nothing else
 
 story-architect-starc:
   flatpak: dev.storyapps.starc
+  comment: All-in-One Writing App
 
 armcord:
   flatpak: xyz.armcord.ArmCord
+  comment: ArmCord is a custom client designed to enhance your Discord experience while keeping everything lightweight.
 
 little-adventure:
   flatpak: org.dupot.littleadventure
+  comment: RPG Pixel Art little Game
 
 beat-and-match-to-pass:
   flatpak: org.dupot.beatmatchtopass
+  comment: Beat them all
 
 archivekeep:
   flatpak: org.archivekeep.ArchiveKeep
+  comment: Archive files the easy way
 
 alien-arena:
   flatpak: org.alienarena.alienarena
+  comment: Ultra fast paced arena FPS
 
 record-apps:
   flatpak: io.github.sigmasd.recordapps
+  comment: Record audio from individual applications
 
 ascii-draw:
   flatpak: io.github.nokse22.asciidraw
+  comment: Sketch anything using characters
 
 adwsteamgtk:
   flatpak: io.github.Foldex.AdwSteamGtk
+  comment: Give Steam the Adwaita treatment
 
 ente-auth:
   flatpak: io.ente.auth
+  comment: FOSS, cross-platform 2FA app
 
 learn-6502-assembly:
   flatpak: eu.jumplink.Learn6502
+  comment: 6502 Assembly Learning Environment
 
 quick-web-apps:
   flatpak: dev.heppen.webapps
+  comment: Web applications at your fingertips
 
 archives:
   flatpak: dev.geopjr.Archives
+  comment: Create and view web archives
 
 audio-sharing:
   flatpak: de.haeckerfelix.AudioSharing
+  comment: Share your computer audio
 
 eso-addon-manager:
   flatpak: com.arviceblot.eso-addon-manager
+  comment: Manage addons for The Elder Scrolls Online
 
 serial-port-assistant:
   flatpak: io.github.KangLin.SerialPortAssistant
+  comment: Serial port tool
 
 apostrophe:
   flatpak: org.gnome.gitlab.somas.Apostrophe
+  comment: Edit Markdown in style
 
 asteria:
   flatpak: io.github.alamahant.Asteria
+  comment: AI Reads your Birthchart
 
 add-water:
   flatpak: dev.qwery.AddWater
+  comment: Keep Firefox in fashion
 
 ashpd-demo:
   flatpak: com.belmoussaoui.ashpd.demo
+  comment: Play with portals
 
 authenticator:
   flatpak: com.belmoussaoui.Authenticator
+  comment: Generate two-factor codes
 
 alpine-client:
   flatpak: com.alpineclient.AlpineClient
+  comment: Elevate your Minecraft gameplay
 
 antimicrox:
   flatpak: io.github.antimicrox.antimicrox
+  comment: Graphical program used to map gamepad buttons to keyboard, mouse, scripts and macros
 
 pdf-arranger:
   flatpak: com.github.jeromerobert.pdfarranger
+  comment: Merge, shuffle, and crop PDFs
 
 amiberry:
   flatpak: com.blitterstudio.amiberry
+  comment: A multi-platform Amiga emulator
 
 gnome-application-platform-version-48:
   flatpak: org.gnome.Platform
+  comment: Shared libraries used by GNOME applications
 
 speech-note-amd:
   flatpak: net.mkiol.SpeechNote.Addon.amd
+  comment: Support for GPU acceleration with AMD graphics cards in Speech Note
 
 the-force-engine-adjustable-hud-mod:
   flatpak: io.github.theforceengine.tfe.Mod.AdjustableHud
+  comment: A “The Force Engine” built‑in mod enabling adjustable floating HUD elements in “STAR WARS™: Dark Forces”
 
 alpaca-amd-support:
   flatpak: com.jeffser.Alpaca.Plugins.AMD
+  comment: Support for GPU acceleration with AMD GPUs
 
 aurora:
   flatpak: xyz.kusma.aurora
+  comment: Aurora by Excess
 
 open-alert-viewer:
   flatpak: studio.okcode.open_alert_viewer
+  comment: Fetch and display server alerts
 
 asset-manager-studio:
   flatpak: studio.assetmanager.ams
+  comment: The asset manager and launcher for the rest of us...
 
 scripture-app-builder:
   flatpak: org.sil.scripture-app-builder
+  comment: Build apps with Scripture and audio
 
 reading-app-builder:
   flatpak: org.sil.reading-app-builder
+  comment: Build apps with synced text and audio
 
 keyboard-app-builder:
   flatpak: org.sil.keyboard-app-builder
+  comment: Build apps with Keyman keyboards
 
 dictionary-app-builder:
   flatpak: org.sil.dictionary-app-builder
+  comment: Build dictionary apps: pics & audio
 
 disk-usage-analyzer:
   flatpak: org.gnome.baobab
+  comment: Check folder sizes and available disk space
 
 appstream-glib:
   flatpak: org.freedesktop.appstream-glib
+  comment: AppStream files validation an tools
 
 cataclysm-dark-days-ahead:
   flatpak: org.cataclysmdda.CataclysmDDA
+  comment: A turn-based survival game set in a post-apocalyptic world
 
 altaqwaa:
   flatpak: org.altaqwaa.Altaqwaa
+  comment: Quran, adhkar, and prayer times
 
 aviator:
   flatpak: net.natesales.Aviator
+  comment: Your Video Copilot: AV1/OPUS Video Encoder
 
 web-apps:
   flatpak: net.codelogistics.webapps
+  comment: Install websites as apps
 
 antares-sql:
   flatpak: it.fabiodistasio.AntaresSQL
+  comment: A modern, fast and productivity driven SQL client with a focus in UX
 
 icon-browser-adw:
   flatpak: io.github.rsvzz.iconvwadw
+  comment: Icon Browser for Adwaita
 
 emergency-alerts:
   flatpak: io.github.leolost2605.emergency-alerts
+  comment: Receive emergency alerts
 
 akkhara:
   flatpak: io.github.fidele007.akkhara
+  comment: The dictionary app you need
 
 awesome-calculator:
   flatpak: io.github.deaen.awesomecalculator
+  comment: AWESOME calculator program
 
 android-virtual-pen:
   flatpak: io.github.androidvirtualpen.virtualpen
+  comment: Capture android pen input on Linux
 
 atomic:
   flatpak: io.github.am2r_community_developers.Atomic
+  comment: A mod packaging toolchain for AM2R mods.
 
 am2rlauncher:
   flatpak: io.github.am2r_community_developers.AM2RLauncher
+  comment: A front-end for dealing with AM2R updates and mods
 
 appflowy:
   flatpak: io.appflowy.AppFlowy
+  comment: Open Source Notion Alternative
 
 anytype:
   flatpak: io.anytype.anytype
+  comment: The everything app for those who celebrate trust and autonomy
 
 beyond-all-reason:
   flatpak: info.beyondallreason.bar
+  comment: Total Annihilation Inspired RTS
 
 meine-ausweiskopie:
   flatpak: in.varb.Ausweiskopie
+  comment: Redact and mark German id copies
 
 an-adventurer-s-gallantry:
   flatpak: games.zetsubou.AnAdventurersGallantry
+  comment: Disgraced knight-in-training Oren gets a second chance at life as an adventurer in this fantasy visual novel
 
 ftb-electron-app:
   flatpak: dev.ftb.ftb-app
+  comment: Explore and manage FTB modpacks!
 
 astroimpact:
   flatpak: com.voxdsp.AstroImpact
+  comment: Defend the planet from asteroids!
 
 wolfenstein-blade-of-agony:
   flatpak: com.realm667.Wolfenstein_Blade_of_Agony
+  comment: Story-driven FPS inspired by WWII shooters from the 90's and early 2000's
 
 animatch:
   flatpak: com.holypangolin.Animatch
+  comment: Match 3 with cute animals
 
 avvie:
   flatpak: com.github.taiko2k.avvie
+  comment: Crop images for avatars or wallpapers
 
 dragon-s-apprentice:
   flatpak: com.endlessnetwork.dragonsapprentice
+  comment: An RPG-like puzzle-solving dungeon-crawling game, and more!
 
 atlauncher:
   flatpak: com.atlauncher.ATLauncher
+  comment: A launcher for Minecraft which integrates multiple different modpacks to allow you to download and install modpacks easily and quickly.
 
 kde-application-platform:
   flatpak: org.kde.Platform
+  comment: Shared libraries used by KDE applications
 
 free-pascal-compiler-and-lazarus:
   flatpak: org.freedesktop.Sdk.Extension.freepascal
+  comment: A compiler for the closely related programming-language dialects Pascal and Object Pascal
 
 ocr-albanian:
   flatpak: com.github.unrud.djpdf.OCR.Sqi
+  comment: OCR extension for Albanian (sqi)
 
 ocr-canadian-aboriginal-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptCanadianAboriginal
+  comment: OCR extension for Canadian Aboriginal script (script/Canadian_Aboriginal)
 
 ocr-armenian-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptArmenian
+  comment: OCR extension for Armenian script (script/Armenian)
 
 ocr-arabic-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptArabic
+  comment: OCR extension for Arabic script (script/Arabic)
 
 ocr-armenian:
   flatpak: com.github.unrud.djpdf.OCR.Hye
+  comment: OCR extension for Armenian (hye)
 
 ocr-greek-ancient-to-1453:
   flatpak: com.github.unrud.djpdf.OCR.Grc
+  comment: OCR extension for Greek, Ancient (to 1453) (grc)
 
 ocr-azerbaijani-cyrilic:
   flatpak: com.github.unrud.djpdf.OCR.AzeCyrl
+  comment: OCR extension for Azerbaijani - Cyrilic (aze_cyrl)
 
 ocr-azerbaijani:
   flatpak: com.github.unrud.djpdf.OCR.Aze
+  comment: OCR extension for Azerbaijani (aze)
 
 ocr-assamese:
   flatpak: com.github.unrud.djpdf.OCR.Asm
+  comment: OCR extension for Assamese (asm)
 
 ocr-arabic:
   flatpak: com.github.unrud.djpdf.OCR.Ara
+  comment: OCR extension for Arabic (ara)
 
 ocr-amharic:
   flatpak: com.github.unrud.djpdf.OCR.Amh
+  comment: OCR extension for Amharic (amh)
 
 ocr-afrikaans:
   flatpak: com.github.unrud.djpdf.OCR.Afr
+  comment: OCR extension for Afrikaans (afr)
 
 arianna:
   flatpak: org.kde.arianna
+  comment: EBook reader
 
 amarok:
   flatpak: org.kde.amarok
+  comment: Rediscover your music
 
 akregator:
   flatpak: org.kde.akregator
+  comment: Keep up with your feeds
 
 azahar:
   flatpak: org.azahar_emu.Azahar
+  comment: Open-source 3DS emulator project based on Citra.
 
 artisan:
   flatpak: org.artisan_scope.artisan
+  comment: Visual scope for coffee roasters
 
 armagetron-advanced:
   flatpak: org.armagetronad.ArmagetronAdvanced
+  comment: 3D Lightcycle Game
 
 aurea:
   flatpak: io.github.cleomenezesjr.aurea
+  comment: Flatpak metainfo banner previewer
 
 audok:
   flatpak: com.github.kalibari.audok
+  comment: A free, open source music player
 
 aliza-ms:
   flatpak: com.github.AlizaMedicalImaging.AlizaMS
+  comment: A DICOM viewer
 
 abiword:
   flatpak: com.abisource.AbiWord
+  comment: A word processor
 
 antibillard:
   flatpak: page.codeberg.maerchenfeeimgarten.AntiBillard
+  comment: Billiards: round table, square balls
 
 atlantik:
   flatpak: org.kde.atlantik
+  comment: Monopoly®-like Board Games
 
 angelfish:
   flatpak: org.kde.angelfish
+  comment: Webbrowser for mobile devices
 
 alligator:
   flatpak: org.kde.alligator
+  comment: RSS feed reader
 
 app-icon-preview:
   flatpak: org.gnome.design.AppIconPreview
+  comment: Icon design helper
 
 ardorquery:
   flatpak: org.emptyflow.ArdorQuery
+  comment: Testing websites
 
 argos:
   flatpak: io.github.orontee.Argos
+  comment: Light weight front-end for Mopidy music server
 
 asteroids-revenge:
   flatpak: io.github.mlm_games.asteroids_revenge
+  comment: Evade lasers as an enigmatic entity
 
 tux-planet-speedrun-any:
   flatpak: io.github.dtsudo.TuxPlanetSpeedrunAnyPercent
+  comment: Speedrun your way through 10 levels using save states!
 
 aaaaxy:
   flatpak: io.github.divverent.aaaaxy
+  comment: Impossible spaces puzzle platformer
 
 nitrokey-app2:
   flatpak: com.nitrokey.nitrokey-app2
+  comment: Manage your Nitrokey 3 device
 
 nitrokey-app:
   flatpak: com.nitrokey.nitrokey-app
+  comment: Manage your Nitrokey devices
 
 alpaca:
   flatpak: com.jeffser.Alpaca
+  comment: Chat with AI models
 
 albasheer:
   flatpak: com.github.yucefsourani.albasheer-electronic-quran-browser
+  comment: Electronic Quran Browser
 
 ntag-audio-file-tag-editor:
   flatpak: com.github.nrittsti.NTag
+  comment: NTag is a cross platform-graphical tag editor focused on everyday life use cases.
 
 aqueducts:
   flatpak: com.endlessnetwork.aqueducts
+  comment: Hack your way to saving the day
 
 adventure-list:
   flatpak: codes.merritt.adventurelist
+  comment: Todo list that syncs
 
 awake-on-lan:
   flatpak: co.logonoff.awakeonlan
+  comment: Remotely wake up computers
 
 jdappstreamedit:
   flatpak: page.codeberg.JakobDev.jdAppStreamEdit
+  comment: A graphical Program to create and edit AppStream files
 
 tenacity:
   flatpak: org.tenacityaudio.Tenacity
+  comment: Record and edit audio files
 
 synfig-studio:
   flatpak: org.synfig.SynfigStudio
+  comment: Create and edit 2D animations and compositions
 
 strawberry-music-player:
   flatpak: org.strawberrymusicplayer.strawberry
+  comment: A music player and collection organizer
 
 siril:
   flatpak: org.siril.Siril
+  comment: Astronomical image processor
 
 qtractor:
   flatpak: org.rncbc.qtractor
+  comment: An Audio/MIDI multi-track sequencer
 
 previewqt:
   flatpak: org.previewqt.PreviewQt
+  comment: Preview all kinds of files
 
 photoqt:
   flatpak: org.photoqt.PhotoQt
+  comment: View and manage images and videos
 
 pencil2d:
   flatpak: org.pencil2d.Pencil2D
+  comment: Create 2D animations with ease
 
 mmex-money-manager:
   flatpak: org.moneymanagerex.MMEX
+  comment: Organize finances and track cash flow
 
 kid3:
   flatpak: org.kde.kid3
+  comment: Edit audio file metadata
 
 evolution:
   flatpak: org.gnome.Evolution
+  comment: Manage your email, contacts and schedule
 
 connections:
   flatpak: org.gnome.Connections
+  comment: View and use other desktops
 
 retrodeck:
   flatpak: net.retrodeck.retrodeck
+  comment: RetroDECK brings an environment to catalog and play your retro games directly on your Steam Deck
 
 speech-note:
   flatpak: net.mkiol.SpeechNote
+  comment: Notes with offline Speech to Text, Text to Speech and Machine Translation
 
 glide:
   flatpak: net.base_art.Glide
+  comment: Play movies and audio files
 
 gear-lever:
   flatpak: it.mijorus.gearlever
+  comment: Manage AppImages
 
 hbud:
   flatpak: io.github.swanux.hbud
+  comment: Simple audio/video player and karaoke app written in Python and GTK4
 
 pins:
   flatpak: io.github.fabrialberio.pinapp
+  comment: Create and edit app shortcuts
 
 thebeat:
   flatpak: com.vicr123.thebeat
+  comment: Audio Player
 
 orion-torrent-client:
   flatpak: com.ktechpit.orion
+  comment: Complete torrent client and streamer for Linux Desktop
 
 clapper:
   flatpak: com.github.rafostar.Clapper
+  comment: Lean back and enjoy videos
 
 bitwig-studio:
   flatpak: com.bitwig.BitwigStudio
+  comment: Modern music production and performance
 
 recordbox:
   flatpak: ca.edestcroix.Recordbox
+  comment: Browse and play your local music
 
 tenmon:
   flatpak: space.nouspiro.tenmon
+  comment: FITS/XISF image viewer, converter, index and search
 
 xonotic:
   flatpak: org.xonotic.Xonotic
+  comment: The Free and Fast Arena Shooter
 
 volume-control:
   flatpak: org.pulseaudio.pavucontrol
+  comment: Adjust device and app volumes
 
 onionshare:
   flatpak: org.onionshare.OnionShare
+  comment: Securely and anonymously share files, host websites, and chat with friends
 
 parabolic:
   flatpak: org.nickvision.tubeconverter
+  comment: Download web video and audio
 
 clock:
   flatpak: org.kde.kclock
+  comment: Keep time and set alarms
 
 al-quran-tafsir-by-word:
   flatpak: org.gtaf.quran
+  comment: Study the Quran through Word by Word Analysis, Colored Tajweed, Tafsir & Audio
 
 document-scanner:
   flatpak: org.gnome.SimpleScan
+  comment: Make a digital copy of your photos and documents
 
 lights-off:
   flatpak: org.gnome.LightsOff
+  comment: Turn off all the lights
 
 devhelp:
   flatpak: org.gnome.Devhelp
+  comment: A developer tool for browsing and searching API documentation
 
 calculator:
   flatpak: dev.edfloreshz.Calculator
+  comment: Beyond the equation
 
 contour-terminal-emulator:
   flatpak: org.contourterminal.Contour
+  comment: Contour is a modern and actually fast, modal, virtual terminal emulator, for everyday use
 
 qmidiplayer:
   flatpak: org.chrisoft.qmidiplayer
+  comment: A cross-platform midi file player based on libfluidsynth and Qt.
 
 cataclysm-bn:
   flatpak: org.cataclysmbn.CataclysmBN
+  comment: Try to survive the apocalypse
 
 drumstick-metronome:
   flatpak: net.sourceforge.kmetronome
+  comment: Drumstick MIDI Metronome based on the ALSA Sequencer
 
 elelem:
   flatpak: net.fionix.elelem
+  comment: A friendly assistant with LLM
 
 tundra:
   flatpak: moe.tundra.Tundra
+  comment: Update your anime lists automatically
 
 jamesdsp:
   flatpak: me.timschneeberger.jdsp4linux
+  comment: Open-source audio effect processor for Pipewire
 
 strongbox:
   flatpak: la.ogri.strongbox
+  comment: Addon manager for World of Warcraft
 
 upscaler:
   flatpak: io.gitlab.theevilskeleton.Upscaler
+  comment: Upscale and enhance images
 
 letterpress:
   flatpak: io.gitlab.gregorni.Letterpress
+  comment: Create beautiful ASCII art
 
 cpu-x:
   flatpak: io.github.thetumultuousunicornofdarkness.cpu-x
+  comment: Gathers information on CPU, motherboard and more
 
 virtaudio:
   flatpak: io.github.sigmasd.VirtAudio
+  comment: Create virtual microphones from browser audio
 
 dayon:
   flatpak: io.github.retgal.Dayon
+  comment: Remote assistance made easy!
 
 pocket-sync:
   flatpak: io.github.neil_morrison44.pocket-sync
+  comment: A GUI to do stuff with the Analogue Pocket
 
 hegelmote:
   flatpak: io.github.jacalz.hegelmote
+  comment: Control Hegel amplifier remotely
 
 varia:
   flatpak: io.github.giantpinkrobots.varia
+  comment: Download files, videos and torrents
 
 ignition:
   flatpak: io.github.flattool.Ignition
+  comment: Manage startup apps and scripts
 
 doukutsu-rs:
   flatpak: io.github.doukutsu_rs.doukutsu-rs
+  comment: A faithful and open-source remake of Cave Story's engine written in Rust
 
 soundscape:
   flatpak: io.github.ddanilov.soundscape
+  comment: Desktop soundscape application
 
 salawat:
   flatpak: io.github.dbchoco.Salawat
+  comment: Islamic prayer times application
 
 coccinelle:
   flatpak: io.github.coccinelle.coccinelle
+  comment: Match and transform C code using semantic patches
 
 gpu-viewer:
   flatpak: io.github.arunsivaramanneo.GPUViewer
+  comment: A front-end to glxinfo, vulkaninfo, clinfo and es2_info
 
 qalculate-gtk-ui:
   flatpak: io.github.Qalculate
+  comment: Powerful and easy to use calculator
 
 qalculate-qt-ui:
   flatpak: io.github.Qalculate.qalculate-qt
+  comment: Powerful and easy to use calculator
 
 toolblex:
   flatpak: io.emeric.toolblex
+  comment: Bluetooth device scanner and analyzer
 
 botfather:
   flatpak: io.botfather.Botfather
+  comment: Universal automation framework
 
 minion:
   flatpak: gg.minion.Minion
+  comment: An AddOn manager for The Elder Scrolls Online and World of Warcraft
 
 jarmemu:
   flatpak: fr.dwightstudio.JArmEmu
+  comment: Simple ARMv7 simulator written in Java, intended for educational purpose
 
 oboete:
   flatpak: dev.mariinkys.Oboete
+  comment: A simple flashcards application
 
 calligraphy:
   flatpak: dev.geopjr.Calligraphy
+  comment: Turn text into ASCII banners
 
 the-unofficial-homestuck-collection:
   flatpak: dev.bambosh.UnofficialHomestuckCollection
+  comment: Offline collection of Homestuck and its related works
 
 ymuse:
   flatpak: com.yktoo.ymuse
+  comment: Easy, functional, and snappy GTK front-end (client) for Music Player Daemon
 
 4ktube:
   flatpak: com.warlordsoftwares.youtube-downloader-4ktube
+  comment: 4K YouTube Downloader – Download HD YouTube Videos, Playlists, and Music Instantly.
 
 video-downloader-tube2go:
   flatpak: com.warlordsoftwares.tube2go
+  comment: Download HD videos from YouTube, Instagram, TikTok, Facebook, Twitter, and more with Tube2go. Enjoy fast and easy downloads from a wide range of websites.
 
 toledo1:
   flatpak: com.toledo1.Toledo1
+  comment: Achieve search sovereignty with Toledo1, a compound LLM browser
 
 community-remote:
   flatpak: com.theappgineer.community_remote
+  comment: Roon control for family and friends
 
 sgdboop:
   flatpak: com.steamgriddb.SGDBoop
+  comment: Apply SteamGridDB assets to Steam
 
 keyvault:
   flatpak: com.polydez.KeyVault
+  comment: Secure 2FA and OTP authentication manager
 
 notesnook:
   flatpak: com.notesnook.Notesnook
+  comment: A fully open source & end-to-end encrypted note taking alternative to Evernote
 
 media-downloader:
   flatpak: io.github.mhogomchungu.media-downloader
+  comment: A GUI to yt-dlp, gallery-dl, lux.
 
 ultimate-media-downloader:
   flatpak: com.ktechpit.ultimate-media-downloader
+  comment: Online video & audio downloader for Linux, 1400+ websites support
 
 pulseeffects:
   flatpak: com.github.wwmm.pulseeffects
+  comment: Audio Effects for PulseAudio Applications
 
 easy-effects:
   flatpak: com.github.wwmm.easyeffects
+  comment: Audio Effects for PipeWire Applications
 
 pin-it:
   flatpak: com.github.ryonakano.pinit
+  comment: Pin portable apps to the launcher
 
 comic-sticks:
   flatpak: com.github.rkoesters.xkcd-gtk
+  comment: Read xkcd: a webcomic of romance, sarcasm, math, and language
 
 mixer:
   flatpak: com.github.childishgiant.mixer
+  comment: Change the volume of apps
 
 fruit-credits:
   flatpak: com.dz4k.FruitCredits
+  comment: Keep plaintext accounts
 
 qprompt:
   flatpak: com.cuperino.qprompt
+  comment: Personal teleprompter software for all video creators
 
 tally:
   flatpak: ca.vlacroix.Tally
+  comment: Count anything
 
 butler:
   flatpak: com.cassidyjames.butler
+  comment: Companion for Home Assistant
 
 read-it-later:
   flatpak: com.belmoussaoui.ReadItLater
+  comment: Save and read web articles
 
 iaito-translations:
   flatpak: org.radare.iaito.translations
+  comment: Community translations for iaito
 
 ocaml-platform-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.ocaml
+  comment: Extension providing the latest stable release of the Ocaml platform
 
 bazel:
   flatpak: org.freedesktop.Sdk.Extension.bazel
+  comment: Bazel build system
 
 openh264:
   flatpak: org.freedesktop.Platform.openh264
+  comment: OpenH264 Video Codec provided by Cisco Systems, Inc.
 
 vkbasalt:
   flatpak: org.freedesktop.Platform.VulkanLayer.vkBasalt
+  comment: A Vulkan post processing layer for Linux
 
 gamescope:
   flatpak: org.freedesktop.Platform.VulkanLayer.gamescope
+  comment: The micro-compositor formerly known as steamcompmgr
 
 obs-vkcapture-tools:
   flatpak: org.freedesktop.Platform.VulkanLayer.OBSVkCapture
+  comment: Vulkan/OpenGL capture tools to use with the OBS VkCapture plugin
 
 semantik-english-language-pack:
   flatpak: net.krafting.SemantiK.Lang.English
+  comment: English language pack for SemantiK
 
 freedom-valley:
   flatpak: dev.tchx84.Gameeky.ThematicPack.FreedomValley
+  comment: A classic farming role game
 
 ocr-yoruba:
   flatpak: com.github.unrud.djpdf.OCR.Yor
+  comment: OCR extension for Yoruba (yor)
 
 ocr-vietnamese:
   flatpak: com.github.unrud.djpdf.OCR.Vie
+  comment: OCR extension for Vietnamese (vie)
 
 ocr-ukrainian:
   flatpak: com.github.unrud.djpdf.OCR.Ukr
+  comment: OCR extension for Ukrainian (ukr)
 
 ocr-tonga:
   flatpak: com.github.unrud.djpdf.OCR.Ton
+  comment: OCR extension for Tonga (ton)
 
 ocr-tigrinya:
   flatpak: com.github.unrud.djpdf.OCR.Tir
+  comment: OCR extension for Tigrinya (tir)
 
 ocr-thai:
   flatpak: com.github.unrud.djpdf.OCR.Tha
+  comment: OCR extension for Thai (tha)
 
 ocr-tagalog:
   flatpak: com.github.unrud.djpdf.OCR.Tgl
+  comment: OCR extension for Tagalog (tgl)
 
 ocr-tajik:
   flatpak: com.github.unrud.djpdf.OCR.Tgk
+  comment: OCR extension for Tajik (tgk)
 
 ocr-tatar:
   flatpak: com.github.unrud.djpdf.OCR.Tat
+  comment: OCR extension for Tatar (tat)
 
 ocr-tamil:
   flatpak: com.github.unrud.djpdf.OCR.Tam
+  comment: OCR extension for Tamil (tam)
 
 ocr-syriac:
   flatpak: com.github.unrud.djpdf.OCR.Syr
+  comment: OCR extension for Syriac (syr)
 
 ocr-swahili:
   flatpak: com.github.unrud.djpdf.OCR.Swa
+  comment: OCR extension for Swahili (swa)
 
 ocr-sundanese:
   flatpak: com.github.unrud.djpdf.OCR.Sun
+  comment: OCR extension for Sundanese (sun)
 
 ocr-serbian-latin:
   flatpak: com.github.unrud.djpdf.OCR.SrpLatn
+  comment: OCR extension for Serbian - Latin (srp_latn)
 
 ocr-serbian:
   flatpak: com.github.unrud.djpdf.OCR.Srp
+  comment: OCR extension for Serbian (srp)
 
 ocr-spanish-castilian-old:
   flatpak: com.github.unrud.djpdf.OCR.SpaOld
+  comment: OCR extension for Spanish; Castilian - Old (spa_old)
 
 ocr-spanish-castilian:
   flatpak: com.github.unrud.djpdf.OCR.Spa
+  comment: OCR extension for Spanish; Castilian (spa)
 
 ocr-slovenian:
   flatpak: com.github.unrud.djpdf.OCR.Slv
+  comment: OCR extension for Slovenian (slv)
 
 ocr-slovak-fraktur:
   flatpak: com.github.unrud.djpdf.OCR.SlkFrak
+  comment: OCR extension for Slovak - Fraktur (slk_frak)
 
 ocr-slovak:
   flatpak: com.github.unrud.djpdf.OCR.Slk
+  comment: OCR extension for Slovak (slk)
 
 ocr-sinhala-sinhalese:
   flatpak: com.github.unrud.djpdf.OCR.Sin
+  comment: OCR extension for Sinhala; Sinhalese (sin)
 
 ocr-vietnamese-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptVietnamese
+  comment: OCR extension for Vietnamese script (script/Vietnamese)
 
 ocr-tibetan-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptTibetan
+  comment: OCR extension for Tibetan script (script/Tibetan)
 
 ocr-thai-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptThai
+  comment: OCR extension for Thai script (script/Thai)
 
 ocr-thaana-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptThaana
+  comment: OCR extension for Thaana script (script/Thaana)
 
 ocr-tamil-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptTamil
+  comment: OCR extension for Tamil script (script/Tamil)
 
 ocr-syriac-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptSyriac
+  comment: OCR extension for Syriac script (script/Syriac)
 
 ocr-sinhala-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptSinhala
+  comment: OCR extension for Sinhala script (script/Sinhala)
 
 ocr-oriya-odia-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptOriya
+  comment: OCR extension for Oriya (Odia) script (script/Oriya)
 
 ocr-myanmar-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptMyanmar
+  comment: OCR extension for Myanmar script (script/Myanmar)
 
 ocr-malayalam-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptMalayalam
+  comment: OCR extension for Malayalam script (script/Malayalam)
 
 ocr-latin-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptLatin
+  comment: OCR extension for Latin script (script/Latin)
 
 ocr-lao-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptLao
+  comment: OCR extension for Lao script (script/Lao)
 
 ocr-kannada-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptKannada
+  comment: OCR extension for Kannada script (script/Kannada)
 
 ocr-japanese-vertical-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptJapaneseVert
+  comment: OCR extension for Japanese vertical script (script/Japanese_vert)
 
 ocr-japanese-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptJapanese
+  comment: OCR extension for Japanese script (script/Japanese)
 
 ocr-hangul-vertical-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptHangulVert
+  comment: OCR extension for Hangul vertical script (script/Hangul_vert)
 
 ocr-hangul-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptHangul
+  comment: OCR extension for Hangul script (script/Hangul)
 
 ocr-han-traditional-vertical-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptHanTVert
+  comment: OCR extension for Han traditional vertical script (script/HanT_vert)
 
 ocr-han-traditional-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptHanT
+  comment: OCR extension for Han traditional script (script/HanT)
 
 ocr-han-simplified-vertical-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptHanSVert
+  comment: OCR extension for Han simplified vertical script (script/HanS_vert)
 
 ocr-han-simplified-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptHanS
+  comment: OCR extension for Han simplified script (script/HanS)
 
 ocr-gujarati-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptGujarati
+  comment: OCR extension for Gujarati script (script/Gujarati)
 
 ocr-georgian-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptGeorgian
+  comment: OCR extension for Georgian script (script/Georgian)
 
 ocr-fraktur-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptFraktur
+  comment: OCR extension for Fraktur script (script/Fraktur)
 
 ocr-devanagari-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptDevanagari
+  comment: OCR extension for Devanagari script (script/Devanagari)
 
 ocr-bengali-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptBengali
+  comment: OCR extension for Bengali script (script/Bengali)
 
 ocr-sanskrit:
   flatpak: com.github.unrud.djpdf.OCR.San
+  comment: OCR extension for Sanskrit (san)
 
 ocr-russian:
   flatpak: com.github.unrud.djpdf.OCR.Rus
+  comment: OCR extension for Russian (rus)
 
 ocr-romanian-moldavian-moldovan:
   flatpak: com.github.unrud.djpdf.OCR.Ron
+  comment: OCR extension for Romanian; Moldavian; Moldovan (ron)
 
 ocr-quechua:
   flatpak: com.github.unrud.djpdf.OCR.Que
+  comment: OCR extension for Quechua (que)
 
 ocr-pushto-pashto:
   flatpak: com.github.unrud.djpdf.OCR.Pus
+  comment: OCR extension for Pushto; Pashto (pus)
 
 ocr-panjabi-punjabi:
   flatpak: com.github.unrud.djpdf.OCR.Pan
+  comment: OCR extension for Panjabi; Punjabi (pan)
 
 ocr-oriya:
   flatpak: com.github.unrud.djpdf.OCR.Ori
+  comment: OCR extension for Oriya (ori)
 
 ocr-occitan-post-1500:
   flatpak: com.github.unrud.djpdf.OCR.Oci
+  comment: OCR extension for Occitan (post 1500) (oci)
 
 ocr-norwegian:
   flatpak: com.github.unrud.djpdf.OCR.Nor
+  comment: OCR extension for Norwegian (nor)
 
 ocr-nepali:
   flatpak: com.github.unrud.djpdf.OCR.Nep
+  comment: OCR extension for Nepali (nep)
 
 ocr-burmese:
   flatpak: com.github.unrud.djpdf.OCR.Mya
+  comment: OCR extension for Burmese (mya)
 
 ocr-malay:
   flatpak: com.github.unrud.djpdf.OCR.Msa
+  comment: OCR extension for Malay (msa)
 
 ocr-maori:
   flatpak: com.github.unrud.djpdf.OCR.Mri
+  comment: OCR extension for Maori (mri)
 
 ocr-mongolian:
   flatpak: com.github.unrud.djpdf.OCR.Mon
+  comment: OCR extension for Mongolian (mon)
 
 ocr-maltese:
   flatpak: com.github.unrud.djpdf.OCR.Mlt
+  comment: OCR extension for Maltese (mlt)
 
 ocr-macedonian:
   flatpak: com.github.unrud.djpdf.OCR.Mkd
+  comment: OCR extension for Macedonian (mkd)
 
 ocr-marathi:
   flatpak: com.github.unrud.djpdf.OCR.Mar
+  comment: OCR extension for Marathi (mar)
 
 ocr-malayalam:
   flatpak: com.github.unrud.djpdf.OCR.Mal
+  comment: OCR extension for Malayalam (mal)
 
 ocr-lithuanian:
   flatpak: com.github.unrud.djpdf.OCR.Lit
+  comment: OCR extension for Lithuanian (lit)
 
 ocr-latvian:
   flatpak: com.github.unrud.djpdf.OCR.Lav
+  comment: OCR extension for Latvian (lav)
 
 ocr-latin:
   flatpak: com.github.unrud.djpdf.OCR.Lat
+  comment: OCR extension for Latin (lat)
 
 ocr-lao:
   flatpak: com.github.unrud.djpdf.OCR.Lao
+  comment: OCR extension for Lao (lao)
 
 ocr-korean-vertical:
   flatpak: com.github.unrud.djpdf.OCR.KorVert
+  comment: OCR extension for Korean (vertical) (kor_vert)
 
 ocr-korean:
   flatpak: com.github.unrud.djpdf.OCR.Kor
+  comment: OCR extension for Korean (kor)
 
 ocr-kurmanji-kurdish-latin-script:
   flatpak: com.github.unrud.djpdf.OCR.Kmr
+  comment: OCR extension for Kurmanji (Kurdish - Latin Script) (kmr)
 
 ocr-central-khmer:
   flatpak: com.github.unrud.djpdf.OCR.Khm
+  comment: OCR extension for Central Khmer (khm)
 
 ocr-kazakh:
   flatpak: com.github.unrud.djpdf.OCR.Kaz
+  comment: OCR extension for Kazakh (kaz)
 
 ocr-georgian-old:
   flatpak: com.github.unrud.djpdf.OCR.KatOld
+  comment: OCR extension for Georgian - Old (kat_old)
 
 ocr-georgian:
   flatpak: com.github.unrud.djpdf.OCR.Kat
+  comment: OCR extension for Georgian (kat)
 
 ocr-kannada:
   flatpak: com.github.unrud.djpdf.OCR.Kan
+  comment: OCR extension for Kannada (kan)
 
 ocr-japanese-vertical:
   flatpak: com.github.unrud.djpdf.OCR.JpnVert
+  comment: OCR extension for Japanese (vertical) (jpn_vert)
 
 ocr-japanese:
   flatpak: com.github.unrud.djpdf.OCR.Jpn
+  comment: OCR extension for Japanese (jpn)
 
 ocr-javanese:
   flatpak: com.github.unrud.djpdf.OCR.Jav
+  comment: OCR extension for Javanese (jav)
 
 ocr-italian-old:
   flatpak: com.github.unrud.djpdf.OCR.ItaOld
+  comment: OCR extension for Italian - Old (ita_old)
 
 ocr-italian:
   flatpak: com.github.unrud.djpdf.OCR.Ita
+  comment: OCR extension for Italian (ita)
 
 ocr-icelandic:
   flatpak: com.github.unrud.djpdf.OCR.Isl
+  comment: OCR extension for Icelandic (isl)
 
 ocr-indonesian:
   flatpak: com.github.unrud.djpdf.OCR.Ind
+  comment: OCR extension for Indonesian (ind)
 
 ocr-hungarian:
   flatpak: com.github.unrud.djpdf.OCR.Hun
+  comment: OCR extension for Hungarian (hun)
 
 ocr-croatian:
   flatpak: com.github.unrud.djpdf.OCR.Hrv
+  comment: OCR extension for Croatian (hrv)
 
 ocr-haitian-haitian-creole:
   flatpak: com.github.unrud.djpdf.OCR.Hat
+  comment: OCR extension for Haitian; Haitian Creole (hat)
 
 ocr-gujarati:
   flatpak: com.github.unrud.djpdf.OCR.Guj
+  comment: OCR extension for Gujarati (guj)
 
 ocr-galician:
   flatpak: com.github.unrud.djpdf.OCR.Glg
+  comment: OCR extension for Galician (glg)
 
 ocr-scottish-gaelic:
   flatpak: com.github.unrud.djpdf.OCR.Gla
+  comment: OCR extension for Scottish Gaelic (gla)
 
 ocr-western-frisian:
   flatpak: com.github.unrud.djpdf.OCR.Fry
+  comment: OCR extension for Western Frisian (fry)
 
 ocr-french-middle-ca-1400-1600:
   flatpak: com.github.unrud.djpdf.OCR.Frm
+  comment: OCR extension for French, Middle (ca.1400-1600) (frm)
 
 ocr-german-fraktur:
   flatpak: com.github.unrud.djpdf.OCR.DeuFrak
+  comment: OCR extension for German - Fraktur (deu_frak)
 
 ocr-french:
   flatpak: com.github.unrud.djpdf.OCR.Fra
+  comment: OCR extension for French (fra)
 
 ocr-filipino-old-tagalog:
   flatpak: com.github.unrud.djpdf.OCR.Fil
+  comment: OCR extension for Filipino (old - Tagalog) (fil)
 
 ocr-persian:
   flatpak: com.github.unrud.djpdf.OCR.Fas
+  comment: OCR extension for Persian (fas)
 
 ocr-faroese:
   flatpak: com.github.unrud.djpdf.OCR.Fao
+  comment: OCR extension for Faroese (fao)
 
 ocr-basque:
   flatpak: com.github.unrud.djpdf.OCR.Eus
+  comment: OCR extension for Basque (eus)
 
 ocr-estonian:
   flatpak: com.github.unrud.djpdf.OCR.Est
+  comment: OCR extension for Estonian (est)
 
 ocr-math-equation-detection:
   flatpak: com.github.unrud.djpdf.OCR.Equ
+  comment: OCR extension for Math / equation detection (equ)
 
 ocr-esperanto:
   flatpak: com.github.unrud.djpdf.OCR.Epo
+  comment: OCR extension for Esperanto (epo)
 
 ocr-dzongkha:
   flatpak: com.github.unrud.djpdf.OCR.Dzo
+  comment: OCR extension for Dzongkha (dzo)
 
 ocr-german:
   flatpak: com.github.unrud.djpdf.OCR.Deu
+  comment: OCR extension for German (deu)
 
 ocr-danish-fraktur:
   flatpak: com.github.unrud.djpdf.OCR.DanFrak
+  comment: OCR extension for Danish - Fraktur (dan_frak)
 
 ocr-danish:
   flatpak: com.github.unrud.djpdf.OCR.Dan
+  comment: OCR extension for Danish (dan)
 
 ocr-corsican:
   flatpak: com.github.unrud.djpdf.OCR.Cos
+  comment: OCR extension for Corsican (cos)
 
 ocr-chinese-traditional-vertical:
   flatpak: com.github.unrud.djpdf.OCR.ChiTraVert
+  comment: OCR extension for Chinese - Traditional (vertical) (chi_tra_vert)
 
 ocr-chinese-traditional:
   flatpak: com.github.unrud.djpdf.OCR.ChiTra
+  comment: OCR extension for Chinese - Traditional (chi_tra)
 
 ocr-chinese-simplified-vertical:
   flatpak: com.github.unrud.djpdf.OCR.ChiSimVert
+  comment: OCR extension for Chinese - Simplified (vertical) (chi_sim_vert)
 
 ocr-cebuano:
   flatpak: com.github.unrud.djpdf.OCR.Ceb
+  comment: OCR extension for Cebuano (ceb)
 
 ocr-catalan-valencian:
   flatpak: com.github.unrud.djpdf.OCR.Cat
+  comment: OCR extension for Catalan; Valencian (cat)
 
 ocr-bulgarian:
   flatpak: com.github.unrud.djpdf.OCR.Bul
+  comment: OCR extension for Bulgarian (bul)
 
 ocr-bosnian:
   flatpak: com.github.unrud.djpdf.OCR.Bos
+  comment: OCR extension for Bosnian (bos)
 
 ocr-tibetan:
   flatpak: com.github.unrud.djpdf.OCR.Bod
+  comment: OCR extension for Tibetan (bod)
 
 ocr-bengali:
   flatpak: com.github.unrud.djpdf.OCR.Ben
+  comment: OCR extension for Bengali (ben)
 
 ocr-belarusian:
   flatpak: com.github.unrud.djpdf.OCR.Bel
+  comment: OCR extension for Belarusian (bel)
 
 clapper-enhancers:
   flatpak: com.github.rafostar.Clapper.Enhancers
+  comment: Plugins enhancing Clapper library capabilities
 
 nscan:
   flatpak: pl.youkai.nscan
+  comment: Network scanner.
 
 jddiff:
   flatpak: page.codeberg.JakobDev.jdDiff
+  comment: A graphical cross platform diff viewer
 
 vinegar:
   flatpak: org.vinegarhq.Vinegar
+  comment: Run Roblox Studio on Linux
 
 kimagemapeditor:
   flatpak: org.kde.kimagemapeditor
+  comment: HTML Image Map Editor
 
 kdiamond:
   flatpak: org.kde.kdiamond
+  comment: KDiamond is a three-in-a-row game by KDE
 
 iso-image-writer:
   flatpak: org.kde.isoimagewriter
+  comment: Write an ISO Image to a USB Disk
 
 granatier:
   flatpak: org.kde.granatier
+  comment: Bomberman clone
 
 francis:
   flatpak: org.kde.francis
+  comment: Track your time
 
 ikona:
   flatpak: org.kde.Ikona
+  comment: Ikona is a design companion to help you design icons
 
 hnefatafl:
   flatpak: org.hnefatafl.hnefatafl_client
+  comment: Play the game
 
 typography:
   flatpak: org.gnome.design.Typography
+  comment: Look up text styles
 
 color-palette:
   flatpak: org.gnome.design.Palette
+  comment: Color Palette tool
 
 contrast:
   flatpak: org.gnome.design.Contrast
+  comment: Check contrast between two colors
 
 citations:
   flatpak: org.gnome.World.Citations
+  comment: Manage your bibliography
 
 famistudio:
   flatpak: org.famistudio.FamiStudio
+  comment: FamiStudio NES Music Editor
 
 grabber:
   flatpak: org.bionus.Grabber
+  comment: Very customizable imageboard/booru downloader with powerful filenaming features
 
 tachidesk-vaadinui:
   flatpak: online.hatsune_miku.tachidesk-vaadinui
+  comment: Desktop client for Tachidesk
 
 reddy:
   flatpak: net.krafting.Reddy
+  comment: Repost Reddit images to Lemmy
 
 pacman-log-viewer:
   flatpak: it.cuteworks.pacmanlogviewer
+  comment: Inspect pacman log
 
 fstl-e:
   flatpak: io.github.wdaniau.fstl
+  comment: Fast stl viewer
 
 waylyrics:
   flatpak: io.github.waylyrics.Waylyrics
+  comment: Show desktop lyrics in a furry way
 
 mangojuice:
   flatpak: io.github.radiolamp.mangojuice
+  comment: Graphical configurator Mangohud.
 
 quaternion:
   flatpak: io.github.quotient_im.Quaternion
+  comment: Qt-based client for Matrix networks
 
 makou-reactor:
   flatpak: io.github.myst6re.makoureactor
+  comment: A Field Editor for Final Fantasy VII
 
 countdown:
   flatpak: io.github.lainsce.Countdown
+  comment: Track events until they happen or since they happened
 
 colorway:
   flatpak: io.github.lainsce.Colorway
+  comment: Generate color pairings
 
 hidamari:
   flatpak: io.github.jeffshee.Hidamari
+  comment: Video wallpaper for Linux
 
 ppdeditor:
   flatpak: io.github.fralonra.PpdEditor
+  comment: 2D paper doll editor
 
 opsta-kultura:
   flatpak: io.github.dida_code.OpstaKultura
+  comment: Game, knowledge quiz
 
 random-number-five:
   flatpak: io.github.FailurePoint.RandomNumberFive
+  comment: Random number generator for For the Linux desktop!
 
 gencolormap:
   flatpak: de.marlam.gencolormap
+  comment: Color Map Generator
 
 notify:
   flatpak: com.ranfdev.Notify
+  comment: Receive notifications from ntfy.sh.
 
 diccionario-de-la-lengua:
   flatpak: com.mardojai.DiccionarioLengua
+  comment: Busca palabras en el DLE
 
 caffeine:
   flatpak: com.konstantintutsch.Caffeine
+  comment: Calculate your coffee
 
 qwertone:
   flatpak: com.gitlab.azymohliad.Qwertone
+  comment: Turns your PC into musical instrument
 
 file-manager:
   flatpak: com.expidusos.file_manager
+  comment: ExpidusOS File Manager
 
 chatterino:
   flatpak: com.chatterino.chatterino
+  comment: Chat client for twitch.tv
 
 bolt-launcher:
   flatpak: com.adamcake.Bolt
+  comment: Third-party Jagex launcher
 
 qspeakers:
   flatpak: rocks.noise.qspeakers
+  comment: Loudspeaker design software
 
 koreader:
   flatpak: rocks.koreader.KOReader
+  comment: Ebook reader
 
 main-menu:
   flatpak: page.codeberg.libre_menu_editor.LibreMenuEditor
+  comment: Customize the menu
 
 shotcut:
   flatpak: org.shotcut.Shotcut
+  comment: Video editor
 
 qpwgraph:
   flatpak: org.rncbc.qpwgraph
+  comment: A PipeWire Graph Qt GUI Interface
 
 kwave:
   flatpak: org.kde.kwave
+  comment: Sound editor
 
 jamovi:
   flatpak: org.jamovi.jamovi
+  comment: Real-time statistical spreadsheet
 
 freecad:
   flatpak: org.freecad.FreeCAD
+  comment: An open source parametric 3D CAD modeler
 
 goodvibes:
   flatpak: io.gitlab.Goodvibes
+  comment: Play web radios
 
 ecotubehq:
   flatpak: io.github.ecotubehq.player
+  comment: Energy Efficient Video Player
 
 celluloid:
   flatpak: io.github.celluloid_player.Celluloid
+  comment: Plays videos
 
 prusaslicer:
   flatpak: com.prusa3d.PrusaSlicer
+  comment: The Slicer for Every Maker
 
 0-a-d:
   flatpak: com.play0ad.zeroad
+  comment: Real-time strategy game
 
 xournal:
   flatpak: com.github.xournalpp.xournalpp
+  comment: Take handwritten notes
 
 gapless:
   flatpak: com.github.neithern.g4music
+  comment: Play your music elegantly
 
 bambu-studio:
   flatpak: com.bambulab.BambuStudio
+  comment: Get perfect 3D prints!
 
 kodi:
   flatpak: tv.kodi.Kodi
+  comment: Ultimate entertainment center
 
 jazz-resurrection:
   flatpak: tk.deat.Jazz2Resurrection
+  comment: A re-implementation of Jazz Jackrabbit 2
 
 syng:
   flatpak: rocks.syng.Syng
+  comment: Easily host karaoke events
 
 imaginer:
   flatpak: page.codeberg.Imaginer.Imaginer
+  comment: Imagine with AI
 
 battle-for-wesnoth:
   flatpak: org.wesnoth.Wesnoth
+  comment: A turn-based strategy game with a high fantasy theme
 
 sober:
   flatpak: org.vinegarhq.Sober
+  comment: Play, chat & explore on Roblox
 
 qsynth:
   flatpak: org.rncbc.qsynth
+  comment: A fluidsynth Qt GUI Interface
 
 iaito:
   flatpak: org.radare.iaito
+  comment: GUI for radare2
 
 surge-engine:
   flatpak: org.opensurge2d.OpenSurge
+  comment: Fun retro platformer & game creator
 
 hushboard:
   flatpak: org.kryogenix.hushboard
+  comment: Mute your mic while you’re typing
 
 nuclear:
   flatpak: org.js.nuclear.Nuclear
+  comment: Unlimited free music player
 
 gottet:
   flatpak: org.gottcode.Gottet
+  comment: Clear the board of falling blocks
 
 clocks:
   flatpak: org.gnome.clocks
+  comment: Keep track of time
 
 pika-backup:
   flatpak: org.gnome.World.PikaBackup
+  comment: Keep your data safe
 
 shotwell:
   flatpak: org.gnome.Shotwell
+  comment: Digital photo organizer
 
 d-j-dup-backups:
   flatpak: org.gnome.DejaDup
+  comment: Protect yourself from data loss
 
 contacts:
   flatpak: org.gnome.Contacts
+  comment: Manage your contacts
 
 what-ip:
   flatpak: org.gabmus.whatip
+  comment: Info on your IP
 
 flightgear:
   flatpak: org.flightgear.FlightGear
+  comment: Flight simulator
 
 live-captions:
   flatpak: net.sapples.LiveCaptions
+  comment: Live Captioning for the desktop
 
 superfluous-returnz:
   flatpak: net.ptilouk.superfluous
+  comment: The unnecessary video game of a useless superhero
 
 jupii:
   flatpak: net.mkiol.Jupii
+  comment: Play media on UPnP/DLNA devices
 
 tsukimi:
   flatpak: moe.tsuna.tsukimi
+  comment: A simple third-party Emby client
 
 ticket-booth:
   flatpak: me.iepure.Ticketbooth
+  comment: Keep track of your favorite shows
 
 whisper:
   flatpak: it.mijorus.whisper
+  comment: Listen to your mic
 
 greenery:
   flatpak: io.greenfire.Greenery
+  comment: Crypto bookkeeping wallet
 
 wardrobe:
   flatpak: io.github.swordpuffin.wardrobe
+  comment: Desktop customization made easy
 
 mousai:
   flatpak: io.github.seadve.Mousai
+  comment: Identify songs in seconds
 
 rosary:
   flatpak: io.github.roseblume.rosary
+  comment: Study Christianity
 
 vahatraker:
   flatpak: io.github.rdybka.vht
+  comment: Live MIDI sequencer
 
 newelle:
   flatpak: io.github.qwersyk.Newelle
+  comment: AI chatbot
 
 pantheon-tweaks:
   flatpak: io.github.pantheon_tweaks.pantheon-tweaks
+  comment: Tweak Pantheon settings
 
 trivia-quiz:
   flatpak: io.github.nokse22.trivia-quiz
+  comment: Respond to endless questions
 
 resonance:
   flatpak: io.github.nate_xyz.Resonance
+  comment: Harmonize your listening experience
 
 chromatic:
   flatpak: io.github.nate_xyz.Chromatic
+  comment: Fine-tune your instruments
 
 rss-guard-lite:
   flatpak: io.github.martinrotter.rssguardlite
+  comment: Simple, yet powerful news feed reader (no built-in web browser)
 
 rss-guard:
   flatpak: io.github.martinrotter.rssguard
+  comment: Simple, yet powerful news feed reader
 
 pwall:
   flatpak: io.github.ltiber.Pwall
+  comment: browse your photos/videos
 
 lact:
   flatpak: io.github.ilya_zlobintsev.LACT
+  comment: Control your graphics cards
 
 sopwith:
   flatpak: io.github.fragglet.sdl_sopwith
+  comment: Classic biplane shoot-'em up
 
 coppwr:
   flatpak: io.github.dimtpap.coppwr
+  comment: Visual, low level PipeWire control
 
 examine:
   flatpak: io.github.cosmic_utils.Examine
+  comment: View system information
 
 pure-data-pd:
   flatpak: info.puredata.Pd
+  comment: realtime computer music system
 
 exult-ultima-vii-engine:
   flatpak: info.exult.exult
+  comment: Cross-platform engine for the Ultima VII games
 
 bodev:
   flatpak: fr.sgued.bodev
+  comment: Low level dev tools
 
 clockode:
   flatpak: dev.mariinkys.Clockode
+  comment: Minimal TOTP client
 
 turntable:
   flatpak: dev.geopjr.Turntable
+  comment: Scrobble your music
 
 tuba:
   flatpak: dev.geopjr.Tuba
+  comment: Browse the Fediverse
 
 collision:
   flatpak: dev.geopjr.Collision
+  comment: Check hashes for your files
 
 keypunch:
   flatpak: dev.bragefuglseth.Keypunch
+  comment: Practice your typing skills
 
 picture-of-the-day:
   flatpak: de.swsnr.pictureoftheday
+  comment: Your daily wallpaper
 
 formatlab:
   flatpak: com.warlordsoftwares.formatlab
+  comment: Video Converter With Friendly UI
 
 goldwarden:
   flatpak: com.quexten.Goldwarden
+  comment: A Bitwarden compatible desktop client
 
 maxint:
   flatpak: com.maxint.maxint
+  comment: A money management platform
 
 torrhunt:
   flatpak: com.ktechpit.torrhunt
+  comment: Torrent Search Engine
 
 picguard-pro:
   flatpak: com.kjxbyz.PicGuardPro
+  comment: Your pictures, your signature
 
 picguard:
   flatpak: com.kjxbyz.PicGuard
+  comment: Your pictures, your signature
 
 openmadoola:
   flatpak: com.infochunk.OpenMadoola
+  comment: Wing of Madoola reimplementation
 
 gai:
   flatpak: com.iche2.gai
+  comment: Generative-AI tools for beginner
 
 hack:
   flatpak: com.hack_computer.Clubhouse
+  comment: The destination for kids to learn how to code
 
 vokoscreenng:
   flatpak: com.github.vkohaupt.vokoscreenNG
+  comment: Easy to use screencast creator
 
 reco:
   flatpak: com.github.ryonakano.reco
+  comment: Focus on recording
 
 ludusavi:
   flatpak: com.github.mtkennerly.ludusavi
+  comment: Back up your PC video game save data
 
 tuner:
   flatpak: com.github.louis77.tuner
+  comment: Internet Radio
 
 netease-cloud-music-gtk4:
   flatpak: com.github.gmg137.netease-cloud-music-gtk
+  comment: Linux music player for NetEase Cloud Music
 
 dippi:
   flatpak: com.github.cassidyjames.dippi
+  comment: Calculate display info like DPI
 
 floorp:
   flatpak: one.ablaze.floorp
+  comment: A Firefox-based, flexible browser developed in Japan with a variety of features.
 
 simple-wireplumber-gui:
   flatpak: io.github.dyegoaurelio.simple-wireplumber-gui
+  comment: A simple GTK4 GUI for PipeWire
 
 bavarder:
   flatpak: io.github.Bavarder.Bavarder
+  comment: Chit-chat with an AI
 
 graphs:
   flatpak: se.sjoerd.Graphs
+  comment: Plot and manipulate data
 
 jddesktopentryedit:
   flatpak: page.codeberg.JakobDev.jdDesktopEntryEdit
+  comment: A graphical Program to create and edit Desktop Entries
 
 zrythm:
   flatpak: org.zrythm.Zrythm
+  comment: Digital audio workstation
 
 xnec2c:
   flatpak: org.xnec2c.Xnec2c
+  comment: A multi-threaded EM tool based on NEC2 to model antenna radiation patterns
 
 turbowarp:
   flatpak: org.turbowarp.TurboWarp
+  comment: Make games, animations, and stories
 
 tribler:
   flatpak: org.tribler.Tribler
+  comment: Towards making Bittorrent anonymous and impossible to shut down.
 
 glaxnimate:
   flatpak: org.mattbas.Glaxnimate
+  comment: Vector Animation Editor
 
 librepcb:
   flatpak: org.librepcb.LibrePCB
+  comment: Design Schematics and PCBs
 
 kicad:
   flatpak: org.kicad.KiCad
+  comment: An EDA suite for schematic and circuit board design
 
 keepassxc:
   flatpak: org.keepassxc.KeePassXC
   aliases: [keepass]
+  comment: Community-driven port of the Windows application “KeePass Password Safe”
 
 subtitle-composer:
   flatpak: org.kde.subtitlecomposer
+  comment: Video subtitle editor that supports basic and advanced editing operations
 
 lokalize:
   flatpak: org.kde.lokalize
+  comment: Computer-aided translation system
 
 labplot:
   flatpak: org.kde.labplot2
+  comment: Interactive Data Visualization and Analysis
 
 ktuberling:
   flatpak: org.kde.ktuberling
+  comment: A simple constructor game suitable for children and adults alike
 
 kst:
   flatpak: org.kde.kst
+  comment: Interactive Data Visualization and Analysis
 
 krdc:
   flatpak: org.kde.krdc
+  comment: Connect with RDP or VNC to another computer
 
 kde-itinerary:
   flatpak: org.kde.itinerary
+  comment: Digital travel assistant
 
 elisa:
   flatpak: org.kde.elisa
+  comment: Play local music and listen to online radio
 
 jasp:
   flatpak: org.jaspstats.JASP
+  comment: Classical and Bayesian Statistics
 
 gnucash:
   flatpak: org.gnucash.GnuCash
+  comment: Manage your finances, accounts, and investments
 
 maps:
   flatpak: org.gnome.Maps
+  comment: Find places around the world
 
 glade:
   flatpak: org.gnome.Glade
+  comment: Create or open user interface designs for GTK+ applications
 
 builder:
   flatpak: org.gnome.Builder
+  comment: Create applications for GNOME
 
 gimp:
   flatpak: org.gimp.GIMP
+  comment: Create images and edit photographs
 
 gaphor:
   flatpak: org.gaphor.Gaphor
+  comment: Simple UML and SysML modeling tool
 
 bustle:
   flatpak: org.freedesktop.Bustle
+  comment: Visualize D-Bus activity
 
 fre-ac:
   flatpak: org.freac.freac
+  comment: Audio converter and CD ripper
 
 musicpod:
   flatpak: org.feichtmeier.Musicpod
+  comment: Music, podcast and internet radio player
 
 mkvtoolnix:
   flatpak: org.bunkus.mkvtoolnix-gui
+  comment: Matroska files creator and tools
 
 bluefish:
   flatpak: nl.openoffice.bluefish
+  comment: Code and text editor with many web and software development extras
 
 drumstick-midi-monitor:
   flatpak: net.sourceforge.kmidimon
+  comment: Drumstick MIDI Monitor is a MIDI monitor for Linux using ALSA sequencer
 
 lifeograph:
   flatpak: net.sourceforge.Lifeograph
+  comment: Advanced personal note taking application
 
 melonds:
   flatpak: net.kuribo64.melonDS
+  comment: Nintendo DS and DSi emulator
 
 remote-desktop-manager:
   flatpak: net.devolutions.RDM
+  comment: Centralize, Manage and Secure Remote Connections
 
 qt-design-studio:
   flatpak: io.qt.qtdesignstudio
+  comment: UI Designer for Qml applications
 
 switcheroo:
   flatpak: io.gitlab.adhami3310.Converter
+  comment: Convert and manipulate images
 
 quod-libet:
   flatpak: io.github.quodlibet.QuodLibet
+  comment: Listen to, browse, or edit your audio collection
 
 peazip:
   flatpak: io.github.peazip.PeaZip
+  comment: Free file archiver utility
 
 near-infinity:
   flatpak: io.github.nearinfinitybrowser.nearinfinity
+  comment: An Infinity Engine Resource Browser and Editor
 
 scid:
   flatpak: io.github.benini.scid
+  comment: A chess database application
 
 mailviewer:
   flatpak: io.github.alescdb.mailviewer
+  comment: EML and MSG file viewer
 
 logarithmplotter:
   flatpak: eu.ad5001.LogarithmPlotter
+  comment: Create and edit Bode plots
 
 cartero:
   flatpak: es.danirod.Cartero
+  comment: Make HTTP requests and test APIs
 
 gta5view:
   flatpak: de.syping.gta5view
+  comment: Open and edit GTA V profiles
 
 xca:
   flatpak: de.hohnstaedt.xca
+  comment: X Certificate and Key management
 
 field-monitor:
   flatpak: de.capypara.FieldMonitor
+  comment: Access VMs and external screens
 
 formiko:
   flatpak: cz.zeropage.Formiko
+  comment: reStructuredText and MarkDown editor
 
 thincast-remote-desktop-client:
   flatpak: com.thincast.client
+  comment: A free RDP (Remote Desktop Protocol) Client for Linux, macOS and Windows
 
 pikatorrent:
   flatpak: com.pikatorrent.PikaTorrent
+  comment: Just pick a Torrent, stream and download
 
 librum:
   flatpak: com.librumreader.librum
+  comment: A modern e-book reader and library manager
 
 qview:
   flatpak: com.interversehq.qView
+  comment: Practical and minimal image viewer
 
 power-tab-editor:
   flatpak: com.github.powertab.powertabeditor
+  comment: View and edit guitar tablature
 
 minder:
   flatpak: com.github.phase1geo.minder
+  comment: Create, develop and visualize your ideas
 
 makhber:
   flatpak: com.github.makhber.Makhber
+  comment: Visualization and Analysis of Scientific Data
 
 writernote:
   flatpak: com.github.giacomogroppi.writernote-qt
+  comment: Writernote is a multiplatform application that allows you to take notes by recording audio, translate it later into text, and listen to it in an intelligent way.
 
 gabut-download-manager:
   flatpak: com.github.gabutakut.gabutdm
+  comment: Simple and Fast Download Manager
 
 rnote:
   flatpak: com.github.flxzt.rnote
+  comment: Sketch and take handwritten notes
 
 beaver-notes:
   flatpak: com.beavernotes.beavernotes
+  comment: Private note taking app
 
 penpot-desktop:
   flatpak: com.authormore.penpotdesktop
+  comment: Design and code beautiful products together
 
 saber:
   flatpak: com.adilhanney.saber
+  comment: The notes app built for handwriting
 
 gnome-software-development-kit-version-48:
   flatpak: org.gnome.Sdk
+  comment: Tools and headers for developing applications using the GNOME application platform
 
 freedesktop-sdk:
   flatpak: org.freedesktop.Sdk
+  comment: Tools and headers for developing applications
 
 vala-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.vala
+  comment: An object-oriented programming language with a self-hosting compiler that generates C code and uses the GObject system
 
 rust-nightly-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.rust-nightly
+  comment: Rust nightly compiler and tools
 
 openjdk-21-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.openjdk21
+  comment: The LTS (long term support) version of the OpenJDK JRE and JDK
 
 openjdk-17-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.openjdk17
+  comment: The LTS (long term support) version of the OpenJDK JRE and JDK
 
 openjdk-11-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.openjdk11
+  comment: The LTS (long term support) version of the OpenJDK JRE and JDK
 
 openjdk-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.openjdk
+  comment: The latest version of the OpenJDK JRE and JDK
 
 gnat-14:
   flatpak: org.freedesktop.Sdk.Extension.gnat14
+  comment: GNU Ada/SPARK compiler 14.x and build environment
 
 gnat-13:
   flatpak: org.freedesktop.Sdk.Extension.gnat13
+  comment: GNU Ada/SPARK compiler and build environment
 
 freedesktop-platform:
   flatpak: org.freedesktop.Platform
+  comment: Runtime platform for applications
 
 speech-note-nvidia:
   flatpak: net.mkiol.SpeechNote.Addon.nvidia
+  comment: Support for GPU acceleration with NVIDIA graphics cards in Speech Note
 
 ollama-instance:
   flatpak: com.jeffser.Alpaca.Plugins.Ollama
+  comment: Run and create local models
 
 dos-browser:
   flatpak: zone.dos.Browser
+  comment: Browser with built-in acceleration for DOS/Win9x games
 
 razergenie:
   flatpak: xyz.z3ntu.razergenie
+  comment: Configure and control your Razer devices
 
 door-knocker:
   flatpak: xyz.tytanium.DoorKnocker
+  comment: Check the availability of portals
 
 exercise-timer:
   flatpak: xyz.safeworlds.hiit
+  comment: Train and rest with high intensity
 
 rescribe:
   flatpak: xyz.rescribe.rescribe
+  comment: OCR images, PDFs and Google Books
 
 moment:
   flatpak: xyz.mx_moment.moment
+  comment: Customizable and keyboard-operable Matrix client
 
 hyperplay:
   flatpak: xyz.hyperplay.HyperPlay
+  comment: Play Windows and Linux Games
 
 deckr:
   flatpak: surf.deckr.deckr
+  comment: Deckr Desktop App
 
 dissent:
   flatpak: so.libdb.dissent
+  comment: Tiny native Discord app
 
 cider:
   flatpak: sh.cider.Cider
+  comment: An open source and community oriented Apple Music client
 
 giscan:
   flatpak: se.sjoerd.GIScan
+  comment: Read and analyze GISAXS data stored in cbf format
 
 keenetic-manager:
   flatpak: ru.toxblh.KeeneticManager
+  comment: Provides the ability to manage some features of the Keenetic router more easily
 
 libretrack:
   flatpak: ru.proninyaroslav.libretrack
+  comment: Private, cross-platform package tracking app
 
 librelinkupdesktop:
   flatpak: rocks.poopjournal.librelinkupdesktop
+  comment: This is a desktop application that fetches your blood sugar from LibreLinkUp
 
 shopping-list:
   flatpak: ro.hume.cosmin.ShoppingList
+  comment: A shopping list application for GNU/Linux mobile devices
 
 junction:
   flatpak: re.sonny.Junction
+  comment: Application chooser
 
 eloquent:
   flatpak: re.sonny.Eloquent
+  comment: Your proofreading assistant
 
 cutter:
   flatpak: re.rizin.cutter
+  comment: Free and Open Source Reverse Engineering Platform powered by Rizin and Qt
 
 openfreebuds:
   flatpak: pw.mmk.OpenFreebuds
+  comment: Companion app for HUAWEI earphones
 
 lanchat:
   flatpak: pl.youkai.lanchat
+  comment: LAN chat and file transfer
 
 refine:
   flatpak: page.tesk.Refine
+  comment: Tweak various aspects of GNOME
 
 cartridges:
   flatpak: page.kramo.Cartridges
+  comment: Launch all your games
 
 librerama:
   flatpak: page.codeberg.yeldham.Librerama
+  comment: A free/libre fast-paced arcade collection of mini-games
 
 satellite:
   flatpak: page.codeberg.tpikonen.satellite
+  comment: Check your GPS reception and save your tracks
 
 geobug:
   flatpak: page.codeberg.tpikonen.geobug
+  comment: Check your location and save it to a GPX track
 
 pfeilspiel-tng-international:
   flatpak: page.codeberg.maerchenfeeimgarten.Pfeilspiel
+  comment: A game about arrows that requires a close look
 
 jdtextedit:
   flatpak: page.codeberg.JakobDev.jdTextEdit
+  comment: An advanced text editor
 
 jdsimpleautostart:
   flatpak: page.codeberg.JakobDev.jdSimpleAutostart
+  comment: Edit autostart entries
 
 jdreplace:
   flatpak: page.codeberg.JakobDev.jdReplace
+  comment: With jdReplace you can replace a text in all files of a directory
 
 jdprocessfilewatcher:
   flatpak: page.codeberg.JakobDev.jdProcessFileWatcher
+  comment: Effortlessly monitor and display real-time file access for any process
 
 jdflatpaksnapshot:
   flatpak: page.codeberg.JakobDev.jdFlatpakSnapshot
+  comment: A Program to create Snapshots of Flatpak Apps
 
 jdeolconverter:
   flatpak: page.codeberg.JakobDev.jdEolConverter
+  comment: Converts End of Line of all files in a directory
 
 jddbusdebugger:
   flatpak: page.codeberg.JakobDev.jdDBusDebugger
+  comment: Advanced D-Bus Debugger
 
 jdanimatedimageeditor:
   flatpak: page.codeberg.JakobDev.jdAnimatedImageEditor
+  comment: A simple program for creating animated Images
 
 karoto-shopping-list:
   flatpak: page.codeberg.DrRac27.Karoto
+  comment: A shopping list app for Linux mobile
 
 ristretto:
   flatpak: org.xfce.ristretto
+  comment: Fast and lightweight image viewer
 
 wezterm:
   flatpak: org.wezfurlong.wezterm
+  comment: Powerful terminal and multiplexer
 
 upscayl:
   flatpak: org.upscayl.Upscayl
+  comment: Free and Open Source AI Image Upscaler
 
 tor-browser-launcher:
   flatpak: org.torproject.torbrowser-launcher
+  comment: A program to help you download, keep updated, and run the Tor Browser Bundle
 
 saldo:
   flatpak: org.tabos.saldo
+  comment: Check your bank accounts
 
 roger-router:
   flatpak: org.tabos.roger
+  comment: Journal, Fax-Software and Call-Monitor for AVM FRITZ!Box or compatible
 
 syphon:
   flatpak: org.syphon.Syphon
+  comment: chat with your privacy and freedom intact
 
 syntalos:
   flatpak: org.syntalos.syntalos
+  comment: Synchronized data acquisition from diverse sources and flexible experiment control
 
 subtitld:
   flatpak: org.subtitld.Subtitld
+  comment: Subtitld is a software to create and edit subtitles
 
 fieldworks-language-explorer:
   flatpak: org.sil.FieldWorks
+  comment: Language and cultural data management
 
 scummvm:
   flatpak: org.scummvm.ScummVM
+  comment: Interpreter for numerous adventure games and role-playing games
 
 sasview:
   flatpak: org.sasview.sasview
+  comment: SasView is a Small Angle Scattering Analysis Software Package
 
 biplanes-revival:
   flatpak: org.regular_dev.biplanes_revival
+  comment: Old cellphone arcade recreation
 
 pydpainter:
   flatpak: org.pydpainter.PyDPainter
+  comment: Pixel art paint program
 
 pitivi:
   flatpak: org.pitivi.Pitivi
+  comment: Create and edit your own movies
 
 openandroidinstaller:
   flatpak: org.openandroidinstaller.OpenAndroidInstaller
+  comment: Makes installing alternative Android distributions nice and easy
 
 cavalier:
   flatpak: org.nickvision.cavalier
+  comment: Visualize audio with CAVA
 
 naev:
   flatpak: org.naev.Naev
+  comment: 2D action/rpg space trading combat game
 
 thunderbird:
   flatpak: org.mozilla.Thunderbird
+  comment: Thunderbird is a free and open source email, newsfeed, chat, and calendaring client
 
 webappreader:
   flatpak: org.mintguide.WebAppReader
+  comment: Downloading and viewing websites offline
 
 scoreboard:
   flatpak: org.metal3d.scoreboard
+  comment: A simple scoreboard to count points for any game
 
 lvnauth:
   flatpak: org.lvnauth.LVNAuth
+  comment: Create and play visual novels
 
 hardware-probe:
   flatpak: org.linux_hardware.hw-probe
+  comment: Check operability of computer hardware and find drivers
 
 retroarch:
   flatpak: org.libretro.RetroArch
+  comment: Frontend for emulators, game engines and media players
 
 librecad:
   flatpak: org.librecad.librecad
+  comment: 2D Computer Aided Design (CAD)
 
 skanpage:
   flatpak: org.kde.skanpage
+  comment: Scan multi-page documents and images
 
 skanlite:
   flatpak: org.kde.skanlite
+  comment: Image Scanning Application
 
 barcode-scanner:
   flatpak: org.kde.qrca
+  comment: Scan and create QR-Codes
 
 qmlkonsole:
   flatpak: org.kde.qmlkonsole
+  comment: Mobile terminal application
 
 kontact:
   flatpak: org.kde.kontact
+  comment: Handle all your emails, calendars, contacts and more within a single window
 
 knetwalk:
   flatpak: org.kde.knetwalk
+  comment: KNetWalk is a game for system administrators
 
 klickety:
   flatpak: org.kde.klickety
+  comment: An adaptation of the "clickomania" game.
 
 klevernotes:
   flatpak: org.kde.klevernotes
+  comment: Take and manage your notes
 
 klettres:
   flatpak: org.kde.klettres
+  comment: Learn The Alphabet
 
 kleopatra:
   flatpak: org.kde.kleopatra
+  comment: Certificate manager and cryptography app
 
 kiten:
   flatpak: org.kde.kiten
+  comment: Japanese Reference and Study Tool
 
 kgoldrunner:
   flatpak: org.kde.kgoldrunner
+  comment: Hunt Gold, Dodge Enemies and Solve Puzzles
 
 keysmith:
   flatpak: org.kde.keysmith
+  comment: Two-factor code generator for Plasma Mobile and Desktop
 
 kdiff3:
   flatpak: org.kde.kdiff3
+  comment: A file and folder comparison and merge tool
 
 kdevelop:
   flatpak: org.kde.kdevelop
+  comment: Featureful, plugin-extensible IDE for C/C++ and other programming languages
 
 kcolorchooser:
   flatpak: org.kde.kcolorchooser
+  comment: Color selector and palette editor
 
 kbounce:
   flatpak: org.kde.kbounce
+  comment: KBounce is a single player arcade game with the elements of puzzle
 
 kate:
   flatpak: org.kde.kate
+  comment: Advanced text editor
 
 kasts:
   flatpak: org.kde.kasts
+  comment: Podcast application
 
 kamoso:
   flatpak: org.kde.kamoso
+  comment: Use your webcam to take pictures and make videos
 
 filelight:
   flatpak: org.kde.filelight
+  comment: Show disk usage and delete unused files
 
 calligra:
   flatpak: org.kde.calligra
+  comment: All-in-one office solution
 
 crow-translate:
   flatpak: org.kde.CrowTranslate
+  comment: Application that allows you to translate and speak text using Mozhi
 
 pomodorolm:
   flatpak: org.jousse.vincent.Pomodorolm
+  comment: A simple, good looking and configurable pomodoro tracker with tray icon.
 
 jjazzlab:
   flatpak: org.jjazzlab.JJazzLab
+  comment: Generate backing tracks for any song
 
 jabref:
   flatpak: org.jabref.jabref
+  comment: Graphical Java application for managing BibTeX and biblatex (.bib) databases
 
 hikou-no-mizu:
   flatpak: org.hikounomizu.HikouNoMizu
+  comment: Platform-based, anime-styled fighting game
 
 burgernotes:
   flatpak: org.hectabit.Burgernotes
+  comment: Simple, private notes app
 
 groestlcoin-core:
   flatpak: org.groestlcoin.groestlcoin-qt
+  comment: Fully validating Groestlcoin peer-to-peer network node, wallet and GUI
 
 gnunet-messenger:
   flatpak: org.gnunet.Messenger
+  comment: Private and secure communication
 
 fava:
   flatpak: org.gnome.gitlab.johannesjh.favagtk
+  comment: Do your finances using fava and beancount
 
 icon-library:
   flatpak: org.gnome.design.IconLibrary
+  comment: Symbolic icons for your apps
 
 emblem:
   flatpak: org.gnome.design.Emblem
+  comment: Generate project avatars
 
 weather:
   flatpak: org.kde.kweather
+  comment: View real-time weather forecasts
 
 swell-foop:
   flatpak: org.gnome.SwellFoop
+  comment: Clear the screen by removing groups of colored and shaped tiles
 
 camera:
   flatpak: org.gnome.Snapshot
+  comment: Take pictures and videos
 
 music:
   flatpak: org.gnome.Music
+  comment: Play and organize your music collection
 
 mahjongg:
   flatpak: org.gnome.Mahjongg
+  comment: Match tiles and clear the board
 
 translation-editor:
   flatpak: org.gnome.Gtranslator
+  comment: Translate and localize applications and libraries
 
 characters:
   flatpak: org.gnome.Characters
+  comment: Character map application
 
 vulkaninfo:
   flatpak: org.freedesktop.Platform.VulkanInfo
+  comment: Vulkan Utilities and Tools
 
 vainfo:
   flatpak: org.freedesktop.Platform.VaInfo
+  comment: Intel VA-API Media Applications and Scripts for libva
 
 glxinfo:
   flatpak: org.freedesktop.Platform.GlxInfo
+  comment: Glxinfo is a command-line tool to diagnose problems with 3D acceleration setup
 
 clinfo:
   flatpak: org.freedesktop.Platform.ClInfo
+  comment: Print all known information about all available OpenCL platforms and devices in the system
 
 yoga-image-optimizer:
   flatpak: org.flozz.yoga-image-optimizer
+  comment: Convert and optimize JPEG, PNG and WebP images
 
 flare-empyrean-campaign:
   flatpak: org.flarerpg.Flare
+  comment: 2D action role playing game
 
 ktailctl:
   flatpak: org.fkoehler.KTailctl
+  comment: Manage and monitor Tailscale
 
 endless-key:
   flatpak: org.endlessos.Key
+  comment: Curated learning anytime, anywhere
 
 firefly-luciferin:
   flatpak: org.dpsoftware.FireflyLuciferin
+  comment: Ambient lighting software
 
 devilutionx:
   flatpak: org.diasurgical.DevilutionX
+  comment: Experience Diablo and Hellfire anew
 
 deskflow:
   flatpak: org.deskflow.deskflow
+  comment: Software Keyboard and mouse sharing
 
 dash-core:
   flatpak: org.dash.dash-core
+  comment: Fully validating Dash peer-to-peer network node, wallet and GUI
 
 lemma:
   flatpak: org.cvfosammmm.Lemma
+  comment: Note-Taking App
 
 bitcoin-core:
   flatpak: org.bitcoincore.bitcoin-qt
+  comment: Fully validating Bitcoin peer-to-peer network node, wallet and GUI
 
 btksorgu:
   flatpak: org.KekikAkademi.BTKSorgu
+  comment: Is the target website accessible in Turkey? (BTK)
 
 iconic:
   flatpak: nl.emphisia.icon
+  comment: Add icons on top of folders
 
 vcard-studio:
   flatpak: net.zdechov.app.vCardStudio
+  comment: Contact management application
 
 vmpk:
   flatpak: net.sourceforge.VMPK
+  comment: Virtual MIDI Piano Keyboard: a MIDI events generator and receiver
 
 nymvpn:
   flatpak: net.nymtech.NymVPN
+  comment: Decentralized, mixnet, and zero-knowledge VPN
 
 bible:
   flatpak: net.lugsole.bible_gui
+  comment: Bible app that supports multiple translations
 
 pedantik:
   flatpak: net.krafting.PedantiK
+  comment: Find the Wikipedia article
 
 outwiker:
   flatpak: net.jenyay.Outwiker
+  comment: Personal wiki and outliner.
 
 squiid:
   flatpak: net.imaginaryinfinity.Squiid
+  comment: Advanced algebraic & RPN calculator
 
 stretchly:
   flatpak: net.hovancik.Stretchly
+  comment: The break time reminder app
 
 tiny-crate:
   flatpak: net.hhoney.tinycrate
+  comment: Crate-chucking action puzzler
 
 candy-wrapper:
   flatpak: net.hhoney.candy
+  comment: Screen-wrapping arcade action
 
 converseen:
   flatpak: net.fasterland.converseen
+  comment: Convert and resize images in batch
 
 doomsday-engine:
   flatpak: net.dengine.Doomsday
+  comment: Enhanced source port of Doom, Heretic, and Hexen
 
 protonup-qt:
   flatpak: net.davidotek.pupgui2
+  comment: Install Wine- and Proton-based compatibility tools
 
 gromit-mpx:
   flatpak: net.christianbeier.Gromit-MPX
+  comment: Make annotations on the screen
 
 frigoligo:
   flatpak: net.casimirlab.frigoligo
+  comment: Your articles with you
 
 usbkvm:
   flatpak: net.carrotindustries.usbkvm
+  comment: Keyboard, video and mouse over USB
 
 karaoke-mugen:
   flatpak: moe.karaokes.mugen
+  comment: Karaoke session manager and player
 
 maverick-model-3d:
   flatpak: moe.clover.mm3d
+  comment: 3D model editor and animator for games
 
 earbud-manager-for-galaxy-buds:
   flatpak: me.timschneeberger.GalaxyBudsClient
+  comment: An unofficial app to manage any Galaxy Buds device manufactured by Samsung
 
 splitcat:
   flatpak: lol.janjic.Splitcat
+  comment: Simple application for splitting and merging files.
 
 collector:
   flatpak: it.mijorus.collector
+  comment: Drag and Drop to the next level
 
 iplan:
   flatpak: ir.imansalmani.IPlan
+  comment: Your plan for improving personal life and workflow
 
 vikunja:
   flatpak: io.vikunja.Vikunja
+  comment: The open-source to-do app
 
 podman-desktop:
   flatpak: io.podman_desktop.PodmanDesktop
+  comment: Manage Podman and other container engines from a single UI
 
 ossia-score:
   flatpak: io.ossia.score
+  comment: Sequencer for media artists
 
 openrct2:
   flatpak: io.openrct2.OpenRCT2
+  comment: Amusement park simulation
 
 inner-breeze:
   flatpak: io.naox.InnerBreeze
+  comment: A meditation app to guide and track your Wim Hof Breathing practice
 
 mimiri-notes:
   flatpak: io.mimiri.notes
+  comment: Secure and organized notes
 
 headlamp:
   flatpak: io.kinvolk.Headlamp
+  comment: An easy-to-use and extensible web UI for Kubernetes
 
 empty-clip:
   flatpak: io.gitlab.jazztickets.emptyclip
+  comment: Empty Clip is a top-down shooter action RPG
 
 package-transporter:
   flatpak: io.gitlab.gwendalj.package-transporter
+  comment: Transfer your applications across installations
 
 counters:
   flatpak: io.gitlab.guillermop.Counters
+  comment: Keep track of anything
 
 floodlight-presenter:
   flatpak: io.gitlab.floodlight.Presenter
+  comment: Free, libre, open source presentation and lyrics program
 
 password:
   flatpak: io.gitlab.elescoute.password
+  comment: Password calculator and generator
 
 hashes:
   flatpak: io.github.zefr0x.hashes
+  comment: Identify hashing algorithms
 
 spider:
   flatpak: io.github.zaedus.spider
+  comment: Install web apps
 
 goldendict-ng:
   flatpak: io.github.xiaoyifang.goldendict_ng
+  comment: Advanced dictionary lookup program
 
 oculante:
   flatpak: io.github.woelper.Oculante
+  comment: A fast and simple image viewer/editor
 
 serialtest:
   flatpak: io.github.wh201906.serialtest
+  comment: A cross-platform test tool for serial port, Bluetooth, TCP and UDP
 
 deepqt:
   flatpak: io.github.voxelcubes.deepqt
+  comment: Harness the power of the DeepL API with this friendly user interface
 
 pixyne:
   flatpak: io.github.vinser.pixyne
+  comment: Quickly review photo folders, safely delete bad and similar shots, fix the shooting dates
 
 burnfix:
   flatpak: io.github.vinser.burnfix
+  comment: Try to fix screen image retentions and burn in, look for screen defects
 
 recent-filter:
   flatpak: io.github.unrud.RecentFilter
+  comment: Exclude files and folders from recently used files
 
 greenlight:
   flatpak: io.github.unknownskl.greenlight
+  comment: Greenlight is an open-source client for xCloud and Xbox home streaming
 
 suanpan:
   flatpak: io.github.tlcfem.suanPan
+  comment: 🧮 An Open Source, Parallel and Heterogeneous Finite Element Analysis Framework
 
 tangent:
   flatpak: io.github.suchnsuch.Tangent
+  comment: A clean and powerful open source notes app
 
 chiaki-ng:
   flatpak: io.github.streetpea.Chiaki4deck
+  comment: Free and Open Source Client for PlayStation Remote Play
 
 stimulator:
   flatpak: io.github.sigmasd.stimulator
+  comment: Keep your computer awake
 
 delineate:
   flatpak: io.github.seadve.Delineate
+  comment: View and edit graphs
 
 breathing:
   flatpak: io.github.seadve.Breathing
+  comment: Relax and meditate
 
 pure-maps:
   flatpak: io.github.rinigus.PureMaps
+  comment: Maps and navigation
 
 osm-scout-server:
   flatpak: io.github.rinigus.OSMScoutServer
+  comment: Maps server providing tiles, geocoder, and router
 
 drum-machine:
   flatpak: io.github.revisto.drum-machine
+  comment: Create and play drum beats
 
 multielement:
   flatpak: io.github.r_sergii.multiElement
+  comment: Alternative versions of the periodic table of chemical elements
 
 ex-falso:
   flatpak: io.github.quodlibet.ExFalso
+  comment: Edit tags in your audio files
 
 2dtaskboard:
   flatpak: io.github.piotrek_k._2dTaskBoard
+  comment: Task management productivity app with markdown support
 
 rclone-shuttle:
   flatpak: io.github.pieterdd.RcloneShuttle
+  comment: Upload your files to anywhere
 
 notes:
   flatpak: io.github.nuttyartist.notes
+  comment: Note-taking app. Write down your thoughts
 
 inspector:
   flatpak: io.github.nokse22.inspector
+  comment: View information about your system
 
 moonlight-installer:
   flatpak: io.github.moonlight_mod.moonlight-installer
+  comment: Installer for moonlight, yet another Discord client mod
 
 goofcord:
   flatpak: io.github.milkshiift.GoofCord
+  comment: A privacy minded and highly configurable Discord client
 
 quick-pdf-join:
   flatpak: io.github.mihnea_radulescu.quickpdfjoin
+  comment: Simple application that joins multiple PDF files together
 
 password-secure:
   flatpak: io.github.mihnea_radulescu.passwordsecure
+  comment: Offline password manager, using strong AES-256 encryption
 
 diffuse:
   flatpak: io.github.mightycreak.Diffuse
+  comment: Graphical tool for merging and comparing text files
 
 tvhplayer:
   flatpak: io.github.mfat.tvhplayer
+  comment: A desktop client for Tvheadend for watching and recording live TV channels
 
 jottr:
   flatpak: io.github.mfat.jottr
+  comment: A simple text editor mainly intended for writers, journalists and researchers
 
 textosaurus:
   flatpak: io.github.martinrotter.textosaurus
+  comment: Simple cross-platform text editor based on Qt and QScintilla
 
 syncthing-tray:
   flatpak: io.github.martchus.syncthingtray
+  comment: Tray application for Syncthing v1
 
 delta-patcher:
   flatpak: io.github.marco_calautti.DeltaPatcher
+  comment: Applies and creates patches in xdelta format
 
 game-server-watcher:
   flatpak: io.github.lxndr.gswatcher
+  comment: A simple game server monitor and an administrative tool.
 
 loot:
   flatpak: io.github.loot.loot
+  comment: Modding utility for Starfield and some Elder Scrolls and Fallout games
 
 vibrantlinux:
   flatpak: io.github.libvibrant.vibrantLinux
+  comment: System utility to adjust color saturation of X11 screens
 
 letslearn:
   flatpak: io.github.letslearn_app.letslearn
+  comment: A opensource note application with tidy look
 
 boxflat:
   flatpak: io.github.lawstorant.boxflat
+  comment: Configure Moza Racing hardware and more
 
 dot-matrix:
   flatpak: io.github.lainsce.DotMatrix
+  comment: The creativity playground of lines and curves
 
 lada:
   flatpak: io.github.ladaapp.lada
+  comment: Recover pixelated adult videos
 
 mindmate:
   flatpak: io.github.koromelodev.mindmate
+  comment: Unofficial application for ChatGPT
 
 kasasa:
   flatpak: io.github.kelvinnovais.Kasasa
+  comment: Snip and pin useful information
 
 modular-calculator:
   flatpak: io.github.jordanl2.ModularCalculator
+  comment: A powerful, scriptable, modular calculator aimed at scientific, engineering or computing work.
 
 monitorets:
   flatpak: io.github.jorchube.monitorets
+  comment: Have always at a glance the usage of system resources
 
 fheroes2:
   flatpak: io.github.ihhub.Fheroes2
+  comment: fheroes2 is a recreation of the Heroes of Might and Magic II game engine
 
 screen-to-portable-pixmap:
   flatpak: io.github.igorlogius.scr2ppm
+  comment: The tiniest X11 screen capture aka. screenshot utility
 
 blutfest:
   flatpak: io.github.hepfnepf.blutfest
+  comment: Fight for survival using items, perks and weapons
 
 tremulous:
   flatpak: io.github.grangerhub.Tremulous
+  comment: Aliens vs Humans, First Person Shooter game with elements of Real Time Strategy
 
 qrookie:
   flatpak: io.github.glaumar.QRookie
+  comment: Download and install Quest games
 
 bittorrent-tracker-editor:
   flatpak: io.github.gerryferdinandus.bittorrent-tracker-editor
+  comment: Add or remove tracker from torrent files.
 
 time-switch:
   flatpak: io.github.fsobolev.TimeSwitch
+  comment: Set a task to run after a timer
 
 qlog:
   flatpak: io.github.foldynl.QLog
+  comment: Amateur radio logbook
 
 warehouse:
   flatpak: io.github.flattool.Warehouse
+  comment: Manage all things Flatpak
 
 telegraph:
   flatpak: io.github.fkinoshita.Telegraph
+  comment: Write and decode morse
 
 converter-now-unit-converter:
   flatpak: io.github.ferraridamiano.ConverterNOW
+  comment: A simple, immediate and fast unit converter!
 
 equibop:
   flatpak: io.github.equicord.equibop
+  comment: Snappier Discord app with Equicord
 
 endless-sky:
   flatpak: io.github.endless_sky.endless_sky
+  comment: Space exploration and combat game
 
 vakt-i-salah:
   flatpak: io.github.eminfedar.vaktisalah-gtk-rs
+  comment: Simple prayer times app
 
 dosbox-staging:
   flatpak: io.github.dosbox-staging
+  comment: DOS/x86 emulator with advanced features
 
 gps-correlate:
   flatpak: io.github.dfandrich.gpscorrelate
+  comment: Attaches GPS location to images
 
 muezzin:
   flatpak: io.github.dbchoco.muezzin
+  comment: Islamic prayer times application
 
 wallpaper-selector:
   flatpak: io.github.davidoc26.wallpaper_selector
+  comment: Downloads and applies wallpapers
 
 elektroid:
   flatpak: io.github.dagargo.Elektroid
+  comment: Sample and MIDI device manager
 
 escambo:
   flatpak: io.github.cleomenezesjr.Escambo
+  comment: Test and develop APIs
 
 fsearch:
   flatpak: io.github.cboxdoerfer.FSearch
+  comment: A graphical file search application
 
 ip-lookup:
   flatpak: io.github.bytezz.IPLookup
+  comment: Find info about an IP address
 
 bpm2fps:
   flatpak: io.github.breadmakesyoufull.bpm2fps
+  comment: Match beats to frames for animation
 
 pomidaq:
   flatpak: io.github.bothlab.pomidaq
+  comment: View and record videos from UCLA Miniscopes
 
 ssplot:
   flatpak: io.github.babaissarkar.ssplot
+  comment: Simple plotting utility and numerical simulator
 
 typhoon:
   flatpak: io.github.archisman_panigrahi.typhoon
+  comment: Stylish weather application
 
 shortcut:
   flatpak: io.github.andreibachim.shortcut
+  comment: Make app shortcuts
 
 xca-ai-chat:
   flatpak: io.github.alfianlosari.GTKChatGPT
+  comment: Chat with AI - Powered by ChatGPT API
 
 planify:
   flatpak: io.github.alainm23.planify
+  comment: Forget about forgetting things
 
 salatok:
   flatpak: io.github.adenlall.salatok-gtk
+  comment: Get all day prayer times
 
 minus-games:
   flatpak: io.github.accessory.minus_games_gui
+  comment: Download, sync and run games
 
 ytdownloader:
   flatpak: io.github.aandrew_me.ytdn
+  comment: Download videos and audios from hundreds of sites
 
 quran-companion:
   flatpak: io.github._0xzer0x.qurancompanion
+  comment: Read and listen to the Quran
 
 wheel-wizard:
   flatpak: io.github.TeamWheelWizard.WheelWizard
+  comment: Mario Kart Wii Mod Manager & Retro Rewind Auto Updater
 
 ps2-pnacher:
   flatpak: io.github.Snaggly.PS2_Pnacher
+  comment: Applying Pnaches directly to PS2 ISOs.
 
 kazumi:
   flatpak: io.github.Predidit.Kazumi
+  comment: Watch Animes online with danmaku support
 
 scripted-journeys:
   flatpak: io.github.MrPiggy92.ScriptedJourneys
+  comment: Play a multi-map text adventure
 
 xstreamingdesktop:
   flatpak: io.github.Geocld.XStreamingDesktop
+  comment: XStreaming: Lets you stream Xbox games to your device, supporting Xbox streaming and Xbox Cloud Gaming (XCloud).
 
 gdevelop:
   flatpak: io.gdevelop.ide
+  comment: Fast and Easy Game-Making
 
 freetube:
   flatpak: io.freetubeapp.FreeTube
+  comment: An Open Source YouTube app for privacy
 
 carburetor:
   flatpak: io.frama.tractor.carburetor
+  comment: Browse anonymously
 
 watchflower:
   flatpak: io.emeric.watchflower
+  comment: A plant monitoring application for Bluetooth Low Energy sensors and thermometers like Xiaomi 'Flower Care' or Parrot 'Flower Power'
 
 komikku:
   flatpak: info.febvre.Komikku
+  comment: Discover and read manga & comics
 
 wikilynx:
   flatpak: in.org.dawn.wikilynx
+  comment: A simple app to play wikipedia speedruns the right way
 
 cinny:
   flatpak: in.cinny.Cinny
+  comment: Yet another Matrix client with simple, elegant and secure interface.
 
 memorado:
   flatpak: im.bernard.Memorado
+  comment: Memorize anything
 
 sable-s-grimoire-demo:
   flatpak: games.zetsubou.SablesGrimoireDemo
+  comment: Monster girl visual novel which takes place in a magic academy
 
 humanity-must-perish:
   flatpak: games.zetsubou.HumanityMustPerish
+  comment: A comedic visual novel about an android dressed as a high school girl as she prepares to destroy humanity
 
 cosmic-comics:
   flatpak: fr.nytuo.cosmiccomics
+  comment: Comics and manga reader and collectionner
 
 whoswho:
   flatpak: fr.masson_informatique.WhosWho
+  comment: Create PDF documents with people pictures and corresponding name, also called "who's who", "yearbook" or "facebook"
 
 vcmi:
   flatpak: eu.vcmi.VCMI
+  comment: Open-source game engine for Heroes of Might and Magic III
 
 usermode-ftp-server:
   flatpak: eu.ithz.umftpd
+  comment: Access your files from another device
 
 tabela:
   flatpak: eu.cichy1173.tabela
+  comment: Simple app that shows CSV content in table
 
 wallpaper-downloader:
   flatpak: es.estoes.wallpaperDownloader
+  comment: Download, manage and change your wallpapers automatically from the Internet
 
 vesktop:
   flatpak: dev.vencord.Vesktop
+  comment: Snappier Discord app with Vencord
 
 chordcat:
   flatpak: dev.ters.Chordcat
+  comment: Play and name chords
 
 gameeky:
   flatpak: dev.tchx84.Gameeky
+  comment: Play, create and learn
 
 tonbrett:
   flatpak: dev.schlaubi.Tonbrett
+  comment: Companion App for Discord Soundboard Bot
 
 wordbook:
   flatpak: dev.mufeed.Wordbook
+  comment: Lookup definitions for any English term
 
 quadrant-for-minecraft:
   flatpak: dev.mrquantumoff.mcmodpackmanager
+  comment: Manage your mods and modpacks with ease.
 
 starrydex:
   flatpak: dev.mariinkys.StarryDex
+  comment: A simple Pokédex Application for the COSMIC™ desktop
 
 lapce:
   flatpak: dev.lapce.lapce
+  comment: Lightning-fast and powerful code editor written in Rust
 
 xivlauncher:
   flatpak: dev.goats.xivlauncher
+  comment: Custom 3rd-party launcher for a critically acclaimed MMO
 
 open-tv:
   flatpak: dev.fredol.open-tv
+  comment: Fast And Powerful IPTV App
 
 wger:
   flatpak: de.wger.flutter
+  comment: Fitness and nutrition tracker
 
 railway:
   flatpak: de.schmidhuberj.DieBahn
+  comment: Find all your travel information
 
 clapgrep:
   flatpak: de.leopoldluley.Clapgrep
+  comment: Search through all your files
 
 televido:
   flatpak: de.k_bo.Televido
+  comment: Access German-language public TV
 
 pm-browser:
   flatpak: de.halaszovich.PMbrowser
+  comment: Open, browse and export PM dat files
 
 mos-launcher:
   flatpak: de.fabrik19.mos-Launcher
+  comment: Used for mobile app development with Mobility Suite mos.
 
 zquest-classic:
   flatpak: com.zquestclassic.ZQuest
+  comment: A game engine for creating games similar to the popular classic adventure game
 
 tuxocide:
   flatpak: com.voxdsp.Tuxocide
+  comment: 3D FPS a war rages on in antarctica
 
 tuxscape2:
   flatpak: com.voxdsp.TuxScape2
+  comment: SpaceTux adventure
 
 tuxscape:
   flatpak: com.voxdsp.TuxScape
+  comment: Mythical adventure as Tux!
 
 serious-shooter:
   flatpak: com.voxdsp.SeriousShooter
+  comment: 3D FPS approved by Uncle Sam
 
 cubeshooter:
   flatpak: com.voxdsp.CubeShooter
+  comment: 3D Arcade sTyle shoOter
 
 borg-er-0:
   flatpak: com.voxdsp.Borg0
+  comment: Draw oscillators and envelopes
 
 vesctool:
   flatpak: com.vesc_project.VescTool
+  comment: VESC® Tool is the all new and 100% revised replacement for BLDC-Tool
 
 steam-link:
   flatpak: com.valvesoftware.SteamLink
+  comment: Stream games from another computer with Steam
 
 bruno:
   flatpak: com.usebruno.Bruno
+  comment: Fast and Git-Friendly API Client
 
 treemly:
   flatpak: com.treemly.treemly
+  comment: Automated Document Processing for Accounting Services
 
 folio:
   flatpak: com.toolstack.Folio
+  comment: Beautiful markdown note-taking app
 
 wonderpen:
   flatpak: com.tominlab.wonderpen
+  comment: Write novels and essays
 
 fingrom:
   flatpak: com.tercad.fingrom
+  comment: Platform-agnostic financial accounting app
 
 super-productivity:
   flatpak: com.super_productivity.SuperProductivity
+  comment: Advanced to-do list
 
 steam-rom-manager:
   flatpak: com.steamgriddb.steam-rom-manager
+  comment: Steam bulk importer & art manager!
 
 soulfire:
   flatpak: com.soulfiremc.soulfire
+  comment: Advanced Minecraft Server-Stresser Tool
 
 scanoss-sbom-workbench:
   flatpak: com.scanoss.sbom-workbench
+  comment: Graphical user interface to scan and audit your source code
 
 saunasim:
   flatpak: com.saunasim.saunasim
+  comment: ATC Training Simulator
 
 rustdesk:
   flatpak: com.rustdesk.RustDesk
+  comment: Secure remote desktop access
 
 thrive:
   flatpak: com.revolutionarygamesstudio.ThriveLauncher
+  comment: An evolution simulation game. Take control of your species in the environment and edit your species as a whole. Compete with other evolving species for resources on an alien planet.
 
 blanket:
   flatpak: com.rafaelmardojai.Blanket
+  comment: Listen to ambient sounds
 
 passky:
   flatpak: com.rabbit_company.passky
+  comment: Passky is a simple, modern, lightweight, open-source and secure password manager.
 
 q-zandronum:
   flatpak: com.qzandronum.Q-Zandronum
+  comment: A Zandronum 3.0 fork with improved netcode, configurable movement and many small tweaks
 
 pot:
   flatpak: com.pot_app.pot
+  comment: A text translation and OCR app
 
 pokemmo:
   flatpak: com.pokemmo.PokeMMO
+  comment: Multiplayer Nintendo DS and GBA game emulator
 
 ownr-crypto-wallet-visa-card:
   flatpak: com.ownrwallet.wallet
+  comment: Send, receive, withdraw, exchange & buy virtual currencies. Only you control access and assets
 
 outer-wilds-mod-manager:
   flatpak: com.outerwildsmods.owmods_gui
+  comment: Install and run Outer Wilds mods
 
 openterfaceqt:
   flatpak: com.openterface.openterfaceQT
+  comment: App control openterface-Mini-KVM
 
 obs-studio:
   flatpak: com.obsproject.Studio
+  comment: Live stream and record videos
 
 intiface-central:
   flatpak: com.nonpolynomial.intiface_central
+  comment: Buttplug Frontend Application
 
 webready:
   flatpak: com.nickgirga.webready
+  comment: Web-ready animations in seconds
 
 neoregex:
   flatpak: com.neoutils.NeoRegex
+  comment: Regular expression editor and tester.
 
 detwinner:
   flatpak: com.neatdecisions.Detwinner
+  comment: Find and remove duplicate files and similar images
 
 moonlight:
   flatpak: com.moonlight_stream.Moonlight
+  comment: Stream games and other applications from another PC running Sunshine or GeForce Experience
 
 extension-manager:
   flatpak: com.mattjakeman.ExtensionManager
+  comment: Browse, install, and manage GNOME Shell Extensions
 
 tidal-hi-fi:
   flatpak: com.mastermindzh.tidal-hifi
+  comment: The web version of listen.tidal.com with Hi-Fi (High and Max) support
 
 time-tracker:
   flatpak: com.lynnmichaelmartin.TimeTracker
+  comment: Track and sync time, local-first
 
 colorwall:
   flatpak: com.ktechpit.colorwall
+  comment: The Ultimate Desktop Wallpaper Application
 
 cpu-info:
   flatpak: com.kgurgul.cpuinfo
+  comment: Information about device hardware and software
 
 jpexs-free-flash-decompiler:
   flatpak: com.jpexs.decompiler.flash
+  comment: Decompile and edit SWF files
 
 invoice-ninja:
   flatpak: com.invoiceninja.InvoiceNinja
+  comment: Create invoices, accept payments, track expenses & time tasks
 
 inochi-creator:
   flatpak: com.inochi2d.inochi-creator
+  comment: Tool to create and edit Inochi2D puppets
 
 heroic:
   flatpak: com.heroicgameslauncher.hgl
+  comment: Play Epic, GOG and Amazon Games
 
 meteo:
   flatpak: com.gitlab.bitseater.meteo
+  comment: Know the forecast of the next hours and days with data and maps
 
 electronmail:
   flatpak: com.github.vladimiry.ElectronMail
+  comment: Unofficial ProtonMail desktop app
 
 remote-touchpad:
   flatpak: com.github.unrud.RemoteTouchpad
+  comment: Control mouse and keyboard from a smartphone
 
 scrivano-for-handwritten-notes:
   flatpak: com.github.scrivanolabs.scrivano
+  comment: A note-taking application for those who prefer handwriting over typing
 
 sleek:
   flatpak: com.github.ransome1.sleek
+  comment: todo manager based on the todo.txt syntax for Linux, free and open-source (FOSS)
 
 czkawka:
   flatpak: com.github.qarmin.czkawka
+  comment: Multi functional app to find duplicates, empty folders, similar images, broken files etc.
 
 otpclient:
   flatpak: com.github.paolostivanin.OTPClient
+  comment: Application for managing TOTP/HOTP tokens with built-in encryption
 
 coulr:
   flatpak: com.github.huluti.Coulr
+  comment: Enjoy colors and feel happy
 
 wike:
   flatpak: com.github.hugolabe.Wike
+  comment: Search and read Wikipedia articles
 
 copyq:
   flatpak: com.github.hluk.copyq
+  comment: Advanced clipboard manager
 
 cozy:
   flatpak: com.github.geigi.cozy
+  comment: Listen to audio books
 
 eyedropper:
   flatpak: com.github.finefindus.eyedropper
+  comment: Pick and format colors
 
 identifications:
   flatpak: com.github.edenalencar.identifications
+  comment: It is a tool for the QA team and developers
 
 normcap:
   flatpak: com.github.dynobo.normcap
+  comment: Capture text from any screen area
 
 cubiomes-viewer:
   flatpak: com.github.cubitect.cubiomes-viewer
+  comment: Minecraft seed finder and map viewer
 
 viper:
   flatpak: com.github._0negal.Viper
+  comment: Viper is a launcher and updater for Northstar, and not much more than that
 
 pinta:
   flatpak: com.github.PintaProject.Pinta
+  comment: Edit images and paint digitally
 
 gittyup:
   flatpak: com.github.Murmele.Gittyup
+  comment: Graphical Git client designed to help you understand and manage your source code history
 
 protontricks:
   flatpak: com.github.Matoking.protontricks
+  comment: Apps and fixes for Proton games
 
 quickaccess:
   flatpak: com.georgefb.quickaccess
+  comment: A global menu giving you quick access to folders and custom commands.
 
 chronos:
   flatpak: com.francescogaglione.chronos
+  comment: Chronos is a simple and intuitive Pomodoro timer for Linux
 
 fafa-runner:
   flatpak: com.fafarunner.FaFaRunner
+  comment: Enjoy smooth gameplay, stunning graphics, and endless fun
 
 furiganapad:
   flatpak: com.esrille.furiganapad
+  comment: Write Japanese text with Ruby annotations easily
 
 feeel:
   flatpak: com.enjoyingfoss.feeel
+  comment: A simple home workout/exercise app that respects your privacy
 
 parlera:
   flatpak: com.enjoyingfoss.Parlera
+  comment: A party game where your friends describe and you guess; or vice versa
 
 the-passage:
   flatpak: com.endlessnetwork.passage
+  comment: Hack your way through this side-scrolling action adventure shooting game
 
 frog-squash:
   flatpak: com.endlessnetwork.frogsquash
+  comment: An addictive crossy roads game with a twist
 
 fablemaker:
   flatpak: com.endlessnetwork.fablemaker
+  comment: Hack Aesop’s fables
 
 midnightmare-teddy:
   flatpak: com.endlessnetwork.MidnightmareTeddy
+  comment: Shoot and survive
 
 photo-editor:
   flatpak: com.endlessm.photos
+  comment: Easily edit and share all of your favorite photos
 
 time-tracker-for-ridango:
   flatpak: com.empesol.timetracker
+  comment: Track work time and tasks
 
 euterpe:
   flatpak: com.doycho.euterpe.gtk
+  comment: Audio player for the Euterpe media server
 
 syncbackup:
   flatpak: com.darhon.syncbackup
+  comment: Backup and mirror your drives
 
 webcamcontrol:
   flatpak: com.daniel15.wcc
+  comment: Control webcam pan/tilt/zoom settings and more
 
 cloudotp:
   flatpak: com.cloudchewie.cloudotp
+  comment: Two-Factor Authenticator
 
 clairvoyant:
   flatpak: com.cassidyjames.clairvoyant
+  comment: Ask questions, get psychic answers
 
 buckets:
   flatpak: com.budgetwithbuckets.Buckets
+  comment: Quick, simple and private family budgeting app
 
 blockstream-green:
   flatpak: com.blockstream.Green
+  comment: A simple and secure Bitcoin and Liquid Network wallet
 
 gpg-frontend:
   flatpak: com.bktus.gpgfrontend
+  comment: Encrypt and sign data
 
 simple-diary:
   flatpak: com.bjareholt.johan.SimpleDiary
+  comment: Simple and lightweight diary app
 
 decoder:
   flatpak: com.belmoussaoui.Decoder
+  comment: Scan and generate QR codes
 
 nyrna:
   flatpak: codes.merritt.Nyrna
+  comment: Suspend games and applications
 
 feeling-finder:
   flatpak: codes.merritt.FeelingFinder
+  comment: A fast and beautiful emoji picker
 
 simplex-chat:
   flatpak: chat.simplex.simplex
+  comment: A private & encrypted open-source messenger without any user IDs (not even random)!
 
 iamb:
   flatpak: chat.iamb.iamb
+  comment: A terminal Matrix client for Vim addicts
 
 delta-chat:
   flatpak: chat.delta.desktop
+  comment: Decentralized private messenger with chat-shared tools and games
 
 gtk-meteo:
   flatpak: ch.bailu.gtk_meteo
+  comment: Select location from map and show forecast
 
 delfin:
   flatpak: cafe.avery.Delfin
+  comment: Stream movies and TV shows from Jellyfin
 
 simplexity:
   flatpak: br.com.wiselabs.simplexity
+  comment: Simple desktop app for Perplexity.AI
 
 iaito-radare2-webui:
   flatpak: org.radare.iaito.webui
+  comment: Radare2 WebUI addon for iaito
 
 kde-software-development-kit:
   flatpak: org.kde.Sdk
+  comment: Tools and headers for developing applications using the KDE application platform
 
 typescript:
   flatpak: org.freedesktop.Sdk.Extension.typescript
+  comment: TypeScript stable compiler and tools
 
 tex-live-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.texlive
+  comment: LaTeX packages and tools
 
 swift-6:
   flatpak: org.freedesktop.Sdk.Extension.swift6
+  comment: Swift 6 compiler and tools for the Flatpak Freedesktop SDK
 
 swift-5:
   flatpak: org.freedesktop.Sdk.Extension.swift5
+  comment: Swift 5 compiler and tools for the Flatpak Freedesktop SDK
 
 rust-stable:
   flatpak: org.freedesktop.Sdk.Extension.rust-stable
+  comment: Rust stable compiler and tools
 
 mono-6-x-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.mono6
+  comment: Mono runtime, compiler and tools
 
 llvm-20:
   flatpak: org.freedesktop.Sdk.Extension.llvm20
+  comment: LLVM 20 stable compiler and tools extension for the flatpak Freedesktop SDK
 
 llvm-19:
   flatpak: org.freedesktop.Sdk.Extension.llvm19
+  comment: LLVM 19 stable compiler and tools extension for the flatpak Freedesktop SDK
 
 llvm-18:
   flatpak: org.freedesktop.Sdk.Extension.llvm18
+  comment: LLVM 18 stable compiler and tools extension for the flatpak Freedesktop SDK
 
 llvm-17:
   flatpak: org.freedesktop.Sdk.Extension.llvm17
+  comment: LLVM 17 stable compiler and tools extension for the flatpak Freedesktop SDK
 
 llvm-16:
   flatpak: org.freedesktop.Sdk.Extension.llvm16
+  comment: LLVM 16 stable compiler and tools extension for the flatpak Freedesktop SDK
 
 llvm-15:
   flatpak: org.freedesktop.Sdk.Extension.llvm15
+  comment: LLVM 15 stable compiler and tools extension for the flatpak Freedesktop SDK
 
 go-programming-language-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.golang
+  comment: Go compiler and tools
 
 mangohud:
   flatpak: org.freedesktop.Platform.VulkanLayer.MangoHud
+  comment: A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more
 
 intel-vaapi-driver:
   flatpak: org.freedesktop.Platform.VAAPI.Intel
+  comment: VA-API implementation for Intel G45 and HD Graphics family
 
 identity:
   flatpak: org.gnome.gitlab.YaLTeR.Identity
+  comment: Compare images and videos
 
 openflap:
   flatpak: io.gitlab.jazztickets.openflap
+  comment: A game about bouncing balls through gaps of never-ending pipes
 
 real-video-enhancer:
   flatpak: io.github.tntwise.REAL-Video-Enhancer
+  comment: Free and Open Source Video Enhancement Tool
 
 storyreader:
   flatpak: io.github.tareksander.StoryReader
+  comment: An offline library and reader for stories on ScribbleHub and RoyalRoad
 
 sidetrack:
   flatpak: com.hack_computer.Sidetrack
+  comment: Escape the maze of pits and robots!
 
 udplogger:
   flatpak: com.gitlab.Murmele.UDPLogger
+  comment: UDPLogger is a lightweight high performance Logger of UDP Data. Additional the data can be visualized on plots.
 
 neothesia:
   flatpak: com.github.polymeilex.neothesia
+  comment: GPU accelerated midi visualizer
 
 midiconn:
   flatpak: xyz.safeworlds.midiconn
+  comment: Virtual MIDI hub
 
 paperwork:
   flatpak: work.openpaper.Paperwork
+  comment: Personal document manager
 
 portproton:
   flatpak: ru.linux_gaming.PortProton
+  comment: Software for running Windows games.
 
 ruffle:
   flatpak: rs.ruffle.Ruffle
+  comment: Play Flash games & movies
 
 mousepad:
   flatpak: org.xfce.mousepad
+  comment: Mousepad is a simple text editor for the Xfce desktop environment
 
 texworks:
   flatpak: org.tug.texworks
+  comment: Editing TeX documents made simple
 
 tryton-7-4:
   flatpak: org.tryton.Tryton-74
+  comment: Connect to Tryton
 
 tryton-7-2:
   flatpak: org.tryton.Tryton-72
+  comment: Connect to Tryton
 
 tryton-7-0:
   flatpak: org.tryton.Tryton-70
+  comment: Connect to Tryton
 
 tropy:
   flatpak: org.tropy.Tropy
+  comment: Explore your research photos
 
 stellarium:
   flatpak: org.stellarium.Stellarium
+  comment: Desktop Planetarium
 
 bloom:
   flatpak: org.sil.Bloom
+  comment: Literacy materials development for language communities
 
 light-video:
   flatpak: org.sigxcpu.Livi
+  comment: A simple GTK4 based video player for mobile phones
 
 prism-launcher:
   flatpak: org.prismlauncher.PrismLauncher
   aliases: [minecraft, mc]
+  comment: Custom Minecraft Launcher to easily manage multiple Minecraft installations at once
 
 trguing:
   flatpak: org.openscopeproject.TrguiNG
+  comment: Remote GUI for Transmission torrent daemon
 
 onlyoffice-desktop-editors:
   flatpak: org.onlyoffice.desktopeditors
   aliases: [onlyoffice, only-office]
+  comment: Office productivity suite
 
 tagger:
   flatpak: org.nickvision.tagger
+  comment: Tag your music
 
 denaro:
   flatpak: org.nickvision.money
+  comment: Manage your personal finances
 
 tiled:
   flatpak: org.mapeditor.Tiled
+  comment: General purpose map editor
 
 linux-show-player:
   flatpak: org.linuxshowplayer.LinuxShowPlayer
+  comment: Cue player designed for stage productions
 
 leocad:
   flatpak: org.leocad.LeoCAD
+  comment: Design virtual models you can build with LEGO bricks
 
 kiwix:
   flatpak: org.kiwix.desktop
+  comment: View offline content
 
 umbrello:
   flatpak: org.kde.umbrello
+  comment: UML Modeller
 
 tellico:
   flatpak: org.kde.tellico
+  comment: Collection Manager
 
 skrooge:
   flatpak: org.kde.skrooge
+  comment: Single-entry bookkeeping for home use
 
 rocs:
   flatpak: org.kde.rocs
+  comment: Rocs Graph Theory
 
 parley:
   flatpak: org.kde.parley
+  comment: Vocabulary Trainer
 
 palapeli:
   flatpak: org.kde.palapeli
+  comment: Jigsaw puzzle game
 
 massif-visualizer:
   flatpak: org.kde.massif-visualizer
+  comment: A visualizer for Valgrind Massif data files
 
 kxstitch:
   flatpak: org.kde.kxstitch
+  comment: A cross stitch pattern creator
 
 wordquiz:
   flatpak: org.kde.kwordquiz
+  comment: Flash card trainer
 
 kwalletmanager:
   flatpak: org.kde.kwalletmanager5
+  comment: Wallet Management Tool
 
 kuiviewer:
   flatpak: org.kde.kuiviewer
+  comment: Qt Designer UI File Viewer
 
 kpatience:
   flatpak: org.kde.kpat
+  comment: Solitaire card game
 
 kolf:
   flatpak: org.kde.kolf
+  comment: Miniature Golf
 
 kmymoney:
   flatpak: org.kde.kmymoney
+  comment: Personal finance manager based on double-entry bookkeeping
 
 kmplot:
   flatpak: org.kde.kmplot
+  comment: Mathematical Function Plotter
 
 kmplayer:
   flatpak: org.kde.kmplayer
+  comment: Interface for MPlayer by KDE
 
 kigo:
   flatpak: org.kde.kigo
+  comment: Go Board Game
 
 kig:
   flatpak: org.kde.kig
+  comment: Interactive Geometry
 
 kget:
   flatpak: org.kde.kget
+  comment: Download manager
 
 kcachegrind:
   flatpak: org.kde.kcachegrind
+  comment: Profiler Frontend
 
 kbibtex:
   flatpak: org.kde.kbibtex
+  comment: BibTeX editor by KDE to edit bibliographies used with LaTeX
 
 kalgebra:
   flatpak: org.kde.kalgebra
+  comment: Graph Calculator
 
 haruna:
   flatpak: org.kde.haruna
+  comment: Media player
 
 cantor:
   flatpak: org.kde.cantor
+  comment: Frontend to mathematical software
 
 symboleditor:
   flatpak: org.kde.SymbolEditor
+  comment: A cross stitch symbol editor
 
 inkscape:
   snap: inkscape
   flatpak: org.inkscape.Inkscape
+  comment: Vector Graphics Editor
 
 tanglet:
   flatpak: org.gottcode.Tanglet
+  comment: Single player variant of Boggle
 
 focuswriter:
   flatpak: org.gottcode.FocusWriter
+  comment: Fullscreen word processor
 
 bookup:
   flatpak: org.gnome.gitlab.ilhooq.Bookup
+  comment: Streamline notes with Markdown!
 
 fonts:
   flatpak: org.gnome.font-viewer
+  comment: View fonts on your system
 
 secrets:
   flatpak: org.gnome.World.Secrets
+  comment: Manage your passwords
 
 videos:
   flatpak: org.gnome.Totem
+  comment: Play movies
 
 papers:
   flatpak: org.gnome.Papers
+  comment: Read documents
 
 document-viewer:
   flatpak: org.gnome.Evince
+  comment: Document viewer for popular document formats
 
 web:
   flatpak: org.gnome.Epiphany
   aliases: [gnome-web, epiphany]
+  comment: Browse the web
 
 crosswords:
   flatpak: org.gnome.Crosswords
+  comment: Solve crossword puzzles
 
 crossword-editor:
   flatpak: org.gnome.Crosswords.Editor
+  comment: Create crossword puzzles
 
 gnome-chess:
   flatpak: org.gnome.Chess
+  comment: Play the classic two-player board game of chess
 
 boxes:
   flatpak: org.gnome.Boxes
   aliases: [gnome-boxes]
+  comment: Virtualization made simple
 
 firedragon:
   flatpak: org.garudalinux.firedragon
+  comment: Floorp fork build using custom branding & settings
 
 feeds:
   flatpak: org.gabmus.gfeeds
+  comment: News reader for GNOME
 
 fooyin:
   flatpak: org.fooyin.fooyin
+  comment: A customisable music player
 
 setzer:
   flatpak: org.cvfosammmm.Setzer
+  comment: Simple yet full-featured LaTeX editor
 
 cryptomator:
   flatpak: org.cryptomator.Cryptomator
+  comment: Encryption for your cloud made easy
 
 black-fennec:
   flatpak: org.blackfennec.app
+  comment: Semi-structured Data Editor
 
 xtactics:
   flatpak: net.zdechov.app.xTactics
+  comment: Risk like turn-based strategy game
 
 c-evo-new-horizons:
   flatpak: net.zdechov.app.C-evo
+  comment: Turn-based empire building game
 
 xmind-2024:
   flatpak: net.xmind.XMind
+  comment: Mind Mapping & Brainstorming
 
 imhex:
   flatpak: net.werwolv.ImHex
+  comment: Modern REing Hex Editor
 
 fuse:
   flatpak: net.sourceforge.fuse_emulator.Fuse
+  comment: Sinclair ZX Spectrum Emulator
 
 dmidiplayer:
   flatpak: net.sourceforge.dmidiplayer
+  comment: Drumstick Multiplatform MIDI File Player
 
 cherrytree:
   flatpak: net.giuspen.cherrytree
+  comment: Hierarchical Note Taking
 
 drawpile:
   flatpak: net.drawpile.drawpile
+  comment: Collaborative drawing
 
 hiperthermia:
   flatpak: me.sergiotarxz.Exd
+  comment: Program your thermal printer
 
 passes:
   flatpak: me.sanchezrodriguez.passes
+  comment: Manage your digital passes
 
 pentobi:
   flatpak: io.sourceforge.pentobi
+  comment: Computer opponent for Blokus
 
 seamly2d:
   flatpak: io.seamly.seamly2d
+  comment: Sewing pattern design software
 
 qt-creator:
   flatpak: io.qt.QtCreator
+  comment: Cross-platform integrated development environment (IDE)
 
 gaupol:
   flatpak: io.otsaloma.gaupol
+  comment: Editor for text-based subtitles
 
 librewolf:
   flatpak: io.gitlab.librewolf-community
+  comment: LibreWolf Web Browser
 
 daikhan:
   flatpak: io.gitlab.daikhan.stable
+  comment: Play Videos/Music with style
 
 impression:
   flatpak: io.gitlab.adhami3310.Impression
+  comment: Create bootable drives
 
 zsnes:
   flatpak: io.github.xyproto.zsnes
+  comment: Super Nintendo emulator
 
 ungoogled-chromium:
   flatpak: io.github.ungoogled_software.ungoogled_chromium
+  comment: Chromium without Google
 
 lpub3d:
   flatpak: io.github.trevorsandy.LPub3D
+  comment: LPub3D - An LDraw Building Instruction Editor
 
 black-chocobo:
   flatpak: io.github.sithlord48.blackchocobo
+  comment: Save editor for Final Fantasy VII
 
 simple64:
   flatpak: io.github.simple64.simple64
+  comment: Nintendo 64 Emulator
 
 punes:
   flatpak: io.github.punesemu.puNES
+  comment: Nintendo Entertaiment System emulator
 
 pd-l2ork:
   flatpak: io.github.pd_l2ork.Pd_L2Ork
+  comment: Visual programming for multimedia
 
 kiview:
   flatpak: io.github.nyre221.kiview
+  comment: Quick file preview
 
 weasis:
   flatpak: io.github.nroduit.Weasis
+  comment: A free/libre/open medical DICOM viewer
 
 exhibit:
   flatpak: io.github.nokse22.Exhibit
+  comment: Preview your 3D models
 
 media-player-classic-qute-theater:
   flatpak: io.github.mpc_qt.mpc-qt
+  comment: A clone of Media Player Classic reimplemented in Qt
 
 nightpdf:
   flatpak: io.github.lunarequest.NightPDF
+  comment: Dark Mode PDF reader
 
 flowblade:
   flatpak: io.github.jliljebl.Flowblade
+  comment: Video Editor - Fast, Precise, Stable
 
 winezgui:
   flatpak: io.github.fastrizwaan.WineZGUI
+  comment: Wine GUI using Zenity
 
 webkitword:
   flatpak: io.github.fastrizwaan.WebkitWord
+  comment: Rich text editor using WebKit
 
 chronograph:
   flatpak: io.github.dzheremi2.lrcmake-gtk
+  comment: Sync lyrics of your loved songs
 
 boxbuddy:
   flatpak: io.github.dvlv.boxbuddyrs
+  comment: A Graphical Distrobox Manager
 
 photometry:
   flatpak: io.github.dlippok.photometric-viewer
+  comment: View photometric files
 
 vimix:
   flatpak: io.github.brunoherbelin.Vimix
+  comment: Video live mixer
 
 lazpaint:
   flatpak: io.github.bgrabitmap.LazPaint
+  comment: Fast raster image editor
 
 jumpdf:
   flatpak: io.github.b43NnUNF4vidFYFhpqaLWy2ANawtRbMtUXZY9Pf.jumpdf
+  comment: PDF viewer
 
 gameoutlet:
   flatpak: io.github.appoutlet.GameOutlet
+  comment: Find the best prices on PC games
 
 oku:
   flatpak: io.github.OkuBrowser.oku
+  comment: Browse & express yourself
 
 rabbit-remote-control:
   flatpak: io.github.KangLin.RabbitRemoteControl
+  comment: Remote control software
 
 pdf4qt:
   flatpak: io.github.JakubMelka.Pdf4qt
+  comment: Open Source PDF Editor
 
 cemu:
   flatpak: info.cemu.Cemu
+  comment: Nintendo Wii U Emulator
 
 handbrake:
   flatpak: fr.handbrake.ghb
+  comment: Video Transcoder
 
 betterbird:
   flatpak: eu.betterbird.Betterbird
+  comment: A better version of Thunderbird
 
 nyxt:
   flatpak: engineer.atlas.Nyxt
+  comment: The hacker's browser
 
 linwood-butterfly:
   flatpak: dev.linwood.butterfly
+  comment: Powerful, minimalistic note-taking
 
 optimusui:
   flatpak: de.z_ray.OptimusUI
+  comment: Interface for nVidia Optimus
 
 fragments:
   flatpak: de.haeckerfelix.Fragments
+  comment: Manage torrents
 
 zetaoffice:
   flatpak: de.allotropia.ZetaOffice
+  comment: The ZetaOffice productivity suite
 
 bottles:
   flatpak: com.usebottles.bottles
+  comment: Run Windows software
 
 ulaa:
   flatpak: com.ulaa.Ulaa
+  comment: Private, Secure & Fast Browsing
 
 stremio:
   flatpak: com.stremio.Stremio
+  comment: Freedom to Stream
 
 oneware:
   flatpak: com.one_ware.OneWare
+  comment: IDE for Electronics Development
 
 lock:
   flatpak: com.konstantintutsch.Lock
+  comment: Process data with GnuPG
 
 gopeed:
   flatpak: com.gopeed.Gopeed
+  comment: A modern download manager
 
 tauon:
   flatpak: com.github.taiko2k.tauonmb
+  comment: Play your music with style
 
 foliate:
   flatpak: com.github.johnfactotum.Foliate
+  comment: Read e-books in style
 
 eovpn:
   flatpak: com.github.jkotra.eovpn
+  comment: OpenVPN Configuration Manager
 
 byte:
   flatpak: com.github.alainm23.byte
+  comment: Rediscover your music
 
 rosalie-s-mupen-gui:
   flatpak: com.github.Rosalie241.RMG
+  comment: Play Nintendo 64 games easily
 
 manga-reader:
   flatpak: com.georgefb.mangareader
+  comment: Manga Reader for local files
 
 boxy-svg:
   flatpak: com.boxy_svg.BoxySVG
+  comment: Scalable Vector Graphics editor
 
 super-nonogram:
   flatpak: com.adilhanney.super_nonogram
+  comment: Solve unlimited procedurally-generated nonogram puzzles!
 
 parallel-launcher:
   flatpak: ca.parallel_launcher.ParallelLauncher
+  comment: Modern N64 Emulator
 
 zig-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.ziglang
+  comment: Zig toolchain
 
 php-8-3:
   flatpak: org.freedesktop.Sdk.Extension.php83
+  comment: PHP 8.3 extension for the flatpak Freedesktop SDK
 
 php-8-2:
   flatpak: org.freedesktop.Sdk.Extension.php82
+  comment: PHP 8.2 extension for the flatpak Freedesktop SDK
 
 php-7-4:
   flatpak: org.freedesktop.Sdk.Extension.php74
+  comment: PHP 7.4 extension for the flatpak Freedesktop SDK
 
 php-7-3:
   flatpak: org.freedesktop.Sdk.Extension.php73
+  comment: PHP 7.3 extension for the flatpak Freedesktop SDK
 
 openjdk-8-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.openjdk8
+  comment: OpenJdk 8 Sdk extension
 
 node-js-12-x:
   flatpak: org.freedesktop.Sdk.Extension.node12
+  comment: Node.js SDK extension
 
 ldc2:
   flatpak: org.freedesktop.Sdk.Extension.ldc
+  comment: LDC DLang compiler SDK Extension for the Freedesktop Flatpak runtime
 
 net-9-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.dotnet9
+  comment: .NET 9 SDK extension
 
 net-8-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.dotnet8
+  comment: .NET 8 SDK extension
 
 net-core-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.dotnet7
+  comment: .NET Core SDK extension
 
 ffmpeg-extension-with-extra-codecs:
   flatpak: org.freedesktop.Platform.ffmpeg-full
+  comment: FFmpeg-full extension contains patent-restricted codecs not in runtime FFmpeg
 
 openmpt-gstreamer-plugin:
   flatpak: org.freedesktop.Platform.GStreamer.openmpt
+  comment: GStreamer support for tracker music
 
 mesa-extra:
   flatpak: org.freedesktop.Platform.GL.default
+  comment: Mesa - The 3D Graphics Library
 
 woxel:
   flatpak: xyz.woxel.Woxel
+  comment: Minecraft Style Voxel Editor
 
 splash:
   flatpak: xyz.splashmapper.Splash
+  comment: Video-mapping software
 
 jogger:
   flatpak: xyz.slothlife.Jogger
+  comment: Fitness tracker
 
 rust4diva:
   flatpak: xyz.rust4diva.Rust4Diva
+  comment: Cross platform mod manager for Project Diva Mega Mix+
 
 i2pd:
   flatpak: website.i2pd.i2pd
+  comment: Invisible Internet
 
 cobang:
   flatpak: vn.hoabinh.quan.CoBang
+  comment: QR code scanner for Linux desktop
 
 materialious:
   flatpak: us.materialio.Materialious
+  comment: Materialious is a privacy respecting frontend for YouTube built ontop of Invidious.
 
 plex:
   flatpak: tv.plex.PlexDesktop
+  comment: Plex client for desktop computers
 
 ikooskar:
   flatpak: tr.com.ikooskar.ikoOSKAR
+  comment: Random Seating Schemes for Exams
 
 keyforge-master:
   flatpak: tech.keyforge.keyforge_master
+  comment: Configurator for KeyForge devices
 
 eufonia-client:
   flatpak: studio.eufonia.EufoniaClient
+  comment: Join Minecraft in-game events
 
 cassette:
   flatpak: space.rirusha.Cassette
+  comment: Unofficial Yandex Music client
 
 gaia-sky:
   flatpak: space.gaiasky.GaiaSky
+  comment: Explore the universe in 3D
 
 lonewolf:
   flatpak: site.someones.Lonewolf
+  comment: Organize your tasks
 
 katawa-shoujo-re-engineered:
   flatpak: sh.fhs.ksre
+  comment: A modern version of classic bishoujo-style visual novel
 
 mapollage:
   flatpak: se.trixon.Mapollage
+  comment: Create KML files from geotagged photos
 
 blue-recorder:
   flatpak: sa.sy.bluerecorder
+  comment: A simple screen recorder for Linux desktop. Supports Wayland & Xorg
 
 vacuumtube:
   flatpak: rocks.shy.VacuumTube
+  comment: YouTube TV interface on the desktop
 
 workbench:
   flatpak: re.sonny.Workbench
+  comment: Prototype with GNOME technologies
 
 tangram:
   flatpak: re.sonny.Tangram
+  comment: Browser for your pinned tabs
 
 retro:
   flatpak: re.sonny.Retro
+  comment: Customizable clock widget
 
 playhouse:
   flatpak: re.sonny.Playhouse
+  comment: Playground for HTML/CSS/JavaScript
 
 oh-my-svg:
   flatpak: re.sonny.OhMySVG
+  comment: Reduce the size of SVGs
 
 commit:
   flatpak: re.sonny.Commit
+  comment: Commit message editor
 
 colorful:
   flatpak: pl.suve.colorful
+  comment: Side-view shooter game
 
 sly:
   flatpak: page.kramo.Sly
+  comment: Edit your images easily
 
 terratactician-expandoria:
   flatpak: page.codeberg.terratactician_expandoria.game
+  comment: Hexagon based logic game
 
 outfly:
   flatpak: page.codeberg.outfly.outfly
+  comment: Breathtaking 3D space game in the rings of Jupiter
 
 universal-blood-pressure-manager:
   flatpak: page.codeberg.lazyt.ubpm
+  comment: Manage blood pressure data
 
 snux:
   flatpak: page.codeberg.ilijaculap.snux
+  comment: Simple snake game
 
 glerm:
   flatpak: page.codeberg.gwync.glerm
+  comment: A puzzle game
 
 escritoire:
   flatpak: page.codeberg.dudenix.escritoire
+  comment: Write letters with confidence
 
 jdsystemmonitor:
   flatpak: page.codeberg.JakobDev.jdSystemMonitor
+  comment: Monitor your system
 
 jdpixelupscaler:
   flatpak: page.codeberg.JakobDev.jdPixelUpscaler
+  comment: Upscale Images per Pixel
 
 jdpermissionstoreedit:
   flatpak: page.codeberg.JakobDev.jdPermissionStoreEdit
+  comment: Edit the Flatpak Permission Store
 
 jdnbtexplorer:
   flatpak: page.codeberg.JakobDev.jdNBTExplorer
+  comment: An Editor for Minecraft NBT files
 
 jdminecraftlauncher:
   flatpak: page.codeberg.JakobDev.jdMinecraftLauncher
+  comment: Unofficial classic styled Minecraft Launcher
 
 jdmacroplayer:
   flatpak: page.codeberg.JakobDev.jdMacroPlayer
+  comment: Wayland compatible macro player for Linux
 
 cclite:
   flatpak: page.codeberg.JakobDev.CCLite
+  comment: A ComputerCraft Emulator
 
 zulip:
   flatpak: org.zulip.Zulip
+  comment: Zulip Desktop Client for Linux
 
 zeal:
   flatpak: org.zealdocs.Zeal
+  comment: Documentation browser
 
 zap:
   flatpak: org.zaproxy.ZAP
+  comment: A popular free security tool
 
 warpinator:
   flatpak: org.x.Warpinator
+  comment: Share files on your network
 
 widelands:
   flatpak: org.widelands.Widelands
+  comment: A real-time build-up strategy game
 
 virtualxt:
   flatpak: org.virtualxt.VirtualXT
+  comment: Turbo PC/XT emulator
 
 rev-hub-interface-community-edition:
   flatpak: org.unofficialrevport.REVHubInterface
+  comment: Directly control a REV Robotics Expansion Hub
 
 stationhub:
   flatpak: org.unitystation.StationHub
+  comment: Launcher for the open-source game Unitystation
 
 tux-paint:
   flatpak: org.tuxpaint.Tuxpaint
+  comment: A drawing program for children
 
 qgit:
   flatpak: org.tibirna.qgit
+  comment: A git GUI viewer
 
 thonny:
   flatpak: org.thonny.Thonny
+  comment: Python IDE for beginners
 
 texstudio:
   flatpak: org.texstudio.TeXstudio
+  comment: Craft beautiful LaTeX documents
 
 telegram:
   flatpak: org.telegram.desktop
+  comment: New era of messaging
 
 taisei-project:
   flatpak: org.taisei_project.Taisei
+  comment: Bullet hell shoot 'em up game set in the Tōhō universe
 
 twofun:
   flatpak: org.tabos.twofun
+  comment: Touch based reaction game for two players
 
 max-control:
   flatpak: org.tabos.maxcontrol
+  comment: Control software for Max! devices
 
 sonic-robo-blast-2:
   flatpak: org.srb2.SRB2
+  comment: A 3D Sonic the Hedgehog fangame based on a modified version of Doom Legacy
 
 halloy:
   flatpak: org.squidowl.halloy
+  comment: IRC client written in Rust
 
 squey:
   flatpak: org.squey.Squey
+  comment: Explore your data
 
 skytemple:
   flatpak: org.skytemple.SkyTemple
+  comment: ROM Editor for Pokémon Mystery Dungeon Explorers of Sky
 
 skytemple-randomizer:
   flatpak: org.skytemple.Randomizer
+  comment: Randomizer for Pokémon Mystery Dungeon Explorers of Sky
 
 pocket-broomball:
   flatpak: org.simondalvai.pocket-broomball
+  comment: World's first Broomball video game
 
 ball2box:
   flatpak: org.simondalvai.ball2box
+  comment: Shoot the ball into the red box
 
 quelea:
   flatpak: org.quelea.Quelea
+  comment: Open source projection software for churches
 
 qownnotes:
   flatpak: org.qownnotes.QOwnNotes
+  comment: Markdown note-taking
 
 password-safe:
   flatpak: org.pwsafe.pwsafe
+  comment: Password management utility
 
 play:
   flatpak: org.purei.Play
+  comment: A Playstation 2 emulator
 
 plom-client:
   flatpak: org.plomgrading.PlomClient
+  comment: Grading/marking client for the Plom online grading system
 
 eternal-lands:
   flatpak: org.pjbroad.EternallandsClient
+  comment: A free to play, graphical MMORPG
 
 pegasus:
   flatpak: org.pegasus_frontend.Pegasus
+  comment: Cross platform, customizable graphical frontend for launching emulators
 
 pdf-stitcher:
   flatpak: org.pdfstitcher.pdfstitcher
+  comment: Modify PDF sewing patterns
 
 openomf:
   flatpak: org.openomf.OpenOMF
+  comment: Remake of One Must Fall 2097
 
 openmw:
   flatpak: org.openmw.OpenMW
+  comment: Reimplementation of The Elder Scrolls III: Morrowind
 
 nicotine:
   flatpak: org.nicotine_plus.Nicotine
+  comment: Browse the Soulseek network
 
 mixxx:
   flatpak: org.mixxx.Mixxx
+  comment: Perform live DJ mixes
 
 hurry-curry:
   flatpak: org.metamuffin.hurrycurry.client
+  comment: Multiplayer co-op coooking game
 
 meshtastic:
   flatpak: org.meshtastic.meshtasticd
+  comment: Decentralized mesh communication
 
 localsend:
   flatpak: org.localsend.localsend_app
+  comment: Share files to nearby devices
 
 kolibri:
   flatpak: org.learningequality.Kolibri
+  comment: Offline learning platform
 
 utm-no:
   flatpak: org.kryogenix.utm_no
+  comment: Remove tracking parameters from copied URLs
 
 pick:
   flatpak: org.kryogenix.Pick
+  comment: A colour picker
 
 ntvhaber:
   flatpak: org.kekikakademi.ntvHaber
+  comment: Breaking News in Turkish from NTV.com.tr
 
 efatura:
   flatpak: org.kekikakademi.eFatura
+  comment: E-Invoice Usage Inquiry from Tax or TR Identity Number
 
 yakuake:
   flatpak: org.kde.yakuake
+  comment: Drop-down Terminal
 
 tokodon:
   flatpak: org.kde.tokodon
+  comment: Browse the Fediverse
 
 ruqola:
   flatpak: org.kde.ruqola
+  comment: Rocket Chat Client
 
 plasmatube:
   flatpak: org.kde.plasmatube
+  comment: Watch YouTube videos
 
 pix:
   flatpak: org.kde.pix
+  comment: Image Gallery
 
 picmi:
   flatpak: org.kde.picmi
+  comment: Puzzle game based on number logic
 
 peruse:
   flatpak: org.kde.peruse
+  comment: Comic Book Reader
 
 optiimage:
   flatpak: org.kde.optiimage
+  comment: Image optimizer to reduce the size of images
 
 okular-mobile:
   flatpak: org.kde.okular.kirigami
+  comment: Document Viewer
 
 okteta:
   flatpak: org.kde.okteta
+  comment: Hex editor
 
 minuet:
   flatpak: org.kde.minuet
+  comment: Music Education Software
 
 marknote:
   flatpak: org.kde.marknote
+  comment: Write down your thoughts
 
 marble:
   flatpak: org.kde.marble
+  comment: Virtual Globe
 
 lskat:
   flatpak: org.kde.lskat
+  comment: German card game Skat for two players
 
 kwrite:
   flatpak: org.kde.kwrite
+  comment: Text Editor
 
 kubrick:
   flatpak: org.kde.kubrick
+  comment: 3-D Game based on Rubik's Cube
 
 kturtle:
   flatpak: org.kde.kturtle
+  comment: Educational Programming Environment
 
 ktrip:
   flatpak: org.kde.ktrip
+  comment: Public transport navigator
 
 ktouch:
   flatpak: org.kde.ktouch
+  comment: Touch Typing Tutor
 
 ktimetracker:
   flatpak: org.kde.ktimetracker
+  comment: Personal Time Tracker
 
 kteatime:
   flatpak: org.kde.kteatime
+  comment: Tea Cooker
 
 ksudoku:
   flatpak: org.kde.ksudoku
+  comment: Complete a numeric puzzle with the numbers from one to nine
 
 kstars:
   flatpak: org.kde.kstars
+  comment: Desktop Planetarium
 
 ksquares:
   flatpak: org.kde.ksquares
+  comment: Connect the dots to create squares
 
 ksnakeduel:
   flatpak: org.kde.ksnakeduel
+  comment: Tron-like Game
 
 ksirk:
   flatpak: org.kde.ksirk
+  comment: World Domination Strategy Game
 
 kruler:
   flatpak: org.kde.kruler
+  comment: Screen Ruler
 
 kronometer:
   flatpak: org.kde.kronometer
+  comment: Chronometer
 
 kreversi:
   flatpak: org.kde.kreversi
+  comment: Reversi Board Game
 
 krename:
   flatpak: org.kde.krename
+  comment: A powerful batch file renamer
 
 kphotoalbum:
   flatpak: org.kde.kphotoalbum
+  comment: KDE image management software
 
 kontrast:
   flatpak: org.kde.kontrast
+  comment: Check color contrast
 
 konquest:
   flatpak: org.kde.konquest
+  comment: Galactic Strategy Game
 
 kongress:
   flatpak: org.kde.kongress
+  comment: Conference companion
 
 kompare:
   flatpak: org.kde.kompare
+  comment: Diff/Patch Frontend
 
 kollision:
   flatpak: org.kde.kollision
+  comment: Casual ball game
 
 photos:
   flatpak: org.kde.koko
+  comment: Image Gallery
 
 knights:
   flatpak: org.kde.knights
+  comment: Chess game
 
 naval-battle:
   flatpak: org.kde.knavalbattle
+  comment: Battle Ship Game
 
 kmines:
   flatpak: org.kde.kmines
+  comment: Minesweeper-like Game
 
 kmahjongg:
   flatpak: org.kde.kmahjongg
+  comment: Mahjong Solitaire
 
 kolor-lines:
   flatpak: org.kde.klines
+  comment: Tactical Game
 
 kjumpingcube:
   flatpak: org.kde.kjumpingcube
+  comment: Territory Capture Game
 
 kiriki:
   flatpak: org.kde.kiriki
+  comment: Yahtzee-like Dice Game
 
 killbots:
   flatpak: org.kde.killbots
+  comment: Outsmart the killer robots to win
 
 kile:
   flatpak: org.kde.kile
+  comment: TeX/LaTeX Editor
 
 khangman:
   flatpak: org.kde.khangman
+  comment: Hangman Game
 
 kgraphviewer:
   flatpak: org.kde.kgraphviewer
+  comment: A Graphviz DOT graph viewer
 
 kgeotag:
   flatpak: org.kde.kgeotag
+  comment: Photo geotagging program
 
 kgeography:
   flatpak: org.kde.kgeography
+  comment: Geography learning tool
 
 kfind:
   flatpak: org.kde.kfind
+  comment: Find Files/Folders
 
 kdiskfree:
   flatpak: org.kde.kdf
+  comment: View Disk Usage
 
 kcharselect:
   flatpak: org.kde.kcharselect
+  comment: Character Selector
 
 kcalc:
   flatpak: org.kde.kcalc
+  comment: Scientific calculator
 
 kbruch:
   flatpak: org.kde.kbruch
+  comment: Exercise Fractions
 
 kbreakout:
   flatpak: org.kde.kbreakout
+  comment: KBreakOut is a Breakout-like game by KDE
 
 kblocks:
   flatpak: org.kde.kblocks
+  comment: Falling Blocks Game
 
 kblackbox:
   flatpak: org.kde.kblackbox
+  comment: Blackbox Logic Game
 
 katomic:
   flatpak: org.kde.katomic
+  comment: Sokoban-like Logic Game
 
 kapman:
   flatpak: org.kde.kapman
+  comment: Pac-Man Clone
 
 kanagram:
   flatpak: org.kde.kanagram
+  comment: Letter Order Game
 
 kalzium:
   flatpak: org.kde.kalzium
+  comment: Periodic Table of Elements
 
 juk:
   flatpak: org.kde.juk
+  comment: Music Player
 
 index:
   flatpak: org.kde.index
+  comment: Manage your files
 
 gcompris:
   flatpak: org.kde.gcompris
+  comment: Educational game for children
 
 dolphin:
   flatpak: org.kde.dolphin
+  comment: Manage your files
 
 digikam:
   flatpak: org.kde.digikam
+  comment: Photo Management Program
 
 bovo:
   flatpak: org.kde.bovo
+  comment: "Five in a row" board game
 
 blinken:
   flatpak: org.kde.blinken
+  comment: Memory Enhancement Game
 
 dr-robotnik-s-ring-racers:
   flatpak: org.kartkrew.RingRacers
+  comment: Racing at the Next Level
 
 jellyfin-server:
   flatpak: org.jellyfin.JellyfinServer
+  comment: Media Streaming System
 
 horizon-eda:
   flatpak: org.horizon_eda.HorizonEDA
+  comment: A free EDA package
 
 gtkhash:
   flatpak: org.gtkhash.gtkhash
+  comment: Calculate message digests or checksums
 
 time-log:
   flatpak: org.gtimelog.GTimeLog
+  comment: Unobtrusively keep track of your time
 
 electrum-grs:
   flatpak: org.groestlcoin.electrum-grs
+  comment: Lightweight Groestlcoin client
 
 tetzle:
   flatpak: org.gottcode.Tetzle
+  comment: Jigsaw puzzle with tetromino pieces
 
 simsu:
   flatpak: org.gottcode.Simsu
+  comment: Fill in numbers to solve puzzles
 
 peg-e:
   flatpak: org.gottcode.Peg-E
+  comment: Jump pegs to eliminate them
 
 novprog:
   flatpak: org.gottcode.NovProg
+  comment: Wordcount graphing program
 
 kapow-punch-clock:
   flatpak: org.gottcode.Kapow
+  comment: Keep track of time spent on projects
 
 hexalate:
   flatpak: org.gottcode.Hexalate
+  comment: Spin circles to match colors
 
 cutemaze:
   flatpak: org.gottcode.CuteMaze
+  comment: Find targets in a maze
 
 connectagram:
   flatpak: org.gottcode.Connectagram
+  comment: Unscramble words placed in patterns
 
 goldcoin:
   flatpak: org.goldcoinproject.goldcoin-qt
+  comment: Discover the Gold Standard of Digital Currency.
 
 gmetronome:
   flatpak: org.gnome.gitlab.dqpb.GMetronome
+  comment: Maintain a steady tempo
 
 pulp:
   flatpak: org.gnome.gitlab.cheywood.Pulp
+  comment: Skim excessive feeds
 
 buffer:
   flatpak: org.gnome.gitlab.cheywood.Buffer
+  comment: Embrace ephemeral text
 
 convolution:
   flatpak: org.gnome.gitlab.bazylevnik0.Convolution
+  comment: Maze escaping game
 
 video-trimmer:
   flatpak: org.gnome.gitlab.YaLTeR.VideoTrimmer
+  comment: Trim videos quickly
 
 gitg:
   flatpak: org.gnome.gitg
+  comment: Graphical user interface for git
 
 five-or-more:
   flatpak: org.gnome.five-or-more
+  comment: Remove colored balls from the board by forming lines
 
 symbolic-preview:
   flatpak: org.gnome.design.SymbolicPreview
+  comment: Symbolics Made Easy
 
 lorem:
   flatpak: org.gnome.design.Lorem
+  comment: Generate placeholder text
 
 iotas:
   flatpak: org.gnome.World.Iotas
+  comment: Simple note taking
 
 gnome-sudoku:
   flatpak: org.gnome.Sudoku
+  comment: Test yourself in the classic puzzle
 
 showtime:
   flatpak: org.gnome.Showtime
+  comment: Watch without distraction
 
 polari:
   flatpak: org.gnome.Polari
+  comment: Talk to people on IRC
 
 mines:
   flatpak: org.gnome.Mines
+  comment: Clear hidden mines from a minefield
 
 image-viewer:
   flatpak: org.gnome.Loupe
+  comment: View images
 
 logs:
   flatpak: org.gnome.Logs
+  comment: View detailed event logs for the system
 
 fractal:
   flatpak: org.gnome.Fractal
+  comment: Chat on Matrix
 
 firmware:
   flatpak: org.gnome.Firmware
+  comment: Install firmware on devices
 
 extensions:
   flatpak: org.gnome.Extensions
+  comment: Manage your GNOME Extensions
 
 calendar:
   flatpak: org.gnome.Calendar
+  comment: Manage your schedule
 
 gitfourchette:
   flatpak: org.gitfourchette.gitfourchette
+  comment: The comfortable Git UI
 
 gemrb:
   flatpak: org.gemrb.gemrb
+  comment: GemRB is a portable open-source implementation of Bioware’s Infinity Engine
 
 gajim:
   flatpak: org.gajim.Gajim
+  comment: Fully-featured XMPP chat client
 
 swatch:
   flatpak: org.gabmus.swatch
+  comment: Color palette manager
 
 notorious:
   flatpak: org.gabmus.notorious
+  comment: Keyboard centric notes
 
 hydrapaper:
   flatpak: org.gabmus.hydrapaper
+  comment: Wallpaper manager with multi monitor support
 
 fwupd:
   flatpak: org.freedesktop.fwupd
+  comment: Update device firmware on Linux
 
 vdpauinfo:
   flatpak: org.freedesktop.Platform.VdpauInfo
+  comment: Command line utility for querying the capabilities of a VDPAU device
 
 freeciv-sdl2-client:
   flatpak: org.freeciv.sdl2
+  comment: SDL2 based client for the Freeciv game
 
 freeciv-qt-client:
   flatpak: org.freeciv.qt
+  comment: Qt based client for the Freeciv game
 
 freeciv-gtk4-client:
   flatpak: org.freeciv.gtk4
+  comment: Gtk4 based client for the Freeciv game
 
 freeciv-gtk-3-22-client:
   flatpak: org.freeciv.gtk322
+  comment: Gtk+-3.22 based client for the Freeciv game
 
 calcleaner:
   flatpak: org.flozz.calcleaner
+  comment: A simple graphical tool to purge old events from CalDAV calendars
 
 flowkeeper:
   flatpak: org.flowkeeper.Flowkeeper
+  comment: Pomodoro timer for power users
 
 ferdium:
   flatpak: org.ferdium.Ferdium
+  comment: Messenger for the desktop
 
 fedora-media-writer:
   flatpak: org.fedoraproject.MediaWriter
+  comment: A tool to create a live USB drive with an edition of Fedora
 
 bined:
   flatpak: org.exbin.BinEd
+  comment: Binary/Hex Editor
 
 easyrpg-player:
   flatpak: org.easyrpg.player
+  comment: RPG Maker 2000/2003 interpreter
 
 easy-flatpak:
   flatpak: org.dupot.easyflatpak
+  comment: A simple Flatpak store
 
 dune-3d:
   flatpak: org.dune3d.dune3d
+  comment: Parametric 3D CAD
 
 duckstation:
   flatpak: org.duckstation.DuckStation
+  comment: PlayStation Emulator
 
 dbgate:
   flatpak: org.dbgate.DbGate
+  comment: (no)SQL database client
 
 damask-mesh:
   flatpak: org.damask_multiphysics.DAMASK_mesh
+  comment: Mesh solver for DAMASK
 
 damask-grid:
   flatpak: org.damask_multiphysics.DAMASK_grid
+  comment: Grid solver for DAMASK
 
 mosaic:
   flatpak: org.d3cod3.Mosaic
+  comment: An openFrameworks based Visual Patching Creative-Coding Platform
 
 cockpit-client:
   flatpak: org.cockpit_project.CockpitClient
+  comment: Web-based server interface via ssh
 
 kumo:
   flatpak: org.catacombing.kumo
+  comment: Mobile web browser
 
 bzflag:
   flatpak: org.bzflag.BZFlag
+  comment: A 3D first person tank battle game
 
 buhocms:
   flatpak: org.buhocms.BuhoCMS
+  comment: A local CMS for static site generators
 
 blackcoin-more:
   flatpak: org.blackcoin.blackcoin-more
+  comment: True Decentralised Digital Currency
 
 bino:
   flatpak: org.bino3d.bino
+  comment: 3D Video Player
 
 signal-cli:
   flatpak: org.asamk.SignalCli
+  comment: Use Signal messenger in terminal
 
 tipitaka-pali-reader:
   flatpak: org.americanmonk.TipitakaPaliReader
+  comment: Study Pāḷi texts with ease
 
 2009scape:
   flatpak: org._2009scape.Launcher
+  comment: 2009 Runescape Emulation
 
 interstellar:
   flatpak: one.jwr.interstellar
+  comment: Connect with the fediverse
 
 girens-for-plex:
   flatpak: nl.g4d.Girens
+  comment: Watch your Plex content
 
 powersupply:
   flatpak: nl.brixit.powersupply
+  comment: Linux power subsystem debugger
 
 session-desktop:
   flatpak: network.loki.Session
+  comment: Private messenger
 
 2048:
   flatpak: net.zdechov.app.x2048
+  comment: Block sliding puzzle game
 
 tunneler:
   flatpak: net.zdechov.app.Tunneler
+  comment: Tank digging battle game
 
 translines:
   flatpak: net.zdechov.app.TransLines
+  comment: Enjoyable metro building game
 
 lazfuck:
   flatpak: net.zdechov.app.LazFuck
+  comment: Simple BrainFuck IDE
 
 warzone-2100:
   flatpak: net.wz2100.wz2100
+  comment: Command the forces of The Project in a battle to rebuild the world
 
 unvanquished:
   flatpak: net.unvanquished.Unvanquished
+  comment: Fast paced, first person strategy game
 
 tabletop-club:
   flatpak: net.tabletopclub.TabletopClub
+  comment: Play board games in a 3D sandbox
 
 xbplay-remote-play-for-xbox:
   flatpak: net.studio08.xbplay
+  comment: Remote play from your console or xCloud
 
 the-ur-quan-masters-hd-megamod:
   flatpak: net.sourceforge.uqm_mods.UQM-MegaMod
+  comment: Mod for The Ur-Quan Masters
 
 shadps4:
   flatpak: net.shadps4.shadPS4
+  comment: PS4 Emulator
 
 runelite:
   flatpak: net.runelite.RuneLite
+  comment: RuneLite OSRS Client
 
 nextgroove:
   flatpak: net.rosebirch.nextgroove
+  comment: Play music from Nextcloud
 
 peercoin:
   flatpak: net.peercoin.peercoin-qt
+  comment: Peercoin, a green crypto for sustainable future.
 
 pcsx2:
   flatpak: net.pcsx2.PCSX2
+  comment: PlayStation 2 Emulator
 
 openhabittracker:
   flatpak: net.openhabittracker.OpenHabitTracker
+  comment: Take notes, plan tasks, track habits
 
 resources:
   flatpak: net.nokyan.Resources
+  comment: Keep an eye on system resources
 
 shuusou-gyoku-engine:
   flatpak: net.nmlgc.rec98.sh01
+  comment: ReC98 source port of the first Seihou Project game
 
 luanti:
   flatpak: net.minetest.Minetest
+  comment: Block-based multiplayer game platform
 
 lutris:
   flatpak: net.lutris.Lutris
+  comment: Video game preservation platform
 
 freeciv21:
   flatpak: net.longturn.freeciv21
+  comment: Develop Your Civilization from Humble Roots to a Global Empire
 
 camp-counselor:
   flatpak: net.line72.campcounselor
+  comment: Bandcamp.com Wishlist Manager
 
 muehle:
   flatpak: net.kubux.Muehle
+  comment: Play a game of Nine Men's Morris.
 
 semantik:
   flatpak: net.krafting.SemantiK
+  comment: Find the secret word
 
 pleasure-dvr:
   flatpak: net.krafting.PleasureDVR
+  comment: Record Chaturbate live streams
 
 playlifin-voyager:
   flatpak: net.krafting.PlaylifinVoyager
+  comment: Transfer playlists to/from Jellyfin
 
 playlifin:
   flatpak: net.krafting.Playlifin
+  comment: Sync YouTube playlists to Jellyfin
 
 hex-colordle:
   flatpak: net.krafting.HexColordle
+  comment: Find the color
 
 confy:
   flatpak: net.kirgroup.confy
+  comment: Conference schedules viewer
 
 kulki:
   flatpak: net.jockx.Kulki
+  comment: A game of matching marbles
 
 parallel-overhead:
   flatpak: net.huitsi.ParallelOverhead
+  comment: Endless runner game
 
 rota:
   flatpak: net.hhoney.rota
+  comment: Gravity bends beneath your feet
 
 gpro:
   flatpak: net.gpro.gproapp
+  comment: Manage your racing team
 
 freerct:
   flatpak: net.freerct.FreeRCT
+  comment: Theme park strategy game
 
 clicker:
   flatpak: net.codelogistics.clicker
+  comment: Simulate user input repeatedly
 
 multivnc:
   flatpak: net.christianbeier.MultiVNC
+  comment: Multicast-enabled VNC viewer
 
 pineapple-pictures:
   flatpak: net.blumia.pineapple-pictures
+  comment: Image Viewer
 
 ntfy-desktop:
   flatpak: moe.emmaexe.ntfyDesktop
+  comment: A desktop client for ntfy
 
 snowball:
   flatpak: mobi.snowball.Snowball
+  comment: Novel 3D loop/buzz wire style game
 
 lemonade:
   flatpak: ml.mdwalters.Lemonade
+  comment: Follow discussions on Lemmy
 
 kando:
   flatpak: menu.kando.Kando
+  comment: Do things with utmost efficiency
 
 japachar:
   flatpak: me.sergiotarxz.JapaChar
+  comment: Learn Japanese characters
 
 lptk:
   flatpak: me.ogarcia.lptk
+  comment: Stateless password manager
 
 dev-toolbox:
   flatpak: me.iepure.devtoolbox
+  comment: Dev tools at your fingertips
 
 opendeck:
   flatpak: me.amankhanna.opendeck
+  comment: Use stream controllers
 
 a-photo-tool-libre:
   flatpak: me.ahola.aphototoollibre
+  comment: Photo editor for Linux
 
 lachesis:
   flatpak: me.acristoffers.Lachesis
+  comment: Moirai supervisor
 
 cauldron:
   flatpak: it.dottorblaster.cauldron
+  comment: Collect content from the web
 
 welle-io:
   flatpak: io.welle.welle-gui
+  comment: A DAB/DAB+ Software Radio
 
 furtherance:
   flatpak: io.unobserved.furtherance
+  comment: Time tracker
 
 espansogui:
   flatpak: io.unobserved.espansoGUI
+  comment: GUI interface for espanso
 
 nexus-lu-launcher:
   flatpak: io.thenexusavenger.Nexus-LU-Launcher
+  comment: Launcher for LEGO Universe
 
 pysolfc:
   flatpak: io.sourceforge.pysolfc.PySolFC
+  comment: Solitaire game compilation
 
 commander-genius:
   flatpak: io.sourceforge.clonekeenplus
+  comment: A Game Engine for "Commander Keen"
 
 nfo-viewer:
   flatpak: io.otsaloma.nfoview
+  comment: Viewer for NFO files
 
 mission-center:
   flatpak: io.missioncenter.MissionCenter
+  comment: Monitor system resource usage
 
 s3drive:
   flatpak: io.kapsa.drive
+  comment: Convert S3, SFTP, WebDAV or Rclone back-end into your encrypted storage
 
 webp-converter:
   flatpak: io.itsterminal.WebPConverter
+  comment: The fastest way to convert images to WebP
 
 stone-kingdoms:
   flatpak: io.gitlab.stone_kingdoms.StoneKingdoms
+  comment: Open source Stronghold fan remake
 
 newsflash:
   flatpak: io.gitlab.news_flash.NewsFlash
+  comment: Keep up with your feeds
 
 text-pieces:
   flatpak: io.gitlab.liferooter.TextPieces
+  comment: Developer's scratchpad
 
 tactics:
   flatpak: io.gitlab.leesonwai.Tactics
+  comment: Build your soccer lineup
 
 sums:
   flatpak: io.gitlab.leesonwai.Sums
+  comment: Calculate with postfix notation
 
 irrlamb:
   flatpak: io.gitlab.jazztickets.irrlamb
+  comment: 3D physics platformer
 
 choria:
   flatpak: io.gitlab.jazztickets.choria
+  comment: Old school multiplayer RPG
 
 space-launch:
   flatpak: io.gitlab.elescoute.spacelaunch
+  comment: Rocket launches tracker
 
 nis-one-click-backup:
   flatpak: io.gitlab.dev_nis.one-click-backup
+  comment: Simple program to backup folders to an external location by copying them
 
 watchmate:
   flatpak: io.gitlab.azymohliad.WatchMate
+  comment: Manage your PineTime
 
 footage:
   flatpak: io.gitlab.adhami3310.Footage
+  comment: Polish your videos
 
 schedule:
   flatpak: io.github.zhrexl.thisweekinmylife
+  comment: A simple kanban-styled planner
 
 yuki-iptv:
   flatpak: io.github.yuki_iptv.yuki-iptv
+  comment: IPTV player with EPG support
 
 pong:
   flatpak: io.github.yesser_studios.Pong
+  comment: A simple Pong clone
 
 unciv:
   flatpak: io.github.yairm210.unciv
+  comment: Turn-based strategy game
 
 xaos:
   flatpak: io.github.xaos_project.XaoS
+  comment: Fast real-time fractal zoomer
 
 orbvis:
   flatpak: io.github.wojciech_graj.OrbVis
+  comment: A Realtime Satellite Orbit Visualizer
 
 wivrn-server:
   flatpak: io.github.wivrn.wivrn
+  comment: Play your PC VR games on a standalone headset
 
 fan-control:
   flatpak: io.github.wiiznokes.fan-control
+  comment: Control your fans with different behaviors
 
 panel-cleaner:
   flatpak: io.github.voxelcubes.panelcleaner
+  comment: Let AI clean manga panels for you
 
 hand-tex:
   flatpak: io.github.voxelcubes.hand-tex
+  comment: Draw the symbol, get the LaTeX
 
 netsleuth:
   flatpak: io.github.vmkspv.netsleuth
+  comment: Calculate IP subnets
 
 savedesktop:
   flatpak: io.github.vikdevelop.SaveDesktop
+  comment: Save your desktop configuration
 
 emoji-mart:
   flatpak: io.github.vemonet.EmojiMart
+  comment: A modern popup emoji picker
 
 cube-timer:
   flatpak: io.github.vallabhvidy.CubeTimer
+  comment: 3x3 Rubiks Cube timer
 
 key-cutter:
   flatpak: io.github.unicornyrainbow.secrets
+  comment: Easily generate passwords based on your needs
 
 the-force-engine:
   flatpak: io.github.theforceengine.tfe
+  comment: A modern cross‑platform port of “STAR WARS™: Dark Forces” with mod support
 
 flood-it:
   flatpak: io.github.tfuxu.floodit
+  comment: Flood the board
 
 halftone:
   flatpak: io.github.tfuxu.Halftone
+  comment: Dither your images
 
 diurnals:
   flatpak: io.github.sss_says_snek.diurnals
+  comment: Get daily Todoist notifications
 
 progress:
   flatpak: io.github.smolblackcat.Progress
+  comment: Kanban-style task organiser
 
 share:
   flatpak: io.github.sigmasd.share
+  comment: Easily share files
 
 primehack:
   flatpak: io.github.shiiion.primehack
+  comment: Dolphin Emu fork for various Metroid Prime mods
 
 oceanpop:
   flatpak: io.github.sharkwouter.oceanpop
+  comment: A relaxing match 3 puzzle game with a twist
 
 minigalaxy:
   flatpak: io.github.sharkwouter.Minigalaxy
+  comment: A simple GOG client for Linux
 
 vipster:
   flatpak: io.github.sgsaenger.vipster
+  comment: Visualization of various molecular structure files
 
 kooha:
   flatpak: io.github.seadve.Kooha
+  comment: Elegantly record your screen
 
 csven:
   flatpak: io.github.rsvzz.csven
+  comment: Order English words
 
 rosary-music:
   flatpak: io.github.roseblume.rosemusic
+  comment: Listen To Online Radio
 
 concessio:
   flatpak: io.github.ronniedroid.concessio
+  comment: Understand file permissions
 
 gdm-settings:
   flatpak: io.github.realmazharhussain.GdmSettings
+  comment: Customize your login screen
 
 randovania:
   flatpak: io.github.randovania.Randovania
+  comment: A randomizer platform for a multitude of games
 
 multiclock:
   flatpak: io.github.r_sergii.multiClock
+  comment: Time in the world's largest financial centers
 
 fast-reader:
   flatpak: io.github.quantum_mutnauq.fast_reader_gtk
+  comment: Reading one word at a time
 
 qcanvas:
   flatpak: io.github.qcanvas.QCanvasApp
+  comment: View courses from Canvas LMS
 
 clipboard-server:
   flatpak: io.github.q962.ClipboardServer
+  comment: Clipboard data collector
 
 sysd-manager:
   flatpak: io.github.plrigaux.sysd-manager
+  comment: A GUI to manage systemd units
 
 icebox:
   flatpak: io.github.pleromix.IceBox
+  comment: PDF Maker
 
 bmi:
   flatpak: io.github.philippkosarev.bmi
+  comment: Body mass index calculator
 
 tags:
   flatpak: io.github.phastmike.tags
+  comment: Color logs based on tags
 
 infiniteshooter:
   flatpak: io.github.pastthepixels.InfiniteShooter
+  comment: A simplistic shooter made with the Godot engine.
 
 mqtty:
   flatpak: io.github.otaxhu.MQTTy
+  comment: GUI for consuming MQTT topics
 
 opennumismat:
   flatpak: io.github.opennumismat.open-numismat
+  comment: Custom coin collection catalog
 
 openhv:
   flatpak: io.github.openhv.OpenHV
+  comment: Futuristic strategy game
 
 onionmedia-x:
   flatpak: io.github.onionware_github.onionmedia
+  comment: Free Media Downloader & Converter
 
 packet:
   flatpak: io.github.nozwock.Packet
+  comment: Share files easily
 
 ultimate-tic-tac-toe:
   flatpak: io.github.nokse22.ultimate-tic-tac-toe
+  comment: (Tic Tac Toe)²
 
 teleprompter:
   flatpak: io.github.nokse22.teleprompter
+  comment: Stay on track during speeches
 
 mini-text:
   flatpak: io.github.nokse22.minitext
+  comment: Ephemeral scratch pad
 
 nest-desktop:
   flatpak: io.github.nest_desktop.nest-desktop
+  comment: Simulate spiking neuronal networks
 
 paleta:
   flatpak: io.github.nate_xyz.Paleta
+  comment: Generate color palettes with ease
 
 conjure:
   flatpak: io.github.nate_xyz.Conjure
+  comment: Magically transform images
 
 kleaner:
   flatpak: io.github.najepaliya.kleaner
+  comment: An Image Metadata Cleaner
 
 errands:
   flatpak: io.github.mrvladus.List
+  comment: Manage your tasks
 
 sticky-hours:
   flatpak: io.github.mrstickypiston.stickyhours
+  comment: Easily find common schedule gaps
 
 vaults:
   flatpak: io.github.mpobaschnig.Vaults
+  comment: Keep important files safe
 
 tambourine:
   flatpak: io.github.mmarco94.tambourine
+  comment: Your music, minus the clutter
 
 pomodorot:
   flatpak: io.github.mlm_games.pomodorot
+  comment: A pomodoro timer which can block your screen during breaks
 
 tripeaks-neue:
   flatpak: io.github.mimoguz.tripeaks_neue
+  comment: Patience game
 
 rpn-calculator:
   flatpak: io.github.mike632t.x11-calc
+  comment: HP Calculator Simulator
 
 imagefan-reloaded:
   flatpak: io.github.mihnea_radulescu.imagefanreloaded
+  comment: Light-weight, tab-based image viewer, supporting multi-core processing
 
 sirikali:
   flatpak: io.github.mhogomchungu.sirikali
+  comment: A GUI to Gocryptfs, Securefs, Cryfs
 
 picker:
   flatpak: io.github.mezoahmedii.Picker
+  comment: Randomly pick something to do
 
 xbox-cloud-gaming-electron:
   flatpak: io.github.mandruis7.xbox-cloud-gaming-electron
+  comment: Open-source Xbox Cloud Electron client
 
 qtcord:
   flatpak: io.github.mak448a.QTCord
+  comment: Lightweight Discord client
 
 doom-bfa:
   flatpak: io.github.maddecoder.Classic-RBDOOM-3-BFG
+  comment: Doom BFA is a Doom 3 BFG GPL source port
 
 echo:
   flatpak: io.github.lo2dev.Echo
+  comment: Ping websites
 
 limo:
   flatpak: io.github.limo_app.limo
+  comment: Mod Manager
 
 frontends-manager:
   flatpak: io.github.libredirect.frontends-manager
+  comment: Host privacy frontends locally
 
 gradebook:
   flatpak: io.github.leolost2605.gradebook
+  comment: Keep track of your grades
 
 librequake:
   flatpak: io.github.lavenderdotpet.LibreQuake
+  comment: Cosmic horror first-person shooter
 
 notejot:
   flatpak: io.github.lainsce.Notejot
+  comment: Jot your ideas
 
 khronos:
   flatpak: io.github.lainsce.Khronos
+  comment: Log the time it took to do tasks
 
 emulsion:
   flatpak: io.github.lainsce.Emulsion
+  comment: Stock up on colors
 
 materialgram:
   flatpak: io.github.kukuruzka165.materialgram
+  comment: Googlized Telegram
 
 poliedros:
   flatpak: io.github.kriptolix.Poliedros
+  comment: Poliedros is a multi-type dice roller.
 
 bibref:
   flatpak: io.github.kovzol.bibref
+  comment: Discover references in the Bible
 
 kotatogram:
   flatpak: io.github.kotatogram
+  comment: Experimental Telegram messenger
 
 danceinterpreter:
   flatpak: io.github.klassenserver7b.danceinterpreter-rs
+  comment: Utility for displaying song infos
 
 syncara:
   flatpak: io.github.khaled_0.TubeSync
+  comment: Sync YouTube playlists offline
 
 lightkeeperrm:
   flatpak: io.github.kalaksi.Lightkeeper
+  comment: Linux server management tool
 
 text-compare:
   flatpak: io.github.josephmawa.TextCompare
+  comment: Text snippet comparison
 
 spelling-bee:
   flatpak: io.github.josephmawa.SpellingBee
+  comment: Learn new English words
 
 egghead:
   flatpak: io.github.josephmawa.Egghead
+  comment: Learn while having fun
 
 bella:
   flatpak: io.github.josephmawa.Bella
+  comment: Pick a color from the screen
 
 kdiskmark:
   flatpak: io.github.jonmagon.kdiskmark
+  comment: Disk benchmark tool
 
 runemaster:
   flatpak: io.github.johnfactotum.Runemaster
+  comment: Unleash the magic of Unicode characters
 
 bmi-calculator:
   flatpak: io.github.johannesboehler2.BmiCalculator
+  comment: Calculate your BMI
 
 rymdport:
   flatpak: io.github.jacalz.rymdport
+  comment: Fast, encrypted file transfers
 
 iptux:
   flatpak: io.github.iptux_src.iptux
+  comment: LAN communication software
 
 valuta:
   flatpak: io.github.idevecore.Valuta
+  comment: Convert between currencies
 
 length:
   flatpak: io.github.herve4m.Length
+  comment: Measure objects on screen
 
 hedge-mod-manager:
   flatpak: io.github.hedge_dev.hedgemodmanager
+  comment: Manage mods for Sonic games
 
 go-minesweeper:
   flatpak: io.github.heathcliff26.go-minesweeper
+  comment: A minesweeper game
 
 coulomb:
   flatpak: io.github.hamza_algohary.Coulomb
+  comment: Electronic circuit simulator
 
 mingle:
   flatpak: io.github.halfmexican.Mingle
+  comment: Combine emojis with Google's Emoji Kitchen
 
 flatsweep:
   flatpak: io.github.giantpinkrobots.flatsweep
+  comment: Flatpak leftover cleaner
 
 bootqt:
   flatpak: io.github.giantpinkrobots.bootqt
+  comment: Create bootable drives
 
 embellish:
   flatpak: io.github.getnf.embellish
+  comment: Install nerd fonts
 
 jsymphonic-revival:
   flatpak: io.github.georgewoodall82.jsymphonic
+  comment: A Manager for Sony digital players
 
 cbconvert:
   flatpak: io.github.gen2brain.cbconvert
+  comment: A Comic Book converter
 
 wgshadertoy:
   flatpak: io.github.fralonra.WgShadertoy
+  comment: A WGSL playground inspired by Shadertoy
 
 pmim:
   flatpak: io.github.fm_elpac.pmim_ibus
+  comment: Chinese pinyin input method
 
 binary:
   flatpak: io.github.fizzyizzy05.binary
+  comment: Convert numbers between bases
 
 hieroglyphic:
   flatpak: io.github.finefindus.Hieroglyphic
+  comment: Find LaTeX symbols
 
 crispy-doom:
   flatpak: io.github.fabiangreffrath.Doom
+  comment: Limit-removing enhanced-resolution Doom source port
 
 olympus:
   flatpak: io.github.everestapi.Olympus
+  comment: Cross-platform Celeste Mod Manager
 
 jorts:
   flatpak: io.github.ellie_commons.jorts
+  comment: Colourful little sticky notes! :)
 
 play-timer:
   flatpak: io.github.efogdev.mpris-timer
+  comment: Native-feeling timers
 
 bluejay:
   flatpak: io.github.ebonjaeger.bluejay
+  comment: Bluetooth device manager
 
 lexi:
   flatpak: io.github.dzheremi2.lexi
+  comment: Build your own dictionary
 
 design:
   flatpak: io.github.dubstar_04.design
+  comment: 2D CAD for GNOME
 
 chess-comp-stomp-with-hacks:
   flatpak: io.github.dtsudo.ChessCompStompWithHacks
+  comment: Defeat the chess AI using hacks!
 
 dosage:
   flatpak: io.github.diegopvlk.Dosage
+  comment: Keep track of your treatments
 
 memorize:
   flatpak: io.github.david_swift.Flashcards
+  comment: Study flashcards
 
 e2-sat-editor:
   flatpak: io.github.ctlcltd.e2se
+  comment: Satellite channel lists editor for Enigma2, Neutrino, dreambox
 
 serigy:
   flatpak: io.github.cleomenezesjr.Serigy
+  comment: A proof of concept for a "clipboard pinner" for GNOME
 
 yass:
   flatpak: io.github.chilledheart.yass
+  comment: Lightweight forward proxy
 
 electricity-clock:
   flatpak: io.github.carterbox.Electricity_Clock
+  comment: Monitor electricity rates
 
 katharsis:
   flatpak: io.github.buonhobo.Katharsis
+  comment: Emulate computer networks with ease
 
 cohesion:
   flatpak: io.github.brunofin.Cohesion
+  comment: Unofficial Notion Desktop client
 
 eternalmodmanager:
   flatpak: io.github.brunoanc.eternalmodmanager
+  comment: Mod manager for DOOM Eternal
 
 baseconvert:
   flatpak: io.github.breadmakesyoufull.baseconvert
+  comment: Convert numbers between bases
 
 lnxlink:
   flatpak: io.github.bkbilly.lnxlink
+  comment: Manage Linux machine with MQTT
 
 mousam:
   flatpak: io.github.amit9838.mousam
+  comment: Weather at a glance
 
 tarotcaster:
   flatpak: io.github.alamahant.TarotCaster
+  comment: Cast in Style
 
 stage:
   flatpak: io.github.aganzha.Stage
+  comment: Git GUI client inspired by Magit
 
 sitemarker:
   flatpak: io.github.aerocyber.sitemarker
+  comment: An open source bookmark manager
 
 verse:
   flatpak: io.github.TanmayPatil105.verse
+  comment: Get currently playing Spotify song lyrics
 
 soundux:
   flatpak: io.github.Soundux
+  comment: A cross-platform soundboard
 
 signwriter:
   flatpak: io.github.Samuel_Schlemper_Schlemuel.SignWriter
+  comment: Write in SignWriting
 
 fig:
   flatpak: io.github.Q1CHENL.fig
+  comment: Sleek GIF editor
 
 pithos:
   flatpak: io.github.Pithos
+  comment: Pandora radio client
 
 mqtt5-explorer:
   flatpak: io.github.Omniaevo.mqtt5-explorer
+  comment: Simple yet powerful MQTT5 client
 
 lightwave-explorer:
   flatpak: io.github.NickKarpowicz.LightwaveExplorer
+  comment: Easily simulate nonlinear optics
 
 improve-imgsli:
   flatpak: io.github.Loganavter.Improve-ImgSLI
+  comment: Image comparison with magnifier
 
 imeditor:
   flatpak: io.github.ImEditor
+  comment: Simple & versatile image editor
 
 hexchat:
   flatpak: io.github.Hexchat
+  comment: IRC Client
 
 eventrecorder:
   flatpak: io.github.FedericoCalzoni.EventRecorder
+  comment: Record Timed Events
 
 kontainer:
   flatpak: io.github.DenysMb.Kontainer
+  comment: Manage Distrobox containers
 
 brisk:
   flatpak: io.github.BrisklyDev.Brisk
+  comment: Ultra-fast, modern download manager
 
 sane-break:
   flatpak: io.github.AllanChain.sane-break
+  comment: Break reminder, no mindless skips
 
 stardropforked:
   flatpak: io.github.Adda0.Stardrop
+  comment: Unofficial fork of Stardrop with custom changes
 
 e-d-market-connector:
   flatpak: io.edcd.EDMarketConnector
+  comment: Updates the EDDN with data from your game
 
 portfolio-performance:
   flatpak: info.portfolio_performance.PortfolioPerformance
+  comment: Track the performance of an investment portfolio
 
 bibletime:
   flatpak: info.bibletime.BibleTime
+  comment: Bible Study Program
 
 vara:
   flatpak: in.co.nandakumar.vara
+  comment: Minimalist digital painting
 
 nheko:
   flatpak: im.nheko.Nheko
+  comment: Desktop client for the Matrix protocol
 
 fluffychat:
   flatpak: im.fluffychat.Fluffychat
   aliases: [fluffy-chat]
+  comment: Chat with your friends
 
 dino:
   flatpak: im.dino.Dino
   aliases: [dino-xmpp]
+  comment: Modern XMPP chat client
 
 nostalgia:
   flatpak: im.bernard.Nostalgia
+  comment: Set historic GNOME wallpapers
 
 worldcoin:
   flatpak: global.worldcoin.worldcoin-core
+  comment: Separated by borders, United by technology
 
 stockpile:
   flatpak: garden.turtle.Jellybean
+  comment: Keep count of restockable items
 
 morphosis:
   flatpak: garden.jamie.Morphosis
+  comment: Convert your documents
 
 wander-no-more:
   flatpak: games.zetsubou.WanderNoMore
+  comment: A visual novel telling the story of a rogue samurai
 
 max-massacre:
   flatpak: games.zetsubou.MaxMassacre
+  comment: A visual novel set in a monster-filled fantasy world
 
 ten-forward:
   flatpak: fr.sgued.ten_forward
+  comment: Control a NAT-PMP gateway
 
 reckoner:
   flatpak: finance.reckoner.Reckoner
+  comment: Private personal financial tracking
 
 lagrange:
   flatpak: fi.skyjake.Lagrange
+  comment: A Beautiful Gemini Client
 
 ultrastar-deluxe:
   flatpak: eu.usdx.UltraStarDeluxe
+  comment: Karaoke for your PC
 
 open-chakra-toning:
   flatpak: eu.quelltext.open_chakra_toning
+  comment: Open your chakras with sound
 
 mirror-hall:
   flatpak: eu.nokun.MirrorHall
+  comment: Use Linux devices as second screens
 
 chess-clock:
   flatpak: eu.fortysixandtwo.chessclock
+  comment: Time games of over-the-board chess
 
 xl-converter:
   flatpak: eu.codepoems.xl-converter
+  comment: Convert images
 
 cantata:
   flatpak: dog.unix.cantata.Cantata
+  comment: Control your music server
 
 chance:
   flatpak: dev.zelikos.rollit
+  comment: Roll the dice
 
 spmp:
   flatpak: dev.toastbits.spmp
+  comment: A customisable YouTube Music client
 
 localtranslate:
   flatpak: dev.ters.LocalTranslate
+  comment: Translate text offline
 
 seabird:
   flatpak: dev.skynomads.Seabird
+  comment: A simple Kubernetes IDE for GNOME
 
 waycheck:
   flatpak: dev.serebit.Waycheck
+  comment: Show Wayland compositor details
 
 forecast:
   flatpak: com.jwestall.Forecast
+  comment: View weather predictions
 
 restfox:
   flatpak: dev.restfox.Restfox
+  comment: A powerful minimalistic HTTP client
 
 overlayed:
   flatpak: dev.overlayed.Overlayed
+  comment: A Discord overlay
 
 sunshine:
   flatpak: dev.lizardbyte.app.Sunshine
+  comment: GameStream host for Moonlight
 
 tiny-image-finder:
   flatpak: dev.levz.TinyImageFinder
+  comment: Image Finder with Preview
 
 qr-scanner:
   flatpak: dev.lasheen.qr
+  comment: A QR code scanner/generator
 
 tasks:
   flatpak: dev.edfloreshz.Tasks
+  comment: Get things done
 
 tweaks:
   flatpak: dev.edfloreshz.CosmicTweaks
+  comment: Beyond the limits of your desktop
 
 trayscale:
   flatpak: dev.deedles.Trayscale
+  comment: Unofficial GUI for Tailscale
 
 fretboard:
   flatpak: dev.bragefuglseth.Fretboard
+  comment: Look up guitar chords
 
 boxi:
   flatpak: dev.boxi.Boxi
+  comment: Terminal emulator for Toolbox
 
 discorkie:
   flatpak: dev.appoutlet.DisCorkie
+  comment: Discover new communities
 
 spot:
   flatpak: dev.alextren.Spot
+  comment: Listen to music on Spotify
 
 picplanner:
   flatpak: de.zwarf.picplanner
+  comment: Plan your next photo locations
 
 facetracker:
   flatpak: de.z_ray.Facetracker
+  comment: Face tracking made easy
 
 plattenalbum:
   flatpak: de.wagnermartin.Plattenalbum
+  comment: Connect to your music
 
 turn-on:
   flatpak: de.swsnr.turnon
+  comment: Turn on devices in your network
 
 pipeline:
   flatpak: de.schmidhuberj.tubefeeder
+  comment: Follow video creators
 
 flare:
   flatpak: de.schmidhuberj.Flare
+  comment: Chat with your friends on Signal
 
 turtle:
   flatpak: de.philippun1.turtle
+  comment: Manage your git repositories
 
 snoop:
   flatpak: de.philippun1.Snoop
+  comment: Snoop through your files
 
 nagstamon:
   flatpak: de.nagstamon.nagstamon
+  comment: The status monitor for the desktop
 
 qv-quickview:
   flatpak: de.marlam.qv
+  comment: 2D Data Visualizer
 
 libellus:
   flatpak: de.hummdudel.Libellus
+  comment: View DnD information in style
 
 shortwave:
   flatpak: de.haeckerfelix.Shortwave
+  comment: Listen to internet radio
 
 gonnect:
   flatpak: de.gonicus.gonnect
+  comment: Make SIP calls
 
 cookbook:
   flatpak: de.flose.Kochbuch
+  comment: The easy to use electronic cookbook
 
 barcoder:
   flatpak: cz.ondrejkolin.Barcoder
+  comment: Create barcodes & QR codes
 
 xpano:
   flatpak: cz.krupkat.Xpano
+  comment: Easy panorama stitching
 
 lfy:
   flatpak: cool.ldr.lfy
+  comment: Translation software designed for reading scientific research literature
 
 zettlr:
   flatpak: com.zettlr.Zettlr
+  comment: A Markdown editor for the 21st century
 
 wonderland-editor:
   flatpak: com.wonderlandengine.editor
+  comment: Fast, lightweight 3D engine for the web
 
 wireframesketcher:
   flatpak: com.wireframesketcher.WireframeSketcher
+  comment: Wireframing tool for professionals
 
 jpeg2pdf:
   flatpak: com.warlordsoftwares.jpeg2pdf
+  comment: Convert Images Into PDF File
 
 protonplus:
   flatpak: com.vysp3r.ProtonPlus
+  comment: Modern compatibility tools manager
 
 ai-generated-game:
   flatpak: com.voxdsp.aigeneratedgame
+  comment: Save your friends from the ghosts!
 
 voxel-paint-pro:
   flatpak: com.voxdsp.VoxelPaintPro
+  comment: Paint in 3D using pixel Voxels
 
 voxel-paint:
   flatpak: com.voxdsp.VoxelPaint
+  comment: Paint in 3D using Voxels
 
 tux-vs-dragon:
   flatpak: com.voxdsp.TuxVsDragon
+  comment: Slay the Red Dragon Tux!
 
 tux-fishing:
   flatpak: com.voxdsp.TuxFishing
+  comment: 3D Fishing Game
 
 the-catrooms:
   flatpak: com.voxdsp.TheCatrooms
+  comment: Liminal Cat Horror
 
 temple-driver:
   flatpak: com.voxdsp.TempleDriver
+  comment: Terry's 1st Temple
 
 spaceminer:
   flatpak: com.voxdsp.Spaceminer
+  comment: 3D space mining game
 
 snowling:
   flatpak: com.voxdsp.Snowling
+  comment: Bowling game of luck
 
 snowboarder:
   flatpak: com.voxdsp.Snowboarder
+  comment: 3D Snowboarding
 
 porydrive:
   flatpak: com.voxdsp.PoryDrive
+  comment: Driving Game, Catch Porygon!
 
 pac-gal:
   flatpak: com.voxdsp.PacGal
+  comment: Feminized PAC-MAN remake
 
 borg-er-3:
   flatpak: com.voxdsp.Borg
+  comment: Tone generator
 
 cosmicding:
   flatpak: com.vkhitrin.cosmicding
+  comment: Manage your bookmarks
 
 sticky-notes:
   flatpak: com.vixalien.sticky
+  comment: Pin notes to your desktop
 
 focal:
   flatpak: com.vargary.focal
+  comment: Organize tasks & notes in a tree.
 
 finamp:
   flatpak: com.unicornsonlsd.finamp
+  comment: Open source Jellyfin music player
 
 tuxpusher-friends:
   flatpak: com.tuxpusher.TuxPusherAF
+  comment: 515 Unique Prizes + 6 Penguins
 
 tuxpusher:
   flatpak: com.tuxpusher.TuxPusher
+  comment: Coin pusher game featuring Tux
 
 emote:
   flatpak: com.tomjwatson.Emote
+  comment: Modern popup emoji picker
 
 surfshark:
   flatpak: com.surfshark.Surfshark
+  comment: Connect to secure, private web!
 
 space-station-14:
   flatpak: com.spacestation14.Launcher
+  comment: Multiplayer disaster simulator
 
 ear-x:
   flatpak: com.somaxa8.earx
+  comment: Control your Nothing earbuds' settings
 
 simutrans:
   flatpak: com.simutrans.Simutrans
+  comment: Open source transportation simulation game
 
 pwvucontrol:
   flatpak: com.saivert.pwvucontrol
+  comment: Volume control for pipewire
 
 zapzap:
   flatpak: com.rtosta.zapzap
+  comment: WhatsApp Messenger
 
 redis-insight:
   flatpak: com.redis.RedisInsight
+  comment: Developer GUI for Redis, by Redis
 
 lobjur:
   flatpak: com.ranfdev.Lobjur
+  comment: A simple lobste.rs client
 
 geopard:
   flatpak: com.ranfdev.Geopard
+  comment: Browse Gemini pages
 
 distroshelf:
   flatpak: com.ranfdev.DistroShelf
+  comment: Graphical interface for managing Distrobox containers
 
 black-box:
   flatpak: com.raggesilver.BlackBox
+  comment: A beautiful GTK 4 terminal
 
 webfont-kit-generator:
   flatpak: com.rafaelmardojai.WebfontKitGenerator
+  comment: Create @font-face kits easily
 
 share-preview:
   flatpak: com.rafaelmardojai.SharePreview
+  comment: Test social media cards locally
 
 popcornfx-editor:
   flatpak: com.popcornfx.PopcornFXEditor
+  comment: Realtime visual effects editor
 
 multiplex:
   flatpak: com.pojtinger.felicitas.Multiplex
+  comment: Watch torrents with your friends
 
 plexamp:
   flatpak: com.plexamp.Plexamp
+  comment: Beautiful music player for Plex
 
 shijima-qt:
   flatpak: com.pixelomer.ShijimaQt
+  comment: Shimeji desktop pet runner
 
 color-code:
   flatpak: com.oyajun.ColorCode
+  comment: Color Code to Resistance Value
 
 openscq30:
   flatpak: com.oppzippy.OpenSCQ30
+  comment: Control Soundcore headphones
 
 netxms-5-1:
   flatpak: com.netxms.NetXMSClient51
+  comment: Control your network monitoring
 
 netxms-5-0:
   flatpak: com.netxms.NetXMSClient50
+  comment: Control your network monitoring
 
 netxms-4-5:
   flatpak: com.netxms.NetXMSClient
+  comment: Control your network monitoring
 
 madamiru:
   flatpak: com.mtkennerly.madamiru
+  comment: Dynamic multi-multimedia player
 
 tab-la:
   flatpak: com.mastropaolo.www.tabela
+  comment: Format tables to Markdown or HTML
 
 forge-sparks:
   flatpak: com.mardojai.ForgeSparks
+  comment: Get Git forges notifications
 
 volaris:
   flatpak: com.leohanney.Volaris
+  comment: Sleek file encryption/decryption
 
 openchrom:
   flatpak: com.lablicate.OpenChrom
+  comment: Chromatography Data System
 
 wonderwall:
   flatpak: com.ktechpit.wonderwall
+  comment: Wallpaper manager
 
 whatsie:
   flatpak: com.ktechpit.whatsie
+  comment: Qt Whatsapp Web Client for Linux Desktop
 
 flutter-nmap-gui:
   flatpak: com.krioltech.fnmap
+  comment: Fnmap is a GUI front end for the nmap (Network Mapper)
 
 gitnuro:
   flatpak: com.jetpackduba.Gitnuro
+  comment: Multiplatform Git client
 
 inochi-session:
   flatpak: com.inochi2d.inochi-session
+  comment: Stream with Inochi2D puppets
 
 inform:
   flatpak: com.inform7.IDE
+  comment: Write interactive fiction
 
 lunacy:
   flatpak: com.icons8.Lunacy
+  comment: Free graphic design tool for UX/UI
 
 celeste:
   flatpak: com.hunterwittenborn.Celeste
+  comment: Sync your cloud files
 
 crayon-ball:
   flatpak: com.howlingmoonsoftware.CrayonBall
+  comment: A fast paced match-4 puzzler
 
 system:
   flatpak: com.hack_computer.OperatingSystemApp
+  comment: System lets you be part of the magic that keeps your computer humming!
 
 pinepods:
   flatpak: com.gooseberrydevelopment.pinepods
+  comment: A complete, self-hosted podcast management system
 
 tipp10:
   flatpak: com.gitlab.tipp10.tipp10
+  comment: Touch Typing Tutor
 
 nextcloud-password-client:
   flatpak: com.gitlab.j0chn.nextcloud_password_client
+  comment: Manage Nextcloud Passwords on your desktop
 
 master-key:
   flatpak: com.gitlab.guillermop.MasterKey
+  comment: Manage passwords without saving them
 
 haguichi:
   flatpak: com.github.ztefn.haguichi
+  comment: Manage your Hamachi networks
 
 syncthingy:
   flatpak: com.github.zocker_160.SyncThingy
+  comment: SyncThingy = Syncthing + simple tray indicator
 
 timer:
   flatpak: com.github.vikdevelop.timer
+  comment: Simple countdown timer
 
 scans-to-pdf:
   flatpak: com.github.unrud.djpdf
+  comment: Create small, searchable PDFs from scanned documents
 
 video-downloader:
   flatpak: com.github.unrud.VideoDownloader
+  comment: Download web videos
 
 norka:
   flatpak: com.github.tenderowl.norka
+  comment: Continuous text editor
 
 frog:
   flatpak: com.github.tenderowl.frog
+  comment: Extract text from images
 
 flatseal:
   flatpak: com.github.tchx84.Flatseal
+  comment: Manage Flatpak permissions
 
 jadx:
   flatpak: com.github.skylot.jadx
+  comment: Dex to Java decompiler
 
 game-of-life:
   flatpak: com.github.sixpounder.GameOfLife
+  comment: Play Conway's Game of Life
 
 whaler:
   flatpak: com.github.sdv43.whaler
+  comment: Docker Container Management
 
 corechess:
   flatpak: com.github.sakya.corechess
+  comment: Open source chess GUI for chess engines
 
 konbucase:
   flatpak: com.github.ryonakano.konbucase
+  comment: Convert case in your text
 
 szyszka:
   flatpak: com.github.qarmin.szyszka
+  comment: Simple but powerful file renamer, written in Rust
 
 open-lighting-console:
   flatpak: com.github.mikacousin.olc
+  comment: Control your lighting shows
 
 pods:
   flatpak: com.github.marhkb.Pods
+  comment: Manage your Podman containers
 
 drawing:
   flatpak: com.github.maoschanz.drawing
+  comment: Edit screenshots or memes
 
 pokete:
   flatpak: com.github.lxgr_linux.pokete
+  comment: A terminal based Pokemon like game
 
 touch:
   flatpak: com.github.joseexposito.touche
+  comment: Multi-touch gestures
 
 quick-lookup:
   flatpak: com.github.johnfactotum.QuickLookup
+  comment: Look up words quickly
 
 geotagging:
   flatpak: com.github.jmlich.geotagging
+  comment: Geo-sync your photos easily
 
 unlockr:
   flatpak: com.github.jkotra.unlockr
+  comment: PDF Password remover
 
 jellyfin-mpv-shim:
   flatpak: com.github.iwalton3.jellyfin-mpv-shim
+  comment: Cast-only client for Jellyfin Media Server
 
 jellyfin-media-player:
   flatpak: com.github.iwalton3.jellyfin-media-player
+  comment: Desktop client for Jellyfin media server
 
 curtail:
   flatpak: com.github.huluti.Curtail
+  comment: Compress your images
 
 image-optimizer:
   flatpak: com.github.gijsgoudzwaard.image-optimizer
+  comment: Simple lossless image compression
 
 iqpuzzle:
   flatpak: com.github.elth0r0.iqpuzzle
+  comment: Challenging pentomino puzzle
 
 gplaces:
   flatpak: com.github.dimkr.gplaces
+  comment: A terminal based Gemini client
 
 notepad-next:
   flatpak: com.github.dail8859.NotepadNext
+  comment: A cross-platform, reimplementation of Notepad++
 
 tlp-ui:
   flatpak: com.github.d4nj1.tlpui
+  comment: TLP configuration utility
 
 julius:
   flatpak: com.github.bvschaik.julius
+  comment: Julius is an open source re-implementation of Caesar III
 
 huely:
   flatpak: com.github.benpocalypse.Huely
+  comment: Color your space
 
 warble:
   flatpak: com.github.avojak.warble
+  comment: The word-guessing game
 
 paint-spill:
   flatpak: com.github.avojak.paint-spill
+  comment: The color-filling puzzle game
 
 plots:
   flatpak: com.github.alexhuntley.Plots
+  comment: Simple graph plotting
 
 popout3d:
   flatpak: com.github.PopoutApps.popout3d
+  comment: Creates 3D images from photographs taken with an ordinary camera
 
 spotube:
   flatpak: com.github.KRTirtho.Spotube
+  comment: Freedom of music
 
 portal-for-teams:
   flatpak: com.github.IsmaelMartinez.teams_for_linux
+  comment: Unofficial Microsoft Teams client for Linux
 
 spedread:
   flatpak: com.github.Darazaki.Spedread
+  comment: GTK speed reading software: Read like a speedrunner!
 
 mednaffe:
   flatpak: com.github.AmatCoder.mednaffe
+  comment: A front-end (GUI) for mednafen emulator (included)
 
 file-shredder:
   flatpak: com.github.ADBeveridge.Raider
+  comment: Permanently delete your files
 
 gamestar-mechanic:
   flatpak: com.gamestarmechanic.gamestarmechanic
+  comment: Learn to design video games
 
 freerdp-client:
   flatpak: com.freerdp.FreeRDP
+  comment: Remote Desktop Protocol Client
 
 cosmic-money:
   flatpak: com.francescogaglione.cosmicmoney
+  comment: Simple money manager
 
 wildcard:
   flatpak: com.felipekinoshita.Wildcard
+  comment: Test your regular expressions
 
 kana:
   flatpak: com.felipekinoshita.Kana
+  comment: Learn Japanese characters
 
 boatswain:
   flatpak: com.feaneron.Boatswain
+  comment: Control your Elgato Stream Decks
 
 et-legacy:
   flatpak: com.etlegacy.ETLegacy
+  comment: First-person objective shooter
 
 white-house:
   flatpak: com.endlessnetwork.whitehouse
+  comment: Hack your world with CSS
 
 tank-warriors:
   flatpak: com.endlessnetwork.tankwarriors
+  comment: Program an AI to beat the enemy
 
 missile-math:
   flatpak: com.endlessnetwork.missilemath
+  comment: A plane flying shooter game
 
 discord:
   flatpak: com.discordapp.Discord
+  comment: Talk, play, hang out
 
 gpu-screen-recorder:
   flatpak: com.dec05eba.gpu_screen_recorder
+  comment: A shadowplay-like screen recorder for Linux. The fastest screen recorder for Linux
 
 corsixth:
   flatpak: com.corsixth.corsixth
+  comment: Open source clone of Theme Hospital
 
 streamcontroller:
   flatpak: com.core447.StreamController
+  comment: Control your Elgato Stream Decks with plugin support
 
 cinecred:
   flatpak: com.cinecred.cinecred
+  comment: Create beautiful film credits without the pain
 
 zatikon:
   flatpak: com.chroniclogic.Zatikon
+  comment: Chess-like, fantasy game of conquering the enemy's castle
 
 recipe-scribe:
   flatpak: com.cerebralnomad.recipescribe
+  comment: A program for writing recipes
 
 vorta:
   flatpak: com.borgbase.Vorta
+  comment: Backup client
 
 bestatic:
   flatpak: com.bestaticpy.bestatic
+  comment: A simple but powerful static-site generator
 
 snowglobe:
   flatpak: com.belmoussaoui.snowglobe
+  comment: Virtualization viewer using QEMU over DBus
 
 obfuscate:
   flatpak: com.belmoussaoui.Obfuscate
+  comment: Censor private information
 
 pixel-wheels:
   flatpak: com.agateau.PixelWheels
+  comment: Pixel Wheels is a retro top-down race game
 
 karambola:
   flatpak: com.agatanawrot.karambola
+  comment: Help Karambola rescue his emotional fruit people friends from the power of dark thoughts
 
 metronome:
   flatpak: com.adrienplazas.Metronome
+  comment: Keep the tempo
 
 timing-trainer-learn-this-skill:
   flatpak: com.adilhanney.timing
+  comment: Learn to identify sub-second timing intervals
 
 ricochlime:
   flatpak: com.adilhanney.ricochlime
+  comment: Satisfying monster shooter
 
 unit-bargain-hunter:
   flatpak: codes.merritt.bargain
+  comment: Easily compare items when shopping
 
 wiliwili:
   flatpak: cn.xfangfang.wiliwili
+  comment: Watch videos from Bilibili
 
 xivlaunchercn:
   flatpak: cn.ottercorp.xivlaunchercn
+  comment: Launcher & seamless Linux integration for Final Fantasy XIV Online (China version)
 
 legacy-launcher:
   flatpak: ch.tlaun.TL
+  comment: Play Minecraft in your own world!
 
 dconf-editor:
   flatpak: ca.desrt.dconf-editor
+  comment: A graphical tool for editing the dconf database
 
 qpdf-tools:
   flatpak: br.eng.silas.qpdftools
+  comment: Tool for managing PDFs
 
 parlatype:
   flatpak: xyz.parlatype.Parlatype
+  comment: Media player for transcription
 
 jdmrpackinstaller:
   flatpak: page.codeberg.JakobDev.jdMrpackInstaller
+  comment: Install Modrinth modpacks
 
 ppsspp:
   flatpak: org.ppsspp.PPSSPP
+  comment: A PlayStation Portable emulator
 
 vvave:
   flatpak: org.kde.vvave
+  comment: Play your music collection
 
 telly-skout:
   flatpak: org.kde.telly-skout
+  comment: A convergent Kirigami TV guide
 
 kalm:
   flatpak: org.kde.kalm
+  comment: Breathing techniques
 
 kaffeine:
   flatpak: org.kde.kaffeine
+  comment: Multimedia Player
 
 text-editor:
   flatpak: org.gnome.TextEditor
+  comment: Edit text files
 
 gpx-viewer:
   flatpak: nl.sarine.gpx-viewer
+  comment: A simple gpx viewer
 
 m64py:
   flatpak: net.sourceforge.m64py.M64Py
+  comment: A frontend for Mupen64Plus
 
 gopher64:
   flatpak: io.github.gopher64.gopher64
+  comment: Nintendo 64 Emulator
 
 vscodium:
   flatpak: com.vscodium.codium
+  comment: Telemetry-less code editing
 
 vscodium-insiders:
   flatpak: com.vscodium.codium-insiders
+  comment: Telemetry-less code editing
