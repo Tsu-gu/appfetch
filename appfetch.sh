@@ -2,6 +2,72 @@
 
 CONFIG_FILE="$HOME/Documents/apps.yaml"
 
+# Handle "search" command with multiple apps
+if [[ "$1" == "search" ]]; then
+    shift
+    if (( $# == 0 )); then
+        echo "Usage: $0 search app1 app2 ..."
+        exit 1
+    fi
+
+    search_single_app() {
+        local query="${1,,}"  # lowercase query for case-insensitive matching
+        local app="" comment="" aliases="" found=0 in_app=0 matched_this_app=0
+
+        print_match_if_needed() {
+            if (( matched_this_app == 0 )); then
+                local lower_app="${app,,}"
+                local lower_aliases="${aliases,,}"
+                local lower_comment="${comment,,}"
+                if [[ "$lower_app" == *"$query"* || "$lower_aliases" == *"$query"* || "$lower_comment" == *"$query"* ]]; then
+                    echo "🔎 $app: $comment"
+                    found=1
+                    matched_this_app=1
+                fi
+            fi
+        }
+
+        while IFS= read -r line || [[ -n $line ]]; do
+            if [[ $line =~ ^([a-zA-Z0-9_-]+): ]]; then
+                if (( in_app )); then
+                    print_match_if_needed
+                fi
+                app=${BASH_REMATCH[1]}
+                comment=""
+                aliases=""
+                in_app=1
+                matched_this_app=0
+                continue
+            fi
+
+            if (( in_app )); then
+                if [[ $line =~ ^[[:space:]]{2}comment:[[:space:]]*(.*)$ ]]; then
+                    comment=${BASH_REMATCH[1]}
+                elif [[ $line =~ ^[[:space:]]{2}aliases:[[:space:]]*\[(.*)\] ]]; then
+                    aliases=${BASH_REMATCH[1]}
+                elif [[ ! $line =~ ^[[:space:]] ]]; then
+                    print_match_if_needed
+                    in_app=0
+                fi
+            fi
+        done < "$CONFIG_FILE"
+
+        # Final check for last app block
+        if (( in_app )); then
+            print_match_if_needed
+        fi
+
+        if (( found == 0 )); then
+            echo "❌ $1: not found"
+        fi
+    }
+
+    for query in "$@"; do
+        search_single_app "$query"
+    done
+    exit 0
+fi
+
 # Check if an install method is available
 method_available() {
     case "$1" in
@@ -115,3 +181,4 @@ if (( ${#flatpak_apps[@]} > 0 )); then
     echo "Installing flatpak packages: ${flatpak_apps[*]}"
     flatpak install -y flathub "${flatpak_apps[@]}"
 fi
+
