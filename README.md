@@ -1,5 +1,4 @@
-**Copy and paste this to install
-**
+**Copy and paste this to install**
 ```
 cd $HOME/Documents
 wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml 
@@ -21,5 +20,4 @@ As the name suggests, you just tell it to fetch something and it does it. No fla
 
 ![image](https://github.com/user-attachments/assets/0a6da772-de30-46fa-b6a8-0ae3a446fe8a)
 
-**I'm only testing this on Ubuntu and it will work on Debian too if it has snap installed.
-**
+**I'm only testing this on Ubuntu and it will work on Debian too if it has snap installed.**
