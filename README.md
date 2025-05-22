@@ -1,4 +1,4 @@
-**Copy and paste this to install**
+**Installation**
 ```
 cd $HOME/Documents
 wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml 
