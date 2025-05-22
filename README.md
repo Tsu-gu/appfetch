@@ -9,3 +9,5 @@ As the name suggests, you just tell it to fetch something and it does it. No fla
 ![image](https://github.com/user-attachments/assets/96df4dbe-ecb5-4e55-b54d-ffb96782e8bf)
 
 ![image](https://github.com/user-attachments/assets/0a6da772-de30-46fa-b6a8-0ae3a446fe8a)
+
+I'm only testing this on Ubuntu and it will work on Debian too if it has snap installed.
