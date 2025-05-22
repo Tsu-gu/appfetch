@@ -61,21 +61,27 @@ steam:
 
 aws-cli:
   snap: aws-cli
+  comment: Universal Command Line Interface for Amazon Web Services
 
 amazon-ssm-agent:
   snap: amazon-ssm-agent
+  comment: Agent to enable remote management of your Amazon EC2 instance configuration
 
 awswickrgov:
   snap: awswickrgov
+  comment: Secure Messaging for Teams
 
 ant:
   snap: ant
+  comment: Apache Ant
 
 aws-iot-greengrass:
   snap: aws-iot-greengrass
+  comment: AWS supported software that extends cloud capabilities to local devices.
 
 adguard-home:
   snap: adguard-home
+  comment: Network-wide ads & trackers blocking DNS server
 
 artikulate:
   snap: artikulate
@@ -84,6 +90,7 @@ artikulate:
 
 all-remixes:
   snap: all-remixes
+  comment: Discover ALL Remixes of the Songs You Love!
 
 audiotube:
   snap: audiotube
@@ -109,21 +116,26 @@ blender:
 
 bw:
   snap: bw
+  comment: Bitwarden CLI - A secure and free password manager for all of your devices.
 
 blix:
   snap: blix
+  comment: Blix is the ultimate communication tool for your team. It combines email, chat, calendar and contacts in one single app.
 
 bluemail:
   snap: bluemail
+  comment: BlueMail is a free, secure, universal email app, capable of managing an unlimited number of mail accounts
 
 branch-diff:
   snap: branch-diff
+  comment: Compares 2 git branches without hassle.
 
 xfburn:
   custom: sudo apt install xfburn
 
 bcc:
   snap: bcc
+  comment: BPF Compiler Collection (BCC)
 
 bomber:
   snap: bomber
@@ -132,147 +144,195 @@ bomber:
   
 bluez:
   snap: bluez
+  comment: Bluetooth tools and daemons
 
 blinken:
   snap: blinken
+  comment: Memory Enhancement Game
 
 bovo:
   snap: bovo
+  comment: "Five in a row" board game
 
 busybox-static:
   snap: busybox-static
+  comment: Statically linked busybox
 
 bluez-tests:
   snap: bluez-tests
+  comment: Set of utilities that are not production ready yet help in testing
 
 canonical-livepatch:
   snap: canonical-livepatch
+  comment: Canonical Livepatch Client
 
 chromium:
   snap: chromium
+  comment: Chromium web browser, open-source version of Chrome
 
 cacher:
   snap: cacher
+  comment: Cacher
 
 cdk-addons:
   snap: cdk-addons
+  comment: Addons for Canonical Kubernetes
 
 canonical-livepatch-server:
   snap: canonical-livepatch-server
+  comment: Canonical Livepatch Server
 
 chip-tool:
   snap: chip-tool
+  comment: Chip Tool Matter Controller
 
 canonical-livepatch-downloader:
   snap: canonical-livepatch-downloader
+  comment: Canonical Livepatch Downloader Tool
 
 charmed-mongodb:
   snap: charmed-mongodb
+  comment: MongoDB bundle for charm development
 
 charmed-mysql:
   snap: charmed-mysql
+  comment: MySQL bundle for charm development
 
 charmed-postgresql:
   snap: charmed-postgresql
+  comment: PostgreSQL bundle for charm development
 
 charmed-pgbouncer:
   snap: charmed-pgbouncer
+  comment: PgBouncer bundle for charm development
 
 charmed-kafka:
   snap: charmed-kafka
+  comment: Charmed Kafka for Charmed Operators
 
 circleci:
   snap: circleci
+  comment: Run local CI builds and validate configuration.
 
 charmed-zookeeper:
   snap: charmed-zookeeper
+  comment: Charmed Zookeeper for Charmed Operators
 
 chromium-ffmpeg:
   snap: chromium-ffmpeg
+  comment: FFmpeg codecs (free and proprietary) for use by third-party browser snaps
 
 certbot:
   snap: certbot
+  comment: Automatically configure HTTPS using Let's Encrypt
 
 cmake:
   snap: cmake
+  comment: Cross-platform software build system generator
 
 crystal:
   snap: crystal
+  comment: A language for humans and computers
 
 charmcraft:
   snap: charmcraft
+  comment: The charming tool
 
 collabee:
   snap: collabee
+  comment: collabee
 
 content-for-spring-boot-34:
   snap: content-for-spring-boot-34
+  comment: Rebuild of Spring® Boot Framework sources v3.4.x
 
 content-for-spring-boot-35:
   snap: content-for-spring-boot-35
+  comment: Rebuild of Spring® Boot Framework sources v3.5.x
 
 content-for-spring-framework-70:
   snap: content-for-spring-framework-70
+  comment: Rebuild of Spring® Framework sources v7.0.x
 
 content-for-spring-framework-62:
   snap: content-for-spring-framework-62
+  comment: Rebuild of Spring® Framework sources v6.2.x
 
 charmed-openstack-exporter:
   snap: charmed-openstack-exporter
+  comment: OpenStack Exporter for Prometheus
 
 charm:
   snap: charm
+  comment: charm-tools
 
 chisel:
   snap: chisel
+  comment: Chisel is a software tool for carving and cutting Debian packages!
 
 certbot-dns-cloudxns:
   snap: certbot-dns-cloudxns
+  comment: CloudXNS DNS Authenticator plugin for Certbot
 
 certbot-dns-cloudflare:
   snap: certbot-dns-cloudflare
+  comment: Cloudflare DNS Authenticator plugin for Certbot
 
 certbot-dns-sakuracloud:
   snap: certbot-dns-sakuracloud
+  comment: Sakura Cloud DNS Authenticator plugin for Certbot
 
 certbot-dns-google:
   snap: certbot-dns-google
+  comment: Google Cloud DNS Authenticator plugin for Certbot
 
 charmed-openstack-upgrader:
   snap: charmed-openstack-upgrader
+  comment: Automation tool for upgrading Charmed OpenStack
 
 certbot-dns-dnsmadeeasy:
   snap: certbot-dns-dnsmadeeasy
+  comment: DNS Made Easy DNS Authenticator plugin for Certbot
 
 certbot-dns-dnsimple:
   snap: certbot-dns-dnsimple
+  comment: DNSimple DNS Authenticator plugin for Certbot
 
 certbot-dns-digitalocean:
   snap: certbot-dns-digitalocean
+  comment: DigitalOcean DNS Authenticator plugin for Certbot
 
 certbot-dns-nsone:
   snap: certbot-dns-nsone
+  comment: NS1 DNS Authenticator plugin for Certbot
 
 certbot-dns-rfc2136:
   snap: certbot-dns-rfc2136
+  comment: RFC 2136 DNS Authenticator plugin for Certbot
 
 certbot-dns-ovh:
   snap: certbot-dns-ovh
+  comment: OVH DNS Authenticator plugin for Certbot
 
 certbot-dns-luadns:
   snap: certbot-dns-luadns
+  comment: LuaDNS Authenticator plugin for Certbot
 
 certbot-dns-linode:
   snap: certbot-dns-linode
+  comment: Linode DNS Authenticator plugin for Certbot
 
 certbot-dns-route53:
   snap: certbot-dns-route53
+  comment: Route53 DNS Authenticator plugin for Certbot
 
 certbot-dns-gehirn:
   snap: certbot-dns-gehirn
+  comment: Gehirn Infrastructure Service DNS Authenticator plugin for Certbot
 
 cloudstats:
   snap: cloudstats
+  comment: provide and report cloudstats via prometheus-exporter
   
 vscode:
   custom: snap install code --classic
@@ -280,102 +340,135 @@ vscode:
   
 candid:
   snap: candid
+  comment: Candid Identity Manager
 
 canonical-se-engineering-tests:
   snap: canonical-se-engineering-tests
+  comment: Canonical System Enablement Engineering Test cases
 
 doctl:
   snap: doctl
+  comment: The official DigitalOcean command line interface
 
 domotzpro-agent-publicstore:
   snap: domotzpro-agent-publicstore
+  comment: Domotz Network monitoring
 
 dotnet-runtime-21:
   snap: dotnet-runtime-21
+  comment: Cross-Platform .NET Core Runtime.
 
 docker:
   snap: docker
+  comment: Docker container runtime
 
 discographer:
   snap: discographer
+  comment: Discover FULL discography of the artists you love!
 
 disk-space-saver:
   snap: disk-space-saver
+  comment: Disk Space Analyzer that saves hundreds of gigabytes!
 
 digikam:
   snap: digikam
+  comment: Photo Management Program
 
 datagrip:
   snap: datagrip
+  comment: DataGrip
 
 dcgm:
   snap: dcgm
+  comment: Snap for NVIDIA DCGM and DCGM-Exporter
 
 data-science-stack:
   snap: data-science-stack
+  comment: ML environments at ease on your AI workstation
 
 devpack-for-spring:
   snap: devpack-for-spring
+  comment: Development tools for Spring® projects
 
 dnslookup:
   snap: dnslookup
+  comment: Simple command-line tool to make DNS lookups using any protocol.
 
 dotnet-sdk:
   snap: dotnet-sdk
+  comment: Develop high performance applications in less time, on any platform.
 
 desktop-security-center:
   snap: desktop-security-center
+  comment: The desktop Security Center will provide easy-to-access security features in Ubuntu.
 
 dataspell:
   snap: dataspell
+  comment: DataSpell
 
 drawio:
   snap: drawio
+  comment: draw.io
 
 dragonboard:
   snap: dragonboard
+  comment: Dragonbaord support package
 
 dragon:
   snap: dragon
+  comment: simple video player
 
 devpack-for-spring-manifest:
   snap: devpack-for-spring-manifest
+  comment: The list of all available content snaps for Spring®
 
 eclipse:
   snap: eclipse
+  comment: Extensible Tool Platform and Java IDE
 
 etcd:
   snap: etcd
+  comment: Resilient key-value store by CoreOS
 
 easy-disk-cleaner:
   snap: easy-disk-cleaner
+  comment: Disk Space Analyzer that saves hundreds of gigabytes!
 
 eog:
   snap: eog
+  comment: Eye of GNOME Image Viewer
 
 eks:
   snap: eks
+  comment: Amazon EKS Distro (EKS-D) snap
 
 easy-file-organizer:
   snap: easy-file-organizer
+  comment: Easy File Organizer
 
 elisa:
   snap: elisa
+  comment: Play local music and listen to online radio
 
 enterprise-store:
   snap: enterprise-store
+  comment: A smart caching proxy for the Snap Store
 
 expect:
   snap: expect
+  comment: Automates interactive applications
 
 flock-chat:
   snap: flock-chat
+  comment: Flock: Team Communication App
 
 flutter-gallery:
   snap: flutter-gallery
+  comment: Flutter Gallery
 
 flutter:
   snap: flutter
+  comment: Flutter SDK
 
 firefox:
   snap: firefox
@@ -384,6 +477,7 @@ firefox:
 
 full-discography:
   snap: full-discography
+  comment: Discover FULL discography of the artists you love!
 
 falkon:
   snap: falkon
@@ -392,87 +486,115 @@ falkon:
 
 filmographer:
   snap: filmographer
+  comment: Watch ALL your movies with a simple click!
 
 francis:
   snap: francis
+  comment: Track your time
 
 foxglove-bridge:
   snap: foxglove-bridge
+  comment: Foxglove WebSocket bridge for ROS and ROS 2.
 
 filelight:
   snap: filelight
+  comment: View disk usage information
 
 google-cloud-sdk:
   snap: google-cloud-sdk
+  comment: Google Cloud SDK
 
 gitkraken:
   snap: gitkraken
+  comment: For repo management, in-app code editing & issue tracking.
 
 gluu-server:
   snap: gluu-server
+  comment: Gluu Server
 
 gitkraken-cli:
   snap: gitkraken-cli
+  comment: Official CLI for GitKraken
 
 google-cloud-cli:
   snap: google-cloud-cli
+  comment: Google Cloud CLI
 
 golangci-lint:
   snap: golangci-lint
+  comment: Fast linters runner for Go
 
 gnome-system-monitor:
   snap: gnome-system-monitor
+  comment: System Monitor
 
 gnome-calculator:
   snap: gnome-calculator
+  comment: GNOME Calculator
 
 gnome-logs:
   snap: gnome-logs
+  comment: A log viewer for the systemd journal
 
 go:
   snap: go
+  comment: The Go programming language
 
 graalvm-jdk:
   snap: graalvm-jdk
+  comment: GraalVM Community Edition for the Java Development Kit
 
 ghostscript-printer-app:
   snap: ghostscript-printer-app
+  comment: Ghostscript Printer Application
 
 goland:
   snap: goland
+  comment: The Complete IDE Crafted for Gophers
 
 gnome-sudoku:
   snap: gnome-sudoku
+  comment: Test your logic skills in this number grid puzzle
 
 gutenprint-printer-app:
   snap: gutenprint-printer-app
+  comment: Gutenprint Printer Application
 
 go-example-webserver:
   snap: go-example-webserver
+  comment: Minimal Golang webserver for snappy
 
 gnome-calendar:
   snap: gnome-calendar
+  comment: Calendar for GNOME
 
 gnome-clocks:
   snap: gnome-clocks
+  comment: Simple GNOME app with stopwatch, timer, and world clock support
 
 gazebo:
   snap: gazebo
+  comment: Iterate quickly on design concepts and control strategies with Ignition's rich suite of tools, libraries, and cloud services.
 
 gnome-contacts:
   snap: gnome-contacts
+  comment: A contacts manager for GNOME
 
 gcompris:
   snap: gcompris
+  comment: Multi-Activity Educational game for children 2 to 10
 
 gnome-characters:
   snap: gnome-characters
+  comment: A character map application
 
 groovy:
   snap: groovy
+  comment: The Apache Groovy programming language - A multi-faceted language for the Java platform
 
 granatier:
   snap: granatier
+  comment: Bomberman clone
 
 ghostwriter:
   snap: ghostwriter
@@ -491,120 +613,159 @@ gwenview:
 
 glaxnimate:
   snap: glaxnimate
+  comment: Vector animation program
 
 governor-broker:
   snap: governor-broker
+  comment: Broker Daemon for Governor Charms
 
 gtk-theme-breeze:
   snap: gtk-theme-breeze
+  comment: Breeze is the default theme for KDE plasma;
 
 gtk2-common-themes:
   snap: gtk2-common-themes
+  comment: All the (common) GTK 2 themes
 
 graphics-test-tools:
   snap: graphics-test-tools
+  comment: Tools helpful in debugging graphics stacks
 
 heroku:
   snap: heroku
+  comment: CLI client for Heroku
 
 husarion-webui:
   snap: husarion-webui
+  comment: A web UI for Husarion robots
 
 husarion-depthai:
   snap: husarion-depthai
+  comment: OAK-x cameras driver for Husarion robots
 
 hurdle:
   snap: hurdle
+  comment: hurdle Desktop Client
 
 hiri:
   snap: hiri
+  comment: Hiri email client
 
 husarion-shutdown:
   snap: husarion-shutdown
+  comment: Safe shutdown service for Husarion Panther and Lynx UGV
 
 husarion-ouster:
   snap: husarion-ouster
+  comment: The ROS 2 Ouster LIDAR snap
 
 husarion-astra:
   snap: husarion-astra
+  comment: The husarion-astra
 
 husarion-camera:
   snap: husarion-camera
+  comment: USB cameras ROS 2 driver for Husarion robots
 
 husarion-rplidar:
   snap: husarion-rplidar
+  comment: RPLIDAR ROS 2 driver for Husarion robots
 
 hey-mail:
   snap: hey-mail
+  comment: Email at its best, by Basecamp
 
 hplip-printer-app:
   snap: hplip-printer-app
+  comment: HPLIP Printer Application
 
 hypernotes:
   snap: hypernotes
+  comment: Collaborative knowledge management made easy.
 
 haruna:
   snap: haruna
+  comment: Media player
 
 headscale:
   snap: headscale
+  comment: An open source, self-hosted implementation of the Tailscale control server
 
 influx:
   snap: influx
+  comment: Command-line client for interacting with InfluxDB
 
 irccloud:
   snap: irccloud
+  comment: An IRC client with a future. Stay connected, chat from anywhere, and never miss a message
 
 influxdb:
   snap: influxdb
+  comment: Scalable datastore for metrics, events, and real-time analytics.
 
 intellij-idea-community:
   snap: intellij-idea-community
+  comment: The IDE for Java and Kotlin enthusiasts
 
 intellij-idea-ultimate:
   snap: intellij-idea-ultimate
+  comment: IntelliJ IDEA – The IDE for Professional Development in Java and Kotlin
 
 iot-kernel:
   snap: iot-kernel
+  comment: Yet another Ubuntu linux kernel
 
 ipp-usb:
   snap: ipp-usb
+  comment: IPP-over-USB - Driverless IPP printing on USB-connected printers
 
 intel-npu-driver:
   snap: intel-npu-driver
+  comment: User Mode Driver with Compiler Software for the Intel® NPU (Neural Processing Unit) Accelerator
 
 icon-theme-breeze:
   snap: icon-theme-breeze
+  comment: Breeze is the default theme for KDE plasma;
 
 julia:
   snap: julia
+  comment: The Julia programming language
 
 juju:
   snap: juju
+  comment: Juju - a model-driven operator lifecycle manager for K8s and machines
 
 journey-desktop:
   snap: journey-desktop
+  comment: Capture Every Moment with Journey. Your Trusted Journaling and Diary Companion.
 
 jobbergate-agent:
   snap: jobbergate-agent
+  comment: The Jobbergate Agent snap
 
 jupyterlab-desktop:
   snap: jupyterlab-desktop
+  comment: JupyterLab
 
 juk:
   snap: juk
+  comment: Music Player
 
 jaas:
   snap: jaas
+  comment: JAAS Plugin
 
 joule-expansion:
   snap: joule-expansion
+  comment: Automate the scaling of applications inside cloud scale groups.
 
 juju-backup-all:
   snap: juju-backup-all
+  comment: Tool for backing up charms, local juju configs, and juju controllers.
 
 kata-containers:
   snap: kata-containers
+  comment: Build lightweight VMs that seamlessly plug into the containers ecosystem
 
 krita:
   snap: krita
@@ -613,9 +774,11 @@ krita:
 
 kstars:
   snap: kstars
+  comment: KStars is a desktop planetarium for amateur and professional astronomers.
 
 keepalived:
   snap: keepalived
+  comment: High availability VRRP/BFD and load-balancing for Linux
 
 kolourpaint:
   snap: kolourpaint
@@ -624,12 +787,15 @@ kolourpaint:
 
 kturtle:
   snap: kturtle
+  comment: Educational Programming Environment
 
 kmplot:
   snap: kmplot
+  comment: Mathematical Function Plotter
 
 klettres:
   snap: klettres
+  comment: a KDE program to learn the alphabet
 
 konversation:
   snap: konversation
@@ -638,162 +804,215 @@ konversation:
 
 kgeography:
   snap: kgeography
+  comment: A Geography Learning Program
 
 kbruch:
   snap: kbruch
+  comment: Exercise Fractions
 
 kiten:
   snap: kiten
+  comment: Japanese Reference and Study Tool
 
 kcalc:
   snap: kcalc
+  comment: Scientific Calculator
 
 kalzium:
   snap: kalzium
+  comment: KDE Periodic Table of Elements
 
 kalgebra:
   snap: kalgebra
+  comment: algebraic graphing calculator
 
 ksudoku:
   snap: ksudoku
+  comment: KSudoku, Sudoku game & more by KDE
 
 kgoldrunner:
   snap: kgoldrunner
+  comment: A game of action and puzzle-solving
 
 kate:
   snap: kate
+  comment: KDE Advanced Text Editor
 
 kapman:
   snap: kapman
+  comment: Eat pills escaping ghosts
 
 kfind:
   snap: kfind
+  comment: Find Files/Folders
 
 kigo:
   snap: kigo
+  comment: Go Board Game
 
 kwave:
   snap: kwave
+  comment: Kwave is a sound editor that can record to, play, open, and edit many file formats.
 
 kcharselect:
   snap: kcharselect
+  comment: Character Selector
 
 kdf:
   snap: kdf
+  comment: disk information utility
 
 ktuberling:
   snap: ktuberling
+  comment: A simple constructor game suitable for children and adults alike
 
 kget:
   snap: kget
+  comment: Download manager
 
 kongress:
   snap: kongress
+  comment: Conference companion
 
 knights:
   snap: knights
+  comment: Chess game
 
 kanagram:
   snap: kanagram
+  comment: Letter Order Game
 
 ksnakeduel:
   snap: ksnakeduel
+  comment: Tron-like Game
 
 killbots:
   snap: killbots
+  comment: port of the classic BSD console game robots
 
 kwordquiz:
   snap: kwordquiz
+  comment: A flashcard and vocabulary learning program
 
 kcachegrind:
   snap: kcachegrind
+  comment: Profiler Frontend
 
 ksystemlog:
   snap: ksystemlog
+  comment: system log viewer
 
 khangman:
   snap: khangman
+  comment: Hangman Game
 
 ksirk:
   snap: ksirk
+  comment: Risk strategy game
 
 kolf:
   snap: kolf
+  comment: Miniature Golf
 
 ksquares:
   snap: ksquares
+  comment: Connect the dots to create squares
 
 kdevelop:
   snap: kdevelop
+  comment: Featureful, plugin-extensible IDE for C/C++ and other programming languages
 
 konquest:
   snap: konquest
+  comment: Galactic Strategy Game
 
 kshisen:
   snap: kshisen
+  comment: Shisen-Sho Mahjongg-like Tile Game
 
 kpat:
   snap: kpat
+  comment: Solitaire card game
 
 kbackup:
   snap: kbackup
+  comment: Create backups as .tar files to a local folder or remote URL
 
 kruler:
   snap: kruler
+  comment: Screen Ruler
 
 kfourinline:
   snap: kfourinline
+  comment: Connect Four game
 
 kcolorchooser:
   snap: kcolorchooser
+  comment: color chooser and palette editor
 
 klickety:
   snap: klickety
+  comment: SameGame puzzle game
 
 kdiamond:
   snap: kdiamond
+  comment: three-in-a-row game
 
 kontrast:
   snap: kontrast
+  comment: Check color contrast
 
 kmahjongg:
   snap: kmahjongg
+  comment: Mahjong Solitaire
 
 krdc:
   snap: krdc
+  comment: Remote Desktop Connection client
 
 kspaceduel:
   snap: kspaceduel
+  comment: Space Arcade Game
 
 kteatime:
   snap: kteatime
+  comment: Tea Cooker
 
 klines:
   snap: klines
+  comment: color lines game
 
 keysmith:
   snap: keysmith
+  comment: Two-factor code generator for Plasma Mobile and Desktop
 
 kubrick:
   snap: kubrick
+  comment: A 3-D game based on Rubik's Cube
 
 kblackbox:
   snap: kblackbox
+  comment: Blackbox Logic Game
 
 knetwalk:
   snap: knetwalk
+  comment: wire puzzle game
 
 kalm:
   snap: kalm
+  comment: Breathing techniques
 
 kreversi:
   snap: kreversi
+  comment: Reversi Board Game
 
 kimagemapeditor:
   snap: kimagemapeditor
+  comment: HTML Image Map Editor
 
 katomic:
   snap: katomic
+  comment: Sokoban-like Logic Game
 
 kdenlive:
   snap: kdenlive
@@ -802,51 +1021,67 @@ kdenlive:
 
 kasts:
   snap: kasts
+  comment: Podcast application
 
 kbreakout:
   snap: kbreakout
+  comment: ball and paddle game
 
 knavalbattle:
   snap: knavalbattle
+  comment: battleship board game
 
 kdebugsettings:
   snap: kdebugsettings
+  comment: Set which debug messages are shown
 
 kblocks:
   snap: kblocks
+  comment: Falling Blocks Game
 
 kiriki:
   snap: kiriki
+  comment: Yahtzee-like Dice Game
 
 kompare:
   snap: kompare
+  comment: Diff/Patch Frontend
 
 kjumpingcube:
   snap: kjumpingcube
+  comment: simple tactical game
 
 kollision:
   snap: kollision
+  comment: Casual ball game
 
 kbounce:
   snap: kbounce
+  comment: Jezzball arcade game
 
 kclock:
   snap: kclock
+  comment: Keep time and set alarms
 
 kalk:
   snap: kalk
+  comment: A feature rich calculator
 
 kweather:
   snap: kweather
+  comment: View real-time weather forecasts
 
 koko:
   snap: koko
+  comment: Image Gallery
 
 krecorder:
   snap: krecorder
+  comment: Audio recorder
 
 konqueror:
   snap: konqueror
+  comment: KDE File Manager & Web Browser
 
 ktorrent:
   snap: ktorrent
@@ -864,18 +1099,23 @@ konsole:
 
 kdialog:
   snap: kdialog
+  comment: Display dialog boxes from shell scripts
 
 kjournald:
   snap: kjournald
+  comment: Browser for journald databases
 
 librepcb:
   snap: librepcb
+  comment: EDA software to develop printed circuit boards
 
 lenovo-wwan-dpr:
   snap: lenovo-wwan-dpr
+  comment: This APP is used for FCC unlock and DPR of WWAN feature for Lenovo.
 
 lxd:
   snap: lxd
+  comment: LXD - container and VM manager
 
 libreoffice:
   snap: libreoffice
@@ -884,63 +1124,83 @@ libreoffice:
 
 labplot:
   snap: labplot
+  comment: Interactive Data Visualization and Analysis
 
 large-files-finder:
   snap: large-files-finder
+  comment: Instantly find large files on your hard drive and free up disk space easily!
 
 landscape-client:
   snap: landscape-client
+  comment: Landscape Client
 
 lp-build-snap:
   snap: lp-build-snap
+  comment: Utility to trigger Snap package builds in Launchpad
 
 libertine:
   snap: libertine
+  comment: Libertine suite
 
 lokalize:
   snap: lokalize
+  comment: Computer-aided translation system
 
 lskat:
   snap: lskat
+  comment: German card game Skat for two players
 
 license-manager-agent:
   snap: license-manager-agent
+  comment: The License Manager Agent snap
 
 linuxptp:
   snap: linuxptp
+  comment: LinuxPTP
 
 librealsense:
   snap: librealsense
+  comment: librealsense
 
 landscape-api:
   snap: landscape-api
+  comment: Tool to access the Landscape API
 
 mosquitto:
   snap: mosquitto
+  comment: Eclipse Mosquitto MQTT broker
 
 nextcloud:
   snap: nextcloud
+  comment: Nextcloud Server - A safe home for all your data
 
 node-red:
   snap: node-red
+  comment: Low-code programming for event-driven applications
 
 nginx-prometheus-exporter:
   snap: nginx-prometheus-exporter
+  comment: NGINX Prometheus Exporter for NGINX and NGINX Plus
 
 nordvpn:
   snap: nordvpn
+  comment: Shield your online activity and browse privately with the world’s leading VPN
 
 nginx-asg-sync:
   snap: nginx-asg-sync
+  comment: NGINX Plus Integration with Cloud Autoscaling
 
 node:
   snap: node
+  comment: Official Node.js Runtime
 
 network-manager:
   snap: network-manager
+  comment: Network Manager
 
 nats:
   snap: nats
+  comment: High-Performance server for NATS, the cloud native messaging system
 
 neochat:
   snap: neochat
@@ -949,12 +1209,15 @@ neochat:
 
 netbeans:
   snap: netbeans
+  comment: Apache NetBeans IDE
 
 node-cert-exporter:
   snap: node-cert-exporter
+  comment: Node Cert Exporter
 
 nhc:
   snap: nhc
+  comment: LBNL Node Health Check (NHC)
 
 opera:
   snap: opera
@@ -966,30 +1229,39 @@ onlyoffice-desktopeditors:
 
 ora:
   snap: ora
+  comment: Ora
 
 openvino-toolkit-2404:
   snap: openvino-toolkit-2404
+  comment: Intel's OpenVINO™ Toolkit
 
 opera-beta:
   snap: opera-beta
+  comment: Fast and secure web browser
 
 opera-developer:
   snap: opera-developer
+  comment: Fast and secure web browser
 
 onlyoffice-ds:
   snap: onlyoffice-ds
+  comment: An online office suite that allowing to create, view and edit documents.
 
 openvino-ai-plugins-gimp:
   snap: openvino-ai-plugins-gimp
+  comment: Intel's OpenVINO™ AI Plugins for GIMP
 
 o3de:
   snap: o3de
+  comment: O3DE is an open-source, cross-platform, real time 3D engine that you can use to create high performance interactive experiences
 
 opentofu:
   snap: opentofu
+  comment: OpenTofu lets you declaratively manage your cloud infrastructure.
 
 octave:
   snap: octave
+  comment: Interactive programming environment for numerical computations
 
 okular:
   snap: okular
@@ -998,51 +1270,67 @@ okular:
 
 organize-my-files:
   snap: organize-my-files
+  comment: Easy File Organizer
 
 openstack-hypervisor:
   snap: openstack-hypervisor
+  comment: OpenStack Hypervisor
 
 ovn-chassis:
   snap: ovn-chassis
+  comment: Open vSwitch and Open Virtual Network chassis components
 
 opensearch:
   snap: opensearch
+  comment: OpenSearch makes it easy to ingest, search, visualize, and analyze your data.
 
 octavia-diskimage-retrofit:
   snap: octavia-diskimage-retrofit
+  comment: Turn stock cloud image into Octavia Amphora image
 
 openthread-border-router:
   snap: openthread-border-router
+  comment: OpenThread Border Router
 
 openchrom:
   snap: openchrom
+  comment: Visualization and Analysis of mass spectrometric and chromatographic data.
 
 openstackclients:
   snap: openstackclients
+  comment: OpenStack Client tools
 
 openstack:
   snap: openstack
+  comment: Small footprint, K8S native OpenStack
 
 ofono:
   snap: ofono
+  comment: Mobile telephony daemon
 
 plexmediaserver:
   snap: plexmediaserver
+  comment: Your media on all your devices.
 
 postman:
   snap: postman
+  comment: API Development Environment
 
 parca-agent:
   snap: parca-agent
+  comment: Parca Agent is an always-on sampling profiler that uses eBPF
 
 plex-desktop:
   snap: plex-desktop
+  comment: Plex client for Linux
 
 plex-htpc:
   snap: plex-htpc
+  comment: Plex HTPC client for Linux
 
 parca:
   snap: parca
+  comment: Parca continuous profiling tool
 
 pycharm-community:
   snap: pycharm-community
@@ -1050,117 +1338,155 @@ pycharm-community:
 
 phpstorm:
   snap: phpstorm
+  comment: PhpStorm
 
 powershell:
   snap: powershell
+  comment: PowerShell for every system!
 
 pycharm-professional:
   snap: pycharm-professional
+  comment: PyCharm Professional Edition
 
 prometheus:
   snap: prometheus
+  comment: The Prometheus monitoring system and time series database
 
 postgresql10:
   snap: postgresql10
+  comment: PostgreSQL is a powerful, open source object-relational database system.
 
 picard:
   snap: picard
+  comment: Picard is the official MusicBrainz audio tagger
 
 parley:
   snap: parley
+  comment: vocabulary trainer
 
 pycharm-educational:
   snap: pycharm-educational
+  comment: Easy and Professional Tool to Learn & Teach Programming with Python
 
 ps-printer-app:
   snap: ps-printer-app
+  comment: PostScript Printer Application
 
 powershell-preview:
   snap: powershell-preview
+  comment: PowerShell for every system!
 
 prometheus-alertmanager:
   snap: prometheus-alertmanager
+  comment: Prometheus Alertmanager
 
 prometheus-grok-exporter:
   snap: prometheus-grok-exporter
+  comment: Export prometheus metrics from parsed log data
 
 prometheus-blackbox-exporter:
   snap: prometheus-blackbox-exporter
+  comment: Prometheus Blackbox Exporter
 
 postgresql:
   snap: postgresql
+  comment: The world's most advanced open-source relational database.
 
 polkadot:
   snap: polkadot
+  comment: Polkadot - A multi-chain framework for better blockchain interoperability
 
 prompting-client:
   snap: prompting-client
+  comment: Prompting Client
 
 postgresql95:
   snap: postgresql95
+  comment: PostgreSQL is a powerful, open source object-relational database system.
 
 postgresql96:
   snap: postgresql96
+  comment: PostgreSQL is a powerful, open source object-relational database system.
 
 postgresql93:
   snap: postgresql93
+  comment: PostgreSQL is a powerful, open source object-relational database system.
 
 postgresql94:
   snap: postgresql94
+  comment: PostgreSQL is a powerful, open source object-relational database system.
 
 palapeli:
   snap: palapeli
+  comment: Jigsaw puzzle game
 
 pi2:
   snap: pi2
+  comment: Raspberry Pi 2 support package
 
 picmi:
   snap: picmi
+  comment: Puzzle game based on number logic
 
 pc:
   snap: pc
+  comment: PC gadget for generic devices
 
 postgresql95-pgpool2-36:
   snap: postgresql95-pgpool2-36
+  comment: pgpool-II is a connection pooler for PostgreSQL.
 
 postgresql95-pgpool2-35:
   snap: postgresql95-pgpool2-35
+  comment: pgpool-II is a connection pooler for PostgreSQL.
 
 prometheus-pushgateway:
   snap: prometheus-pushgateway
+  comment: Unofficial snap for the Prometheus Pushgateway
 
 postgresql-pgbouncer:
   snap: postgresql-pgbouncer
+  comment: Lightweight connection pooler for PostgreSQL
 
 prometheus-iscsi-exporter:
   snap: prometheus-iscsi-exporter
+  comment: Export iscsi metrics to Prometheus
 
 prometheus-libvirt-exporter:
   snap: prometheus-libvirt-exporter
+  comment: The Prometheus libvirt exporter
 
 pipewire:
   snap: pipewire
+  comment: Pipewire server, plus wireplumber and pipewire-pulse
 
 prometheus-ovn-exporter:
   snap: prometheus-ovn-exporter
+  comment: Prometheus OVN Exporter
 
 prometheus-openstack-exporter:
   snap: prometheus-openstack-exporter
+  comment: Exposes high level OpenStack metrics to Prometheus.
 
 quadrapassel:
   snap: quadrapassel
+  comment: Fit falling blocks together
 
 qrca:
   snap: qrca
+  comment: Scan and create QR-Codes
 
 quectel-firmware-switch:
   snap: quectel-firmware-switch
+  comment: Quectel EM120/EM160 firmware switch tool
 
 qt-common-themes-sdk:
   snap: qt-common-themes-sdk
+  comment: Common themes used in Qt based distributions
 
 rocketchat-server:
   snap: rocketchat-server
+  comment: Rocket.Chat server
 
 remmina:
   snap: remmina
@@ -1174,129 +1500,171 @@ rocketchat-desktop:
 
 ruby:
   snap: ruby
+  comment: Interpreter for the Ruby programming language
 
 rambox:
   snap: rambox
+  comment: Rambox
 
 ros2-teleop:
   snap: ros2-teleop
+  comment: The ROS 2 teleop snap
 
 ros2-cli:
   snap: ros2-cli
+  comment: ROS 2 command line interface tools
 
 rubymine:
   snap: rubymine
+  comment: The Most Intelligent Ruby and Rails IDE
 
 rustup:
   snap: rustup
+  comment: The Rust Language installer
 
 rerun:
   snap: rerun
+  comment: Visualize streams of multimodal data
 
 rustrover:
   snap: rustrover
+  comment: RustRover
 
 rosbot-xl:
   snap: rosbot-xl
+  comment: A driver for ROSbot XL mobile robot
 
 rosbot:
   snap: rosbot
+  comment: A driver for ROSbot mobile robot
 
 ros-jazzy-ros-base-dev:
   snap: ros-jazzy-ros-base-dev
+  comment: The ROS 2 jazzy ros-base variant.
 
 ros-noetic-ros-base:
   snap: ros-noetic-ros-base
+  comment: The ROS 1 noetic ros-base variant.
 
 ros-foxy-ros-base-dev:
   snap: ros-foxy-ros-base-dev
+  comment: The ROS 2 foxy ros-base variant.
 
 ros-humble-ros-base-dev:
   snap: ros-humble-ros-base-dev
+  comment: The ROS 2 humble ros-base variant.
 
 ros-foxy-ros-base:
   snap: ros-foxy-ros-base
+  comment: The ROS 2 foxy ros-base variant.
 
 ros-humble-ros-base:
   snap: ros-humble-ros-base
+  comment: The ROS 2 humble ros-base variant.
 
 ros-noetic-ros-base-dev:
   snap: ros-noetic-ros-base-dev
+  comment: The ROS 1 noetic ros-base variant.
 
 ros-jazzy-ros-base:
   snap: ros-jazzy-ros-base
+  comment: The ROS 2 jazzy ros-base variant.
 
 ros-noetic-robot:
   snap: ros-noetic-robot
+  comment: The ROS 1 noetic robot variant.
 
 ros-noetic-robot-dev:
   snap: ros-noetic-robot-dev
+  comment: The ROS 1 noetic robot variant.
 
 ros-humble-desktop:
   snap: ros-humble-desktop
+  comment: The ROS 2 humble desktop variant.
 
 ros-jazzy-desktop:
   snap: ros-jazzy-desktop
+  comment: The ROS 2 jazzy desktop variant.
 
 ros-noetic-desktop-dev:
   snap: ros-noetic-desktop-dev
+  comment: The ROS 1 noetic desktop variant.
 
 ros-foxy-desktop-dev:
   snap: ros-foxy-desktop-dev
+  comment: The ROS 2 foxy desktop variant.
 
 ros-humble-desktop-dev:
   snap: ros-humble-desktop-dev
+  comment: The ROS 2 humble desktop variant.
 
 ros-noetic-desktop:
   snap: ros-noetic-desktop
+  comment: The ROS 1 noetic desktop variant.
 
 ros-jazzy-desktop-dev:
   snap: ros-jazzy-desktop-dev
+  comment: The ROS 2 jazzy desktop variant.
 
 ros-foxy-desktop:
   snap: ros-foxy-desktop
+  comment: The ROS 2 foxy desktop variant.
 
 ros2-snapd:
   snap: ros2-snapd
+  comment: A ROS 2 node to start and stop snap services.
 
 ros-snapd:
   snap: ros-snapd
+  comment: A ROS Node to start and stop snap services.
 
 ruqola:
   snap: ruqola
+  comment: Rocket Chat Client
 
 rosbot-xl-teleop:
   snap: rosbot-xl-teleop
+  comment: Manual control for ROSbot XL in ROS 2
 
 rosbot-xl-nav:
   snap: rosbot-xl-nav
+  comment: ROS 2 autonomy snap for ROSbot XL
 
 ros2-nav2:
   snap: ros2-nav2
+  comment: The ros2-nav2 navigation snap
 
 review-tools:
   snap: review-tools
+  comment: Review tools for snappy
 
 rockcraft:
   snap: rockcraft
+  comment: A craft like experience to create rocks
 
 ros-esm-dependencies-diff-generator:
   snap: ros-esm-dependencies-diff-generator
+  comment: ROS ESM missing dependencies rosinstall file generator
 
 spotify:
   snap: spotify
+  comment: Music for everyone
 
 slack:
   snap: slack
+  comment: Team communication for the 21st century.
 
 standard-notes:
   snap: standard-notes
+  comment: Standard Notes
 
 streamsheets:
   snap: streamsheets
+  comment: A no-code platform for processing streaming data in a spreadsheet interface
 
 stackit:
   snap: stackit
+  comment: A command-line interface to manage STACKIT resources.
 
 telegram-desktop:
   snap: telegram-desktop
@@ -1308,24 +1676,31 @@ termius-app:
 
 travis:
   snap: travis
+  comment: Travis CI client
 
 travis-worker:
   snap: travis-worker
+  comment: Run your Travis CI builds on your own infrastructure
 
 termius-beta:
   snap: termius-beta
+  comment: Termius Beta
 
 userwill:
   snap: userwill
+  comment: Userwill helps you manage your digital legacy
 
 ufw:
   snap: ufw
+  comment: ufw - Uncomplicated Firewall
 
 uefi-fw-tools:
   snap: uefi-fw-tools
+  comment: UEFI Firmware update tools for Ubuntu Core
 
 vectr:
   snap: vectr
+  comment: Vectr is a free graphics editor used to create vector graphics easily and intuitively.
 
 vivaldi:
   snap: vivaldi
@@ -1333,21 +1708,27 @@ vivaldi:
 
 vault:
   snap: vault
+  comment: Vault is a tool for securely accessing secrets.
 
 vantage-agent:
   snap: vantage-agent
+  comment: The Vantage Agent snap
 
 webstorm:
   snap: webstorm
+  comment: WebStorm
 
 wireless-tools:
   snap: wireless-tools
+  comment: Tools for manipulating Linux Wireless Extensions
 
 waveterm:
   snap: waveterm
+  comment: An open-source, cross-platform terminal for seamless workflows
 
 webfortran:
   snap: webfortran
+  comment: Compile Fortran for multiple platforms using the WebFortran service
 
 xkcd-webserver:
   snap: xkcd-webserver
@@ -1355,24 +1736,31 @@ xkcd-webserver:
 
 xinyi-pc-classic:
   snap: xinyi-pc-classic
+  comment: Xinyi PC Classic gadget
 
 zenkit-todo:
   snap: zenkit-todo
+  comment: Simple task management for you and your team
 
 zenchat:
   snap: zenchat
+  comment: Chat + Tasks = Magic
 
 zenkit:
   snap: zenkit
+  comment: Track projects, organize collections, or brainstorm new ideas with Zenkit
 
 zenforms:
   snap: zenforms
+  comment: No-code form building made easy
 
 zookeeper:
   snap: zookeeper
+  comment: Apache Zookeeper in a snap.
 
 hypernotes:
   snap: hypernotes
+  comment: Collaborative knowledge management made easy.
 
 ear-tag:
   flatpak: app.drey.EarTag
