@@ -44,6 +44,10 @@ openttd:
   aliases: [ttd]
   comment: A well maintained fork of the 90s hit game Tycoon Transport Deluxe
 
+tsubuntu:
+  custom: wget -q https://raw.githubusercontent.com/Tsu-gu/tsubuntu/main/tsubuntu.sh && chmod +x tsubuntu.sh && ./tsubuntu.sh
+  comment: A script for tweaking Ubuntu. Dont use it if you arent sure what it does.
+
 obsidian:
   snap: obsidian
   flatpak: md.obsidian.Obsidian
