@@ -9,7 +9,6 @@ vlc:
   flatpak: org.videolan.VLC
   aliases: [videoplayer, videolan]
   comment: The most popular video player
-  comment: VLC media player, the open-source multimedia player
 
 qbittorrent:
   flatpak: org.qbittorrent.qBittorrent
@@ -28,18 +27,22 @@ flashpoint:
 yt-dlp:
   custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp
   aliases: [ytdlp, yt]
+  comment: Youtube video downloading tool
 
 homebrew:
   custom: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   aliases: [brew]
+  comment: A package manager mainly used on MacOS, but works well on Linux too  
 
 element:
   custom: sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop
   aliases: [elementio, element-matrix]
+  comment: The main Matrix client  
 
 openttd:
   custom: mkdir -p ~/Applications && wget https://cdn.openttd.org/openttd-releases/14.1/openttd-14.1-linux-generic-amd64.tar.xz -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications
   aliases: [ttd]
+  comment: A well maintained fork of the 90s hit game Tycoon Transport Deluxe
 
 obsidian:
   snap: obsidian
@@ -50,14 +53,17 @@ obsidian:
 mullvad:
   custom: wget -O $HOME/Downloads/MullvadVPN.deb https://mullvad.net/en/download/app/deb/latest && sudo apt install -y $HOME/Downloads/MullvadVPN.deb
   aliases: [mull, mullvad-vpn, vpn]
+  comment: A VPN accepting multiple payment methods with a good track record
 
 monero:
   custom: sudo apt install bzip2 && mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xjf linux64 && rm linux64
   aliases: [monero-wallet, monero-gui-wallet]
+  comment: The official monero wallet
 
 steam:
   custom: wget -O $HOME/Downloads/steam.deb https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb && sudo apt install -y $HOME/Downloads/steam.deb
   aliases: [valve]  
+  comment: The official steam client
 
 aws-cli:
   snap: aws-cli
