@@ -1,6 +1,9 @@
 update:
   custom: wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh && rm $HOME/Documents/apps.yaml && rm /usr/local/bin/appfetch && sudo cp apps.yaml $HOME/Documents/apps.yaml && sudo cp appfetch.sh /usr/local/bin/appfetch && rm apps.yaml appfetch.sh
 
+version:
+  custom: echo "22.5.2025.alpha" 
+  
 vlc:
   snap: vlc
   flatpak: org.videolan.VLC
