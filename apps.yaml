@@ -45,7 +45,7 @@ obsidian:
   
 mullvad:
   custom: wget -O $HOME/Downloads/MullvadVPN.deb https://mullvad.net/en/download/app/deb/latest && sudo apt install -y $HOME/Downloads/MullvadVPN.deb
-  aliases: [mull, mullvad-vpn]
+  aliases: [mull, mullvad-vpn, vpn]
   
 monero:
   custom: sudo apt install bzip2 && mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xjf linux64 && rm linux64
