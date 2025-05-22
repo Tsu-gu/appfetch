@@ -5,3 +5,7 @@ As the name suggests, you just tell it to fetch something and it does it. No fla
 `appfetch app1 app1 app3 app4`, who gives a fuck what format are the apps in, I just want them from the official source.
 
 ![image](https://github.com/user-attachments/assets/8f275fb6-591e-4f5b-abd7-241bbcb3f726)
+
+![image](https://github.com/user-attachments/assets/96df4dbe-ecb5-4e55-b54d-ffb96782e8bf)
+
+![image](https://github.com/user-attachments/assets/0a6da772-de30-46fa-b6a8-0ae3a446fe8a)
