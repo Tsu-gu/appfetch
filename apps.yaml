@@ -7066,6 +7066,7 @@ shuusou-gyoku-engine:
 
 luanti:
   flatpak: net.minetest.Minetest
+  aliases: [minetest, minecraft-clone]
   comment: Block-based multiplayer game platform
 
 lutris:
