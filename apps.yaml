@@ -86,6 +86,7 @@ bitwarden:
 
 brave:
   snap: brave
+  aliases: [brave-browser]
 
 blender:
   custom: snap install blender --classic
@@ -2953,9 +2954,6 @@ gabut-download-manager:
 
 rnote:
   flatpak: com.github.flxzt.rnote
-
-brave:
-  flatpak: com.brave.Browser
 
 beaver-notes:
   flatpak: com.beavernotes.beavernotes
