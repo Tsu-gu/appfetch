@@ -1,3 +1,14 @@
+**Copy and paste this to install
+**
+```
+cd $HOME/Documents
+wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml 
+cd $HOME
+wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh
+sudo cp $HOME/appfetch.sh /usr/local/bin/appfetch
+sudo rm $HOME/appfetch.sh 
+```
+
 Linux users always say how package management is so much easier compared to hunting down .exe files but there are so many package formats that it becomes even harder than on Windows. I merged all verified snaps and flatpaks together, or at least tried to and also added install options for a few apps that aren't a flatpak/snap.
 
 As the name suggests, you just tell it to fetch something and it does it. No flags, no nothing.
@@ -10,4 +21,5 @@ As the name suggests, you just tell it to fetch something and it does it. No fla
 
 ![image](https://github.com/user-attachments/assets/0a6da772-de30-46fa-b6a8-0ae3a446fe8a)
 
-I'm only testing this on Ubuntu and it will work on Debian too if it has snap installed.
+**I'm only testing this on Ubuntu and it will work on Debian too if it has snap installed.
+**
