@@ -145,6 +145,8 @@ bcc:
   
 mpv:
   snap: mpv
+  flatpak: io.mpv.Mpv
+  comment: A lightweight video player
   
 bomber:
   snap: bomber
