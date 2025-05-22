@@ -31,8 +31,9 @@ homebrew:
   custom: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   aliases: [brew]
   
-gimp:
-  flatpak: org.gimp.GIMP
+element:
+  custom: sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop
+  aliases: [elementio, element-matrix]
   
 openttd:
   custom: mkdir -p ~/Applications && wget https://cdn.openttd.org/openttd-releases/14.1/openttd-14.1-linux-generic-amd64.tar.xz -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications
@@ -2851,7 +2852,7 @@ glade:
 builder:
   flatpak: org.gnome.Builder
 
-gnu-image-manipulation-program:
+gimp:
   flatpak: org.gimp.GIMP
 
 gaphor:
@@ -5917,10 +5918,6 @@ nheko:
 fluffychat:
   flatpak: im.fluffychat.Fluffychat
   aliases: [fluffy-chat]
-  
-element:
-  custom: sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop
-  aliases: [elementio, element-matrix]
 
 dino:
   flatpak: im.dino.Dino
