@@ -48,7 +48,7 @@ mullvad:
   aliases: [mull, mullvad-vpn]
   
 monero:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xvjf monero-gui-*.tar.bz2 && rm monero-gui-*.tar.bz2
+  custom: sudo apt install bzip2 && mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xjf linux64 && rm linux64
   aliases: [monero-wallet, monero-gui-wallet]
   
 aws-cli:
