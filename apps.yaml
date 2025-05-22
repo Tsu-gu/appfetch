@@ -71,18 +71,22 @@ adguard-home:
 
 artikulate:
   snap: artikulate
+  flatpak: org.kde.artikulate
 
 all-remixes:
   snap: all-remixes
 
 audiotube:
   snap: audiotube
-
+  flatpak: org.kde.audiotube
+  
 ark:
   snap: ark
+  flatpak: org.kde.ark  
 
 bitwarden:
   snap: bitwarden
+  flatpak: com.bitwarden.desktop
 
 brave:
   snap: brave
@@ -111,7 +115,8 @@ bcc:
 
 bomber:
   snap: bomber
-
+  flatpak: org.kde.bomber
+  
 bluez:
   snap: bluez
 
@@ -361,12 +366,14 @@ flutter:
 
 firefox:
   snap: firefox
+  flatpak: org.mozilla.firefox
 
 full-discography:
   snap: full-discography
 
 falkon:
   snap: falkon
+  flatpak: org.kde.falkon  
 
 filmographer:
   snap: filmographer
@@ -454,12 +461,15 @@ granatier:
 
 ghostwriter:
   snap: ghostwriter
+  flatpak: org.kde.ghostwriter
 
 gedit:
   snap: gedit
+  flatpak: org.gnome.gedit
 
 gwenview:
   snap: gwenview
+  flatpak: org.kde.gwenview
 
 glaxnimate:
   snap: glaxnimate
@@ -520,12 +530,6 @@ haruna:
 
 headscale:
   snap: headscale
-
-hello-world:
-  snap: hello-world
-
-inkscape:
-  snap: inkscape
 
 influx:
   snap: influx
@@ -596,6 +600,7 @@ keepalived:
 
 kolourpaint:
   snap: kolourpaint
+  flatpak: org.kde.kolourpaint
 
 kturtle:
   snap: kturtle
@@ -608,6 +613,7 @@ klettres:
 
 konversation:
   snap: konversation
+  flatpak: org.kde.konversation
 
 kgeography:
   snap: kgeography
@@ -822,6 +828,7 @@ konqueror:
 
 ktorrent:
   snap: ktorrent
+  flatpak: org.kde.ktorrent
 
 k3b:
   snap: k3b
@@ -829,6 +836,7 @@ k3b:
 
 konsole:
   snap: konsole
+  flatpak: org.kde.konsole
 
 kdialog:
   snap: kdialog
@@ -911,6 +919,7 @@ nats:
 
 neochat:
   snap: neochat
+  flatpak: org.kde.neochat
 
 netbeans:
   snap: netbeans
@@ -958,6 +967,7 @@ octave:
 
 okular:
   snap: okular
+  flatpak: org.kde.okular
 
 organize-my-files:
   snap: organize-my-files
@@ -1127,9 +1137,12 @@ rocketchat-server:
 
 remmina:
   snap: remmina
-
+  flatpak: org.remmina.Remmina
+  aliases: [remina]
+  
 rocketchat-desktop:
   snap: rocketchat-desktop
+  aliases: [rocketchat, rocket-chat]
 
 ruby:
   snap: ruby
@@ -1517,9 +1530,6 @@ authenticator:
 alpine-client:
   flatpak: com.alpineclient.AlpineClient
 
-ark:
-  flatpak: org.kde.ark
-
 antimicrox:
   flatpak: io.github.antimicrox.antimicrox
 
@@ -1561,12 +1571,6 @@ keyboard-app-builder:
 
 dictionary-app-builder:
   flatpak: org.sil.dictionary-app-builder
-
-audiotube:
-  flatpak: org.kde.audiotube
-
-artikulate:
-  flatpak: org.kde.artikulate
 
 disk-usage-analyzer:
   flatpak: org.gnome.baobab
@@ -2537,9 +2541,6 @@ shotcut:
 qpwgraph:
   flatpak: org.rncbc.qpwgraph
 
-firefox:
-  flatpak: org.mozilla.firefox
-
 kwave:
   flatpak: org.kde.kwave
 
@@ -2813,9 +2814,6 @@ keepassxc:
 
 subtitle-composer:
   flatpak: org.kde.subtitlecomposer
-
-okular:
-  flatpak: org.kde.okular
 
 lokalize:
   flatpak: org.kde.lokalize
@@ -3248,9 +3246,6 @@ filelight:
 
 calligra:
   flatpak: org.kde.calligra
-
-bomber:
-  flatpak: org.kde.bomber
 
 crow-translate:
   flatpak: org.kde.CrowTranslate
@@ -4060,9 +4055,6 @@ gpg-frontend:
 simple-diary:
   flatpak: com.bjareholt.johan.SimpleDiary
 
-bitwarden:
-  flatpak: com.bitwarden.desktop
-
 decoder:
   flatpak: com.belmoussaoui.Decoder
 
@@ -4201,12 +4193,6 @@ bloom:
 light-video:
   flatpak: org.sigxcpu.Livi
 
-remmina:
-  flatpak: org.remmina.Remmina
-
-qbittorrent:
-  flatpak: org.qbittorrent.qBittorrent
-
 prism-launcher:
   flatpak: org.prismlauncher.PrismLauncher
   aliases: [minecraft, mc]
@@ -4269,14 +4255,8 @@ kwalletmanager:
 kuiviewer:
   flatpak: org.kde.kuiviewer
 
-ktorrent:
-  flatpak: org.kde.ktorrent
-
 kpatience:
   flatpak: org.kde.kpat
-
-kolourpaint:
-  flatpak: org.kde.kolourpaint
 
 kolf:
   flatpak: org.kde.kolf
@@ -4311,12 +4291,6 @@ kalgebra:
 haruna:
   flatpak: org.kde.haruna
 
-gwenview:
-  flatpak: org.kde.gwenview
-
-falkon:
-  flatpak: org.kde.falkon
-
 cantor:
   flatpak: org.kde.cantor
 
@@ -4324,6 +4298,7 @@ symboleditor:
   flatpak: org.kde.SymbolEditor
 
 inkscape:
+  snap: inkscape
   flatpak: org.inkscape.Inkscape
 
 tanglet:
@@ -4334,9 +4309,6 @@ focuswriter:
 
 bookup:
   flatpak: org.gnome.gitlab.ilhooq.Bookup
-
-gedit:
-  flatpak: org.gnome.gedit
 
 fonts:
   flatpak: org.gnome.font-viewer
@@ -4901,9 +4873,6 @@ okular-mobile:
 okteta:
   flatpak: org.kde.okteta
 
-neochat:
-  flatpak: org.kde.neochat
-
 minuet:
   flatpak: org.kde.minuet
 
@@ -4967,14 +4936,8 @@ krename:
 kphotoalbum:
   flatpak: org.kde.kphotoalbum
 
-konversation:
-  flatpak: org.kde.konversation
-
 kontrast:
   flatpak: org.kde.kontrast
-
-konsole:
-  flatpak: org.kde.konsole
 
 konquest:
   flatpak: org.kde.konquest
@@ -5071,9 +5034,6 @@ juk:
 
 index:
   flatpak: org.kde.index
-
-ghostwriter:
-  flatpak: org.kde.ghostwriter
 
 gcompris:
   flatpak: org.kde.gcompris
@@ -5446,9 +5406,6 @@ a-photo-tool-libre:
 
 lachesis:
   flatpak: me.acristoffers.Lachesis
-
-obsidian:
-  flatpak: md.obsidian.Obsidian
 
 cauldron:
   flatpak: it.dottorblaster.cauldron
@@ -5962,7 +5919,7 @@ fluffychat:
   aliases: [fluffy-chat]
   
 element:
-  flatpak: im.riot.Riot
+  custom: sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop
   aliases: [elementio, element-matrix]
 
 dino:
