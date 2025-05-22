@@ -142,7 +142,10 @@ xfburn:
 bcc:
   snap: bcc
   comment: BPF Compiler Collection (BCC)
-
+  
+mpv:
+  snap: mpv
+  
 bomber:
   snap: bomber
   flatpak: org.kde.bomber
