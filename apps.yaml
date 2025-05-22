@@ -30,28 +30,32 @@ yt-dlp:
 homebrew:
   custom: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   aliases: [brew]
-  
+
 element:
   custom: sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop
   aliases: [elementio, element-matrix]
-  
+
 openttd:
   custom: mkdir -p ~/Applications && wget https://cdn.openttd.org/openttd-releases/14.1/openttd-14.1-linux-generic-amd64.tar.xz -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications
   aliases: [ttd]
-  
+
 obsidian:
   snap: obsidian
   flatpak: md.obsidian.Obsidian
   aliases: [obsidianmd]
-  
+
 mullvad:
   custom: wget -O $HOME/Downloads/MullvadVPN.deb https://mullvad.net/en/download/app/deb/latest && sudo apt install -y $HOME/Downloads/MullvadVPN.deb
   aliases: [mull, mullvad-vpn, vpn]
-  
+
 monero:
   custom: sudo apt install bzip2 && mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xjf linux64 && rm linux64
   aliases: [monero-wallet, monero-gui-wallet]
-  
+
+steam:
+  custom: wget -O $HOME/Downloads/steam.deb https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb && sudo apt install -y $HOME/Downloads/steam.deb
+  aliases: [valve]  
+
 aws-cli:
   snap: aws-cli
 
@@ -80,7 +84,7 @@ all-remixes:
 audiotube:
   snap: audiotube
   flatpak: org.kde.audiotube
-  
+
 ark:
   snap: ark
   flatpak: org.kde.ark  
@@ -3823,10 +3827,6 @@ borg-er-0:
 
 vesctool:
   flatpak: com.vesc_project.VescTool
-
-steam:
-  custom: wget -O $HOME/Downloads/steam.deb https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb && sudo apt install -y $HOME/Downloads/steam.deb
-  aliases: [valve]
 
 steam-link:
   flatpak: com.valvesoftware.SteamLink
