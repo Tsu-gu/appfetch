@@ -42,3 +42,6 @@ As the name suggests, you just tell it to fetch something and it does it. No fla
 
 
 **I'm only testing this on Ubuntu and it will work on Debian too if it has snap installed.**
+
+# Exceptions to "official packages only": 
+- mpv
