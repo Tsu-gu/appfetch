@@ -164,7 +164,7 @@ for input in "$@"; do
     elif [[ -n $flatpak_pkg && "$(method_available flatpak && echo yes)" == "yes" ]]; then
         flatpak_apps+=("$flatpak_pkg")
     elif [[ -n $custom_cmd ]]; then
-        echo "Installing $app via custom command"
+        echo "💾 Installing $app via custom command"
         run_cmd "$custom_cmd"
     else
         echo "⚠️ No install method found for '$input'"
