@@ -39,7 +39,7 @@ element:
   comment: The main Matrix client  
 
 aimp:
-  custom: cd $HOME/Downloads && wget --content-disposition https://www.aimp.ru/?do=download.file&id=26 && sudo apt install -y $HOME/Downloads/aimp_*amd64.deb && rm aimp_*amd64.deb
+  custom: cd $HOME/Downloads && wget --user-agent="Mozilla/5.0" -O aimp_amd64.deb "https://www.aimp.ru/?do=download.file&id=26" && sudo apt install -y $HOME/Downloads/aimp_amd64.deb && rm aimp_amd64.deb
   aliases: [aimp-player, aimp-ru]
   comment: A music player that lets you create your own playlists, runs through wine
   
