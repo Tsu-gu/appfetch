@@ -116,6 +116,11 @@ ani-cli:
   custom: sudo apt install sed git grep curl mpv ffmpeg fzf patch && git clone "https://github.com/pystardust/ani-cli.git" && sudo cp ani-cli/ani-cli /usr/local/bin && rm -rf ani-cli
   aliases: [anicli, anime-cli]
   comment: Watch anime straight from your terminal
+
+threema:
+  custom: flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && flatpak install --from https://releases.threema.ch/flatpak/threema-desktop/ch.threema.threema-desktop.flatpakref && flatpak override ch.threema.threema-desktop --filesystem=host
+  aliases: [threema-desktop, threema-app]
+  comment: End-to-end encrypted exchange of messages, calls, and files for businesses, military, authorities, and individuals
   
 vlc:
   snap: vlc
