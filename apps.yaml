@@ -77,6 +77,11 @@ monero:
   aliases: [monero-wallet, monero-gui-wallet]
   comment: The official monero wallet
 
+mullvad-browser:
+  custom:  mkdir -p ~/Applications && cd ~/Applications && wget -q https://mullvad.net/en/download/browser/linux-x86_64/latest && tar -xvJf mullvad-browser-linux-x86_64-*.tar.xz && rm -rf mullvad-browser-linux-x86_64-*.tar.xz
+  aliases: [mullvadbrowser]
+  comment: The Mullvad Browser is developed – in collaboration between Mullvad VPN and the Tor Project – to minimize tracking and fingerprinting. 
+  
 steam:
   custom: wget -O $HOME/Downloads/steam.deb https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb && sudo apt install -y $HOME/Downloads/steam.deb
   aliases: [valve]  
