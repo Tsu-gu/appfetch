@@ -3439,6 +3439,7 @@ prusaslicer:
 
 0-a-d:
   flatpak: com.play0ad.zeroad
+  aliases: [0ad, zeroad]
   comment: Real-time strategy game
 
 xournal:
