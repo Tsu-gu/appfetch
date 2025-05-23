@@ -2,6 +2,10 @@
 
 CONFIG_FILE="$HOME/Documents/apps.yaml"
 
+# Configuration: Set preference when both snap and flatpak are available
+# Set to true to prefer snap, false to prefer flatpak
+PREFER_SNAP=true
+
 # Handle "search" command with multiple apps
 if [[ "$1" == "search" ]]; then
     shift
@@ -93,6 +97,54 @@ get_value() {
     done < "$CONFIG_FILE"
 }
 
+# Check if an app has both snap and flatpak options
+has_both_snap_and_flatpak() {
+    local app=$1
+    local snap_pkg=$(get_value "$app" snap)
+    local flatpak_pkg=$(get_value "$app" flatpak)
+    [[ -n "$snap_pkg" && -n "$flatpak_pkg" ]]
+}
+
+# Determine preferred install method based on configuration
+get_preferred_method() {
+    local app=$1
+    local snap_pkg=$(get_value "$app" snap)
+    local flatpak_pkg=$(get_value "$app" flatpak)
+    local custom_cmd=$(get_value "$app" custom)
+
+    # If custom command exists, always prefer it
+    if [[ -n "$custom_cmd" ]]; then
+        echo "custom"
+        return
+    fi
+
+    # If only one method is available, use it
+    if [[ -n "$snap_pkg" && -z "$flatpak_pkg" ]]; then
+        echo "snap"
+        return
+    elif [[ -z "$snap_pkg" && -n "$flatpak_pkg" ]]; then
+        echo "flatpak"
+        return
+    fi
+
+    # If both are available, use preference
+    if [[ -n "$snap_pkg" && -n "$flatpak_pkg" ]]; then
+        if [[ "$PREFER_SNAP" == true ]] && method_available snap; then
+            echo "snap"
+        elif [[ "$PREFER_SNAP" == false ]] && method_available flatpak; then
+            echo "flatpak"
+        elif method_available snap; then
+            echo "snap"
+        elif method_available flatpak; then
+            echo "flatpak"
+        fi
+        return
+    fi
+
+    # No method available
+    echo "none"
+}
+
 # Resolve user input to the actual app key (via direct name or alias)
 resolve_app_name() {
     local input=$1 app line
@@ -139,6 +191,7 @@ run_cmd() {
 # Argument check
 if (( $# < 1 )); then
     echo "Usage: $0 app1 app2 ..."
+    echo "Configuration: PREFER_SNAP is currently set to $PREFER_SNAP"
     exit 1
 fi
 
@@ -155,20 +208,32 @@ for input in "$@"; do
         continue
     fi
 
-    snap_pkg=$(get_value "$app" snap)
-    flatpak_pkg=$(get_value "$app" flatpak)
-    custom_cmd=$(get_value "$app" custom)
-
-    if [[ -n $snap_pkg && "$(method_available snap && echo yes)" == "yes" ]]; then
-        snap_apps+=("$snap_pkg")
-    elif [[ -n $flatpak_pkg && "$(method_available flatpak && echo yes)" == "yes" ]]; then
-        flatpak_apps+=("$flatpak_pkg")
-    elif [[ -n $custom_cmd ]]; then
-        echo "💾 Installing $app via custom command"
-        run_cmd "$custom_cmd"
-    else
-        echo "⚠️ No install method found for '$input'"
-    fi
+    preferred_method=$(get_preferred_method "$app")
+    
+    case "$preferred_method" in
+        snap)
+            snap_pkg=$(get_value "$app" snap)
+            snap_apps+=("$snap_pkg")
+            if has_both_snap_and_flatpak "$app"; then
+                echo "📦 $app: Using snap (preferred over flatpak)"
+            fi
+            ;;
+        flatpak)
+            flatpak_pkg=$(get_value "$app" flatpak)
+            flatpak_apps+=("$flatpak_pkg")
+            if has_both_snap_and_flatpak "$app"; then
+                echo "📦 $app: Using flatpak (preferred over snap)"
+            fi
+            ;;
+        custom)
+            custom_cmd=$(get_value "$app" custom)
+            echo "💾 Installing $app via custom command"
+            run_cmd "$custom_cmd"
+            ;;
+        none)
+            echo "⚠️ No install method found for '$input'"
+            ;;
+    esac
 done
 
 # Execute batch installs
@@ -181,4 +246,3 @@ if (( ${#flatpak_apps[@]} > 0 )); then
     echo "Installing flatpak packages: ${flatpak_apps[*]}"
     flatpak install -y flathub "${flatpak_apps[@]}"
 fi
-
