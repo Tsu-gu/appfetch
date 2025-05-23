@@ -84,7 +84,7 @@ monero:
   comment: The official monero wallet
 
 mullvad-browser:
-  custom:  mkdir -p ~/Applications && cd ~/Applications && wget https://mullvad.net/en/download/browser/linux-x86_64/latest && tar -xvJf latest && rm -rf latest
+  custom:  mkdir -p ~/Applications && cd ~/Applications && wget -O mullvad-browser.tar.xz https://mullvad.net/en/download/browser/linux-x86_64/latest && tar -xvf mullvad-browser.tar.xz && rm -f mullvad-browser.tar.xz
   aliases: [mullvadbrowser]
   comment: The Mullvad Browser is developed – in collaboration between Mullvad VPN and the Tor Project – to minimize tracking and fingerprinting. 
 
