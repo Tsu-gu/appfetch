@@ -15,12 +15,12 @@ distrobox:
   comment: Use any Linux distribution inside your terminal
 
 flashpoint:
-  custom: echo "This is meant to work on Ubuntu 22 and 24 LTS!" && wget -q https://raw.githubusercontent.com/Tsu-gu/flashpoint-ubuntu-install/main/flashpoint-ubuntu-installer.sh && chmod +x flashpoint-ubuntu-installer.sh && ./flashpoint-ubuntu-installer.sh
+  custom: echo "This is meant to work on Ubuntu 22 and 24 LTS!" && wget https://raw.githubusercontent.com/Tsu-gu/flashpoint-ubuntu-install/main/flashpoint-ubuntu-installer.sh && chmod +x flashpoint-ubuntu-installer.sh && ./flashpoint-ubuntu-installer.sh
   aliases: [bluemaxima, bluemaxima-flashpoint]
   comment: Flashpoint Archive is a community effort to preserve games and animations from the web
   
 yt-dlp:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp
   aliases: [ytdlp, yt]
   comment: Youtube video downloading tool
 
@@ -40,7 +40,7 @@ aimp:
   comment: A music player that lets you create your own playlists, runs through wine
   
 openttd:
-  custom: wget -q https://raw.githubusercontent.com/Tsu-gu/appfetch/main/scripts/openttd.sh && chmod +x openttd.sh && ./openttd.sh && rm -rf openttd.sh
+  custom: wget https://raw.githubusercontent.com/Tsu-gu/appfetch/main/scripts/openttd.sh && chmod +x openttd.sh && ./openttd.sh && rm -rf openttd.sh
   aliases: [ttd]
   comment: A well maintained fork of the 90s hit game Tycoon Transport Deluxe
 
@@ -60,21 +60,21 @@ mullvad:
   comment: A VPN accepting multiple payment methods with a good track record
 
 filen:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://cdn.filen.io/@filen/desktop/release/latest/Filen_linux_x86_64.AppImage && chmod +x Filen_linux_x86_64.AppImage
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://cdn.filen.io/@filen/desktop/release/latest/Filen_linux_x86_64.AppImage && chmod +x Filen_linux_x86_64.AppImage
   aliases: [filen-cloud, filen-io]
   comment: German cloud provider with affordable prices
 
 godot:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://godotengine.org/download/linux && unzip Godot_*.zip && rm -rf Godot_*.zip
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://godotengine.org/download/linux && unzip Godot_*.zip && rm -rf Godot_*.zip
   aliases: [godot4, godot-engine]
   comment: Your free, open‑source game engine
   
 lmms:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://github.com/LMMS/lmms/releases/download/v1.2.2/lmms-1.2.2-linux-x86_64.AppImage && chmod +x lmms-*.AppImage
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/LMMS/lmms/releases/download/v1.2.2/lmms-1.2.2-linux-x86_64.AppImage && chmod +x lmms-*.AppImage
   comment: Lets make music with a free, cross-platform tool for your computer
 
 koofr:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://app.koofr.net/dl/apps/linux64 && tar -xvzf koofr-*.tar.gz && rm -rf koofr-*.tar.gz
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://app.koofr.net/dl/apps/linux64 && tar -xvzf koofr-*.tar.gz && rm -rf koofr-*.tar.gz
   aliases: [koofr-cloud]
   comment: Slovenian cloud provider
   
@@ -84,12 +84,12 @@ monero:
   comment: The official monero wallet
 
 mullvad-browser:
-  custom:  mkdir -p ~/Applications && cd ~/Applications && wget -q https://mullvad.net/en/download/browser/linux-x86_64/latest && tar -xvJf mullvad-browser-linux-x86_64-*.tar.xz && rm -rf mullvad-browser-linux-x86_64-*.tar.xz
+  custom:  mkdir -p ~/Applications && cd ~/Applications && wget https://mullvad.net/en/download/browser/linux-x86_64/latest && tar -xvJf mullvad-browser-linux-x86_64-*.tar.xz && rm -rf mullvad-browser-linux-x86_64-*.tar.xz
   aliases: [mullvadbrowser]
   comment: The Mullvad Browser is developed – in collaboration between Mullvad VPN and the Tor Project – to minimize tracking and fingerprinting. 
 
 palemoon:
-  custom:  mkdir -p ~/Applications && cd ~/Applications && wget -q https://www.palemoon.org/download.php?mirror=eu&bits=64&type=linuxgtk3 && tar -xvJf palemoon-*.tar.xz && rm -rf palemoon-*.tar.xz
+  custom:  mkdir -p ~/Applications && cd ~/Applications && wget https://www.palemoon.org/download.php?mirror=eu&bits=64&type=linuxgtk3 && tar -xvJf palemoon-*.tar.xz && rm -rf palemoon-*.tar.xz
   aliases: [pale-moon, palemoon-browser]
   comment: Pale Moon is an Open Source, Goanna-based web browser available for various operating systems including Microsoft Windows, Mac OS and Linux (with contributed other operating system support), focusing on efficiency and customization
   
@@ -99,7 +99,7 @@ steam:
   comment: The official steam client
 
 super-tux-kart:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://github.com/supertuxkart/stk-code/releases/download/1.4/SuperTuxKart-1.4-linux-x86_64.tar.xz && tar -xvJf SuperTuxKart-*.tar.xz
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/supertuxkart/stk-code/releases/download/1.4/SuperTuxKart-1.4-linux-x86_64.tar.xz && tar -xvJf SuperTuxKart-*.tar.xz
   aliases: [supertuxkart, tuxkart, tuxcart, supertuxcart]
   comment: SuperTuxKart is a 3D open-source arcade racer with a variety characters, tracks, and modes to play
   
