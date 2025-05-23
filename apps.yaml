@@ -89,7 +89,7 @@ mullvad-browser:
   comment: The Mullvad Browser is developed – in collaboration between Mullvad VPN and the Tor Project – to minimize tracking and fingerprinting. 
 
 palemoon:
-  custom:  mkdir -p ~/Applications && cd ~/Applications && curl -L -O "https://www.palemoon.org/download.php?mirror=eu&bits=64&type=linuxgtk3" && tar -xvJf palemoon-*.tar.xz && rm -rf palemoon-*.tar.xz
+  custom:  mkdir -p ~/Applications && cd ~/Applications && wget --content-disposition "https://www.palemoon.org/download.php?mirror=eu&bits=64&type=linuxgtk3" && tar -xvJf palemoon-*.tar.xz && rm -rf palemoon-*.tar.xz
   aliases: [pale-moon, palemoon-browser]
   comment: Pale Moon is an Open Source, Goanna-based web browser available for various operating systems including Microsoft Windows, Mac OS and Linux (with contributed other operating system support), focusing on efficiency and customization
   
