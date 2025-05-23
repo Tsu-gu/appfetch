@@ -99,7 +99,7 @@ steam:
   comment: The official steam client
 
 super-tux-kart:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/supertuxkart/stk-code/releases/download/1.4/SuperTuxKart-1.4-linux-x86_64.tar.xz && tar -xvJf SuperTuxKart-*.tar.xz
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/supertuxkart/stk-code/releases/download/1.4/SuperTuxKart-1.4-linux-x86_64.tar.xz && tar -xvJf SuperTuxKart-*.tar.xz && rm -rf SuperTuxKart-*.tar.xz
   aliases: [supertuxkart, tuxkart, tuxcart, supertuxcart]
   comment: SuperTuxKart is a 3D open-source arcade racer with a variety characters, tracks, and modes to play
   
