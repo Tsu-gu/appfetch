@@ -121,7 +121,12 @@ threema:
   custom: flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && flatpak install --from https://releases.threema.ch/flatpak/threema-desktop/ch.threema.threema-desktop.flatpakref && flatpak override ch.threema.threema-desktop --filesystem=host
   aliases: [threema-desktop, threema-app]
   comment: End-to-end encrypted exchange of messages, calls, and files for businesses, military, authorities, and individuals
-  
+
+ardour:
+  custom: xdg-open "https://community.ardour.org/download?platform=linux&architecture=x86_64&type=compiled&paymentSelection=options"
+  aliases: [ardour-daw]
+  comment: Record, Edit, and Mix on Linux
+
 vlc:
   snap: vlc
   flatpak: org.videolan.VLC
