@@ -25,7 +25,7 @@ yt-dlp:
   comment: Youtube video downloading tool
 
 homebrew:
-  custom: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  custom: sudo apt install git && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   aliases: [brew]
   comment: A package manager mainly used on MacOS, but works well on Linux too  
 
