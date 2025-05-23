@@ -49,3 +49,4 @@ appfetch bug
 
 # Exceptions to "official packages only": 
 - mpv
+- xfburn
