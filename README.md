@@ -1,3 +1,5 @@
+![appfetch-logo](https://github.com/user-attachments/assets/b607848d-1478-4d2b-9fb7-4d17c05377e2)
+
 **Installation**
 ```
 cd $HOME/Documents
