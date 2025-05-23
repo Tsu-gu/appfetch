@@ -63,6 +63,11 @@ filen:
   aliases: [filen-cloud, filen-io]
   comment: German cloud provider with affordable prices
 
+koofr:
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://app.koofr.net/dl/apps/linux64 && tar -xvzf koofr-*.tar.gz && rm -rf koofr-*.tar.gz
+  aliases: [koofr-cloud]
+  comment: Slovenian cloud provider
+  
 monero:
   custom: sudo apt install bzip2 && mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xjf linux64 && rm linux64
   aliases: [monero-wallet, monero-gui-wallet]
