@@ -78,6 +78,11 @@ steam:
   aliases: [valve]  
   comment: The official steam client
 
+gum:
+  custom: command -v brew >/dev/null 2>&1 && brew install gum || { echo "Homebrew (brew) is not installed."; exit 1; }
+  aliases: [gum-ui, gum-tui]
+  comment: A tool for glamorous shell scripts. Leverage the power of Bubbles and Lip Gloss in your scripts and aliases without writing any Go code
+  
 vlc:
   snap: vlc
   flatpak: org.videolan.VLC
