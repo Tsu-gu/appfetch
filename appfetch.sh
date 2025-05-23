@@ -334,19 +334,19 @@ install_apps() {
 # Show usage information
 show_usage() {
     cat << EOF
-Usage: $0 [search] app1 [app2 ...]
+Usage: appfetch app1 app2 ...
 
 Commands:
-  $0 search <query>...    Search for apps matching query
-  $0 <app>...            Install specified apps
+  appfetch search <query>...    Search for apps matching query
+  appfetch <app>...             Install specified apps
 
 Configuration:
   PREFER_SNAP=$PREFER_SNAP (prefer snap over flatpak when both available)
 
 Examples:
-  $0 search video         # Search for apps with 'video' in name/comment
-  $0 vlc firefox         # Install VLC and Firefox
-  $0 minecraft mullvad         # Install using aliases
+  appfetch search video         # Search for apps with 'video' in name/comment
+  appfetch vlc firefox          # Install VLC and Firefox
+  appfetch minecraft mullvad    # Install using aliases
 
 EOF
 }
