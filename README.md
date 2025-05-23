@@ -30,6 +30,12 @@ Yes. There is no install command because it's just wasted time. You want apps, y
 
 Find the variable `PREFER_SNAP` inside of the script and set it to false
 
+**To report bugs/missing apps:**
+
+```
+appfetch bug
+```
+
 # Showcase
 ![image](https://github.com/user-attachments/assets/8f275fb6-591e-4f5b-abd7-241bbcb3f726)
 
