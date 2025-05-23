@@ -40,7 +40,7 @@ aimp:
   comment: A music player that lets you create your own playlists, runs through wine
   
 openttd:
-  custom: mkdir -p ~/Applications && wget https://cdn.openttd.org/openttd-releases/14.1/openttd-14.1-linux-generic-amd64.tar.xz -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications
+  custom: wget -q https://raw.githubusercontent.com/Tsu-gu/appfetch/main/scripts/openttd.sh && chmod +x openttd.sh && ./openttd.sh && rm -rf openttd.sh
   aliases: [ttd]
   comment: A well maintained fork of the 90s hit game Tycoon Transport Deluxe
 
