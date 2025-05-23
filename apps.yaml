@@ -47,6 +47,11 @@ tsubuntu:
   custom: wget -q https://raw.githubusercontent.com/Tsu-gu/tsubuntu/main/tsubuntu.sh && chmod +x tsubuntu.sh && ./tsubuntu.sh
   comment: A script for tweaking Ubuntu. Dont use it if you arent sure what it does.
 
+ani-cli:
+  custom: sudo apt install sed grep curl aria2c mpv ffmpeg fzf patch && git clone "https://github.com/pystardust/ani-cli.git" && sudo cp ani-cli/ani-cli /usr/local/bin && rm -rf ani-cli
+  aliases: [anicli, anime-cli]
+  comment: Watch anime straight from your terminal
+  
 obsidian:
   snap: obsidian
   flatpak: md.obsidian.Obsidian
