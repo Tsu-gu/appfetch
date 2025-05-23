@@ -44,6 +44,11 @@ element:
   aliases: [elementio, element-matrix]
   comment: The main Matrix client  
 
+aimp:
+  custom: cd $HOME/Downloads && wget https://www.aimp.ru/?do=download.file&id=26 &&  sudo apt install -y $HOME/Downloads/aimp_*amd64.deb && rm aimp_*amd64.deb
+  aliases: [aimp-player, aimp-ru]
+  comment: A music player that lets you create your own playlists, runs through wine
+  
 openttd:
   custom: mkdir -p ~/Applications && wget https://cdn.openttd.org/openttd-releases/14.1/openttd-14.1-linux-generic-amd64.tar.xz -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications
   aliases: [ttd]
