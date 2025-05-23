@@ -63,6 +63,11 @@ filen:
   aliases: [filen-cloud, filen-io]
   comment: German cloud provider with affordable prices
 
+godot:
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://godotengine.org/download/linux && unzip Godot_*.zip && rm -rf Godot_*.zip
+  aliases: [godot4, godot-engine]
+  comment: Your free, open‑source game engine
+  
 lmms:
   custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://github.com/LMMS/lmms/releases/download/v1.2.2/lmms-1.2.2-linux-x86_64.AppImage && chmod +x lmms-*.AppImage
   comment: Lets make music with a free, cross-platform tool for your computer
