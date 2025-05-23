@@ -10,6 +10,7 @@ if [ -z "$version" ]; then
 fi
 
 echo "Downloading Audacity version $version..."
-mkdir -p ~/Applications && \
+mkdir -p ~/Applications
+cd  ~/Applications
 wget https://github.com/audacity/audacity/releases/download/Audacity-${version}/audacity-linux-${version}-x64-22.04.AppImage 
 chmod +x audacity-linux-${version}-x64-22.04.AppImage 
