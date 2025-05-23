@@ -192,6 +192,7 @@ bitwarden:
 
 brave:
   snap: brave
+  flatpak: com.brave.Browser
   aliases: [brave-browser]
 
 blender:
