@@ -50,7 +50,7 @@ tsubuntu:
 obsidian:
   snap: obsidian
   flatpak: md.obsidian.Obsidian
-  aliases: [obsidianmd]
+  aliases: [obsidianmd, obsidian-notes]
   comment: Markdown-based knowledge base
 
 mullvad:
