@@ -4,6 +4,10 @@ update:
 version:
   custom: echo "23.5.2025.beta" 
 
+bug:
+  custom: xdg-open "https://github.com/Tsu-gu/appfetch/issues/new?body=%23%20I%20would%20like%20to%20report%20a%3A%0Amissing%20app%2Fbug%2Fbroken%20install%20script%0A%0A%23%20The%20missing%20app%3A"
+  aliases: [bugreport, bug-report, report, report-bug]
+
 reaper:
   custom: mkdir -p ~/Applications && wget https://www.reaper.fm/files/7.x/reaper739_linux_x86_64.tar.xz -O /tmp/reaper.tar.xz && tar -xf /tmp/reaper.tar.xz -C ~/Applications && cd ~/Applications && ./install-reaper.sh
   aliases: [reaperfm]
