@@ -305,7 +305,7 @@ install_apps() {
         if sudo snap install "${snap_queue[@]}"; then
             log_success "Snap packages installed successfully"
         else
-            log_error "Some snap packages failed to install"
+            log_error "Some snap packages failed to install. You can report this via appfetch bug"
             install_success=false
         fi
     fi
@@ -316,7 +316,7 @@ install_apps() {
         if flatpak install -y flathub "${flatpak_queue[@]}"; then
             log_success "Flatpak packages installed successfully"
         else
-            log_error "Some flatpak packages failed to install"
+            log_error "Some flatpak packages failed to install. You can report this via appfetch bug"
             install_success=false
         fi
     fi
