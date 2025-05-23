@@ -341,7 +341,8 @@ Commands:
   appfetch <app>...             Install specified apps
 
 Configuration:
-  PREFER_SNAP=$PREFER_SNAP (prefer snap over flatpak when both available)
+  change this variable PREFER_SNAP=$PREFER_SNAP  if you want to prefer snap over flatpak when both available
+  sudo nano /usr/local/bin/appfetch
 
 Examples:
   appfetch search video         # Search for apps with 'video' in name/comment
