@@ -26,6 +26,9 @@ appfetch app1 app2 app3...
 ```
 Yes. There is no install command because it's just wasted time. You want apps, you run the command and tell it what you want.
 
+**To avoid snaps when possible:**
+
+Find the variable `PREFER_SNAP` inside of the script and set it to false
 
 # Showcase
 ![image](https://github.com/user-attachments/assets/8f275fb6-591e-4f5b-abd7-241bbcb3f726)
