@@ -58,6 +58,11 @@ mullvad:
   aliases: [mull, mullvad-vpn, vpn]
   comment: A VPN accepting multiple payment methods with a good track record
 
+filen:
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://cdn.filen.io/@filen/desktop/release/latest/Filen_linux_x86_64.AppImage && chmod +x Filen_linux_x86_64.AppImage
+  aliases: [filen-cloud, filen-io]
+  comment: German cloud provider with affordable prices
+
 monero:
   custom: sudo apt install bzip2 && mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xjf linux64 && rm linux64
   aliases: [monero-wallet, monero-gui-wallet]
