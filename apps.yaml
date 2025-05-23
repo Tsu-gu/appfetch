@@ -219,10 +219,12 @@ bluez:
 
 blinken:
   snap: blinken
+  flatpak: org.kde.blinken  
   comment: Memory Enhancement Game
 
 bovo:
   snap: bovo
+  flatpak: org.kde.bovo  
   comment: "Five in a row" board game
 
 busybox-static:
@@ -443,6 +445,7 @@ disk-space-saver:
 
 digikam:
   snap: digikam
+  flatpak: org.kde.digikam  
   comment: Photo Management Program
 
 datagrip:
@@ -519,6 +522,7 @@ easy-file-organizer:
 
 elisa:
   snap: elisa
+  flatpak: org.kde.elisa  
   comment: Play local music and listen to online radio
 
 enterprise-store:
@@ -561,6 +565,7 @@ filmographer:
 
 francis:
   snap: francis
+  flatpak: org.kde.francis  
   comment: Track your time
 
 foxglove-bridge:
@@ -756,6 +761,7 @@ hypernotes:
 
 haruna:
   snap: haruna
+  flatpak: org.kde.haruna  
   comment: Media player
 
 headscale:
@@ -1063,6 +1069,7 @@ kubrick:
 
 kblackbox:
   snap: kblackbox
+  flatpak: org.kde.kblackbo  
   comment: Blackbox Logic Game
 
 knetwalk:
@@ -1178,6 +1185,7 @@ kjournald:
 
 librepcb:
   snap: librepcb
+  flatpak: org.librepcb.LibrePCB  
   comment: EDA software to develop printed circuit boards
 
 lenovo-wwan-dpr:
@@ -1828,10 +1836,6 @@ zenforms:
 zookeeper:
   snap: zookeeper
   comment: Apache Zookeeper in a snap.
-
-hypernotes:
-  snap: hypernotes
-  comment: Collaborative knowledge management made easy.
 
 ear-tag:
   flatpak: app.drey.EarTag
@@ -3282,10 +3286,6 @@ granatier:
   flatpak: org.kde.granatier
   comment: Bomberman clone
 
-francis:
-  flatpak: org.kde.francis
-  comment: Track your time
-
 ikona:
   flatpak: org.kde.Ikona
   comment: Ikona is a design companion to help you design icons
@@ -3775,10 +3775,6 @@ glaxnimate:
   flatpak: org.mattbas.Glaxnimate
   comment: Vector Animation Editor
 
-librepcb:
-  flatpak: org.librepcb.LibrePCB
-  comment: Design Schematics and PCBs
-
 kicad:
   flatpak: org.kicad.KiCad
   comment: An EDA suite for schematic and circuit board design
@@ -3815,10 +3811,6 @@ krdc:
 kde-itinerary:
   flatpak: org.kde.itinerary
   comment: Digital travel assistant
-
-elisa:
-  flatpak: org.kde.elisa
-  comment: Play local music and listen to online radio
 
 jasp:
   flatpak: org.jaspstats.JASP
@@ -5750,10 +5742,6 @@ kalgebra:
   flatpak: org.kde.kalgebra
   comment: Graph Calculator
 
-haruna:
-  flatpak: org.kde.haruna
-  comment: Media player
-
 cantor:
   flatpak: org.kde.cantor
   comment: Frontend to mathematical software
@@ -6717,10 +6705,6 @@ kblocks:
   flatpak: org.kde.kblocks
   comment: Falling Blocks Game
 
-kblackbox:
-  flatpak: org.kde.kblackbox
-  comment: Blackbox Logic Game
-
 katomic:
   flatpak: org.kde.katomic
   comment: Sokoban-like Logic Game
@@ -6752,18 +6736,6 @@ gcompris:
 dolphin:
   flatpak: org.kde.dolphin
   comment: Manage your files
-
-digikam:
-  flatpak: org.kde.digikam
-  comment: Photo Management Program
-
-bovo:
-  flatpak: org.kde.bovo
-  comment: "Five in a row" board game
-
-blinken:
-  flatpak: org.kde.blinken
-  comment: Memory Enhancement Game
 
 dr-robotnik-s-ring-racers:
   flatpak: org.kartkrew.RingRacers
