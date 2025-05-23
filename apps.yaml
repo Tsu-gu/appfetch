@@ -181,6 +181,7 @@ branch-diff:
 
 xfburn:
   custom: sudo apt install xfburn
+  comment: The OG DVD and CD burning tool
 
 bcc:
   snap: bcc
