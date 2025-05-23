@@ -65,7 +65,7 @@ filen:
   comment: German cloud provider with affordable prices
 
 godot:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget --content-disposition --trust-server-names https://godotengine.org/download/linux && unzip Godot_*.zip && rm -rf Godot_*.zip
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip && unzip Godot_*.zip && rm -rf Godot_*.zip
   aliases: [godot4, godot-engine]
   comment: Your free, open‑source game engine
   
@@ -89,7 +89,7 @@ mullvad-browser:
   comment: The Mullvad Browser is developed – in collaboration between Mullvad VPN and the Tor Project – to minimize tracking and fingerprinting. 
 
 palemoon:
-  custom:  mkdir -p ~/Applications && cd ~/Applications && wget https://www.palemoon.org/download.php?mirror=eu&bits=64&type=linuxgtk3 && tar -xvJf palemoon-*.tar.xz && rm -rf palemoon-*.tar.xz
+  custom:  mkdir -p ~/Applications && cd ~/Applications && wget --content-disposition --trust-server-names https://www.palemoon.org/download.php?mirror=eu&bits=64&type=linuxgtk3 && tar -xvJf palemoon-*.tar.xz && rm -rf palemoon-*.tar.xz
   aliases: [pale-moon, palemoon-browser]
   comment: Pale Moon is an Open Source, Goanna-based web browser available for various operating systems including Microsoft Windows, Mac OS and Linux (with contributed other operating system support), focusing on efficiency and customization
   
