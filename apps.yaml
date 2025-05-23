@@ -86,6 +86,11 @@ gum:
   custom: command -v brew >/dev/null 2>&1 && brew install gum || { echo "Homebrew (brew) is not installed."; exit 1; }
   aliases: [gum-ui, gum-tui]
   comment: A tool for glamorous shell scripts. Leverage the power of Bubbles and Lip Gloss in your scripts and aliases without writing any Go code
+
+ani-cli:
+  custom: sudo apt install sed git grep curl mpv ffmpeg fzf patch && git clone "https://github.com/pystardust/ani-cli.git" && sudo cp ani-cli/ani-cli /usr/local/bin && rm -rf ani-cli
+  aliases: [anicli, anime-cli]
+  comment: Watch anime straight from your terminal
   
 vlc:
   snap: vlc
