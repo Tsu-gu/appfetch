@@ -1784,6 +1784,7 @@ vectr:
 vivaldi:
   snap: vivaldi
   aliases: [vivaldi-browser]
+  comment: Browse the web with desktop-style tabs, block ads and trackers, and sync data between devices safely
 
 vault:
   snap: vault
