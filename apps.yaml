@@ -135,6 +135,11 @@ ardour:
   custom: xdg-open "https://community.ardour.org/download?platform=linux&architecture=x86_64&type=compiled&paymentSelection=options"
   aliases: [ardour-daw]
   comment: Record, Edit, and Mix on Linux
+  
+makemkv:
+  flatpak: com.makemkv.MakeMKV
+  aliases: [make-mkv]
+  comment: MakeMKV is your one-click solution to convert video that you own into free and patents-unencumbered format that can be played everywhere
 
 vlc:
   snap: vlc
