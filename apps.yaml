@@ -145,6 +145,11 @@ yacreader:
   flatpak: com.yacreader.YACReader
   aliases: [yac-reader]
   comment: YACReader offers you the best way to read and manage your digital comics and mangas in epub and pdf
+
+wps:
+  custom:  cd ~/Downloads && wget wps-office_11.1.0.11723.XA_amd64.deb && sudo apt install -y $HOME/Downloads/wps-office_*.deb && sudo rm -f $HOME/Downloads/wps-office_*.deb 
+  aliases: [wps-office]
+  comment: As one of the best Microsoft Office alternatives of 2021, WPS Office is fully compatible with main Linux distributions
   
 vlc:
   snap: vlc
