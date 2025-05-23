@@ -141,6 +141,11 @@ makemkv:
   aliases: [make-mkv]
   comment: MakeMKV is your one-click solution to convert video that you own into free and patents-unencumbered format that can be played everywhere
 
+yacreader:
+  flatpak: com.yacreader.YACReader
+  aliases: [yac-reader]
+  comment: YACReader offers you the best way to read and manage your digital comics and mangas in epub and pdf
+  
 vlc:
   snap: vlc
   flatpak: org.videolan.VLC
