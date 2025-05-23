@@ -53,3 +53,4 @@ appfetch bug
 - mpv
 - xfburn
 - audacious
+- makemkv
