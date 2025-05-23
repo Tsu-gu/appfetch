@@ -82,6 +82,11 @@ steam:
   aliases: [valve]  
   comment: The official steam client
 
+super-tux-kart:
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget -q https://github.com/supertuxkart/stk-code/releases/download/1.4/SuperTuxKart-1.4-linux-x86_64.tar.xz && tar -xvJf SuperTuxKart-*.tar.xz
+  aliases: [supertuxkart, tuxkart, tuxcart, supertuxcart]
+  comment: SuperTuxKart is a 3D open-source arcade racer with a variety characters, tracks, and modes to play
+  
 gum:
   custom: command -v brew >/dev/null 2>&1 && brew install gum || { echo "Homebrew (brew) is not installed."; exit 1; }
   aliases: [gum-ui, gum-tui]
