@@ -91,6 +91,11 @@ monero:
   aliases: [monero-wallet, monero-gui-wallet]
   comment: The official monero wallet
 
+syncthing:
+  custom: wget https://raw.githubusercontent.com/Tsu-gu/appfetch/main/scripts/syncthing.sh && chmod +x syncthing.sh && ./syncthing.sh && rm -rf syncthing.sh
+  aliases: [sync-thing]
+  comment: Syncing files in a P2P manner 
+  
 mullvad-browser:
   custom:  mkdir -p ~/Applications && cd ~/Applications && wget -O mullvad-browser.tar.xz https://mullvad.net/en/download/browser/linux-x86_64/latest && tar -xvf mullvad-browser.tar.xz && rm -f mullvad-browser.tar.xz
   aliases: [mullvadbrowser]
