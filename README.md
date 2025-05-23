@@ -54,3 +54,5 @@ appfetch bug
 - xfburn
 - audacious
 - makemkv
+
+I think it's better to break my own rules than just throw an error when a user wants to install one of these.
