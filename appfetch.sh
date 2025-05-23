@@ -346,7 +346,7 @@ Configuration:
 Examples:
   $0 search video         # Search for apps with 'video' in name/comment
   $0 vlc firefox         # Install VLC and Firefox
-  $0 gum ani-cli         # Install using aliases
+  $0 minecraft mullvad         # Install using aliases
 
 EOF
 }
