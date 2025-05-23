@@ -221,7 +221,7 @@ execute_custom_command() {
     if eval "$cmd"; then
         log_success "$app installed successfully"
     else
-        log_error "Failed to install $app via custom command"
+        log_error "Failed to install $app via custom command. You can report this by typing appfetch bug."
         return 1
     fi
 }
