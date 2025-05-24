@@ -2,7 +2,13 @@
 
 **Installation**
 ```
-mkdir -p "$HOME/Documents" && wget -O "$HOME/Documents/apps.yaml" https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && wget -O /tmp/appfetch https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh && sudo mv /tmp/appfetch /usr/local/bin/appfetch && sudo chmod +x /usr/local/bin/appfetch
+mkdir -p "$HOME/Documents" && \
+wget -O "/tmp/apps.yaml" https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && \
+wget -O "/tmp/appfetch" https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh && \
+mv /tmp/apps.yaml "$HOME/Documents/apps.yaml" && \
+sudo mv /tmp/appfetch /usr/local/bin/appfetch && \
+sudo chmod +x /usr/local/bin/appfetch
+
 
 ```
 
