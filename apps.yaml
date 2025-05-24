@@ -1,5 +1,5 @@
 update:
-  custom: wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh && rm $HOME/Documents/apps.yaml && rm /usr/local/bin/appfetch && cp apps.yaml $HOME/Documents/apps.yaml && sudo cp appfetch.sh /usr/local/bin/appfetch && rm apps.yaml appfetch.sh
+  custom: wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh && rm -f $HOME/Documents/apps.yaml && sudo rm /usr/local/bin/appfetch && cp apps.yaml $HOME/Documents/apps.yaml && sudo cp appfetch.sh /usr/local/bin/appfetch && rm -f apps.yaml appfetch.sh
 
 update-database:
   custom: cd ~/Downloads && wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && rm -f $HOME/Documents/apps.yaml && cp apps.yaml $HOME/Documents/apps.yaml && rm -f apps.yaml 
