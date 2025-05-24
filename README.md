@@ -8,8 +8,6 @@ wget -O "/tmp/appfetch" https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/h
 mv /tmp/apps.yaml "$HOME/Documents/apps.yaml" && \
 sudo mv /tmp/appfetch /usr/local/bin/appfetch && \
 sudo chmod +x /usr/local/bin/appfetch
-
-
 ```
 
 **To update it and its database:**
