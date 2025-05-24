@@ -22,6 +22,10 @@ flashpoint:
   custom: echo "This is meant to work on Ubuntu 22 and 24 LTS and Debian 12!" && wget https://raw.githubusercontent.com/Tsu-gu/flashpoint-ubuntu-install/main/flashpoint-ubuntu-installer.sh && chmod +x flashpoint-ubuntu-installer.sh && ./flashpoint-ubuntu-installer.sh
   aliases: [bluemaxima, bluemaxima-flashpoint]
   comment: Flashpoint Archive is a community effort to preserve games and animations from the web
+
+session: 
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://getsession.org/linux && chmod +x session-*.AppImage
+  comment: An end-to-end encrypted messenger that protects your personal data
   
 yt-dlp:
   custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp
