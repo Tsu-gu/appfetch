@@ -1,6 +1,6 @@
 update:
-  custom: wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh && rm -f "$HOME/Documents/apps.yaml" && sudo rm -f /usr/local/bin/appfetch && sudo cp apps.yaml "$HOME/Documents/apps.yaml" && sudo cp appfetch.sh /usr/local/bin/appfetch && rm -f apps.yaml appfetch.sh
-  
+  custom: wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh && rm -f "$HOME/Documents/apps.yaml" && sudo rm -f /usr/local/bin/appfetch && sudo cp apps.yaml "$HOME/Documents/apps.yaml" && sudo cp appfetch.sh /usr/local/bin/appfetch && sudo chmod +x /usr/local/bin/appfetch && rm -f apps.yaml appfetch.sh
+
 version:
   custom: echo "24.5.2025.beta" 
 
