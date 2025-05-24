@@ -233,6 +233,11 @@ audiotube:
   flatpak: org.kde.audiotube
   comment: YouTube Music app
 
+wireshark:
+  flatpak: org.wireshark.Wireshark
+  aliases: [wire-shark]
+  comment:  Allows you to examine protocol data stored in files
+
 ark:
   snap: ark
   flatpak: org.kde.ark  
