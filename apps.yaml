@@ -180,6 +180,12 @@ qbittorrent:
   aliases: [qbit, torrent]
   comment: An open-source Bittorrent client
 
+
+ubports:
+  snap: ubports-installer
+  aliases: [ubports-installer, ubuntu-touch]
+  comment: Installer for Ubuntu touch
+  
 aws-cli:
   snap: aws-cli
   comment: Universal Command Line Interface for Amazon Web Services
