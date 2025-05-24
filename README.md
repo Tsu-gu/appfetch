@@ -10,10 +10,10 @@ sudo mv /tmp/appfetch /usr/local/bin/appfetch && \
 sudo chmod +x /usr/local/bin/appfetch
 ```
 
-**To update it and its database:**
+**To update its database:**
 
 ```
-appfetch update
+appfetch update-database
 ```
 **Search for apps with:**
 
