@@ -265,7 +265,7 @@ install_apps() {
             continue
         fi
         
-        IFS='§' read -r snap_pkg flatpak_pkg custom_cmd comment aliases <<< "$app_data"
+        IFS='|' read -r snap_pkg flatpak_pkg custom_cmd comment aliases <<< "$app_data"
         
         # Determine best installation method
         if [[ -n "$custom_cmd" ]]; then
