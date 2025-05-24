@@ -14,7 +14,7 @@ reaper:
   comment: A linux-native DAW
 
 joplin:
-  custom: mkdir -p ~/Applications && cd ~/Applications && latest_version=$(curl -s https://api.github.com/repos/laurent22/joplin/releases/latest | grep '"tag_name":' | cut -d '"' -f 4); version_number=${latest_version#v}; download_url="https://github.com/laurent22/joplin/releases/download/${latest_version}/Joplin-${version_number}.AppImage"; echo "Latest Joplin version: $latest_version"; echo "Download URL: $download_url"; curl -L -o "Joplin-${version_number}.AppImage" "$download_url"
+  custom: mkdir -p ~/Applications && cd ~/Applications && v=$(curl -s https://api.github.com/repos/laurent22/joplin/releases/latest | grep '"tag_name":' | cut -d '"' -f 4) && curl -L -o "Joplin-${v#v}.AppImage" "https://github.com/laurent22/joplin/releases/download/$v/Joplin-${v#v}.AppImage"
   aliases: [joplin-notes]
   comment: The privacy-focused note taking app with sync capabilities for Windows, macOS, Linux, Android and iOS
 
