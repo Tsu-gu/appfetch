@@ -43,7 +43,7 @@ element:
   comment: The main Matrix client  
 
 balena-etcher:
-  custom: wget -q https://raw.githubusercontent.com/Tsu-gu/appfetch/main/scripts/balenaetcher.sh && chmod +x balenaetcher.sh && ./balenaetcher.sh && rm -rf balenaetcher.sh
+  custom: mkdir -p ~/Applications && cd ~/Applications && VERSION=$(curl -s https://github.com/balena-io/etcher/releases | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | sed 's/^v//' | sort -Vr | head -n 1) && if [ -z "$VERSION" ]; then echo "Failed to extract Etcher version."; exit 1; fi && echo "Downloading balenaEtcher version $VERSION..." && wget https://github.com/balena-io/etcher/releases/download/v$VERSION/balenaEtcher-linux-x64-$VERSION.zip && unzip balenaEtcher-linux-x64-$VERSION.zip && rm -f balenaEtcher-linux-x64-$VERSION.zip
   aliases: [etcher, balenaetcher]
   comment: Flash OS images to SD cards & USB drives, safely and easily
   
@@ -53,12 +53,12 @@ aimp:
   comment: A music player that lets you create your own playlists, runs through wine
   
 openttd:
-  custom: wget https://raw.githubusercontent.com/Tsu-gu/appfetch/main/scripts/openttd.sh && chmod +x openttd.sh && ./openttd.sh && rm -rf openttd.sh
+  custom: page_content=$(wget -qO- https://www.openttd.org/downloads/openttd-releases/latest) && version=$(echo "$page_content" | grep -oP 'Latest stable release in openttd is \K[0-9]+\.[0-9]+') && [ -z "$version" ] && echo "Failed to extract version number." && exit 1 || (echo "Downloading OpenTTD version $version..." && mkdir -p ~/Applications && wget "https://cdn.openttd.org/openttd-releases/${version}/openttd-${version}-linux-generic-amd64.tar.xz" -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications)
   aliases: [ttd]
   comment: A well maintained fork of the 90s hit game Tycoon Transport Deluxe
 
 audacity:
-  custom: wget https://raw.githubusercontent.com/Tsu-gu/appfetch/main/scripts/audacity.sh && chmod +x audacity.sh && ./audacity.sh && rm -rf audacity.sh
+  custom: page_content=$(wget -qO- https://www.audacityteam.org/download/linux/) && version=$(echo "$page_content" | grep -oP 'Current version \K[0-9]+\.[0-9]+\.[0-9]+') && if [ -z "$version" ]; then echo "Failed to extract version number."; exit 1; fi && echo "Downloading Audacity version $version..." && mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/audacity/audacity/releases/download/Audacity-${version}/audacity-linux-${version}-x64-22.04.AppImage && chmod +x audacity-linux-${version}-x64-22.04.AppImage
   comment: The world's most popular audio editing and recording app
 
 tsubuntu:
@@ -106,7 +106,7 @@ monero:
   comment: The official monero wallet
 
 syncthing:
-  custom: wget https://raw.githubusercontent.com/Tsu-gu/appfetch/main/scripts/syncthing.sh && chmod +x syncthing.sh && ./syncthing.sh && rm -rf syncthing.sh
+  custom: sudo mkdir -p /etc/apt/keyrings && sudo curl -L -o /etc/apt/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg && echo "deb [signed-by=/etc/apt/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list > /dev/null && sudo apt-get update && sudo apt-get install -y syncthing
   aliases: [sync-thing]
   comment: Syncing files in a P2P manner 
   
@@ -170,7 +170,7 @@ yacreader:
   comment: YACReader offers you the best way to read and manage your digital comics and mangas in epub and pdf
 
 wps:
-  custom:  wget https://raw.githubusercontent.com/Tsu-gu/appfetch/main/scripts/wps.sh && chmod +x wps.sh && ./wps.sh && rm -rf wps.sh
+  custom:  page_content=$(wget -qO- https://www.wps.com/whatsnew/linux/) && version=$(echo "$page_content" | grep -oP '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | head -1) && [ -z "$version" ] && echo "Failed to extract version number." && exit 1 || (build_number=$(echo "$version" | awk -F. '{print $4}') && filename="wps-office_${version}.XA_amd64.deb" && url="https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/${build_number}/${filename}" && user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" && echo "Downloading $filename from $url..." && cd ~/Downloads && wget --header="User-Agent: $user_agent" -O "$filename" "$url" && sudo apt install -y ~/Downloads/wps-*.deb)
   aliases: [wps-office]
   comment: As one of the best Microsoft Office alternatives of 2021, WPS Office is fully compatible with main Linux distributions
   
