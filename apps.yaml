@@ -18,6 +18,11 @@ distrobox:
   aliases: [distro-box]
   comment: Use any Linux distribution inside your terminal
 
+warp:
+  custom:  mkdir -p ~/Applications && cd ~/Applications && curl -L -A "Mozilla/5.0" -o warp.AppImage https://app.warp.dev/download?package=appimage && chmod +x warp.AppImage
+  aliases: [warp-terminal]
+  comment: Warp combines AI and your dev team’s knowledge in one fast, intuitive terminal
+  
 pulsar:
   custom: mkdir -p ~/Applications && cd ~/Applications && curl -L -A "Mozilla/5.0" -o pulsar.tar.gz "https://download.pulsar-edit.dev/?os=linux&type=linux_tar" && tar -xvzf pulsar.tar.gz && rm -f pulsar.tar.gz
   aliases: [pulsar-editor]
@@ -1977,7 +1982,7 @@ fotema:
   flatpak: app.fotema.Fotema
   comment: Admire your photos
 
-warp:
+warp-files:
   flatpak: app.drey.Warp
   comment: Fast and secure file transfer
 
