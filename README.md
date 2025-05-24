@@ -57,5 +57,6 @@ appfetch bug
 - audacious
 - makemkv
 - yacreader (unverified but the flatpak is linked as official on their site)
+- wireshark
 
 I think it's better to break my own rules than just throw an error when a user wants to install one of these.
