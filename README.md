@@ -15,6 +15,8 @@ sudo chmod +x /usr/local/bin/appfetch
 ```
 appfetch update-database
 ```
+I encountered issues with the script trying to update itself so I guess if you want to update it, re-run the installation command.
+
 **Search for apps with:**
 
 ```
