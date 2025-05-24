@@ -61,7 +61,7 @@ parse_app_block() {
         if [[ $line =~ ^([a-zA-Z0-9_-]+):$ ]]; then
             # If we were parsing an app and found a new one
             if [[ $in_app == true && "$app" == "$target_app" ]]; then
-                echo "$snap|$flatpak|$custom|$comment|$aliases"
+                echo "$snap§$flatpak§$custom§$comment§$aliases"
                 return 0
             fi
             
@@ -96,7 +96,7 @@ parse_app_block() {
     
     # Handle case where target app is the last one in file
     if [[ $in_app == true && "$app" == "$target_app" ]]; then
-        echo "$snap|$flatpak|$custom|$comment|$aliases"
+        echo "$snap§$flatpak§$custom§$comment§$aliases"
         return 0
     fi
     
@@ -265,7 +265,7 @@ install_apps() {
             continue
         fi
         
-        IFS='|' read -r snap_pkg flatpak_pkg custom_cmd comment aliases <<< "$app_data"
+        IFS='§' read -r snap_pkg flatpak_pkg custom_cmd comment aliases <<< "$app_data"
         
         # Determine best installation method
         if [[ -n "$custom_cmd" ]]; then
@@ -345,9 +345,9 @@ Configuration:
   sudo nano /usr/local/bin/appfetch
 
 Examples:
-  appfetch search video         # Search for apps with 'video' in name/comment
-  appfetch vlc firefox          # Install VLC and Firefox
-  appfetch minecraft mullvad    # Install using aliases
+  appfetch search video         Search for apps with 'video' in name/comment
+  appfetch vlc firefox          Install VLC and Firefox
+  appfetch minecraft mullvad    Install using aliases
 
 EOF
 }
