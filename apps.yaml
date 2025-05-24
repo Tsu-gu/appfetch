@@ -189,7 +189,12 @@ ubports:
   snap: ubports-installer
   aliases: [ubports-installer, ubuntu-touch]
   comment: Installer for Ubuntu touch
-  
+
+portmaster:
+  custom: curl -fsSL https://updates.safing.io/latest/linux_all/packages/install.sh | sudo bash
+  aliases: [port-master]
+  comment:  A free and open-source application firewall that does the heavy lifting for you
+
 aws-cli:
   snap: aws-cli
   comment: Universal Command Line Interface for Amazon Web Services
