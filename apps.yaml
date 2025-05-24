@@ -14,7 +14,7 @@ reaper:
   comment: A linux-native DAW
 
 distrobox:
-  custom: curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
+  custom: "curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh"
   aliases: [distro-box]
   comment: Use any Linux distribution inside your terminal
 
@@ -38,7 +38,7 @@ homebrew:
   comment: A package manager mainly used on MacOS, but works well on Linux too  
 
 element:
-  custom: sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop
+  custom: "sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop"
   aliases: [elementio, element-matrix]
   comment: The main Matrix client  
 
@@ -77,7 +77,7 @@ mullvad:
   comment: A VPN accepting multiple payment methods with a good track record
 
 ollama:
-  custom: curl -fsSL https://ollama.com/install.sh | sh
+  custom: "curl -fsSL https://ollama.com/install.sh | sh"
   aliases: [ollama-ai]
   comment: Get up and running with large language models
 
@@ -126,7 +126,7 @@ steam:
   comment: The official steam client
 
 waydroid:
-  custom: sudo apt install curl ca-certificates -y && curl -s https://repo.waydro.id | sudo bash && sudo apt install waydroid -y
+  custom: "sudo apt install curl ca-certificates -y && curl -s https://repo.waydro.id | sudo bash && sudo apt install waydroid -y"
   comment: Waydroid is a container-based approach to boot a full Android system on a regular GNU/Linux system like Ubuntu
   
 super-tux-kart:
@@ -135,7 +135,7 @@ super-tux-kart:
   comment: SuperTuxKart is a 3D open-source arcade racer with a variety characters, tracks, and modes to play
   
 gum:
-  custom: command -v brew >/dev/null 2>&1 && brew install gum || { echo "Homebrew (brew) is not installed."; exit 1; }
+  custom: "command -v brew >/dev/null 2>&1 && brew install gum || { echo "Homebrew (brew) is not installed."; exit 1; }"
   aliases: [gum-ui, gum-tui]
   comment: A tool for glamorous shell scripts. Leverage the power of Bubbles and Lip Gloss in your scripts and aliases without writing any Go code
 
