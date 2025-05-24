@@ -185,7 +185,6 @@ qbittorrent:
   aliases: [qbit, torrent]
   comment: An open-source Bittorrent client
 
-
 ubports:
   snap: ubports-installer
   aliases: [ubports-installer, ubuntu-touch]
