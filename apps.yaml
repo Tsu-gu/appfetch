@@ -2,7 +2,7 @@ update-database:
   custom: wget -O "$HOME/Documents/apps.yaml" https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml
 
 version:
-  custom: echo "24.5.2025.beta.1" 
+  custom: echo "24.5.2025" 
 
 bug:
   custom: xdg-open "https://github.com/Tsu-gu/appfetch/issues/new?body=%23%20I%20would%20like%20to%20report%20a%3A%0Amissing%20app%2Fbug%2Fbroken%20install%20script%0A%0A%23%20The%20missing%20app%3A"
