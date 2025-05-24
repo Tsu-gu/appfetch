@@ -42,6 +42,11 @@ element:
   aliases: [elementio, element-matrix]
   comment: The main Matrix client  
 
+balena-etcher:
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/balena-io/etcher/releases/download/v2.1.2/balenaEtcher-linux-x64-2.1.2.zip && unzip balenaEtcher-linux-x64-*.zip && rm -f balenaEtcher-linux-x64-*.zip
+  aliases: [etcher, balenaetcher]
+  comment: Flash OS images to SD cards & USB drives, safely and easily
+  
 aimp:
   custom: cd $HOME/Downloads && wget --user-agent="Mozilla/5.0" -O aimp_amd64.deb "https://www.aimp.ru/?do=download.file&id=26" && sudo apt install -y $HOME/Downloads/aimp_amd64.deb && rm aimp_amd64.deb
   aliases: [aimp-player, aimp-ru]
