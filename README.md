@@ -2,12 +2,8 @@
 
 **Installation**
 ```
-cd $HOME/Documents
-wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml 
-cd $HOME
-wget https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh
-sudo cp $HOME/appfetch.sh /usr/local/bin/appfetch
-sudo rm $HOME/appfetch.sh 
+mkdir -p "$HOME/Documents" && wget -O "$HOME/Documents/apps.yaml" https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && wget -O /tmp/appfetch https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh && sudo mv /tmp/appfetch /usr/local/bin/appfetch && sudo chmod +x /usr/local/bin/appfetch
+
 ```
 
 **To update it and its database:**
