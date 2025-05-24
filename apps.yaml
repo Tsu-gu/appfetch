@@ -19,7 +19,7 @@ distrobox:
   comment: Use any Linux distribution inside your terminal
 
 pulsar:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://download.pulsar-edit.dev/?os=linux&type=linux_tar &&  tar -xvzf pulsar-*.tar.gz && rm -f pulsar-*.tar.gz
+  custom: mkdir -p ~/Applications && cd ~/Applications && curl -L -A "Mozilla/5.0" -o pulsar.tar.gz "https://download.pulsar-edit.dev/?os=linux&type=linux_tar" && tar -xvzf pulsar.tar.gz && rm -f pulsar.tar.gz
   aliases: [pulsar-editor]
   comment: A Community-led Hyper-Hackable Text Editor
 
