@@ -51,7 +51,12 @@ aimp:
   custom: cd $HOME/Downloads && wget --user-agent="Mozilla/5.0" -O aimp_amd64.deb "https://www.aimp.ru/?do=download.file&id=26" && sudo apt install -y $HOME/Downloads/aimp_amd64.deb && rm aimp_amd64.deb
   aliases: [aimp-player, aimp-ru]
   comment: A music player that lets you create your own playlists, runs through wine
-  
+
+dfx:
+  custom: sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+  aliases: [dfx-icp]
+  comment: The IC SDK is a software development kit used to develop applications on your local machine and to deploy them to ICP
+
 openttd:
   custom: page_content=$(wget -qO- https://www.openttd.org/downloads/openttd-releases/latest) && version=$(echo "$page_content" | grep -oP 'Latest stable release in openttd is \K[0-9]+\.[0-9]+') && [ -z "$version" ] && echo "Failed to extract version number." && exit 1 || (echo "Downloading OpenTTD version $version..." && mkdir -p ~/Applications && wget "https://cdn.openttd.org/openttd-releases/${version}/openttd-${version}-linux-generic-amd64.tar.xz" -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications)
   aliases: [ttd]
