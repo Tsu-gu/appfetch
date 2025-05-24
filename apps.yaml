@@ -18,6 +18,11 @@ distrobox:
   aliases: [distro-box]
   comment: Use any Linux distribution inside your terminal
 
+pulsar:
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://download.pulsar-edit.dev/?os=linux&type=linux_tar &&  tar -xvzf pulsar-*.tar.gz && rm -f pulsar-*.tar.gz
+  aliases: [pulsar-editor]
+  comment: A Community-led Hyper-Hackable Text Editor
+
 flashpoint:
   custom: echo "This is meant to work on Ubuntu 22 and 24 LTS and Debian 12!" && wget https://raw.githubusercontent.com/Tsu-gu/flashpoint-ubuntu-install/main/flashpoint-ubuntu-installer.sh && chmod +x flashpoint-ubuntu-installer.sh && ./flashpoint-ubuntu-installer.sh
   aliases: [bluemaxima, bluemaxima-flashpoint]
