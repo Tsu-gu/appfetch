@@ -198,7 +198,7 @@ yacreader:
 
 wps:
   custom:  page_content=$(wget -qO- https://www.wps.com/whatsnew/linux/) && version=$(echo "$page_content" | grep -oP '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | head -1) && [ -z "$version" ] && echo "Failed to extract version number." && exit 1 || (build_number=$(echo "$version" | awk -F. '{print $4}') && filename="wps-office_${version}.XA_amd64.deb" && url="https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/${build_number}/${filename}" && user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" && echo "Downloading $filename from $url..." && cd ~/Downloads && wget --header="User-Agent: $user_agent" -O "$filename" "$url" && sudo apt install -y ~/Downloads/wps-*.deb)
-  uninstall: sudo apt remove  -y wps
+  uninstall: sudo apt remove  -y wps-office
   aliases: [wps-office]
   comment: As one of the best Microsoft Office alternatives of 2021, WPS Office is fully compatible with main Linux distributions
   
