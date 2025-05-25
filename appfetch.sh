@@ -4,6 +4,7 @@ set -euo pipefail
 
 # Configuration
 CONFIG_FILE="$HOME/Documents/apps.yaml"
+INSTALLED_FILE="$HOME/.local/share/appfetch/installed.yaml"
 PREFER_SNAP=true
 
 # Colors for output
@@ -19,6 +20,192 @@ log_success() { echo -e "${GREEN}✅ $*${NC}"; }
 log_warning() { echo -e "${YELLOW}⚠️  $*${NC}"; }
 log_info() { echo -e "${BLUE}ℹ️  $*${NC}"; }
 log_search() { echo -e "🔎 $*"; }
+
+# Ensure installed apps tracking file exists
+ensure_installed_file() {
+    local dir=$(dirname "$INSTALLED_FILE")
+    if [[ ! -d "$dir" ]]; then
+        mkdir -p "$dir"
+    fi
+    if [[ ! -f "$INSTALLED_FILE" ]]; then
+        touch "$INSTALLED_FILE"
+    fi
+}
+
+# Record installed app
+record_installed_app() {
+    local app="$1"
+    local method="$2"  # snap, flatpak, or custom
+    local package="$3" # package name or custom command
+    local timestamp=$(date -Iseconds)
+    
+    ensure_installed_file
+    
+    # Remove existing entry if present
+    if grep -q "^$app:" "$INSTALLED_FILE" 2>/dev/null; then
+        sed -i "/^$app:/,/^[^[:space:]]/{ /^[^[:space:]]/!d; /^$app:/d; }" "$INSTALLED_FILE"
+    fi
+    
+    # Add new entry
+    cat >> "$INSTALLED_FILE" << EOF
+$app:
+  method: $method
+  package: $package
+  installed_at: $timestamp
+
+EOF
+}
+
+# Get installed app info
+get_installed_app_info() {
+    local app="$1"
+    local method="" package="" installed_at=""
+    local in_app=false
+    
+    ensure_installed_file
+    
+    while IFS= read -r line || [[ -n $line ]]; do
+        if [[ $line =~ ^([a-zA-Z0-9_-]+):$ ]]; then
+            if [[ $in_app == true && "$app" == "${BASH_REMATCH[1]}" ]]; then
+                echo "$method§$package§$installed_at"
+                return 0
+            fi
+            
+            if [[ "${BASH_REMATCH[1]}" == "$app" ]]; then
+                in_app=true
+                method="" package="" installed_at=""
+            else
+                in_app=false
+            fi
+            continue
+        fi
+        
+        if [[ $in_app == true ]]; then
+            if [[ $line =~ ^[[:space:]]+method:[[:space:]]*(.+)$ ]]; then
+                method="${BASH_REMATCH[1]}"
+            elif [[ $line =~ ^[[:space:]]+package:[[:space:]]*(.+)$ ]]; then
+                package="${BASH_REMATCH[1]}"
+            elif [[ $line =~ ^[[:space:]]+installed_at:[[:space:]]*(.+)$ ]]; then
+                installed_at="${BASH_REMATCH[1]}"
+            elif [[ ! $line =~ ^[[:space:]] ]]; then
+                break
+            fi
+        fi
+    done < "$INSTALLED_FILE"
+    
+    # Handle case where target app is the last one in file
+    if [[ $in_app == true ]]; then
+        echo "$method§$package§$installed_at"
+        return 0
+    fi
+    
+    return 1
+}
+
+# Remove app from installed list
+remove_from_installed() {
+    local app="$1"
+    
+    ensure_installed_file
+    
+    if grep -q "^$app:" "$INSTALLED_FILE" 2>/dev/null; then
+        # Create temp file and remove the app block
+        local temp_file=$(mktemp)
+        local in_app=false
+        
+        while IFS= read -r line || [[ -n $line ]]; do
+            if [[ $line =~ ^([a-zA-Z0-9_-]+):$ ]]; then
+                if [[ "${BASH_REMATCH[1]}" == "$app" ]]; then
+                    in_app=true
+                    continue
+                else
+                    in_app=false
+                fi
+            fi
+            
+            if [[ $in_app == true ]]; then
+                if [[ ! $line =~ ^[[:space:]] ]]; then
+                    in_app=false
+                    echo "$line" >> "$temp_file"
+                fi
+            else
+                echo "$line" >> "$temp_file"
+            fi
+        done < "$INSTALLED_FILE"
+        
+        mv "$temp_file" "$INSTALLED_FILE"
+    fi
+}
+
+# List installed apps
+list_installed_apps() {
+    ensure_installed_file
+    
+    if [[ ! -s "$INSTALLED_FILE" ]]; then
+        log_info "No apps installed via appfetch yet"
+        return 0
+    fi
+    
+    echo "📦 Apps installed via appfetch:"
+    echo
+    
+    local app="" in_app=false
+    local method="" package=""
+    local apps_data=()
+    
+    # First pass: collect all data
+    while IFS= read -r line || [[ -n $line ]]; do
+        if [[ $line =~ ^([a-zA-Z0-9_-]+):$ ]]; then
+            # Store previous app info if we were in one
+            if [[ $in_app == true ]]; then
+                apps_data+=("$app|$method|$package")
+            fi
+            
+            app="${BASH_REMATCH[1]}"
+            method="" package=""
+            in_app=true
+            continue
+        fi
+        
+        if [[ $in_app == true ]]; then
+            if [[ $line =~ ^[[:space:]]+method:[[:space:]]*(.+)$ ]]; then
+                method="${BASH_REMATCH[1]}"
+            elif [[ $line =~ ^[[:space:]]+package:[[:space:]]*(.+)$ ]]; then
+                package="${BASH_REMATCH[1]}"
+            elif [[ ! $line =~ ^[[:space:]] ]]; then
+                # End of app block
+                apps_data+=("$app|$method|$package")
+                in_app=false
+            fi
+        fi
+    done < "$INSTALLED_FILE"
+    
+    # Handle the last app in file
+    if [[ $in_app == true ]]; then
+        apps_data+=("$app|$method|$package")
+    fi
+    
+    # Second pass: format and display
+    for app_data in "${apps_data[@]}"; do
+        IFS='|' read -r app method package <<< "$app_data"
+        
+        # Format based on method
+        case "$method" in
+            snap|flatpak)
+                printf "  %-20s %s\n" "$app" "$method"
+                ;;
+            custom)
+                if [[ ${#package} -gt 60 ]]; then
+                    # Truncate long commands and add ellipsis
+                    local truncated="${package:0:57}..."
+                    printf "  %-20s custom %s\n" "$app" "$truncated"
+                else
+                    printf "  %-20s custom %s\n" "$app" "$package"
+                fi
+                ;;
+        esac
+    done
+}
 
 # Validate configuration
 validate_config() {
@@ -54,21 +241,21 @@ check_package_manager() {
 parse_app_block() {
     local target_app="$1"
     local app="" in_app=false
-    local snap="" flatpak="" custom="" comment="" aliases=""
+    local snap="" flatpak="" custom="" uninstall="" comment="" aliases=""
     
     while IFS= read -r line || [[ -n $line ]]; do
         # Match app name line
         if [[ $line =~ ^([a-zA-Z0-9_-]+):$ ]]; then
             # If we were parsing an app and found a new one
             if [[ $in_app == true && "$app" == "$target_app" ]]; then
-                echo "$snap§$flatpak§$custom§$comment§$aliases"
+                echo "$snap§$flatpak§$custom§$uninstall§$comment§$aliases"
                 return 0
             fi
             
             app="${BASH_REMATCH[1]}"
             if [[ "$app" == "$target_app" ]]; then
                 in_app=true
-                snap="" flatpak="" custom="" comment="" aliases=""
+                snap="" flatpak="" custom="" uninstall="" comment="" aliases=""
             else
                 in_app=false
             fi
@@ -83,6 +270,8 @@ parse_app_block() {
                 flatpak="${BASH_REMATCH[1]}"
             elif [[ $line =~ ^[[:space:]]+custom:[[:space:]]*(.+)$ ]]; then
                 custom="${BASH_REMATCH[1]}"
+            elif [[ $line =~ ^[[:space:]]+uninstall:[[:space:]]*(.+)$ ]]; then
+                uninstall="${BASH_REMATCH[1]}"
             elif [[ $line =~ ^[[:space:]]+comment:[[:space:]]*(.+)$ ]]; then
                 comment="${BASH_REMATCH[1]}"
             elif [[ $line =~ ^[[:space:]]+aliases:[[:space:]]*\[([^\]]*)\] ]]; then
@@ -96,7 +285,7 @@ parse_app_block() {
     
     # Handle case where target app is the last one in file
     if [[ $in_app == true && "$app" == "$target_app" ]]; then
-        echo "$snap§$flatpak§$custom§$comment§$aliases"
+        echo "$snap§$flatpak§$custom§$uninstall§$comment§$aliases"
         return 0
     fi
     
@@ -220,10 +409,159 @@ execute_custom_command() {
     
     if eval "$cmd"; then
         log_success "$app installed successfully"
+        record_installed_app "$app" "custom" "$cmd"
     else
         log_error "Failed to install $app via custom command. You can report this by typing appfetch bug."
         return 1
     fi
+}
+
+# Execute custom uninstall command
+execute_custom_uninstall() {
+    local app="$1"
+    local cmd="$2"
+    
+    log_info "Uninstalling $app via custom command"
+    echo "➤ Running: $cmd"
+    
+    if eval "$cmd"; then
+        log_success "$app uninstalled successfully"
+        remove_from_installed "$app"
+    else
+        log_error "Failed to uninstall $app via custom command"
+        return 1
+    fi
+}
+
+# Remove/uninstall apps
+remove_apps() {
+    local apps=("$@")
+    local snap_queue=()
+    local flatpak_queue=()
+    local custom_apps=()
+    local failed_apps=()
+    
+    # Process each app
+    for input in "${apps[@]}"; do
+        local resolved_app
+        if ! resolved_app=$(resolve_app_name "$input"); then
+            log_error "No matching app or alias found for '$input'"
+            failed_apps+=("$input")
+            continue
+        fi
+        
+        # Check if app is installed via appfetch
+        local install_info
+        if ! install_info=$(get_installed_app_info "$resolved_app"); then
+            log_error "$resolved_app: not installed via appfetch"
+            failed_apps+=("$input")
+            continue
+        fi
+        
+        IFS='§' read -r method package installed_at <<< "$install_info"
+        
+        case "$method" in
+            snap)
+                snap_queue+=("$package")
+                ;;
+            flatpak)
+                flatpak_queue+=("$package")
+                ;;
+            custom)
+                custom_apps+=("$resolved_app")
+                ;;
+            *)
+                log_error "$resolved_app: unknown installation method '$method'"
+                failed_apps+=("$input")
+                ;;
+        esac
+    done
+    
+    # Execute batch removals
+    local removal_success=true
+    
+    if (( ${#snap_queue[@]} > 0 )); then
+        echo
+        log_info "Removing ${#snap_queue[@]} snap packages: ${snap_queue[*]}"
+        if sudo snap remove "${snap_queue[@]}"; then
+            log_success "Snap packages removed successfully"
+            # Remove from installed list
+            for pkg in "${snap_queue[@]}"; do
+                for input in "${apps[@]}"; do
+                    local resolved_app
+                    if resolved_app=$(resolve_app_name "$input"); then
+                        local install_info
+                        if install_info=$(get_installed_app_info "$resolved_app"); then
+                            IFS='§' read -r method package installed_at <<< "$install_info"
+                            if [[ "$method" == "snap" && "$package" == "$pkg" ]]; then
+                                remove_from_installed "$resolved_app"
+                                break
+                            fi
+                        fi
+                    fi
+                done
+            done
+        else
+            log_error "Some snap packages failed to remove"
+            removal_success=false
+        fi
+    fi
+    
+    if (( ${#flatpak_queue[@]} > 0 )); then
+        echo
+        log_info "Removing ${#flatpak_queue[@]} flatpak packages: ${flatpak_queue[*]}"
+        if flatpak uninstall -y "${flatpak_queue[@]}"; then
+            log_success "Flatpak packages removed successfully"
+            # Remove from installed list
+            for pkg in "${flatpak_queue[@]}"; do
+                for input in "${apps[@]}"; do
+                    local resolved_app
+                    if resolved_app=$(resolve_app_name "$input"); then
+                        local install_info
+                        if install_info=$(get_installed_app_info "$resolved_app"); then
+                            IFS='§' read -r method package installed_at <<< "$install_info"
+                            if [[ "$method" == "flatpak" && "$package" == "$pkg" ]]; then
+                                remove_from_installed "$resolved_app"
+                                break
+                            fi
+                        fi
+                    fi
+                done
+            done
+        else
+            log_error "Some flatpak packages failed to remove"
+            removal_success=false
+        fi
+    fi
+    
+    # Handle custom apps
+    for app in "${custom_apps[@]}"; do
+        echo
+        local app_data
+        if ! app_data=$(parse_app_block "$app"); then
+            log_error "Failed to parse data for '$app'"
+            failed_apps+=("$app")
+            continue
+        fi
+        
+        IFS='§' read -r snap_pkg flatpak_pkg custom_cmd uninstall_cmd comment aliases <<< "$app_data"
+        
+        if [[ -n "$uninstall_cmd" ]]; then
+            execute_custom_uninstall "$app" "$uninstall_cmd"
+        else
+            log_error "$app: no uninstall command defined"
+            failed_apps+=("$app")
+        fi
+    done
+    
+    # Summary
+    if (( ${#failed_apps[@]} > 0 )); then
+        echo
+        log_error "Failed to remove: ${failed_apps[*]}"
+        removal_success=false
+    fi
+    
+    return $([[ $removal_success == true ]] && echo 0 || echo 1)
 }
 
 # Main installation logic
@@ -265,7 +603,7 @@ install_apps() {
             continue
         fi
         
-        IFS='§' read -r snap_pkg flatpak_pkg custom_cmd comment aliases <<< "$app_data"
+        IFS='§' read -r snap_pkg flatpak_pkg custom_cmd uninstall_cmd comment aliases <<< "$app_data"
         
         # Determine best installation method
         if [[ -n "$custom_cmd" ]]; then
@@ -304,6 +642,22 @@ install_apps() {
         log_info "Installing ${#snap_queue[@]} snap packages: ${snap_queue[*]}"
         if sudo snap install "${snap_queue[@]}"; then
             log_success "Snap packages installed successfully"
+            # Record installed packages
+            for pkg in "${snap_queue[@]}"; do
+                for input in "${apps[@]}"; do
+                    local resolved_app
+                    if resolved_app=$(resolve_app_name "$input"); then
+                        local app_data
+                        if app_data=$(parse_app_block "$resolved_app"); then
+                            IFS='§' read -r snap_pkg flatpak_pkg custom_cmd uninstall_cmd comment aliases <<< "$app_data"
+                            if [[ "$snap_pkg" == "$pkg" ]]; then
+                                record_installed_app "$resolved_app" "snap" "$pkg"
+                                break
+                            fi
+                        fi
+                    fi
+                done
+            done
         else
             log_error "Some snap packages failed to install. You can report this via appfetch bug"
             install_success=false
@@ -315,6 +669,22 @@ install_apps() {
         log_info "Installing ${#flatpak_queue[@]} flatpak packages: ${flatpak_queue[*]}"
         if flatpak install -y flathub "${flatpak_queue[@]}"; then
             log_success "Flatpak packages installed successfully"
+            # Record installed packages
+            for pkg in "${flatpak_queue[@]}"; do
+                for input in "${apps[@]}"; do
+                    local resolved_app
+                    if resolved_app=$(resolve_app_name "$input"); then
+                        local app_data
+                        if app_data=$(parse_app_block "$resolved_app"); then
+                            IFS='§' read -r snap_pkg flatpak_pkg custom_cmd uninstall_cmd comment aliases <<< "$app_data"
+                            if [[ "$flatpak_pkg" == "$pkg" ]]; then
+                                record_installed_app "$resolved_app" "flatpak" "$pkg"
+                                break
+                            fi
+                        fi
+                    fi
+                done
+            done
         else
             log_error "Some flatpak packages failed to install. You can report this via appfetch bug"
             install_success=false
@@ -334,20 +704,24 @@ install_apps() {
 # Show usage information
 show_usage() {
     cat << EOF
-Usage: appfetch app1 app2 ...
+Usage: appfetch <command> [args...]
 
 Commands:
-  appfetch search <query>...    Search for apps matching query
-  appfetch <app>...             Install specified apps
+  appfetch search <query>...       Search for apps matching query
+  appfetch <app>...                Install specified apps
+  appfetch list-installed          List apps installed via appfetch
+  appfetch remove <app>...         Remove/uninstall specified apps
 
 Configuration:
   change this variable PREFER_SNAP=$PREFER_SNAP  if you want to prefer snap over flatpak when both available
   sudo nano /usr/local/bin/appfetch
 
 Examples:
-  appfetch search video         Search for apps with 'video' in name/comment
-  appfetch vlc firefox          Install VLC and Firefox
-  appfetch minecraft mullvad    Install using aliases
+  appfetch search video            Search for apps with 'video' in name/comment
+  appfetch vlc firefox             Install VLC and Firefox
+  appfetch update-database         Update the database
+  appfetch list-installed          Show all installed apps
+  appfetch remove vlc firefox      Remove VLC and Firefox
 
 EOF
 }
@@ -361,17 +735,32 @@ main() {
         exit 1
     fi
     
-    if [[ "$1" == "search" ]]; then
-        shift
-        if (( $# == 0 )); then
-            log_error "Search requires at least one query"
-            show_usage
-            exit 1
-        fi
-        search_apps "$@"
-    else
-        install_apps "$@"
-    fi
+    case "$1" in
+        search)
+            shift
+            if (( $# == 0 )); then
+                log_error "Search requires at least one query"
+                show_usage
+                exit 1
+            fi
+            search_apps "$@"
+            ;;
+        list-installed)
+            list_installed_apps
+            ;;
+        remove)
+            shift
+            if (( $# == 0 )); then
+                log_error "Remove requires at least one app"
+                show_usage
+                exit 1
+            fi
+            remove_apps "$@"
+            ;;
+        *)
+            install_apps "$@"
+            ;;
+    esac
 }
 
 main "$@"
