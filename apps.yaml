@@ -45,6 +45,7 @@ homebrew:
 
 virtualbox:
   custom: codename=$(grep -oP '(?<=VERSION_CODENAME=).*' /etc/os-release || lsb_release -cs) && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian $codename contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list && wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor && sudo apt-get update && sudo apt-get install -y virtualbox-7.1
+  uninstall: sudo apt remove -y virtualbox-7.1
   aliases: [virtual-box]
   comment: A general-purpose full virtualization software for x86_64 hardware
 
@@ -144,7 +145,7 @@ steam:
 
 waydroid:
   custom: sudo apt install curl ca-certificates -y && curl -s https://repo.waydro.id | sudo bash && sudo apt install waydroid -y
-  uninstall: sudo apt remove waydroid
+  uninstall: sudo apt remove -y waydroid
   comment: Waydroid is a container-based approach to boot a full Android system on a regular GNU/Linux system like Ubuntu
   
 super-tux-kart:
@@ -294,7 +295,7 @@ branch-diff:
 
 xfburn:
   custom: sudo apt install xfburn
-  uninstall: sudo apt remove xfburn
+  uninstall: sudo apt remove -y xfburn
   comment: The OG DVD and CD burning tool
 
 bcc:
