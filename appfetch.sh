@@ -424,11 +424,11 @@ process_install_queue() {
 }
 
 # Process app removal queue
+# Process app removal queue
 process_remove_queue() {
     local manager="$1"
     shift
     local queue=("$@")
-    local apps_to_remove=("$@")  # This should be passed differently, but keeping original logic
     
     if (( ${#queue[@]} == 0 )); then
         return 0
@@ -438,17 +438,27 @@ process_remove_queue() {
     if remove_via_manager "$manager" "${queue[@]}"; then
         log_success "${manager^} packages removed successfully"
         
-        # Remove from installed list - this needs the original app names
+        # Remove from installed list
+        ensure_installed_file
+        parse_yaml_file "$INSTALLED_FILE"
+        
+        # Get apps from installed file
+        local installed_apps=()
+        for key in "${!YAML_DATA[@]}"; do
+            if [[ $key == *":method" ]]; then
+                installed_apps+=("${key%:*}")
+            fi
+        done
+        
         for pkg in "${queue[@]}"; do
             # Find apps that used this package
-            parse_yaml_file "$INSTALLED_FILE"
-            while IFS= read -r app; do
+            for app in "${installed_apps[@]}"; do
                 local install_method=$(get_app_field "$app" "method")
                 local install_package=$(get_app_field "$app" "package")
                 if [[ "$install_method" == "$manager" && "$install_package" == "$pkg" ]]; then
                     remove_from_installed "$app"
                 fi
-            done < <(get_all_apps)
+            done
         done
         return 0
     else
