@@ -1,5 +1,5 @@
 reaper:
-  custom: mkdir -p ~/Applications && wget https://www.reaper.fm/files/7.x/reaper739_linux_x86_64.tar.xz -O /tmp/reaper.tar.xz && tar -xf /tmp/reaper.tar.xz -C ~/Applications && cd ~/Applications && cd reaper_linux_x86_64 && ./install-reaper.sh
+  custom: mkdir -p ~/Applications && wget https://www.reaper.fm/files/7.x/reaper739_linux_x86_64.tar.xz -O /tmp/reaper.tar.xz && tar -xf /tmp/reaper.tar.xz -C ~/Applications && cd ~/Applications && cd reaper_linux_x86_64 && sh install-reaper.sh
   aliases: [reaperfm]
   comment: A linux-native DAW
 
