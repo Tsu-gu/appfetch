@@ -719,11 +719,9 @@ Configuration:
 Examples:
   appfetch search video            Search for apps with 'video' in name/comment
   appfetch vlc firefox             Install VLC and Firefox
-  appfetch minecraft mullvad       Install using aliases
+  appfetch update-database         Update the database
   appfetch list-installed          Show all installed apps
   appfetch remove vlc firefox      Remove VLC and Firefox
-  appfetch update                  Update the apps database
-  appfetch bug                     Report an issue
 
 EOF
 }
@@ -759,24 +757,10 @@ main() {
             fi
             remove_apps "$@"
             ;;
-        update)
-            log_info "Updating apps database..."
-            if wget -O "$HOME/Documents/apps.yaml" "https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml"; then
-                log_success "Database updated successfully"
-            else
-                log_error "Failed to update database"
-                exit 1
-            fi
-            ;;
-        version)
-            echo "appfetch version 24.5.2025"
-            ;;
-        bug|bugreport|bug-report|report|report-bug)
-            log_info "Opening bug report page..."
-            xdg-open "https://github.com/Tsu-gu/appfetch/issues/new?body=%23%20I%20would%20like%20to%20report%20a%3A%0Amissing%20app%2Fbug%2Fbroken%20install%20script%0A%0A%23%20The%20missing%20app%3A"
-            ;;
         *)
             install_apps "$@"
             ;;
     esac
 }
+
+main "$@"
