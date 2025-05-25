@@ -553,6 +553,7 @@ install_apps() {
 
 
 # Remove/uninstall apps
+# Remove/uninstall apps
 remove_apps() {
     local apps=("$@")
     local snap_queue=()
@@ -562,6 +563,12 @@ remove_apps() {
     
     # Load configuration for custom uninstall commands
     parse_yaml_file "$CONFIG_FILE"
+    
+    # Store config data before we parse installed file
+    declare -A CONFIG_DATA
+    for key in "${!YAML_DATA[@]}"; do
+        CONFIG_DATA["$key"]="${YAML_DATA[$key]}"
+    done
     
     # Process each app
     for input in "${apps[@]}"; do
@@ -610,7 +617,11 @@ remove_apps() {
         removal_success=false
     fi
     
-    # Handle custom apps
+    # Handle custom apps - restore config data first
+    for key in "${!CONFIG_DATA[@]}"; do
+        YAML_DATA["$key"]="${CONFIG_DATA[$key]}"
+    done
+    
     for app in "${custom_apps[@]}"; do
         echo
         local uninstall_cmd=$(get_app_field "$app" "uninstall")
@@ -632,6 +643,7 @@ remove_apps() {
     
     return $([[ $removal_success == true ]] && echo 0 || echo 1)
 }
+
 
 # Show usage information
 show_usage() {
