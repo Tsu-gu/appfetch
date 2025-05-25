@@ -18,11 +18,13 @@ distrobox:
 
 warp:
   custom:  mkdir -p ~/Applications && cd ~/Applications && curl -L -A "Mozilla/5.0" -o warp.AppImage https://app.warp.dev/download?package=appimage && chmod +x warp.AppImage
+  uninstall: rm -f $HOME/Applications/warp.AppImage
   aliases: [warp-terminal]
   comment: Warp combines AI and your dev team’s knowledge in one fast, intuitive terminal
   
 pulsar:
   custom: mkdir -p ~/Applications && cd ~/Applications && curl -L -A "Mozilla/5.0" -o pulsar.tar.gz "https://download.pulsar-edit.dev/?os=linux&type=linux_tar" && tar -xvzf pulsar.tar.gz && rm -f pulsar.tar.gz
+  uninstall: rm -rf $HOME/Applications/pulsar*
   aliases: [pulsar-editor]
   comment: A Community-led Hyper-Hackable Text Editor
 
