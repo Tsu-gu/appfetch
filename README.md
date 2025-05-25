@@ -41,12 +41,10 @@ appfetch bug
 ```
 
 # Showcase
-![image](https://github.com/user-attachments/assets/8f275fb6-591e-4f5b-abd7-241bbcb3f726)
-
-![image](https://github.com/user-attachments/assets/96df4dbe-ecb5-4e55-b54d-ffb96782e8bf)
-
-![image](https://github.com/user-attachments/assets/0a6da772-de30-46fa-b6a8-0ae3a446fe8a)
-![image](https://github.com/user-attachments/assets/117bd294-2f96-4808-9826-e9a3293d8ef8)
+![image](https://github.com/user-attachments/assets/047cef5c-be13-426f-947e-6ca074db8b88)
+![image](https://github.com/user-attachments/assets/9ee4d99f-6ecb-401c-ae98-4641d78f9b83)
+![image](https://github.com/user-attachments/assets/119c8bef-773d-4899-a0f9-033b76d39222)
+![image](https://github.com/user-attachments/assets/43a20d4c-8ffb-47a1-8ad7-7a3c115f3e70)
 
 
 **I'm only testing this on Ubuntu and it will work on Debian too if it has snap installed.**
