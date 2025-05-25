@@ -1,5 +1,7 @@
 ![appfetch-logo](https://github.com/user-attachments/assets/b607848d-1478-4d2b-9fb7-4d17c05377e2)
 
+If some AppImages aren't launching, install `libfuse2t64` via your package manager. A lot of them still rely on the outdated FUSE library.
+
 **Installation**
 ```
 mkdir -p "$HOME/Documents" && \
@@ -13,7 +15,7 @@ sudo chmod +x /usr/local/bin/appfetch
 **To update its database:**
 
 ```
-appfetch update-database
+appfetch update
 ```
 I encountered issues with the script trying to update itself so I guess if you want to update it, re-run the installation command.
 
