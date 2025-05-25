@@ -20,6 +20,7 @@ joplin:
 
 distrobox:
   custom: curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
+  uninstall: curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/uninstall | sudo sh
   aliases: [distro-box]
   comment: Use any Linux distribution inside your terminal
 
