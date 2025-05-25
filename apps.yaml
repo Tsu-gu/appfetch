@@ -180,11 +180,6 @@ threema:
   uninstall: flatpak remove --assumeyes ch.threema.threema-desktop
   aliases: [threema-desktop, threema-app]
   comment: End-to-end encrypted exchange of messages, calls, and files for businesses, military, authorities, and individuals
-
-ardour:
-  custom: xdg-open "https://community.ardour.org/download?platform=linux&architecture=x86_64&type=compiled&paymentSelection=options"
-  aliases: [ardour-daw]
-  comment: Record, Edit, and Mix on Linux
   
 makemkv:
   flatpak: com.makemkv.MakeMKV
@@ -302,11 +297,6 @@ bluemail:
 branch-diff:
   snap: branch-diff
   comment: Compares 2 git branches without hassle.
-
-xfburn:
-  custom: sudo apt install xfburn
-  uninstall: sudo apt remove -y xfburn
-  comment: The OG DVD and CD burning tool
 
 bcc:
   snap: bcc
