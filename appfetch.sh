@@ -693,7 +693,7 @@ main() {
             fi
             ;;
         version)
-            echo "appfetch version 24.5.2025"
+            echo "appfetch version 25.5.2025"
             ;;
         bug|bugreport|bug-report|report|report-bug)
             log_info "Opening bug report page..."
