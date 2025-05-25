@@ -476,7 +476,12 @@ install_apps() {
     for input in "${apps[@]}"; do
         local resolved_app
         if ! resolved_app=$(resolve_app_name "$input"); then
-            log_error "No matching app or alias found for '$input'"
+            log_warning "Using mpm to search for $input because it's not in the database"
+            if [[ -x "$HOME/Applications/mpm.bin" ]]; then
+                "$HOME/Applications/mpm.bin" search "$input"
+            else
+                log_error "mpm not installed. Install it by typing appfetch mpm"
+            fi
             failed_apps+=("$input")
             continue
         fi
@@ -534,6 +539,7 @@ install_apps() {
     
     return $([[ $install_success == true ]] && echo 0 || echo 1)
 }
+
 
 # Remove/uninstall apps
 remove_apps() {
