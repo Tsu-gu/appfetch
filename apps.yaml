@@ -52,6 +52,11 @@ homebrew:
   aliases: [brew]
   comment: A package manager mainly used on MacOS, but works well on Linux too  
 
+virtualbox:
+  custom: codename=$(grep -oP '(?<=VERSION_CODENAME=).*' /etc/os-release || lsb_release -cs) && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian $codename contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list && wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor && sudo apt-get update && sudo apt-get install -y virtualbox-7.1
+  aliases: [virtual-box]
+  comment: A general-purpose full virtualization software for x86_64 hardware
+
 element:
   custom: sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop
   aliases: [elementio, element-matrix]
