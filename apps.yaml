@@ -35,15 +35,18 @@ flashpoint:
 
 session: 
   custom: mkdir -p ~/Applications && cd ~/Applications && wget https://getsession.org/linux && chmod +x session-*.AppImage
+  uninstall: rm -rf $HOME/Applications/session-*.AppImage
   comment: An end-to-end encrypted messenger that protects your personal data
   
 yt-dlp:
   custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp
+  uninstall: rm -rf $HOME/Applications/yt-dlp
   aliases: [ytdlp, yt]
   comment: Youtube video downloading tool
 
 homebrew:
   custom: sudo apt install git && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  uninstall: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
   aliases: [brew]
   comment: A package manager mainly used on MacOS, but works well on Linux too  
 
@@ -55,16 +58,19 @@ virtualbox:
 
 element:
   custom: sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop
+  uninstall: sudo apt remove -y element-desktop
   aliases: [elementio, element-matrix]
   comment: The main Matrix client  
 
 balena-etcher:
   custom: mkdir -p ~/Applications && cd ~/Applications && VERSION=$(curl -s https://github.com/balena-io/etcher/releases | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | sed 's/^v//' | sort -Vr | head -n 1) && if [ -z "$VERSION" ]; then echo "Failed to extract Etcher version."; exit 1; fi && echo "Downloading balenaEtcher version $VERSION..." && wget https://github.com/balena-io/etcher/releases/download/v$VERSION/balenaEtcher-linux-x64-$VERSION.zip && unzip balenaEtcher-linux-x64-$VERSION.zip && rm -f balenaEtcher-linux-x64-$VERSION.zip
+  uninstall: rm -rf $HOME/Applications/balenaEtcher-linux-x64 
   aliases: [etcher, balenaetcher]
   comment: Flash OS images to SD cards & USB drives, safely and easily
   
 aimp:
   custom: cd $HOME/Downloads && wget --user-agent="Mozilla/5.0" -O aimp_amd64.deb "https://www.aimp.ru/?do=download.file&id=26" && sudo apt install -y $HOME/Downloads/aimp_amd64.deb && rm aimp_amd64.deb
+  uninstall: sudo apt remove -y aimp
   aliases: [aimp-player, aimp-ru]
   comment: A music player that lets you create your own playlists, runs through wine
 
@@ -76,6 +82,7 @@ dfx:
 
 openttd:
   custom: page_content=$(wget -qO- https://www.openttd.org/downloads/openttd-releases/latest) && version=$(echo "$page_content" | grep -oP 'Latest stable release in openttd is \K[0-9]+\.[0-9]+') && [ -z "$version" ] && echo "Failed to extract version number." && exit 1 || (echo "Downloading OpenTTD version $version..." && mkdir -p ~/Applications && wget "https://cdn.openttd.org/openttd-releases/${version}/openttd-${version}-linux-generic-amd64.tar.xz" -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications)
+  uninstall: rm -rf $HOME/Applications/openttd*
   aliases: [ttd]
   comment: A well maintained fork of the 90s hit game Tycoon Transport Deluxe
 
