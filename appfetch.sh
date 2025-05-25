@@ -239,6 +239,7 @@ remove_from_installed() {
 }
 
 # List installed apps
+# List installed apps
 list_installed_apps() {
     ensure_installed_file
     
@@ -252,6 +253,15 @@ list_installed_apps() {
     
     parse_yaml_file "$INSTALLED_FILE"
     
+    # Get apps from installed file (look for any key, not just :comment)
+    local apps=()
+    for key in "${!YAML_DATA[@]}"; do
+        if [[ $key == *":method" ]]; then  # Use :method instead of :comment
+            apps+=("${key%:*}")
+        fi
+    done
+    
+    # Sort and process apps
     while IFS= read -r app; do
         local method=$(get_app_field "$app" "method")
         local package=$(get_app_field "$app" "package")
@@ -271,8 +281,9 @@ list_installed_apps() {
                 fi
                 ;;
         esac
-    done < <(get_all_apps)
+    done < <(printf '%s\n' "${apps[@]}" | sort -u)
 }
+
 
 # Validate configuration
 validate_config() {
