@@ -1,6 +1,5 @@
 ![appfetch-logo](https://github.com/user-attachments/assets/b607848d-1478-4d2b-9fb7-4d17c05377e2)
 
-If some AppImages aren't launching, install `libfuse2t64` via your package manager. A lot of them still rely on the outdated FUSE library.
 
 **Installation**
 ```
@@ -50,6 +49,8 @@ appfetch bug
 
 
 **I'm only testing this on Ubuntu and it will work on Debian too if it has snap installed.**
+
+If some AppImages aren't launching, install `libfuse2t64` via your package manager. A lot of them still rely on the outdated FUSE library.
 
 # Exceptions to "official packages only": 
 - mpv
