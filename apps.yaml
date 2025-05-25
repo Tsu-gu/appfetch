@@ -65,6 +65,7 @@ aimp:
 
 dfx:
   custom: sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+  uninstall: rm -f "$HOME/.local/bin/dfxvm" "$HOME/.local/bin/dfxvm-init" && rm -rf "$HOME/.local/share/dfxvm" "$HOME/.cache/dfx" "$HOME/.config/dfx"
   aliases: [dfx-icp]
   comment: The IC SDK is a software development kit used to develop applications on your local machine and to deploy them to ICP
 
