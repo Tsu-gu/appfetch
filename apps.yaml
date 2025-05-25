@@ -17,7 +17,7 @@ distrobox:
   comment: Use any Linux distribution inside your terminal
 
 mpm:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/kdeldycke/meta-package-manager/releases/latest/download/mpm-linux-x64.bin && mv mpm-linux-x64.bin mpm.bin && chmod +x mpm.bin
+  custom: mkdir -p "$HOME/Applications" && wget -O "$HOME/Applications/mpm.bin" https://github.com/kdeldycke/meta-package-manager/releases/latest/download/mpm-linux-x64.bin && chmod +x "$HOME/Applications/mpm.bin"
   uninstall: sudo rm -f $HOME/Applications/mpm.bin
   aliases: [meta-package-manager, metapackagemanager]
   comment: Wraps all package managers with a unifying CLI
