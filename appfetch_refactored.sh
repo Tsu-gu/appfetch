@@ -478,7 +478,7 @@ install_apps() {
         if ! resolved_app=$(resolve_app_name "$input"); then
             log_warning "Using mpm to search for $input because it's not in the database"
             if [[ -x "$HOME/Applications/mpm.bin" ]]; then
-                "$HOME/Applications/mpm.bin" search "$input"
+                "$HOME/Applications/mpm.bin" -v CRITICAL search "$input"
             else
                 log_error "mpm not installed. Install it by typing appfetch mpm"
             fi
