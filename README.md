@@ -52,12 +52,8 @@ appfetch bug
 
 If some AppImages aren't launching, install `libfuse2t64` via your package manager. A lot of them still rely on the outdated FUSE library.
 
-# Exceptions to "official packages only": 
-- mpv
-- xfburn
-- audacious
-- makemkv
-- yacreader (unverified but the flatpak is linked as official on their site)
-- wireshark
+# What happens when a package is not found in the database?
 
-I think it's better to break my own rules than just throw an error when a user wants to install one of these.
+A tool called [mpm](https://github.com/eriknomitch/mpm) is used. It launches the search command for all package managers on your system and outputs a list.
+
+![mpm](https://github.com/user-attachments/assets/f786d817-ea89-4171-8fee-9716469b7f77)
