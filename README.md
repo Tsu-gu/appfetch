@@ -54,6 +54,6 @@ If some AppImages aren't launching, install `libfuse2t64` via your package manag
 
 # What happens when a package is not found in the database?
 
-A tool called [mpm](https://github.com/eriknomitch/mpm) is used. It launches the search command for all package managers on your system and outputs a list.
+A tool called [mpm](https://github.com/kdeldycke/meta-package-manager) is used. It launches the search command for all package managers on your system and outputs a list.
 
 ![mpm](https://github.com/user-attachments/assets/f786d817-ea89-4171-8fee-9716469b7f77)
