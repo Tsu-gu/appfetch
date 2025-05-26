@@ -48,7 +48,7 @@ appfetch bug
 ![image](https://github.com/user-attachments/assets/43a20d4c-8ffb-47a1-8ad7-7a3c115f3e70)
 
 
-**I'm only testing this on Ubuntu and it will work on Debian too if it has snap installed.**
+**I'm only testing this on Ubuntu and it will probably work on Debian too**
 
 If some AppImages aren't launching, install `libfuse2t64` via your package manager. A lot of them still rely on the outdated FUSE library.
 
