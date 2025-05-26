@@ -56,6 +56,12 @@ homebrew:
   aliases: [brew]
   comment: A package manager mainly used on MacOS, but works well on Linux too  
 
+nix:
+  custom: sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon
+  uninstall: sudo systemctl stop nix-daemon.service && sudo systemctl disable nix-daemon.socket nix-daemon.service && sudo systemctl daemon-reload && sudo rm -rf /etc/nix /etc/profile.d/nix.sh /etc/tmpfiles.d/nix-daemon.conf /nix ~root/.nix-channels ~root/.nix-defexpr ~root/.nix-profile && for i in $(seq 1 32); do sudo userdel nixbld$i; done && sudo groupdel nixbld
+  aliases: [nix-package-manager]
+  comment: A tool that takes a unique approach to package management and system configuration
+
 virtualbox:
   custom: codename=$(grep -oP '(?<=VERSION_CODENAME=).*' /etc/os-release || lsb_release -cs) && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian $codename contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list && wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor && sudo apt-get update && sudo apt-get install -y virtualbox-7.1
   uninstall: sudo apt remove -y virtualbox-7.1
