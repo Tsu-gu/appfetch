@@ -2,6 +2,10 @@
 
 The point of this tool is to allow you to install software from its official source on Linux. It achieves that by searching a database I put together which contains official snaps and flatpaks, as well as many apps I added manually which can only be installed by going to their websites.
 
+**I'm only testing this on Ubuntu and it will probably work on Debian too**
+
+If some AppImages aren't launching, install `libfuse2t64` via your package manager. A lot of them still rely on the outdated FUSE library.
+
 **Installation**
 ```
 mkdir -p "$HOME/Documents" && \
@@ -48,10 +52,6 @@ appfetch bug
 ![image](https://github.com/user-attachments/assets/119c8bef-773d-4899-a0f9-033b76d39222)
 ![image](https://github.com/user-attachments/assets/43a20d4c-8ffb-47a1-8ad7-7a3c115f3e70)
 
-
-**I'm only testing this on Ubuntu and it will probably work on Debian too**
-
-If some AppImages aren't launching, install `libfuse2t64` via your package manager. A lot of them still rely on the outdated FUSE library.
 
 # What happens when a package is not found in the database?
 
