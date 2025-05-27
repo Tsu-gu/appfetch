@@ -197,17 +197,6 @@ super-tux-kart:
   aliases: [supertuxkart, tuxkart, tuxcart, supertuxcart]
   comment: SuperTuxKart is a 3D open-source arcade racer with a variety characters, tracks, and modes to play
   
-gum:
-  custom: command -v brew >/dev/null 2>&1 && brew install gum || { echo "Homebrew (brew) is not installed."; exit 1; }
-  uninstall: brew uninstall --force gum
-  aliases: [gum-ui, gum-tui]
-  comment: A tool for glamorous shell scripts. Leverage the power of Bubbles and Lip Gloss in your scripts and aliases without writing any Go code
-
-audacious:
-  snap: audacious
-  flatpak: org.atheme.audacious
-  comment: A descendant of XMMS, Audacious plays your music how you want it, without stealing away your computer’s resources from other tasks 
-  
 ani-cli:
   custom: sudo apt install sed git grep curl mpv ffmpeg fzf patch && git clone "https://github.com/pystardust/ani-cli.git" && sudo cp ani-cli/ani-cli /usr/local/bin && rm -rf ani-cli
   uninstall: sudo rm -f /usr/local/bin/ani-cli
@@ -220,11 +209,6 @@ threema:
   aliases: [threema-desktop, threema-app]
   comment: End-to-end encrypted exchange of messages, calls, and files for businesses, military, authorities, and individuals
   
-makemkv:
-  flatpak: com.makemkv.MakeMKV
-  aliases: [make-mkv]
-  comment: MakeMKV is your one-click solution to convert video that you own into free and patents-unencumbered format that can be played everywhere
-
 yacreader:
   flatpak: com.yacreader.YACReader
   aliases: [yac-reader]
