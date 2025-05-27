@@ -325,11 +325,6 @@ bcc:
   snap: bcc
   comment: BPF Compiler Collection (BCC)
   
-mpv:
-  snap: mpv
-  flatpak: io.mpv.Mpv
-  comment: A lightweight video player
-  
 bomber:
   snap: bomber
   flatpak: org.kde.bomber
