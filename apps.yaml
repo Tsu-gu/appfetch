@@ -92,6 +92,12 @@ dfx:
   aliases: [dfx-icp]
   comment: The IC SDK is a software development kit used to develop applications on your local machine and to deploy them to ICP
 
+rust:
+  custom: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  uninstall: rustup self uninstall
+  aliases: [rust-lang]
+  comment: A language empowering everyone to build reliable and efficient software
+
 volta:
   custom: curl https://get.volta.sh | bash
   uninstall: rm -rf ~/.volta
