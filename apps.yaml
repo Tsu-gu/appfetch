@@ -92,6 +92,12 @@ dfx:
   aliases: [dfx-icp]
   comment: The IC SDK is a software development kit used to develop applications on your local machine and to deploy them to ICP
 
+volta:
+  custom: curl https://get.volta.sh | bash
+  uninstall: rm -rf ~/.volta
+  aliases: [votla, volta-sh]
+  comment: The Hassle-Free JavaScript Tool Manager
+
 pnpm:
   custom: curl -fsSL https://get.pnpm.io/install.sh | sh -
   uninstall: rm -rf "$PNPM_HOME"
