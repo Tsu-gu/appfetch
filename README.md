@@ -79,3 +79,5 @@ brave:
   aliases: [brave-browser]
   comment: A chrome fork with an adblock and crypto
 ```
+
+If only one of them exists, you don't put in the other one
