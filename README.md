@@ -21,7 +21,6 @@ If some AppImages aren't launching, install `libfuse2t64` via your package manag
 
 # Installation
 ```
-mkdir -p "$HOME/Documents" && \
 wget -O "/tmp/apps.yaml" https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && \
 wget -O "/tmp/appfetch" https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/appfetch.sh && \
 mv /tmp/apps.yaml "$HOME/Documents/apps.yaml" && \
