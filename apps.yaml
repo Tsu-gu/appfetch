@@ -292,7 +292,7 @@ audiotube:
 
 ark:
   snap: ark
-  flatpak: org.kde.ark  
+  flatpak: org.kde.ark
   comment: Archiving Tool
 
 bitwarden:
