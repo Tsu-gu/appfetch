@@ -137,6 +137,7 @@ mullvad:
 
 ollama:
   custom: curl -fsSL https://ollama.com/install.sh | sh
+  uninstall: sudo rm $(which ollama) && sudo rm -r /usr/share/ollama && sudo userdel ollama sudo groupdel ollama
   aliases: [ollama-ai]
   comment: Get up and running with large language models
 
