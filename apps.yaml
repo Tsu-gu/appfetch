@@ -4,6 +4,11 @@ reaper:
   aliases: [reaperfm]
   comment: A linux-native DAW
 
+signal:
+  custom: wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg; cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null; echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | sudo tee /etc/apt/sources.list.d/signal-xenial.list; sudo apt update && sudo apt install signal-desktop
+  uninstall: sudo apt remove -y signal-desktop
+  comment: A private messenger
+
 joplin:
   custom: mkdir -p ~/Applications && cd ~/Applications && v=$(curl -s https://api.github.com/repos/laurent22/joplin/releases/latest | grep '"tag_name":' | cut -d '"' -f 4) && curl -L -o "Joplin-${v#v}.AppImage" "https://github.com/laurent22/joplin/releases/download/$v/Joplin-${v#v}.AppImage"
   uninstall: cd ~/Applications && rm -f Joplin-*.AppImage
