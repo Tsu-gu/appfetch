@@ -24,10 +24,39 @@ log_search() { echo -e "🔎 $*"; }
 # Global associative array for parsed YAML data
 declare -A YAML_DATA
 
-# Universal YAML parser - loads all data into YAML_DATA
+# Cache variables
+YAML_CACHE_FILE=""
+YAML_CACHE_MTIME=0
+
+# Faster trim function using built-in parameter expansion
+trim() {
+    local var="$1"
+    # Remove leading whitespace
+    while [[ "$var" == [[:space:]]* ]]; do
+        var="${var#[[:space:]]}"
+    done
+    # Remove trailing whitespace
+    while [[ "$var" == *[[:space:]] ]]; do
+        var="${var%[[:space:]]}"
+    done
+    echo "$var"
+}
+
+# Universal YAML parser with caching - loads all data into YAML_DATA
 # Format: YAML_DATA["app_name:field"] = "value"
 parse_yaml_file() {
     local yaml_file="$1"
+    
+    # Check if we can use cached data
+    if [[ "$yaml_file" == "$YAML_CACHE_FILE" ]]; then
+        local current_mtime=$(stat -c %Y "$yaml_file" 2>/dev/null || echo 0)
+        if [[ "$current_mtime" == "$YAML_CACHE_MTIME" ]]; then
+            # Cache is still valid, skip parsing
+            return 0
+        fi
+    fi
+    
+    # Parse the file
     local app="" in_app=false
     
     # Clear previous data
@@ -50,6 +79,9 @@ parse_yaml_file() {
                 local field="${BASH_REMATCH[1]}"
                 local value="${BASH_REMATCH[2]}"
                 
+                # Trim whitespace safely
+                value=$(trim "$value")
+                
                 # Handle array syntax for aliases
                 if [[ $field == "aliases" && $value =~ ^\[([^\]]*)\]$ ]]; then
                     value="${BASH_REMATCH[1]}"
@@ -62,6 +94,10 @@ parse_yaml_file() {
             fi
         fi
     done < "$yaml_file"
+    
+    # Update cache info
+    YAML_CACHE_FILE="$yaml_file"
+    YAML_CACHE_MTIME=$(stat -c %Y "$yaml_file" 2>/dev/null || echo 0)
 }
 
 # Get value for app:field combination
@@ -79,7 +115,7 @@ app_exists() {
     [[ -n "${YAML_DATA["$app:custom"]:-}" ]]
 }
 
-# Get all app names from loaded data
+# Optimized get_all_apps function
 get_all_apps() {
     local apps=()
     for key in "${!YAML_DATA[@]}"; do
@@ -87,7 +123,10 @@ get_all_apps() {
             apps+=("${key%:*}")
         fi
     done
-    printf '%s\n' "${apps[@]}" | sort -u
+    # Use printf with newlines instead of calling printf multiple times
+    if (( ${#apps[@]} > 0 )); then
+        printf '%s\n' "${apps[@]}" | sort -u
+    fi
 }
 
 # Resolve input to app name (direct match or alias)
@@ -108,7 +147,7 @@ resolve_app_name() {
             
             IFS=',' read -ra alias_array <<< "$aliases"
             for alias in "${alias_array[@]}"; do
-                alias=$(echo "$alias" | xargs)  # trim whitespace
+                alias=$(trim "$alias")  # Use trim function instead of xargs
                 if [[ "$alias" == "$input" ]]; then
                     echo "$app"
                     return 0
@@ -120,15 +159,19 @@ resolve_app_name() {
     return 1
 }
 
-# Search for apps matching query
+# Optimized search_apps function
 search_apps() {
     local queries=("$@")
+    
+    # Pre-build app list once
+    local all_apps
+    mapfile -t all_apps < <(get_all_apps)
     
     for query in "${queries[@]}"; do
         local query_lower="${query,,}"
         local found_this=false
         
-        while IFS= read -r app; do
+        for app in "${all_apps[@]}"; do
             local app_lower="${app,,}"
             local comment_lower="${YAML_DATA["$app:comment"]:-}"
             comment_lower="${comment_lower,,}"
@@ -141,7 +184,7 @@ search_apps() {
                 log_search "$app: ${YAML_DATA["$app:comment"]:-}"
                 found_this=true
             fi
-        done < <(get_all_apps)
+        done
         
         if [[ $found_this == false ]]; then
             log_error "$query: not found"
@@ -182,27 +225,6 @@ $app:
   installed_at: $timestamp
 
 EOF
-}
-
-# Record multiple packages for a manager
-record_packages() {
-    local manager="$1"
-    shift
-    local packages=("$@")
-    
-    # Load config to find which app each package belongs to
-    parse_yaml_file "$CONFIG_FILE"
-    
-    for pkg in "${packages[@]}"; do
-        # Find which app this package belongs to
-        while IFS= read -r app; do
-            local app_pkg=$(get_app_field "$app" "$manager")
-            if [[ "$app_pkg" == "$pkg" ]]; then
-                record_installed_app "$app" "$manager" "$pkg"
-                break
-            fi
-        done < <(get_all_apps)
-    done
 }
 
 # Get installed app info using the same parser
@@ -410,7 +432,7 @@ remove_via_manager() {
     esac
 }
 
-# Process app installation queue (modified for parallel support)
+# Process app installation queue
 process_install_queue() {
     local manager="$1"
     shift
@@ -423,7 +445,18 @@ process_install_queue() {
     echo
     if install_via_manager "$manager" "${queue[@]}"; then
         log_success "${manager^} packages installed successfully"
-        record_packages "$manager" "${queue[@]}"
+        
+        # Record installed packages
+        for pkg in "${queue[@]}"; do
+            # Find which app this package belongs to
+            while IFS= read -r app; do
+                local app_pkg=$(get_app_field "$app" "$manager")
+                if [[ "$app_pkg" == "$pkg" ]]; then
+                    record_installed_app "$app" "$manager" "$pkg"
+                    break
+                fi
+            done < <(get_all_apps)
+        done
         return 0
     else
         log_error "Some $manager packages failed to install. You can report this via appfetch bug"
@@ -474,12 +507,11 @@ process_remove_queue() {
     fi
 }
 
-# Main installation logic with parallel processing
+# Main installation logic
 install_apps() {
     local apps=("$@")
     local snap_queue=()
     local flatpak_queue=()
-    local custom_apps=()
     local failed_apps=()
     
     # Load configuration
@@ -521,7 +553,7 @@ install_apps() {
         
         # Determine best installation method
         if [[ -n "$custom_cmd" ]]; then
-            custom_apps+=("$resolved_app")
+            execute_custom_command "$resolved_app" "$custom_cmd"
         elif [[ -n "$snap_pkg" && -n "$flatpak_pkg" ]]; then
             # Both available, use preference
             if [[ "$PREFER_SNAP" == "true" && "$snap_available" == "true" ]]; then
@@ -548,61 +580,16 @@ install_apps() {
         fi
     done
     
-    # Execute installations
+    # Execute batch installations
     local install_success=true
     
-    # Handle custom apps first (sequential, as they might have dependencies)
-    for app in "${custom_apps[@]}"; do
-        local custom_cmd=$(get_app_field "$app" "custom")
-        if ! execute_custom_command "$app" "$custom_cmd"; then
-            install_success=false
-        fi
-    done
-    
-    # Start parallel package manager installations
-    local pids=()
-    local temp_files=()
-    
-    if (( ${#snap_queue[@]} > 0 )); then
-        local snap_temp="/tmp/appfetch_snap_$$"
-        temp_files+=("$snap_temp")
-        {
-            if process_install_queue "snap" "${snap_queue[@]}"; then
-                echo "SUCCESS" > "$snap_temp"
-            else
-                echo "FAILED" > "$snap_temp"
-            fi
-        } &
-        pids+=($!)
+    if ! process_install_queue "snap" "${snap_queue[@]}"; then
+        install_success=false
     fi
     
-    if (( ${#flatpak_queue[@]} > 0 )); then
-        local flatpak_temp="/tmp/appfetch_flatpak_$$"
-        temp_files+=("$flatpak_temp")
-        {
-            if process_install_queue "flatpak" "${flatpak_queue[@]}"; then
-                echo "SUCCESS" > "$flatpak_temp"
-            else
-                echo "FAILED" > "$flatpak_temp"
-            fi
-        } &
-        pids+=($!)
+    if ! process_install_queue "flatpak" "${flatpak_queue[@]}"; then
+        install_success=false
     fi
-    
-    # Wait for parallel jobs to complete
-    for pid in "${pids[@]}"; do
-        wait "$pid"
-    done
-    
-    # Check results
-    for temp_file in "${temp_files[@]}"; do
-        if [[ -f "$temp_file" ]]; then
-            if ! grep -q "SUCCESS" "$temp_file"; then
-                install_success=false
-            fi
-            rm -f "$temp_file"
-        fi
-    done
     
     # Summary
     if (( ${#failed_apps[@]} > 0 )); then
@@ -726,7 +713,10 @@ Configuration:
 Examples:
   appfetch search video            Search for apps with 'video' in name/comment
   appfetch vlc firefox             Install VLC and Firefox
+  appfetch list-installed          Show all installed apps
   appfetch remove vlc firefox      Remove VLC and Firefox
+  appfetch update                  Update the apps database
+  appfetch bug                     Report an issue
 
 EOF
 }
@@ -773,7 +763,7 @@ main() {
             fi
             ;;
         version)
-            echo "appfetch version 25.5.2025"
+            echo "appfetch version 28.5.2025"
             ;;
         bug|bugreport|bug-report|report|report-bug)
             log_info "Opening bug report page..."
