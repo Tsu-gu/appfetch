@@ -1,6 +1,6 @@
 ![appfetch-logo](https://github.com/user-attachments/assets/b607848d-1478-4d2b-9fb7-4d17c05377e2)
 
-- [Installation](#installation)
+- [Installation and usage](#installation)
   - [To update its database](#to-update-its-database)
   - [Search for apps with](#search-for-apps-with)
   - [Install apps with](#install-apps-with)
