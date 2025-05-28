@@ -1,12 +1,25 @@
 ![appfetch-logo](https://github.com/user-attachments/assets/b607848d-1478-4d2b-9fb7-4d17c05377e2)
 
+- [Installation](#installation)
+  - [To update its database](#to-update-its-database)
+  - [Search for apps with](#search-for-apps-with)
+  - [Install apps with](#install-apps-with)
+  - [To avoid snaps when possible](#to-avoid-snaps-when-possible)
+  - [To report bugs/missing apps](#to-report-bugsmissing-apps)
+- [Showcase](#showcase)
+- [What happens when a package is not found in the database?](#what-happens-when-a-package-is-not-found-in-the-database)
+- [Contributing](#contributing)
+  - [Example of an app with no official flatpak or snap available](#example-of-an-app-with-no-official-flatpak-or-snap-available)
+  - [Example of an app with official flatpak or snap available](#example-of-an-app-with-official-flatpak-or-snap-available)
+
+
 The point of this tool is to allow you to install software from its official source on Linux. It achieves that by searching a database I put together which contains official snaps and flatpaks, as well as many apps I added manually which can only be installed by going to their websites.
 
 **I'm only testing this on Ubuntu and it will probably work on Debian too**
 
 If some AppImages aren't launching, install `libfuse2t64` via your package manager. A lot of them still rely on the outdated FUSE library.
 
-**Installation**
+# Installation
 ```
 mkdir -p "$HOME/Documents" && \
 wget -O "/tmp/apps.yaml" https://raw.githubusercontent.com/Tsu-gu/appfetch/refs/heads/main/apps.yaml && \
@@ -16,31 +29,31 @@ sudo mv /tmp/appfetch /usr/local/bin/appfetch && \
 sudo chmod +x /usr/local/bin/appfetch
 ```
 
-**To update its database:**
+## To update its database:
 
 ```
 appfetch update
 ```
 I encountered issues with the script trying to update itself so if you want to update it, re-run the installation command.
 
-**Search for apps with:**
+## Search for apps with:
 
 ```
 appfetch search app1 app2 app3...
 ```
 
-**Install apps with:**
+## Install apps with:
 
 ```
 appfetch app1 app2 app3...
 ```
 Yes. There is no install command because it's just wasted time. You want apps, you run the command and tell it what you want.
 
-**To avoid snaps when possible:**
+## To avoid snaps when possible:
 
 Find the variable `PREFER_SNAP` inside of the script and set it to false
 
-**To report bugs/missing apps:**
+## To report bugs/missing apps:
 
 ```
 appfetch bug
