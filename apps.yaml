@@ -135,7 +135,6 @@ riseup-vpn:
   aliases: [riseupvpn]
   
 obsidian:
-  snap: obsidian
   flatpak: md.obsidian.Obsidian
   aliases: [obsidianmd, obsidian-notes]
   comment: Markdown-based knowledge base
