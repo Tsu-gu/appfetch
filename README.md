@@ -66,7 +66,7 @@ Just make a PR with an entry like what you see in apps.yaml. Be careful about tr
 ## Example of an app with no official flatpak or snap available:
 ```
 yt-dlp:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget LINK/yt-dlp && chmod +x yt-dlp
   uninstall: rm -rf $HOME/Applications/yt-dlp
   aliases: [ytdlp, yt]
   comment: Youtube video downloading tool
