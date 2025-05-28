@@ -663,7 +663,7 @@ Usage: appfetch <command> [args...]
 Commands:
   appfetch search <query>...       Search for apps matching query
   appfetch <app>...                Install specified apps
-  appfetch list-installed          List apps installed via appfetch
+  appfetch list                    List apps installed via appfetch
   appfetch remove <app>...         Remove/uninstall specified apps
   appfetch update                  Update apps database
   appfetch version                 Show version information
@@ -700,7 +700,7 @@ main() {
             parse_yaml_file "$CONFIG_FILE"
             search_apps "$@"
             ;;
-        list-installed|list)
+        list)
             list_installed_apps
             ;;
         remove)
