@@ -24,6 +24,16 @@ log_search() { echo -e "🔎 $*"; }
 # Global associative array for parsed YAML data
 declare -A YAML_DATA
 
+# Simple trim function
+trim() {
+    local var="$*"
+    # Remove leading whitespace
+    var="${var#"${var%%[![:space:]]*}"}"
+    # Remove trailing whitespace  
+    var="${var%"${var##*[![:space:]]}"}"
+    echo "$var"
+}
+
 # Universal YAML parser - loads all data into YAML_DATA
 # Format: YAML_DATA["app_name:field"] = "value"
 parse_yaml_file() {
@@ -50,8 +60,8 @@ parse_yaml_file() {
                 local field="${BASH_REMATCH[1]}"
                 local value="${BASH_REMATCH[2]}"
                 
-                # Trim whitespace from value
-                value=$(echo "$value" | xargs)
+                # Trim whitespace safely
+                value=$(trim "$value")
                 
                 # Handle array syntax for aliases
                 if [[ $field == "aliases" && $value =~ ^\[([^\]]*)\]$ ]]; then
