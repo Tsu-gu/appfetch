@@ -184,6 +184,27 @@ $app:
 EOF
 }
 
+# Record multiple packages for a manager
+record_packages() {
+    local manager="$1"
+    shift
+    local packages=("$@")
+    
+    # Load config to find which app each package belongs to
+    parse_yaml_file "$CONFIG_FILE"
+    
+    for pkg in "${packages[@]}"; do
+        # Find which app this package belongs to
+        while IFS= read -r app; do
+            local app_pkg=$(get_app_field "$app" "$manager")
+            if [[ "$app_pkg" == "$pkg" ]]; then
+                record_installed_app "$app" "$manager" "$pkg"
+                break
+            fi
+        done < <(get_all_apps)
+    done
+}
+
 # Get installed app info using the same parser
 get_installed_app_info() {
     local app="$1"
@@ -239,7 +260,6 @@ remove_from_installed() {
 }
 
 # List installed apps
-# List installed apps
 list_installed_apps() {
     ensure_installed_file
     
@@ -283,7 +303,6 @@ list_installed_apps() {
         esac
     done < <(printf '%s\n' "${apps[@]}" | sort -u)
 }
-
 
 # Validate configuration
 validate_config() {
@@ -391,7 +410,7 @@ remove_via_manager() {
     esac
 }
 
-# Process app installation queue
+# Process app installation queue (modified for parallel support)
 process_install_queue() {
     local manager="$1"
     shift
@@ -404,18 +423,7 @@ process_install_queue() {
     echo
     if install_via_manager "$manager" "${queue[@]}"; then
         log_success "${manager^} packages installed successfully"
-        
-        # Record installed packages
-        for pkg in "${queue[@]}"; do
-            # Find which app this package belongs to
-            while IFS= read -r app; do
-                local app_pkg=$(get_app_field "$app" "$manager")
-                if [[ "$app_pkg" == "$pkg" ]]; then
-                    record_installed_app "$app" "$manager" "$pkg"
-                    break
-                fi
-            done < <(get_all_apps)
-        done
+        record_packages "$manager" "${queue[@]}"
         return 0
     else
         log_error "Some $manager packages failed to install. You can report this via appfetch bug"
@@ -423,7 +431,6 @@ process_install_queue() {
     fi
 }
 
-# Process app removal queue
 # Process app removal queue
 process_remove_queue() {
     local manager="$1"
@@ -467,11 +474,12 @@ process_remove_queue() {
     fi
 }
 
-# Main installation logic
+# Main installation logic with parallel processing
 install_apps() {
     local apps=("$@")
     local snap_queue=()
     local flatpak_queue=()
+    local custom_apps=()
     local failed_apps=()
     
     # Load configuration
@@ -513,7 +521,7 @@ install_apps() {
         
         # Determine best installation method
         if [[ -n "$custom_cmd" ]]; then
-            execute_custom_command "$resolved_app" "$custom_cmd"
+            custom_apps+=("$resolved_app")
         elif [[ -n "$snap_pkg" && -n "$flatpak_pkg" ]]; then
             # Both available, use preference
             if [[ "$PREFER_SNAP" == "true" && "$snap_available" == "true" ]]; then
@@ -540,16 +548,61 @@ install_apps() {
         fi
     done
     
-    # Execute batch installations
+    # Execute installations
     local install_success=true
     
-    if ! process_install_queue "snap" "${snap_queue[@]}"; then
-        install_success=false
+    # Handle custom apps first (sequential, as they might have dependencies)
+    for app in "${custom_apps[@]}"; do
+        local custom_cmd=$(get_app_field "$app" "custom")
+        if ! execute_custom_command "$app" "$custom_cmd"; then
+            install_success=false
+        fi
+    done
+    
+    # Start parallel package manager installations
+    local pids=()
+    local temp_files=()
+    
+    if (( ${#snap_queue[@]} > 0 )); then
+        local snap_temp="/tmp/appfetch_snap_$$"
+        temp_files+=("$snap_temp")
+        {
+            if process_install_queue "snap" "${snap_queue[@]}"; then
+                echo "SUCCESS" > "$snap_temp"
+            else
+                echo "FAILED" > "$snap_temp"
+            fi
+        } &
+        pids+=($!)
     fi
     
-    if ! process_install_queue "flatpak" "${flatpak_queue[@]}"; then
-        install_success=false
+    if (( ${#flatpak_queue[@]} > 0 )); then
+        local flatpak_temp="/tmp/appfetch_flatpak_$$"
+        temp_files+=("$flatpak_temp")
+        {
+            if process_install_queue "flatpak" "${flatpak_queue[@]}"; then
+                echo "SUCCESS" > "$flatpak_temp"
+            else
+                echo "FAILED" > "$flatpak_temp"
+            fi
+        } &
+        pids+=($!)
     fi
+    
+    # Wait for parallel jobs to complete
+    for pid in "${pids[@]}"; do
+        wait "$pid"
+    done
+    
+    # Check results
+    for temp_file in "${temp_files[@]}"; do
+        if [[ -f "$temp_file" ]]; then
+            if ! grep -q "SUCCESS" "$temp_file"; then
+                install_success=false
+            fi
+            rm -f "$temp_file"
+        fi
+    done
     
     # Summary
     if (( ${#failed_apps[@]} > 0 )); then
@@ -561,8 +614,6 @@ install_apps() {
     return $([[ $install_success == true ]] && echo 0 || echo 1)
 }
 
-
-# Remove/uninstall apps
 # Remove/uninstall apps
 remove_apps() {
     local apps=("$@")
@@ -654,7 +705,6 @@ remove_apps() {
     return $([[ $removal_success == true ]] && echo 0 || echo 1)
 }
 
-
 # Show usage information
 show_usage() {
     cat << EOF
@@ -676,10 +726,7 @@ Configuration:
 Examples:
   appfetch search video            Search for apps with 'video' in name/comment
   appfetch vlc firefox             Install VLC and Firefox
-  appfetch list-installed          Show all installed apps
   appfetch remove vlc firefox      Remove VLC and Firefox
-  appfetch update                  Update the apps database
-  appfetch bug                     Report an issue
 
 EOF
 }
