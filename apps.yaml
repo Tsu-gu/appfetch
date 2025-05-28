@@ -305,6 +305,7 @@ brave:
   snap: brave
   flatpak: com.brave.Browser
   aliases: [brave-browser]
+  comment: Block ads. Save data. And get way faster webpages. Just by switching your browser
 
 blender:
   custom: snap install blender --classic
