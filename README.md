@@ -62,3 +62,20 @@ A tool called [mpm](https://github.com/kdeldycke/meta-package-manager) is used. 
 # Contributing
 
 Just make a PR with an entry like what you see in apps.yaml. Be careful about trailing whitespaces.
+
+## Example of an app with no official flatpak or snap available:
+```
+yt-dlp:
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp
+  uninstall: rm -rf $HOME/Applications/yt-dlp
+  aliases: [ytdlp, yt]
+  comment: Youtube video downloading tool
+```
+## Example of an app with official flatpak or snap available:
+```
+brave:
+  snap: brave
+  flatpak: com.brave.Browser
+  aliases: [brave-browser]
+  comment: A chrome fork with an adblock and crypto
+```
