@@ -50,6 +50,9 @@ parse_yaml_file() {
                 local field="${BASH_REMATCH[1]}"
                 local value="${BASH_REMATCH[2]}"
                 
+                # Trim whitespace from value
+                value=$(echo "$value" | xargs)
+                
                 # Handle array syntax for aliases
                 if [[ $field == "aliases" && $value =~ ^\[([^\]]*)\]$ ]]; then
                     value="${BASH_REMATCH[1]}"
