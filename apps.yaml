@@ -124,6 +124,11 @@ tsubuntu:
   custom: wget -q https://raw.githubusercontent.com/Tsu-gu/tsubuntu/main/tsubuntu.sh && chmod +x tsubuntu.sh && ./tsubuntu.sh
   comment: A script for tweaking Ubuntu. Dont use it if you arent sure what it does.
 
+riseup-vpn:
+  custom: sudo add-apt-repository ppa:leapcodes/riseup-vpn && sudo apt update && sudo apt install riseup-vpn
+  uninstall: sudo apt remove --purge riseup-vpn -y && sudo add-apt-repository --remove ppa:leapcodes/riseup-vpn -y && sudo apt autoremove -y
+  aliases: [riseupvpn]
+  
 obsidian:
   snap: obsidian
   flatpak: md.obsidian.Obsidian
