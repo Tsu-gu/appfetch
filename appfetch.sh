@@ -700,7 +700,7 @@ main() {
             parse_yaml_file "$CONFIG_FILE"
             search_apps "$@"
             ;;
-        list-installed)
+        list-installed|list)
             list_installed_apps
             ;;
         remove)
