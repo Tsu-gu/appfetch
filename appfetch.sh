@@ -676,10 +676,6 @@ Configuration:
 Examples:
   appfetch search video            Search for apps with 'video' in name/comment
   appfetch vlc firefox             Install VLC and Firefox
-  appfetch list-installed          Show all installed apps
-  appfetch remove vlc firefox      Remove VLC and Firefox
-  appfetch update                  Update the apps database
-  appfetch bug                     Report an issue
 
 EOF
 }
