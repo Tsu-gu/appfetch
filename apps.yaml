@@ -39,6 +39,11 @@ pulsar:
   aliases: [pulsar-editor]
   comment: A Community-led Hyper-Hackable Text Editor
 
+guix:
+  custom: cd /tmp && wget 'https://git.savannah.gnu.org/gitweb/?p=guix.git;a=blob_plain;f=etc/guix-install.sh;hb=HEAD' && chmod +x guix-install.sh && guix-install.sh
+  aliases: [gnu-guix]
+  comment: GNU Guix is a package manager for GNU/Linux systems. It is designed to give users more control over their general-purpose and specialized computing environments
+
 flashpoint:
   custom: echo "This is meant to work on Ubuntu 22 and 24 LTS and Debian 12!" && wget https://raw.githubusercontent.com/Tsu-gu/flashpoint-ubuntu-install/main/flashpoint-ubuntu-installer.sh && chmod +x flashpoint-ubuntu-installer.sh && ./flashpoint-ubuntu-installer.sh
   aliases: [bluemaxima, bluemaxima-flashpoint]
