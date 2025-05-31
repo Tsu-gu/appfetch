@@ -178,6 +178,7 @@ koofr:
   
 monero:
   custom: sudo apt install bzip2 && mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xjf linux64 && rm linux64
+  uninstall: rm -rf "$HOME/Applications/monero*"
   aliases: [monero-wallet, monero-gui-wallet]
   comment: The official monero wallet
 
