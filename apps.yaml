@@ -21,6 +21,11 @@ distrobox:
   aliases: [distro-box]
   comment: Use any Linux distribution inside your terminal
 
+syncplay:
+  custom: v=$(curl -s https://api.github.com/repos/Syncplay/syncplay/releases/latest | grep '"tag_name":' | cut -d '"' -f 4) && wget "https://github.com/Syncplay/syncplay/releases/download/$v/syncplay_${v#v}.deb" && sudo apt install -y $HOME/Downloads/syncplay_${v#v}.deb && sudo rm -f $HOME/Downloads/syncplay_${v#v}.deb
+  uninstall: sudo apt remove syncplay -y
+  comment: Free software that synchronises media players so that faraway friends can watch videos together
+  
 mpm:
   custom: mkdir -p "$HOME/Applications" && wget -O "$HOME/Applications/mpm.bin" https://github.com/kdeldycke/meta-package-manager/releases/latest/download/mpm-linux-x64.bin && chmod +x "$HOME/Applications/mpm.bin"
   uninstall: sudo rm -f $HOME/Applications/mpm.bin
