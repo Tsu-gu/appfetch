@@ -237,6 +237,11 @@ threema:
   uninstall: flatpak remove --assumeyes ch.threema.threema-desktop
   aliases: [threema-desktop, threema-app]
   comment: End-to-end encrypted exchange of messages, calls, and files for businesses, military, authorities, and individuals
+
+jami:
+  snap: jami
+  aliases: [gnu-jami, jami-messenger]
+  comment: Jami is free software for universal communication that respects the freedom and privacy of its users
   
 yacreader:
   flatpak: com.yacreader.YACReader
