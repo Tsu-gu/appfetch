@@ -261,7 +261,8 @@ def save_apps_yaml_minimal(yaml_path, original_content, changes):
                 # Remove the snap: line
                 for i in range(app_line_idx + 1, section_end):
                     if lines[i].strip().startswith('snap:'):
-                        lines[i] = ''
+                        del lines[i]  # Actually delete instead of emptying
+                        section_end -= 1  # Adjust section end
                         break
             elif action.startswith('add_custom:'):
                 custom_value = action[11:]  # Remove 'add_custom:' prefix
@@ -279,9 +280,7 @@ def save_apps_yaml_minimal(yaml_path, original_content, changes):
                 if custom_line_idx:
                     lines.insert(custom_line_idx + 1, f"  uninstall: {uninstall_value}")
     
-    # Remove empty lines that were created by deletions
-    lines = [line for line in lines if line != '']
-    
+    # Don't filter out empty lines - preserve original spacing
     with open(yaml_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
 
