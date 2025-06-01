@@ -117,6 +117,12 @@ aimp:
   aliases: [aimp-player, aimp-ru]
   comment: A music player that lets you create your own playlists, runs through wine
 
+tlauncher:
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://dl2.tlauncher.org/f.php?f=files%2Fstarter-core-1.25-v2.jar && echo "You can launch this via java -jar $HOME/Application/starter-core-1.25-v2.jar"
+  uninstall: sudo rm -f $HOME/Application/starter-core-1.25-v2.jar
+  aliases: [tl]
+  comment: There are not so many good Minecraft launchers nowadays, and yet they exist
+  
 dfx:
   custom: sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
   uninstall: rm -f "$HOME/.local/bin/dfxvm" "$HOME/.local/bin/dfxvm-init" && rm -rf "$HOME/.local/share/dfxvm" "$HOME/.cache/dfx" "$HOME/.config/dfx"
