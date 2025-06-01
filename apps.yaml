@@ -8796,3 +8796,242 @@ yetty:
 musescore:
   snap: musescore
   comment: Create, play and print beautiful sheet music.
+  
+1password:
+  snap: 1password
+  comment: 1Password - Password Manager and Secure Wallet
+
+anbox-cloud-appliance:
+  snap: anbox-cloud-appliance
+  comment: Scalable Android in the cloud
+
+authd-google:
+  snap: authd-google
+  comment: Authd - Google IAM Cloud Authentication for Ubuntu
+
+authd-msentraid:
+  snap: authd-msentraid
+  comment: Authd - MS Entra ID Cloud Authentication for Ubuntu
+
+authpass:
+  snap: authpass
+  comment: Open Source Password Manager with KeePass file support.
+
+clion:
+  custom: snap install clion --classic
+  uninstall: snap remove clion
+  comment: A cross-platform IDE for C and C++
+
+coda:
+  snap: coda
+  comment: EdgeIQ Agent for Device Management and Workflow Orchestration
+
+code-insiders:
+  custom: snap install code-insiders --classic
+  uninstall: snap remove code-insiders
+  comment: Code editing. Redefined.
+
+colibri:
+  snap: colibri
+  comment: Browse without tabs
+
+k8s:
+  custom: snap install k8s --classic
+  uninstall: snap remove k8s
+  comment: Canonical Kubernetes, a K8s distribution by Canonical
+
+kotlin:
+  custom: snap install kotlin --classic
+  uninstall: snap remove kotlin
+  comment: Command line Kotlin compiler
+
+kube-apiserver:
+  snap: kube-apiserver
+  comment: Kubernetes control plane component that exposes the Kubernetes API.
+
+kube-controller-manager:
+  snap: kube-controller-manager
+  comment: Kubernetes control plane component that runs controllers.
+
+kube-proxy:
+  custom: snap install kube-proxy --classic
+  uninstall: snap remove kube-proxy
+  comment: Kubernetes network proxy that runs on each node.
+
+kube-scheduler:
+  snap: kube-scheduler
+  comment: Kubernetes control plane component that assigns each newly created pod to a node.
+
+kubeadm:
+  custom: snap install kubeadm --classic
+  uninstall: snap remove kubeadm
+  comment: Tool for bootstrapping Kubernetes clusters.
+
+kubectl:
+  custom: snap install kubectl --classic
+  uninstall: snap remove kubectl
+  comment: Command line client for controlling a Kubernetes cluster.
+
+kubelet:
+  custom: snap install kubelet --classic
+  uninstall: snap remove kubelet
+  comment: Kubernetes agent that runs on each node in Kubernetes.
+
+maas:
+  snap: maas
+  comment: Metal as a Service
+
+maas-cli:
+  snap: maas-cli
+  comment: (deprecated) CLI to communicate with a MAAS region
+
+maas-test-db:
+  snap: maas-test-db
+  comment: PostgreSQL database server for use with the MAAS snap
+
+mailspring:
+  snap: mailspring
+  comment: The best email app for people and teams at work
+
+master-pdf-editor-5:
+  snap: master-pdf-editor-5
+  comment: Master PDF Editor is a full solutions for work with PDF documents
+
+messenger-collabee:
+  snap: messenger-collabee
+  comment: Collabee Messenger
+
+microcloud:
+  snap: microcloud
+  comment: Deploy a scalable, low-touch cloud platform in minutes with MicroCloud.
+
+microk8s:
+  custom: snap install microk8s --classic
+  uninstall: snap remove microk8s
+  comment: Kubernetes for workstations and appliances
+
+microstack:
+  snap: microstack
+  comment: OpenStack on your laptop
+
+mir-kiosk:
+  snap: mir-kiosk
+  comment: Migrate now to Ubuntu Frame
+
+modem-manager:
+  snap: modem-manager
+  comment: ModemManager is a service which controls mobile broadband
+
+multipass:
+  snap: multipass
+  comment: Instant Ubuntu VMs
+
+multipass-sshfs:
+  snap: multipass-sshfs
+  comment: A network filesystem client for mounting host directories
+
+mysql-shell:
+  snap: mysql-shell
+  comment: MySQL Shell is an advanced client and code editor for MySQL Server.
+
+pebble:
+  custom: snap install pebble --classic
+  uninstall: snap remove pebble
+  comment: Pebble - take control of your internal daemons!
+
+prometheus-bind-exporter:
+  snap: prometheus-bind-exporter
+  comment: Prometheus bind exporter
+
+rider:
+  custom: snap install rider --classic
+  uninstall: snap remove rider
+  comment: A fast & powerful cross-platform .NET IDE
+
+rt-tests:
+  snap: rt-tests
+  comment: Real-time test suite
+
+sccache:
+  custom: snap install sccache --classic
+  uninstall: snap remove sccache
+  comment: sccache is ccache with cloud storage
+
+simplestreams:
+  snap: simplestreams
+  comment: Library and tools for using Simple Streams data
+
+simplyfortran:
+  snap: simplyfortran
+  comment: Simply Fortran 3
+
+smart-file-renamer:
+  snap: smart-file-renamer
+  comment: Rename many files in a click on Windows, Mac and Linux!
+
+smartctl-exporter:
+  snap: smartctl-exporter
+  comment: Export smartctl statistics to Prometheus
+
+snap-store:
+  snap: snap-store
+  comment: Snap Store is a graphical desktop application for discovering, installing and managing snaps on Linux.
+
+snap-store-proxy:
+  snap: snap-store-proxy
+  comment: A smart caching proxy for the Snap Store
+
+snapcraft:
+  custom: snap install snapcraft --classic
+  uninstall: snap remove snapcraft
+  comment: easily create snaps
+
+space:
+  snap: space
+  comment: Desktop Application for JetBrains Space
+
+spark-client:
+  snap: spark-client
+  comment: Client side scripts in a snap to submit Apache Spark jobs to a Kubernetes cluster.
+
+speedy-duplicate-finder:
+  snap: speedy-duplicate-finder
+  comment: Extremely fast duplicate finder for Windows, Mac and Linux
+
+storage-explorer:
+  snap: storage-explorer
+  comment: Optimize your Azure storage management
+
+store-admin:
+  snap: store-admin
+  comment: Canonical snap-store-proxy administration client and utility
+
+strace-static:
+  snap: strace-static
+  comment: The linux syscall tracer
+
+stubb:
+  snap: stubb
+  comment: A Docker utility by CircleCI.
+
+tempest:
+  snap: tempest
+  comment: OpenStack Integration Test Suite
+
+theia-ide:
+  custom: snap install theia-ide --classic
+  uninstall: snap remove theia-ide
+  comment: Eclipse Theia IDE
+
+todoist:
+  snap: todoist
+  comment: Simple yet powerful to do list, habit tracker & reminders. Organize work & life.
+
+turtlebot3c:
+  snap: turtlebot3c
+  comment: Turtlebot3 core features as a snap!
+
+twist:
+  snap: twist
+  comment: Twist
+
