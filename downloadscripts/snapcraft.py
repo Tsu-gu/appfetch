@@ -168,7 +168,7 @@ def load_apps_yaml_safe(yaml_path):
             data = yaml.safe_load(content)
             if data is not None:
                 print(f"Successfully loaded YAML with {len(data)} top-level entries")
-                return data
+                return data, content
         except yaml.YAMLError:
             print("Standard YAML parsing failed, trying custom parsing...")
         
@@ -226,45 +226,64 @@ def load_apps_yaml_safe(yaml_path):
             i += 1
         
         print(f"Custom parsing successful with {len(data)} top-level entries")
-        return data
+        return data, content
         
     except Exception as e:
         print(f"Error loading YAML: {e}")
-        return {}
+        return {}, ""
 
-def save_apps_yaml_safe(yaml_path, data):
-    """Save YAML file preserving the original format"""
+def save_apps_yaml_minimal(yaml_path, original_content, changes):
+    """Save YAML file with minimal changes - only modify what needs to be changed"""
+    lines = original_content.split('\n')
+    
+    for app_name, modifications in changes.items():
+        # Find the app section
+        app_line_idx = None
+        for i, line in enumerate(lines):
+            if line.strip() == f"{app_name}:":
+                app_line_idx = i
+                break
+        
+        if app_line_idx is None:
+            continue
+        
+        # Find the end of this app's section
+        section_end = len(lines)
+        for i in range(app_line_idx + 1, len(lines)):
+            line = lines[i]
+            if line.strip() and not line.startswith(' ') and not line.startswith('\t'):
+                section_end = i
+                break
+        
+        # Apply modifications within this section
+        for field, action in modifications.items():
+            if action == 'remove_snap':
+                # Remove the snap: line
+                for i in range(app_line_idx + 1, section_end):
+                    if lines[i].strip().startswith('snap:'):
+                        lines[i] = ''
+                        break
+            elif action.startswith('add_custom:'):
+                custom_value = action[11:]  # Remove 'add_custom:' prefix
+                # Add custom line after app name
+                lines.insert(app_line_idx + 1, f"  custom: {custom_value}")
+                section_end += 1
+            elif action.startswith('add_uninstall:'):
+                uninstall_value = action[14:]  # Remove 'add_uninstall:' prefix
+                # Add uninstall line after custom line
+                custom_line_idx = None
+                for i in range(app_line_idx + 1, section_end):
+                    if lines[i].strip().startswith('custom:'):
+                        custom_line_idx = i
+                        break
+                if custom_line_idx:
+                    lines.insert(custom_line_idx + 1, f"  uninstall: {uninstall_value}")
+    
+    # Remove empty lines that were created by deletions
+    lines = [line for line in lines if line != '']
+    
     with open(yaml_path, 'w', encoding='utf-8') as f:
-        for app_name in data.keys():  # Preserve original order
-            app_data = data[app_name]
-            f.write(f"{app_name}:\n")
-            
-            # Write fields in specific order: snap/custom, uninstall, flatpak, comment
-            field_order = ['snap', 'custom', 'uninstall', 'flatpak', 'comment']
-            written_fields = set()
-            
-            # Write fields in preferred order
-            for field in field_order:
-                if field in app_data:
-                    value = app_data[field]
-                    # Handle long commands that might contain special characters
-                    if len(str(value)) > 80 or any(char in str(value) for char in ['|', '&', ';', '&&', '||']):
-                        escaped_value = str(value).replace('"', '\\"')
-                        f.write(f'  {field}: "{escaped_value}"\n')
-                    else:
-                        f.write(f"  {field}: {value}\n")
-                    written_fields.add(field)
-            
-            # Write any remaining fields
-            for key, value in app_data.items():
-                if key not in written_fields:
-                    if len(str(value)) > 80 or any(char in str(value) for char in ['|', '&', ';', '&&', '||']):
-                        escaped_value = str(value).replace('"', '\\"')
-                        f.write(f'  {key}: "{escaped_value}"\n')
-                    else:
-                        f.write(f"  {key}: {value}\n")
-            
-            f.write("\n")
+        f.write('\n'.join(lines))
 
 def save_new_verified_snaps(new_snaps_data, date_str):
     """Save new verified snaps to a separate file"""
@@ -307,11 +326,12 @@ def main():
     print(f"Found {len(verified_snaps)} verified snaps out of {len(all_snaps)} total")
     
     # Step 2: Load existing apps.yaml
-    existing_apps = load_apps_yaml_safe(yaml_path)
+    existing_apps, original_content = load_apps_yaml_safe(yaml_path)
     
     # Step 3: Process verified snaps
     classic_fixes = 0
     new_snaps_data = {}
+    changes_to_make = {}
     
     for snap in verified_snaps:
         snap_name = snap['name']
@@ -325,9 +345,11 @@ def main():
                 if 'snap' in app_data and 'custom' not in app_data:
                     # Convert from regular snap to classic snap
                     print(f"Converting {snap_name} to classic snap in apps.yaml")
-                    app_data['custom'] = f"snap install {snap_name} --classic"
-                    app_data['uninstall'] = f"snap remove {snap_name}"
-                    del app_data['snap']  # Remove the old snap field
+                    changes_to_make[snap_name] = {
+                        'snap': 'remove_snap',
+                        'custom': f"add_custom:snap install {snap_name} --classic",
+                        'uninstall': f"add_uninstall:snap remove {snap_name}"
+                    }
                     classic_fixes += 1
                 else:
                     print(f"Skipping {snap_name} (already properly configured)")
@@ -359,7 +381,7 @@ def main():
     
     # Save apps.yaml if we made classic fixes
     if classic_fixes > 0:
-        save_apps_yaml_safe(yaml_path, existing_apps)
+        save_apps_yaml_minimal(yaml_path, original_content, changes_to_make)
         print(f"\n✅ Updated apps.yaml with {classic_fixes} classic snap fixes")
         changes_made = True
     
