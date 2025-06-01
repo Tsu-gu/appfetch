@@ -277,13 +277,13 @@ portmaster:
   aliases: [port-master]
 
 aws-cli:
-  custom: snap install aws-cli --classic
-  uninstall: snap remove aws-cli
+  custom: sudo snap install aws-cli --classic
+  uninstall: sudo snap remove aws-cli
   comment: Universal Command Line Interface for Amazon Web Services
 
 amazon-ssm-agent:
-  custom: snap install amazon-ssm-agent --classic
-  uninstall: snap remove amazon-ssm-agent
+  custom: sudo snap install amazon-ssm-agent --classic
+  uninstall: sudo snap remove amazon-ssm-agent
   comment: Agent to enable remote management of your Amazon EC2 instance configuration
 
 awswickrgov:
@@ -291,8 +291,8 @@ awswickrgov:
   comment: Secure Messaging for Teams
 
 ant:
-  custom: snap install ant --classic
-  uninstall: snap remove ant
+  custom: sudo snap install ant --classic
+  uninstall: sudo snap remove ant
   comment: Apache Ant
 
 aws-iot-greengrass:
@@ -334,8 +334,8 @@ brave:
   aliases: [brave-browser]
 
 blender:
-  custom: snap install blender --classic
-  uninstall: snap remove blender
+  custom: sudo snap install blender --classic
+  uninstall: sudo snap remove blender
   comment: A free and open-source 3D computer graphics software tool set
 
 bw:
@@ -446,23 +446,23 @@ chromium-ffmpeg:
   comment: FFmpeg codecs (free and proprietary) for use by third-party browser snaps
 
 certbot:
-  custom: snap install certbot --classic
-  uninstall: snap remove certbot
+  custom: sudo snap install certbot --classic
+  uninstall: sudo snap remove certbot
   comment: Automatically configure HTTPS using Let's Encrypt
 
 cmake:
-  custom: snap install cmake --classic
-  uninstall: snap remove cmake
+  custom: sudo snap install cmake --classic
+  uninstall: sudo snap remove cmake
   comment: Cross-platform software build system generator
 
 crystal:
-  custom: snap install crystal --classic
-  uninstall: snap remove crystal
+  custom: sudo snap install crystal --classic
+  uninstall: sudo snap remove crystal
   comment: A language for humans and computers
 
 charmcraft:
-  custom: snap install charmcraft --classic
-  uninstall: snap remove charmcraft
+  custom: sudo snap install charmcraft --classic
+  uninstall: sudo snap remove charmcraft
   comment: The charming tool
 
 collabee:
@@ -490,8 +490,8 @@ charmed-openstack-exporter:
   comment: OpenStack Exporter for Prometheus
 
 charm:
-  custom: snap install charm --classic
-  uninstall: snap remove charm
+  custom: sudo snap install charm --classic
+  uninstall: sudo snap remove charm
   comment: charm-tools
 
 chisel:
@@ -563,8 +563,8 @@ cloudstats:
   comment: provide and report cloudstats via prometheus-exporter
 
 vscode:
-  custom: snap install code --classic
-  uninstall: snap remove code
+  custom: sudo snap install code --classic
+  uninstall: sudo snap remove code
   aliases: [visualstudio, visual-studio, visual-studio-code]
 
 candid:
@@ -584,8 +584,8 @@ domotzpro-agent-publicstore:
   comment: Domotz Network monitoring
 
 dotnet:
-  custom: snap install dotnet --classic
-  uninstall: snap remove dotnet
+  custom: sudo snap install dotnet --classic
+  uninstall: sudo snap remove dotnet
   comment: .NET CLI tools, SDK, and Runtime
 
 dotnet-runtime-21:
@@ -610,8 +610,8 @@ digikam:
   comment: Photo Management Program
 
 datagrip:
-  custom: snap install datagrip --classic
-  uninstall: snap remove datagrip
+  custom: sudo snap install datagrip --classic
+  uninstall: sudo snap remove datagrip
   comment: DataGrip
 
 dcgm:
@@ -623,8 +623,8 @@ data-science-stack:
   comment: ML environments at ease on your AI workstation
 
 devpack-for-spring:
-  custom: snap install devpack-for-spring --classic
-  uninstall: snap remove devpack-for-spring
+  custom: sudo snap install devpack-for-spring --classic
+  uninstall: sudo snap remove devpack-for-spring
   comment: Development tools for Spring® projects
 
 dnslookup:
@@ -632,8 +632,8 @@ dnslookup:
   comment: Simple command-line tool to make DNS lookups using any protocol.
 
 dotnet-sdk:
-  custom: snap install dotnet-sdk --classic
-  uninstall: snap remove dotnet-sdk
+  custom: sudo snap install dotnet-sdk --classic
+  uninstall: sudo snap remove dotnet-sdk
   comment: Develop high performance applications in less time, on any platform.
 
 desktop-security-center:
@@ -641,8 +641,8 @@ desktop-security-center:
   comment: "The desktop Security Center will provide easy-to-access security features in Ubuntu."
 
 dataspell:
-  custom: snap install dataspell --classic
-  uninstall: snap remove dataspell
+  custom: sudo snap install dataspell --classic
+  uninstall: sudo snap remove dataspell
   comment: DataSpell
 
 drawio:
@@ -662,8 +662,8 @@ devpack-for-spring-manifest:
   comment: The list of all available content snaps for Spring®
 
 eclipse:
-  custom: snap install eclipse --classic
-  uninstall: snap remove eclipse
+  custom: sudo snap install eclipse --classic
+  uninstall: sudo snap remove eclipse
   comment: Extensible Tool Platform and Java IDE
 
 etcd:
@@ -679,8 +679,8 @@ eog:
   comment: Eye of GNOME Image Viewer
 
 eks:
-  custom: snap install eks --classic
-  uninstall: snap remove eks
+  custom: sudo snap install eks --classic
+  uninstall: sudo snap remove eks
   comment: Amazon EKS Distro (EKS-D) snap
 
 easy-file-organizer:
@@ -709,8 +709,8 @@ flutter-gallery:
   comment: Flutter Gallery
 
 flutter:
-  custom: snap install flutter --classic
-  uninstall: snap remove flutter
+  custom: sudo snap install flutter --classic
+  uninstall: sudo snap remove flutter
   comment: Flutter SDK
 
 firefox:
@@ -745,13 +745,13 @@ filelight:
   comment: Show disk usage and delete unused files
 
 google-cloud-sdk:
-  custom: snap install google-cloud-sdk --classic
-  uninstall: snap remove google-cloud-sdk
+  custom: sudo snap install google-cloud-sdk --classic
+  uninstall: sudo snap remove google-cloud-sdk
   comment: Google Cloud SDK
 
 gitkraken:
-  custom: snap install gitkraken --classic
-  uninstall: snap remove gitkraken
+  custom: sudo snap install gitkraken --classic
+  uninstall: sudo snap remove gitkraken
   comment: "For repo management, in-app code editing & issue tracking."
 
 gluu-server:
@@ -763,13 +763,13 @@ gitkraken-cli:
   comment: Official CLI for GitKraken
 
 google-cloud-cli:
-  custom: snap install google-cloud-cli --classic
-  uninstall: snap remove google-cloud-cli
+  custom: sudo snap install google-cloud-cli --classic
+  uninstall: sudo snap remove google-cloud-cli
   comment: Google Cloud CLI
 
 golangci-lint:
-  custom: snap install golangci-lint --classic
-  uninstall: snap remove golangci-lint
+  custom: sudo snap install golangci-lint --classic
+  uninstall: sudo snap remove golangci-lint
   comment: Fast linters runner for Go
 
 gnome-system-monitor:
@@ -785,8 +785,8 @@ gnome-logs:
   comment: A log viewer for the systemd journal
 
 go:
-  custom: snap install go --classic
-  uninstall: snap remove go
+  custom: sudo snap install go --classic
+  uninstall: sudo snap remove go
   comment: The Go programming language
 
 graalvm-jdk:
@@ -798,8 +798,8 @@ ghostscript-printer-app:
   comment: Ghostscript Printer Application
 
 goland:
-  custom: snap install goland --classic
-  uninstall: snap remove goland
+  custom: sudo snap install goland --classic
+  uninstall: sudo snap remove goland
   comment: The Complete IDE Crafted for Gophers
 
 gnome-sudoku:
@@ -839,8 +839,8 @@ gnome-characters:
   comment: A character map application
 
 groovy:
-  custom: snap install groovy --classic
-  uninstall: snap remove groovy
+  custom: sudo snap install groovy --classic
+  uninstall: sudo snap remove groovy
   comment: "The Apache Groovy programming language - A multi-faceted language for the Java platform"
 
 granatier:
@@ -883,8 +883,8 @@ graphics-test-tools:
   comment: Tools helpful in debugging graphics stacks
 
 heroku:
-  custom: snap install heroku --classic
-  uninstall: snap remove heroku
+  custom: sudo snap install heroku --classic
+  uninstall: sudo snap remove heroku
   comment: CLI client for Heroku
 
 husarion-webui:
@@ -957,13 +957,13 @@ influxdb:
   comment: Scalable datastore for metrics, events, and real-time analytics.
 
 intellij-idea-community:
-  custom: snap install intellij-idea-community --classic
-  uninstall: snap remove intellij-idea-community
+  custom: sudo snap install intellij-idea-community --classic
+  uninstall: sudo snap remove intellij-idea-community
   comment: The IDE for Java and Kotlin enthusiasts
 
 intellij-idea-ultimate:
-  custom: snap install intellij-idea-ultimate --classic
-  uninstall: snap remove intellij-idea-ultimate
+  custom: sudo snap install intellij-idea-ultimate --classic
+  uninstall: sudo snap remove intellij-idea-ultimate
   comment: IntelliJ IDEA – The IDE for Professional Development in Java and Kotlin
 
 iot-kernel:
@@ -983,8 +983,8 @@ icon-theme-breeze:
   comment: "Breeze is the default theme for KDE plasma;"
 
 julia:
-  custom: snap install julia --classic
-  uninstall: snap remove julia
+  custom: sudo snap install julia --classic
+  uninstall: sudo snap remove julia
   comment: The Julia programming language
 
 juju:
@@ -996,13 +996,13 @@ journey-desktop:
   comment: Capture Every Moment with Journey. Your Trusted Journaling and Diary Companion.
 
 jobbergate-agent:
-  custom: snap install jobbergate-agent --classic
-  uninstall: snap remove jobbergate-agent
+  custom: sudo snap install jobbergate-agent --classic
+  uninstall: sudo snap remove jobbergate-agent
   comment: The Jobbergate Agent snap
 
 jupyterlab-desktop:
-  custom: snap install jupyterlab-desktop --classic
-  uninstall: snap remove jupyterlab-desktop
+  custom: sudo snap install jupyterlab-desktop --classic
+  uninstall: sudo snap remove jupyterlab-desktop
   comment: JupyterLab
 
 juk:
@@ -1014,8 +1014,8 @@ jaas:
   comment: JAAS Plugin
 
 joule-expansion:
-  custom: snap install joule-expansion --classic
-  uninstall: snap remove joule-expansion
+  custom: sudo snap install joule-expansion --classic
+  uninstall: sudo snap remove joule-expansion
   comment: Automate the scaling of applications inside cloud scale groups.
 
 juju-backup-all:
@@ -1023,8 +1023,8 @@ juju-backup-all:
   comment: Tool for backing up charms, local juju configs, and juju controllers.
 
 kata-containers:
-  custom: snap install kata-containers --classic
-  uninstall: snap remove kata-containers
+  custom: sudo snap install kata-containers --classic
+  uninstall: sudo snap remove kata-containers
   comment: Build lightweight VMs that seamlessly plug into the containers ecosystem
 
 krita:
@@ -1037,8 +1037,8 @@ kstars:
   comment: Desktop Planetarium
 
 keepalived:
-  custom: snap install keepalived --classic
-  uninstall: snap remove keepalived
+  custom: sudo snap install keepalived --classic
+  uninstall: sudo snap remove keepalived
   comment: High availability VRRP/BFD and load-balancing for Linux
 
 kolourpaint:
@@ -1413,8 +1413,8 @@ lskat:
   comment: German card game Skat for two players
 
 license-manager-agent:
-  custom: snap install license-manager-agent --classic
-  uninstall: snap remove license-manager-agent
+  custom: sudo snap install license-manager-agent --classic
+  uninstall: sudo snap remove license-manager-agent
   comment: The License Manager Agent snap
 
 linuxptp:
@@ -1454,8 +1454,8 @@ nginx-asg-sync:
   comment: NGINX Plus Integration with Cloud Autoscaling
 
 node:
-  custom: snap install node --classic
-  uninstall: snap remove node
+  custom: sudo snap install node --classic
+  uninstall: sudo snap remove node
   comment: Official Node.js Runtime
 
 network-manager:
@@ -1472,8 +1472,8 @@ neochat:
   comment: Chat on Matrix
 
 netbeans:
-  custom: snap install netbeans --classic
-  uninstall: snap remove netbeans
+  custom: sudo snap install netbeans --classic
+  uninstall: sudo snap remove netbeans
   comment: Apache NetBeans IDE
 
 node-cert-exporter:
@@ -1517,13 +1517,13 @@ openvino-ai-plugins-gimp:
   comment: Intel's OpenVINO™ AI Plugins for GIMP
 
 o3de:
-  custom: snap install o3de --classic
-  uninstall: snap remove o3de
+  custom: sudo snap install o3de --classic
+  uninstall: sudo snap remove o3de
   comment: "O3DE is an open-source, cross-platform, real time 3D engine that you can use to create high performance interactive experiences"
 
 opentofu:
-  custom: snap install opentofu --classic
-  uninstall: snap remove opentofu
+  custom: sudo snap install opentofu --classic
+  uninstall: sudo snap remove opentofu
   comment: OpenTofu lets you declaratively manage your cloud infrastructure.
 
 octave:
@@ -1552,8 +1552,8 @@ opensearch:
   comment: OpenSearch makes it easy to ingest, search, visualize, and analyze your data.
 
 octavia-diskimage-retrofit:
-  custom: snap install octavia-diskimage-retrofit --classic
-  uninstall: snap remove octavia-diskimage-retrofit
+  custom: sudo snap install octavia-diskimage-retrofit --classic
+  uninstall: sudo snap remove octavia-diskimage-retrofit
   comment: Turn stock cloud image into Octavia Amphora image
 
 openthread-border-router:
@@ -1585,8 +1585,8 @@ postman:
   comment: API Development Environment
 
 parca-agent:
-  custom: snap install parca-agent --classic
-  uninstall: snap remove parca-agent
+  custom: sudo snap install parca-agent --classic
+  uninstall: sudo snap remove parca-agent
   comment: Parca Agent is an always-on sampling profiler that uses eBPF
 
 plex-desktop:
@@ -1602,23 +1602,23 @@ parca:
   comment: Parca continuous profiling tool
 
 pycharm-community:
-  custom: snap install pycharm-community --classic
-  uninstall: snap remove pycharm-community
+  custom: sudo snap install pycharm-community --classic
+  uninstall: sudo snap remove pycharm-community
   aliases: [pycharmca, pycharm-ca, pycharm]
 
 phpstorm:
-  custom: snap install phpstorm --classic
-  uninstall: snap remove phpstorm
+  custom: sudo snap install phpstorm --classic
+  uninstall: sudo snap remove phpstorm
   comment: PhpStorm
 
 powershell:
-  custom: snap install powershell --classic
-  uninstall: snap remove powershell
+  custom: sudo snap install powershell --classic
+  uninstall: sudo snap remove powershell
   comment: PowerShell for every system!
 
 pycharm-professional:
-  custom: snap install pycharm-professional --classic
-  uninstall: snap remove pycharm-professional
+  custom: sudo snap install pycharm-professional --classic
+  uninstall: sudo snap remove pycharm-professional
   comment: PyCharm Professional Edition
 
 prometheus:
@@ -1638,8 +1638,8 @@ parley:
   comment: Vocabulary Trainer
 
 pycharm-educational:
-  custom: snap install pycharm-educational --classic
-  uninstall: snap remove pycharm-educational
+  custom: sudo snap install pycharm-educational --classic
+  uninstall: sudo snap remove pycharm-educational
   comment: "Easy and Professional Tool to Learn & Teach Programming with Python"
 
 ps-printer-app:
@@ -1647,8 +1647,8 @@ ps-printer-app:
   comment: PostScript Printer Application
 
 powershell-preview:
-  custom: snap install powershell-preview --classic
-  uninstall: snap remove powershell-preview
+  custom: sudo snap install powershell-preview --classic
+  uninstall: sudo snap remove powershell-preview
   comment: PowerShell for every system!
 
 prometheus-alertmanager:
@@ -1774,8 +1774,8 @@ rocketchat-desktop:
   aliases: [rocketchat, rocket-chat]
 
 ruby:
-  custom: snap install ruby --classic
-  uninstall: snap remove ruby
+  custom: sudo snap install ruby --classic
+  uninstall: sudo snap remove ruby
   comment: Interpreter for the Ruby programming language
 
 rambox:
@@ -1791,13 +1791,13 @@ ros2-cli:
   comment: ROS 2 command line interface tools
 
 rubymine:
-  custom: snap install rubymine --classic
-  uninstall: snap remove rubymine
+  custom: sudo snap install rubymine --classic
+  uninstall: sudo snap remove rubymine
   comment: The Most Intelligent Ruby and Rails IDE
 
 rustup:
-  custom: snap install rustup --classic
-  uninstall: snap remove rustup
+  custom: sudo snap install rustup --classic
+  uninstall: sudo snap remove rustup
   comment: The Rust Language installer
 
 rerun:
@@ -1805,8 +1805,8 @@ rerun:
   comment: Visualize streams of multimodal data
 
 rustrover:
-  custom: snap install rustrover --classic
-  uninstall: snap remove rustrover
+  custom: sudo snap install rustrover --classic
+  uninstall: sudo snap remove rustrover
   comment: RustRover
 
 rosbot-xl:
@@ -1918,8 +1918,8 @@ review-tools:
   comment: Review tools for snappy
 
 rockcraft:
-  custom: snap install rockcraft --classic
-  uninstall: snap remove rockcraft
+  custom: sudo snap install rockcraft --classic
+  uninstall: sudo snap remove rockcraft
   comment: A craft like experience to create rocks
 
 ros-esm-dependencies-diff-generator:
@@ -1943,8 +1943,8 @@ streamsheets:
   comment: A no-code platform for processing streaming data in a spreadsheet interface
 
 stackit:
-  custom: snap install stackit --classic
-  uninstall: snap remove stackit
+  custom: sudo snap install stackit --classic
+  uninstall: sudo snap remove stackit
   comment: A command-line interface to manage STACKIT resources.
 
 telegram-desktop:
@@ -1993,13 +1993,13 @@ vault:
   comment: Vault is a tool for securely accessing secrets.
 
 vantage-agent:
-  custom: snap install vantage-agent --classic
-  uninstall: snap remove vantage-agent
+  custom: sudo snap install vantage-agent --classic
+  uninstall: sudo snap remove vantage-agent
   comment: The Vantage Agent snap
 
 webstorm:
-  custom: snap install webstorm --classic
-  uninstall: snap remove webstorm
+  custom: sudo snap install webstorm --classic
+  uninstall: sudo snap remove webstorm
   comment: WebStorm
 
 wireless-tools:
@@ -2007,8 +2007,8 @@ wireless-tools:
   comment: Tools for manipulating Linux Wireless Extensions
 
 waveterm:
-  custom: snap install waveterm --classic
-  uninstall: snap remove waveterm
+  custom: sudo snap install waveterm --classic
+  uninstall: sudo snap remove waveterm
   comment: An open-source, cross-platform terminal for seamless workflows
 
 webfortran:
@@ -8818,8 +8818,8 @@ authpass:
   comment: Open Source Password Manager with KeePass file support.
 
 clion:
-  custom: snap install clion --classic
-  uninstall: snap remove clion
+  custom: sudo snap install clion --classic
+  uninstall: sudo snap remove clion
   comment: A cross-platform IDE for C and C++
 
 coda:
@@ -8827,8 +8827,8 @@ coda:
   comment: EdgeIQ Agent for Device Management and Workflow Orchestration
 
 code-insiders:
-  custom: snap install code-insiders --classic
-  uninstall: snap remove code-insiders
+  custom: sudo snap install code-insiders --classic
+  uninstall: sudo snap remove code-insiders
   comment: Code editing. Redefined.
 
 colibri:
@@ -8836,13 +8836,13 @@ colibri:
   comment: Browse without tabs
 
 k8s:
-  custom: snap install k8s --classic
-  uninstall: snap remove k8s
+  custom: sudo snap install k8s --classic
+  uninstall: sudo snap remove k8s
   comment: Canonical Kubernetes, a K8s distribution by Canonical
 
 kotlin:
-  custom: snap install kotlin --classic
-  uninstall: snap remove kotlin
+  custom: sudo snap install kotlin --classic
+  uninstall: sudo snap remove kotlin
   comment: Command line Kotlin compiler
 
 kube-apiserver:
@@ -8854,8 +8854,8 @@ kube-controller-manager:
   comment: Kubernetes control plane component that runs controllers.
 
 kube-proxy:
-  custom: snap install kube-proxy --classic
-  uninstall: snap remove kube-proxy
+  custom: sudo snap install kube-proxy --classic
+  uninstall: sudo snap remove kube-proxy
   comment: Kubernetes network proxy that runs on each node.
 
 kube-scheduler:
@@ -8863,18 +8863,18 @@ kube-scheduler:
   comment: Kubernetes control plane component that assigns each newly created pod to a node.
 
 kubeadm:
-  custom: snap install kubeadm --classic
-  uninstall: snap remove kubeadm
+  custom: sudo snap install kubeadm --classic
+  uninstall: sudo snap remove kubeadm
   comment: Tool for bootstrapping Kubernetes clusters.
 
 kubectl:
-  custom: snap install kubectl --classic
-  uninstall: snap remove kubectl
+  custom: sudo snap install kubectl --classic
+  uninstall: sudo snap remove kubectl
   comment: Command line client for controlling a Kubernetes cluster.
 
 kubelet:
-  custom: snap install kubelet --classic
-  uninstall: snap remove kubelet
+  custom: sudo snap install kubelet --classic
+  uninstall: sudo snap remove kubelet
   comment: Kubernetes agent that runs on each node in Kubernetes.
 
 maas:
@@ -8906,8 +8906,8 @@ microcloud:
   comment: Deploy a scalable, low-touch cloud platform in minutes with MicroCloud.
 
 microk8s:
-  custom: snap install microk8s --classic
-  uninstall: snap remove microk8s
+  custom: sudo snap install microk8s --classic
+  uninstall: sudo snap remove microk8s
   comment: Kubernetes for workstations and appliances
 
 microstack:
@@ -8935,8 +8935,8 @@ mysql-shell:
   comment: MySQL Shell is an advanced client and code editor for MySQL Server.
 
 pebble:
-  custom: snap install pebble --classic
-  uninstall: snap remove pebble
+  custom: sudo snap install pebble --classic
+  uninstall: sudo snap remove pebble
   comment: Pebble - take control of your internal daemons!
 
 prometheus-bind-exporter:
@@ -8944,8 +8944,8 @@ prometheus-bind-exporter:
   comment: Prometheus bind exporter
 
 rider:
-  custom: snap install rider --classic
-  uninstall: snap remove rider
+  custom: sudo snap install rider --classic
+  uninstall: sudo snap remove rider
   comment: A fast & powerful cross-platform .NET IDE
 
 rt-tests:
@@ -8953,8 +8953,8 @@ rt-tests:
   comment: Real-time test suite
 
 sccache:
-  custom: snap install sccache --classic
-  uninstall: snap remove sccache
+  custom: sudo snap install sccache --classic
+  uninstall: sudo snap remove sccache
   comment: sccache is ccache with cloud storage
 
 simplestreams:
@@ -8982,8 +8982,8 @@ snap-store-proxy:
   comment: A smart caching proxy for the Snap Store
 
 snapcraft:
-  custom: snap install snapcraft --classic
-  uninstall: snap remove snapcraft
+  custom: sudo snap install snapcraft --classic
+  uninstall: sudo snap remove snapcraft
   comment: easily create snaps
 
 space:
@@ -9019,8 +9019,8 @@ tempest:
   comment: OpenStack Integration Test Suite
 
 theia-ide:
-  custom: snap install theia-ide --classic
-  uninstall: snap remove theia-ide
+  custom: sudo snap install theia-ide --classic
+  uninstall: sudo snap remove theia-ide
   comment: Eclipse Theia IDE
 
 todoist:
