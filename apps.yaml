@@ -1,287 +1,289 @@
 reaper:
-  custom: mkdir -p ~/Applications && wget https://www.reaper.fm/files/7.x/reaper739_linux_x86_64.tar.xz -O /tmp/reaper.tar.xz && tar -xf /tmp/reaper.tar.xz -C ~/Applications && cd ~/Applications && cd reaper_linux_x86_64 && sh install-reaper.sh
+  custom: "mkdir -p ~/Applications && wget https://www.reaper.fm/files/7.x/reaper739_linux_x86_64.tar.xz -O /tmp/reaper.tar.xz && tar -xf /tmp/reaper.tar.xz -C ~/Applications && cd ~/Applications && cd reaper_linux_x86_64 && sh install-reaper.sh"
   uninstall: sudo rm -rf $HOME/Applications/reaper_linux_x86_64
-  aliases: [reaperfm]
   comment: A linux-native DAW
+  aliases: [reaperfm]
 
 signal:
-  custom: wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg; cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null; echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | sudo tee /etc/apt/sources.list.d/signal-xenial.list; sudo apt update && sudo apt install signal-desktop
+  custom: "wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg; cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null; echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | sudo tee /etc/apt/sources.list.d/signal-xenial.list; sudo apt update && sudo apt install signal-desktop"
   uninstall: sudo apt remove -y signal-desktop
   comment: A private messenger
 
 joplin:
-  custom: mkdir -p ~/Applications && cd ~/Applications && v=$(curl -s https://api.github.com/repos/laurent22/joplin/releases/latest | grep '"tag_name":' | cut -d '"' -f 4) && curl -L -o "Joplin-${v#v}.AppImage" "https://github.com/laurent22/joplin/releases/download/$v/Joplin-${v#v}.AppImage"
-  uninstall: cd ~/Applications && rm -f Joplin-*.AppImage
+  custom: "mkdir -p ~/Applications && cd ~/Applications && v=$(curl -s https://api.github.com/repos/laurent22/joplin/releases/latest | grep '\"tag_name\":' | cut -d '\"' -f 4) && curl -L -o \"Joplin-${v#v}.AppImage\" \"https://github.com/laurent22/joplin/releases/download/$v/Joplin-${v#v}.AppImage\""
+  uninstall: "cd ~/Applications && rm -f Joplin-*.AppImage"
+  comment: "The privacy-focused note taking app with sync capabilities for Windows, macOS, Linux, Android and iOS"
   aliases: [joplin-notes]
-  comment: The privacy-focused note taking app with sync capabilities for Windows, macOS, Linux, Android and iOS
 
 distrobox:
-  custom: curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
-  uninstall: curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/uninstall | sudo sh
-  aliases: [distro-box]
+  custom: "curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh"
+  uninstall: "curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/uninstall | sudo sh"
   comment: Use any Linux distribution inside your terminal
+  aliases: [distro-box]
 
 syncplay:
-  custom: v=$(curl -s https://api.github.com/repos/Syncplay/syncplay/releases/latest | grep '"tag_name":' | cut -d '"' -f 4) && wget "https://github.com/Syncplay/syncplay/releases/download/$v/syncplay_${v#v}.deb" && sudo apt install -y $HOME/Downloads/syncplay_${v#v}.deb && sudo rm -f $HOME/Downloads/syncplay_${v#v}.deb
+  custom: "v=$(curl -s https://api.github.com/repos/Syncplay/syncplay/releases/latest | grep '\"tag_name\":' | cut -d '\"' -f 4) && wget \"https://github.com/Syncplay/syncplay/releases/download/$v/syncplay_${v#v}.deb\" && sudo apt install -y $HOME/Downloads/syncplay_${v#v}.deb && sudo rm -f $HOME/Downloads/syncplay_${v#v}.deb"
   uninstall: sudo apt remove syncplay -y
-  comment: Free software that synchronises media players so that faraway friends can watch videos together
-  
+  comment: "Free software that synchronises media players so that faraway friends can watch videos together"
+
 mpm:
-  custom: mkdir -p "$HOME/Applications" && wget -O "$HOME/Applications/mpm.bin" https://github.com/kdeldycke/meta-package-manager/releases/latest/download/mpm-linux-x64.bin && chmod +x "$HOME/Applications/mpm.bin"
+  custom: "mkdir -p \"$HOME/Applications\" && wget -O \"$HOME/Applications/mpm.bin\" https://github.com/kdeldycke/meta-package-manager/releases/latest/download/mpm-linux-x64.bin && chmod +x \"$HOME/Applications/mpm.bin\""
   uninstall: sudo rm -f $HOME/Applications/mpm.bin
-  aliases: [meta-package-manager, metapackagemanager]
   comment: Wraps all package managers with a unifying CLI
+  aliases: [meta-package-manager, metapackagemanager]
 
 warp:
-  custom:  mkdir -p ~/Applications && cd ~/Applications && curl -L -A "Mozilla/5.0" -o warp.AppImage https://app.warp.dev/download?package=appimage && chmod +x warp.AppImage
+  custom: "mkdir -p ~/Applications && cd ~/Applications && curl -L -A \"Mozilla/5.0\" -o warp.AppImage https://app.warp.dev/download?package=appimage && chmod +x warp.AppImage"
   uninstall: rm -f $HOME/Applications/warp.AppImage
-  aliases: [warp-terminal]
   comment: Warp combines AI and your dev team’s knowledge in one fast, intuitive terminal
-  
+  aliases: [warp-terminal]
+
 pulsar:
-  custom: mkdir -p ~/Applications && cd ~/Applications && curl -L -A "Mozilla/5.0" -o pulsar.tar.gz "https://download.pulsar-edit.dev/?os=linux&type=linux_tar" && tar -xvzf pulsar.tar.gz && rm -f pulsar.tar.gz
+  custom: "mkdir -p ~/Applications && cd ~/Applications && curl -L -A \"Mozilla/5.0\" -o pulsar.tar.gz \"https://download.pulsar-edit.dev/?os=linux&type=linux_tar\" && tar -xvzf pulsar.tar.gz && rm -f pulsar.tar.gz"
   uninstall: rm -rf $HOME/Applications/pulsar*
-  aliases: [pulsar-editor]
   comment: A Community-led Hyper-Hackable Text Editor
+  aliases: [pulsar-editor]
 
 guix:
-  custom: cd /tmp && wget 'https://git.savannah.gnu.org/gitweb/?p=guix.git;a=blob_plain;f=etc/guix-install.sh;hb=HEAD' && chmod +x guix-install.sh && guix-install.sh
+  custom: "cd /tmp && wget 'https://git.savannah.gnu.org/gitweb/?p=guix.git;a=blob_plain;f=etc/guix-install.sh;hb=HEAD' && chmod +x guix-install.sh && guix-install.sh"
+  comment: "GNU Guix is a package manager for GNU/Linux systems. It is designed to give users more control over their general-purpose and specialized computing environments"
   aliases: [gnu-guix]
-  comment: GNU Guix is a package manager for GNU/Linux systems. It is designed to give users more control over their general-purpose and specialized computing environments
 
 flashpoint:
-  custom: echo "This is meant to work on Ubuntu 22 and 24 LTS and Debian 12!" && wget https://raw.githubusercontent.com/Tsu-gu/flashpoint-ubuntu-install/main/flashpoint-ubuntu-installer.sh && chmod +x flashpoint-ubuntu-installer.sh && ./flashpoint-ubuntu-installer.sh
+  custom: "echo \"This is meant to work on Ubuntu 22 and 24 LTS and Debian 12!\" && wget https://raw.githubusercontent.com/Tsu-gu/flashpoint-ubuntu-install/main/flashpoint-ubuntu-installer.sh && chmod +x flashpoint-ubuntu-installer.sh && ./flashpoint-ubuntu-installer.sh"
+  comment: "Flashpoint Archive is a community effort to preserve games and animations from the web"
   aliases: [bluemaxima, bluemaxima-flashpoint]
-  comment: Flashpoint Archive is a community effort to preserve games and animations from the web
 
-session: 
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://getsession.org/linux && chmod +x session-*.AppImage
+session:
+  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://getsession.org/linux && chmod +x session-*.AppImage"
   uninstall: rm -rf $HOME/Applications/session-*.AppImage
   comment: An end-to-end encrypted messenger that protects your personal data
-  
+
 yt-dlp:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp
+  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp"
   uninstall: rm -rf $HOME/Applications/yt-dlp
-  aliases: [ytdlp, yt]
   comment: Youtube video downloading tool
+  aliases: [ytdlp, yt]
 
 homebrew:
-  custom: sudo apt install git && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  uninstall: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+  custom: "sudo apt install git && /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+  uninstall: "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)\""
+  comment: A package manager mainly used on MacOS, but works well on Linux too
   aliases: [brew]
-  comment: A package manager mainly used on MacOS, but works well on Linux too  
 
 nix:
   custom: sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon
-  uninstall: sudo systemctl stop nix-daemon.service && sudo systemctl disable nix-daemon.socket nix-daemon.service && sudo systemctl daemon-reload && sudo rm -rf /etc/nix /etc/profile.d/nix.sh /etc/tmpfiles.d/nix-daemon.conf /nix ~root/.nix-channels ~root/.nix-defexpr ~root/.nix-profile && for i in $(seq 1 32); do sudo userdel nixbld$i; done && sudo groupdel nixbld
+  uninstall: "sudo systemctl stop nix-daemon.service && sudo systemctl disable nix-daemon.socket nix-daemon.service && sudo systemctl daemon-reload && sudo rm -rf /etc/nix /etc/profile.d/nix.sh /etc/tmpfiles.d/nix-daemon.conf /nix ~root/.nix-channels ~root/.nix-defexpr ~root/.nix-profile && for i in $(seq 1 32); do sudo userdel nixbld$i; done && sudo groupdel nixbld"
+  comment: "A tool that takes a unique approach to package management and system configuration"
   aliases: [nix-package-manager]
-  comment: A tool that takes a unique approach to package management and system configuration
 
 virtualbox:
-  custom: codename=$(grep -oP '(?<=VERSION_CODENAME=).*' /etc/os-release || lsb_release -cs) && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian $codename contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list && wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor && sudo apt-get update && sudo apt-get install -y virtualbox-7.1
+  custom: "codename=$(grep -oP '(?<=VERSION_CODENAME=).*' /etc/os-release || lsb_release -cs) && echo \"deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian $codename contrib\" | sudo tee /etc/apt/sources.list.d/virtualbox.list && wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor && sudo apt-get update && sudo apt-get install -y virtualbox-7.1"
   uninstall: sudo apt remove -y virtualbox-7.1
-  aliases: [virtual-box]
   comment: A general-purpose full virtualization software for x86_64 hardware
+  aliases: [virtual-box]
 
 element:
-  custom: sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop
+  custom: "sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo \"deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main\" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop"
   uninstall: sudo apt remove -y element-desktop
+  comment: The main Matrix client
   aliases: [elementio, element-matrix]
-  comment: The main Matrix client  
 
 balena-etcher:
-  custom: mkdir -p ~/Applications && cd ~/Applications && VERSION=$(curl -s https://github.com/balena-io/etcher/releases | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | sed 's/^v//' | sort -Vr | head -n 1) && if [ -z "$VERSION" ]; then echo "Failed to extract Etcher version."; exit 1; fi && echo "Downloading balenaEtcher version $VERSION..." && wget https://github.com/balena-io/etcher/releases/download/v$VERSION/balenaEtcher-linux-x64-$VERSION.zip && unzip balenaEtcher-linux-x64-$VERSION.zip && rm -f balenaEtcher-linux-x64-$VERSION.zip
-  uninstall: rm -rf $HOME/Applications/balenaEtcher-linux-x64 
+  custom: "mkdir -p ~/Applications && cd ~/Applications && VERSION=$(curl -s https://github.com/balena-io/etcher/releases | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | sed 's/^v//' | sort -Vr | head -n 1) && if [ -z \"$VERSION\" ]; then echo \"Failed to extract Etcher version.\"; exit 1; fi && echo \"Downloading balenaEtcher version $VERSION...\" && wget https://github.com/balena-io/etcher/releases/download/v$VERSION/balenaEtcher-linux-x64-$VERSION.zip && unzip balenaEtcher-linux-x64-$VERSION.zip && rm -f balenaEtcher-linux-x64-$VERSION.zip"
+  uninstall: rm -rf $HOME/Applications/balenaEtcher-linux-x64
+  comment: "Flash OS images to SD cards & USB drives, safely and easily"
   aliases: [etcher, balenaetcher]
-  comment: Flash OS images to SD cards & USB drives, safely and easily
-  
+
 aimp:
-  custom: cd $HOME/Downloads && wget --user-agent="Mozilla/5.0" -O aimp_amd64.deb "https://www.aimp.ru/?do=download.file&id=26" && sudo apt install -y $HOME/Downloads/aimp_amd64.deb && rm aimp_amd64.deb
+  custom: "cd $HOME/Downloads && wget --user-agent=\"Mozilla/5.0\" -O aimp_amd64.deb \"https://www.aimp.ru/?do=download.file&id=26\" && sudo apt install -y $HOME/Downloads/aimp_amd64.deb && rm aimp_amd64.deb"
   uninstall: sudo apt remove -y aimp
-  aliases: [aimp-player, aimp-ru]
   comment: A music player that lets you create your own playlists, runs through wine
+  aliases: [aimp-player, aimp-ru]
 
 dfx:
   custom: sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
-  uninstall: rm -f "$HOME/.local/bin/dfxvm" "$HOME/.local/bin/dfxvm-init" && rm -rf "$HOME/.local/share/dfxvm" "$HOME/.cache/dfx" "$HOME/.config/dfx"
+  uninstall: "rm -f \"$HOME/.local/bin/dfxvm\" \"$HOME/.local/bin/dfxvm-init\" && rm -rf \"$HOME/.local/share/dfxvm\" \"$HOME/.cache/dfx\" \"$HOME/.config/dfx\""
+  comment: "The IC SDK is a software development kit used to develop applications on your local machine and to deploy them to ICP"
   aliases: [dfx-icp]
-  comment: The IC SDK is a software development kit used to develop applications on your local machine and to deploy them to ICP
 
 rust:
-  custom: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  custom: "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
   uninstall: rustup self uninstall
-  aliases: [rust-lang]
   comment: A language empowering everyone to build reliable and efficient software
+  aliases: [rust-lang]
 
 volta:
-  custom: curl https://get.volta.sh | bash
+  custom: "curl https://get.volta.sh | bash"
   uninstall: rm -rf ~/.volta
-  aliases: [votla, volta-sh]
   comment: The Hassle-Free JavaScript Tool Manager
+  aliases: [votla, volta-sh]
 
 pnpm:
-  custom: curl -fsSL https://get.pnpm.io/install.sh | sh -
+  custom: "curl -fsSL https://get.pnpm.io/install.sh | sh -"
   uninstall: rm -rf "$PNPM_HOME"
   comment: Fast, disk space efficient package manager
 
 openttd:
-  custom: page_content=$(wget -qO- https://www.openttd.org/downloads/openttd-releases/latest) && version=$(echo "$page_content" | grep -oP 'Latest stable release in openttd is \K[0-9]+\.[0-9]+') && [ -z "$version" ] && echo "Failed to extract version number." && exit 1 || (echo "Downloading OpenTTD version $version..." && mkdir -p ~/Applications && wget "https://cdn.openttd.org/openttd-releases/${version}/openttd-${version}-linux-generic-amd64.tar.xz" -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications)
+  custom: "page_content=$(wget -qO- https://www.openttd.org/downloads/openttd-releases/latest) && version=$(echo \"$page_content\" | grep -oP 'Latest stable release in openttd is \K[0-9]+\.[0-9]+') && [ -z \"$version\" ] && echo \"Failed to extract version number.\" && exit 1 || (echo \"Downloading OpenTTD version $version...\" && mkdir -p ~/Applications && wget \"https://cdn.openttd.org/openttd-releases/${version}/openttd-${version}-linux-generic-amd64.tar.xz\" -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications)"
   uninstall: rm -rf $HOME/Applications/openttd*
-  aliases: [ttd]
   comment: A well maintained fork of the 90s hit game Tycoon Transport Deluxe
+  aliases: [ttd]
 
 audacity:
-  custom: page_content=$(wget -qO- https://www.audacityteam.org/download/linux/) && version=$(echo "$page_content" | grep -oP 'Current version \K[0-9]+\.[0-9]+\.[0-9]+') && if [ -z "$version" ]; then echo "Failed to extract version number."; exit 1; fi && echo "Downloading Audacity version $version..." && mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/audacity/audacity/releases/download/Audacity-${version}/audacity-linux-${version}-x64-22.04.AppImage && chmod +x audacity-linux-${version}-x64-22.04.AppImage || page_content=$(wget -qO- https://www.audacityteam.org/download/linux/) && version=$(echo "$page_content" | grep -oP 'Current version \K[0-9]+\.[0-9]+\.[0-9]+') && if [ -z "$version" ]; then echo "Failed to extract version number."; exit 1; fi && echo "Downloading Audacity version $version..." && mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/audacity/audacity/releases/download/Audacity-${version}/audacity-linux-${version}-x64-24.04.AppImage
+  custom: "page_content=$(wget -qO- https://www.audacityteam.org/download/linux/) && version=$(echo \"$page_content\" | grep -oP 'Current version \K[0-9]+\.[0-9]+\.[0-9]+') && if [ -z \"$version\" ]; then echo \"Failed to extract version number.\"; exit 1; fi && echo \"Downloading Audacity version $version...\" && mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/audacity/audacity/releases/download/Audacity-${version}/audacity-linux-${version}-x64-22.04.AppImage && chmod +x audacity-linux-${version}-x64-22.04.AppImage || page_content=$(wget -qO- https://www.audacityteam.org/download/linux/) && version=$(echo \"$page_content\" | grep -oP 'Current version \K[0-9]+\.[0-9]+\.[0-9]+') && if [ -z \"$version\" ]; then echo \"Failed to extract version number.\"; exit 1; fi && echo \"Downloading Audacity version $version...\" && mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/audacity/audacity/releases/download/Audacity-${version}/audacity-linux-${version}-x64-24.04.AppImage"
   uninstall: rm -f "$HOME/Applications/audacity-*.AppImage"
   comment: The world's most popular audio editing and recording app
 
 tsubuntu:
-  custom: wget -q https://raw.githubusercontent.com/Tsu-gu/tsubuntu/main/tsubuntu.sh && chmod +x tsubuntu.sh && ./tsubuntu.sh
+  custom: "wget -q https://raw.githubusercontent.com/Tsu-gu/tsubuntu/main/tsubuntu.sh && chmod +x tsubuntu.sh && ./tsubuntu.sh"
   uninstall: echo "This entry doesn't have an uninstall script"
   comment: A script for tweaking Ubuntu. Dont use it if you arent sure what it does.
 
 riseup-vpn:
-  custom: sudo add-apt-repository ppa:leapcodes/riseup-vpn && sudo apt update && sudo apt install riseup-vpn
-  uninstall: sudo apt remove --purge riseup-vpn -y && sudo add-apt-repository --remove ppa:leapcodes/riseup-vpn -y && sudo apt autoremove -y
+  custom: "sudo add-apt-repository ppa:leapcodes/riseup-vpn && sudo apt update && sudo apt install riseup-vpn"
+  uninstall: "sudo apt remove --purge riseup-vpn -y && sudo add-apt-repository --remove ppa:leapcodes/riseup-vpn -y && sudo apt autoremove -y"
+  comment: "Riseup offers Personal VPN service for censorship circumvention, location anonymization and traffic encryption"
   aliases: [riseupvpn]
-  comment: Riseup offers Personal VPN service for censorship circumvention, location anonymization and traffic encryption
-  
+
 obsidian:
   flatpak: md.obsidian.Obsidian
-  aliases: [obsidianmd, obsidian-notes]
   comment: Markdown-based knowledge base
+  aliases: [obsidianmd, obsidian-notes]
 
 mullvad:
-  custom: wget -O $HOME/Downloads/MullvadVPN.deb https://mullvad.net/en/download/app/deb/latest && sudo apt install -y $HOME/Downloads/MullvadVPN.deb
+  custom: "wget -O $HOME/Downloads/MullvadVPN.deb https://mullvad.net/en/download/app/deb/latest && sudo apt install -y $HOME/Downloads/MullvadVPN.deb"
   uninstall: sudo apt remove mullvad-vpn -y
-  aliases: [mull, mullvad-vpn, vpn]
   comment: A VPN accepting multiple payment methods with a good track record
+  aliases: [mull, mullvad-vpn, vpn]
 
 ollama:
-  custom: curl -fsSL https://ollama.com/install.sh | sh
-  uninstall: sudo rm $(which ollama) && sudo rm -r /usr/share/ollama && sudo userdel ollama sudo groupdel ollama
-  aliases: [ollama-ai]
+  custom: "curl -fsSL https://ollama.com/install.sh | sh"
+  uninstall: "sudo rm $(which ollama) && sudo rm -r /usr/share/ollama && sudo userdel ollama sudo groupdel ollama"
   comment: Get up and running with large language models
+  aliases: [ollama-ai]
 
 filen:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://cdn.filen.io/@filen/desktop/release/latest/Filen_linux_x86_64.AppImage && chmod +x Filen_linux_x86_64.AppImage
+  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://cdn.filen.io/@filen/desktop/release/latest/Filen_linux_x86_64.AppImage && chmod +x Filen_linux_x86_64.AppImage"
   uninstall: rm -f "$HOME/Applications/Filen*.AppImage"
-  aliases: [filen-cloud, filen-io]
   comment: German cloud provider with affordable prices
+  aliases: [filen-cloud, filen-io]
 
 godot:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip && unzip Godot_*.zip && rm -rf Godot_*.zip
+  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip && unzip Godot_*.zip && rm -rf Godot_*.zip"
   uninstall: rm -f "$HOME/Applications/Godot*"
-  aliases: [godot4, godot-engine]
   comment: Your free, open‑source game engine
-  
+  aliases: [godot4, godot-engine]
+
 lmms:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/LMMS/lmms/releases/download/v1.2.2/lmms-1.2.2-linux-x86_64.AppImage && chmod +x lmms-*.AppImage
+  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/LMMS/lmms/releases/download/v1.2.2/lmms-1.2.2-linux-x86_64.AppImage && chmod +x lmms-*.AppImage"
   uninstall: rm -f "$HOME/Applications/lmms-*.AppImage"
   comment: Lets make music with a free, cross-platform tool for your computer
 
 koofr:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://app.koofr.net/dl/apps/linux64 && tar -xvzf koofr-*.tar.gz && rm -rf koofr-*.tar.gz
-  aliases: [koofr-cloud]
+  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://app.koofr.net/dl/apps/linux64 && tar -xvzf koofr-*.tar.gz && rm -rf koofr-*.tar.gz"
   comment: Slovenian cloud provider
-  
+  aliases: [koofr-cloud]
+
 monero:
-  custom: sudo apt install bzip2 && mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xjf linux64 && rm linux64
+  custom: "sudo apt install bzip2 && mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xjf linux64 && rm linux64"
   uninstall: rm -rf "$HOME/Applications/monero*"
-  aliases: [monero-wallet, monero-gui-wallet]
   comment: The official monero wallet
+  aliases: [monero-wallet, monero-gui-wallet]
 
 syncthing:
-  custom: sudo mkdir -p /etc/apt/keyrings && sudo curl -L -o /etc/apt/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg && echo "deb [signed-by=/etc/apt/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list > /dev/null && sudo apt-get update && sudo apt-get install -y syncthing
+  custom: "sudo mkdir -p /etc/apt/keyrings && sudo curl -L -o /etc/apt/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg && echo \"deb [signed-by=/etc/apt/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable\" | sudo tee /etc/apt/sources.list.d/syncthing.list > /dev/null && sudo apt-get update && sudo apt-get install -y syncthing"
   uninstall: sudo apt remove -y syncthing
+  comment: Syncing files in a P2P manner
   aliases: [sync-thing]
-  comment: Syncing files in a P2P manner 
-  
+
 mullvad-browser:
-  custom:  mkdir -p ~/Applications && cd ~/Applications && wget -O mullvad-browser.tar.xz https://mullvad.net/en/download/browser/linux-x86_64/latest && tar -xvf mullvad-browser.tar.xz && rm -f mullvad-browser.tar.xz
+  custom: "mkdir -p ~/Applications && cd ~/Applications && wget -O mullvad-browser.tar.xz https://mullvad.net/en/download/browser/linux-x86_64/latest && tar -xvf mullvad-browser.tar.xz && rm -f mullvad-browser.tar.xz"
   uninstall: rm -f "$HOME/Applications/mullvad*"
+  comment: "The Mullvad Browser is developed – in collaboration between Mullvad VPN and the Tor Project – to minimize tracking and fingerprinting."
   aliases: [mullvadbrowser]
-  comment: The Mullvad Browser is developed – in collaboration between Mullvad VPN and the Tor Project – to minimize tracking and fingerprinting. 
 
 palemoon:
-  custom:  mkdir -p ~/Applications && cd ~/Applications && wget --content-disposition "https://www.palemoon.org/download.php?mirror=eu&bits=64&type=linuxgtk3" && tar -xvJf palemoon-*.tar.xz && rm -rf palemoon-*.tar.xz
-  uninstall: rm -rf "$HOME/Applications/palemoon*"  
+  custom: "mkdir -p ~/Applications && cd ~/Applications && wget --content-disposition \"https://www.palemoon.org/download.php?mirror=eu&bits=64&type=linuxgtk3\" && tar -xvJf palemoon-*.tar.xz && rm -rf palemoon-*.tar.xz"
+  uninstall: rm -rf "$HOME/Applications/palemoon*"
+  comment: "Pale Moon is an Open Source, Goanna-based web browser available for various operating systems including Microsoft Windows, Mac OS and Linux (with contributed other operating system support), focusing on efficiency and customization"
   aliases: [pale-moon, palemoon-browser]
-  comment: Pale Moon is an Open Source, Goanna-based web browser available for various operating systems including Microsoft Windows, Mac OS and Linux (with contributed other operating system support), focusing on efficiency and customization
-  
+
 steam:
-  custom: wget -O $HOME/Downloads/steam.deb https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb && sudo apt install -y $HOME/Downloads/steam.deb
+  custom: "wget -O $HOME/Downloads/steam.deb https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb && sudo apt install -y $HOME/Downloads/steam.deb"
   uninstall: sudo apt remove -y steam
-  aliases: [valve]  
   comment: The official steam client
+  aliases: [valve]
 
 waydroid:
-  custom: sudo apt install curl ca-certificates -y && curl -s https://repo.waydro.id | sudo bash && sudo apt install waydroid -y
+  custom: "sudo apt install curl ca-certificates -y && curl -s https://repo.waydro.id | sudo bash && sudo apt install waydroid -y"
   uninstall: sudo apt remove -y waydroid
-  comment: Waydroid is a container-based approach to boot a full Android system on a regular GNU/Linux system like Ubuntu
-  
+  comment: "Waydroid is a container-based approach to boot a full Android system on a regular GNU/Linux system like Ubuntu"
+
 super-tux-kart:
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/supertuxkart/stk-code/releases/download/1.4/SuperTuxKart-1.4-linux-x86_64.tar.xz && tar -xvJf SuperTuxKart-*.tar.xz && rm -rf SuperTuxKart-*.tar.xz
-  uninstall: rm -f "$HOME/Applications/SuperTux*"  
+  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/supertuxkart/stk-code/releases/download/1.4/SuperTuxKart-1.4-linux-x86_64.tar.xz && tar -xvJf SuperTuxKart-*.tar.xz && rm -rf SuperTuxKart-*.tar.xz"
+  uninstall: rm -f "$HOME/Applications/SuperTux*"
+  comment: "SuperTuxKart is a 3D open-source arcade racer with a variety characters, tracks, and modes to play"
   aliases: [supertuxkart, tuxkart, tuxcart, supertuxcart]
-  comment: SuperTuxKart is a 3D open-source arcade racer with a variety characters, tracks, and modes to play
-  
+
 ani-cli:
-  custom: sudo apt install sed git grep curl mpv ffmpeg fzf patch && git clone "https://github.com/pystardust/ani-cli.git" && sudo cp ani-cli/ani-cli /usr/local/bin && rm -rf ani-cli
+  custom: "sudo apt install sed git grep curl mpv ffmpeg fzf patch && git clone \"https://github.com/pystardust/ani-cli.git\" && sudo cp ani-cli/ani-cli /usr/local/bin && rm -rf ani-cli"
   uninstall: sudo rm -f /usr/local/bin/ani-cli
-  aliases: [anicli, anime-cli]
   comment: Watch anime straight from your terminal
+  aliases: [anicli, anime-cli]
 
 threema:
-  custom: flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && flatpak install --from https://releases.threema.ch/flatpak/threema-desktop/ch.threema.threema-desktop.flatpakref && flatpak override ch.threema.threema-desktop --filesystem=host
+  custom: "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && flatpak install --from https://releases.threema.ch/flatpak/threema-desktop/ch.threema.threema-desktop.flatpakref && flatpak override ch.threema.threema-desktop --filesystem=host"
   uninstall: flatpak remove --assumeyes ch.threema.threema-desktop
+  comment: "End-to-end encrypted exchange of messages, calls, and files for businesses, military, authorities, and individuals"
   aliases: [threema-desktop, threema-app]
-  comment: End-to-end encrypted exchange of messages, calls, and files for businesses, military, authorities, and individuals
 
 jami:
   snap: jami
+  comment: "Jami is free software for universal communication that respects the freedom and privacy of its users"
   aliases: [gnu-jami, jami-messenger]
-  comment: Jami is free software for universal communication that respects the freedom and privacy of its users
-  
+
 yacreader:
   flatpak: com.yacreader.YACReader
+  comment: "YACReader offers you the best way to read and manage your digital comics and mangas in epub and pdf"
   aliases: [yac-reader]
-  comment: YACReader offers you the best way to read and manage your digital comics and mangas in epub and pdf
 
 wps:
-  custom:  page_content=$(wget -qO- https://www.wps.com/whatsnew/linux/) && version=$(echo "$page_content" | grep -oP '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | head -1) && [ -z "$version" ] && echo "Failed to extract version number." && exit 1 || (build_number=$(echo "$version" | awk -F. '{print $4}') && filename="wps-office_${version}.XA_amd64.deb" && url="https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/${build_number}/${filename}" && user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" && echo "Downloading $filename from $url..." && cd ~/Downloads && wget --header="User-Agent: $user_agent" -O "$filename" "$url" && sudo apt install -y ~/Downloads/wps-*.deb)
+  custom: "page_content=$(wget -qO- https://www.wps.com/whatsnew/linux/) && version=$(echo \"$page_content\" | grep -oP '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | head -1) && [ -z \"$version\" ] && echo \"Failed to extract version number.\" && exit 1 || (build_number=$(echo \"$version\" | awk -F. '{print $4}') && filename=\"wps-office_${version}.XA_amd64.deb\" && url=\"https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/${build_number}/${filename}\" && user_agent=\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36\" && echo \"Downloading $filename from $url...\" && cd ~/Downloads && wget --header=\"User-Agent: $user_agent\" -O \"$filename\" \"$url\" && sudo apt install -y ~/Downloads/wps-*.deb)"
   uninstall: sudo apt remove -y wps-office
+  comment: "As one of the best Microsoft Office alternatives of 2021, WPS Office is fully compatible with main Linux distributions"
   aliases: [wps-office]
-  comment: As one of the best Microsoft Office alternatives of 2021, WPS Office is fully compatible with main Linux distributions
-  
+
 vlc:
   snap: vlc
   flatpak: org.videolan.VLC
-  aliases: [videoplayer, videolan]
   comment: The most popular video player
+  aliases: [videoplayer, videolan]
 
 qbittorrent:
   flatpak: org.qbittorrent.qBittorrent
-  aliases: [qbit, torrent]
   comment: An open-source Bittorrent client
+  aliases: [qbit, torrent]
 
 ubports:
   snap: ubports-installer
-  aliases: [ubports-installer, ubuntu-touch]
   comment: Installer for Ubuntu touch
+  aliases: [ubports-installer, ubuntu-touch]
 
 portmaster:
-  custom: curl -fsSL https://updates.safing.io/latest/linux_all/packages/install.sh | sudo bash && sudo wget https://raw.githubusercontent.com/safing/portmaster-packaging/master/linux/portmaster.desktop  -O /usr/local/share/applications/portmaster.desktop && sudo wget https://raw.githubusercontent.com/safing/portmaster-packaging/master/linux/portmaster_logo.png -O /usr/share/pixmaps/portmaster.png
-  uninstall: wget https://updates.safing.io/latest/linux_all/packages/install.sh && sudo bash install.sh --uninstall && rm -f install.sh
+  custom: "curl -fsSL https://updates.safing.io/latest/linux_all/packages/install.sh | sudo bash && sudo wget https://raw.githubusercontent.com/safing/portmaster-packaging/master/linux/portmaster.desktop  -O /usr/local/share/applications/portmaster.desktop && sudo wget https://raw.githubusercontent.com/safing/portmaster-packaging/master/linux/portmaster_logo.png -O /usr/share/pixmaps/portmaster.png"
+  uninstall: "wget https://updates.safing.io/latest/linux_all/packages/install.sh && sudo bash install.sh --uninstall && rm -f install.sh"
+  comment: A free and open-source application firewall that does the heavy lifting for you
   aliases: [port-master]
-  comment:  A free and open-source application firewall that does the heavy lifting for you
 
 aws-cli:
-  snap: aws-cli
+  custom: snap install aws-cli --classic
+  uninstall: snap remove aws-cli
   comment: Universal Command Line Interface for Amazon Web Services
 
 amazon-ssm-agent:
-  snap: amazon-ssm-agent
+  custom: snap install amazon-ssm-agent --classic
+  uninstall: snap remove amazon-ssm-agent
   comment: Agent to enable remote management of your Amazon EC2 instance configuration
 
 awswickrgov:
@@ -289,7 +291,8 @@ awswickrgov:
   comment: Secure Messaging for Teams
 
 ant:
-  snap: ant
+  custom: snap install ant --classic
+  uninstall: snap remove ant
   comment: Apache Ant
 
 aws-iot-greengrass:
@@ -298,7 +301,7 @@ aws-iot-greengrass:
 
 adguard-home:
   snap: adguard-home
-  comment: Network-wide ads & trackers blocking DNS server
+  comment: "Network-wide ads & trackers blocking DNS server"
 
 artikulate:
   snap: artikulate
@@ -327,8 +330,8 @@ bitwarden:
 brave:
   snap: brave
   flatpak: com.brave.Browser
+  comment: "Block ads. Save data. And get way faster webpages. Just by switching your browser"
   aliases: [brave-browser]
-  comment: Block ads. Save data. And get way faster webpages. Just by switching your browser
 
 blender:
   custom: snap install blender --classic
@@ -341,11 +344,11 @@ bw:
 
 blix:
   snap: blix
-  comment: Blix is the ultimate communication tool for your team. It combines email, chat, calendar and contacts in one single app.
+  comment: "Blix is the ultimate communication tool for your team. It combines email, chat, calendar and contacts in one single app."
 
 bluemail:
   snap: bluemail
-  comment: BlueMail is a free, secure, universal email app, capable of managing an unlimited number of mail accounts
+  comment: "BlueMail is a free, secure, universal email app, capable of managing an unlimited number of mail accounts"
 
 branch-diff:
   snap: branch-diff
@@ -354,24 +357,24 @@ branch-diff:
 bcc:
   snap: bcc
   comment: BPF Compiler Collection (BCC)
-  
+
 bomber:
   snap: bomber
   flatpak: org.kde.bomber
   comment: Arcade Bombing Game
-  
+
 bluez:
   snap: bluez
   comment: Bluetooth tools and daemons
 
 blinken:
   snap: blinken
-  flatpak: org.kde.blinken  
+  flatpak: org.kde.blinken
   comment: Memory Enhancement Game
 
 bovo:
   snap: bovo
-  flatpak: org.kde.bovo  
+  flatpak: org.kde.bovo
   comment: "Five in a row" board game
 
 busybox-static:
@@ -443,19 +446,23 @@ chromium-ffmpeg:
   comment: FFmpeg codecs (free and proprietary) for use by third-party browser snaps
 
 certbot:
-  snap: certbot
+  custom: snap install certbot --classic
+  uninstall: snap remove certbot
   comment: Automatically configure HTTPS using Let's Encrypt
 
 cmake:
-  snap: cmake
+  custom: snap install cmake --classic
+  uninstall: snap remove cmake
   comment: Cross-platform software build system generator
 
 crystal:
-  snap: crystal
+  custom: snap install crystal --classic
+  uninstall: snap remove crystal
   comment: A language for humans and computers
 
 charmcraft:
-  snap: charmcraft
+  custom: snap install charmcraft --classic
+  uninstall: snap remove charmcraft
   comment: The charming tool
 
 collabee:
@@ -483,7 +490,8 @@ charmed-openstack-exporter:
   comment: OpenStack Exporter for Prometheus
 
 charm:
-  snap: charm
+  custom: snap install charm --classic
+  uninstall: snap remove charm
   comment: charm-tools
 
 chisel:
@@ -553,12 +561,12 @@ certbot-dns-gehirn:
 cloudstats:
   snap: cloudstats
   comment: provide and report cloudstats via prometheus-exporter
-  
+
 vscode:
   custom: snap install code --classic
   uninstall: snap remove code
   aliases: [visualstudio, visual-studio, visual-studio-code]
-  
+
 candid:
   snap: candid
   comment: Candid Identity Manager
@@ -574,6 +582,11 @@ doctl:
 domotzpro-agent-publicstore:
   snap: domotzpro-agent-publicstore
   comment: Domotz Network monitoring
+
+dotnet:
+  custom: snap install dotnet --classic
+  uninstall: snap remove dotnet
+  comment: .NET CLI tools, SDK, and Runtime
 
 dotnet-runtime-21:
   snap: dotnet-runtime-21
@@ -593,11 +606,12 @@ disk-space-saver:
 
 digikam:
   snap: digikam
-  flatpak: org.kde.digikam  
+  flatpak: org.kde.digikam
   comment: Photo Management Program
 
 datagrip:
-  snap: datagrip
+  custom: snap install datagrip --classic
+  uninstall: snap remove datagrip
   comment: DataGrip
 
 dcgm:
@@ -609,7 +623,8 @@ data-science-stack:
   comment: ML environments at ease on your AI workstation
 
 devpack-for-spring:
-  snap: devpack-for-spring
+  custom: snap install devpack-for-spring --classic
+  uninstall: snap remove devpack-for-spring
   comment: Development tools for Spring® projects
 
 dnslookup:
@@ -617,15 +632,17 @@ dnslookup:
   comment: Simple command-line tool to make DNS lookups using any protocol.
 
 dotnet-sdk:
-  snap: dotnet-sdk
+  custom: snap install dotnet-sdk --classic
+  uninstall: snap remove dotnet-sdk
   comment: Develop high performance applications in less time, on any platform.
 
 desktop-security-center:
   snap: desktop-security-center
-  comment: The desktop Security Center will provide easy-to-access security features in Ubuntu.
+  comment: "The desktop Security Center will provide easy-to-access security features in Ubuntu."
 
 dataspell:
-  snap: dataspell
+  custom: snap install dataspell --classic
+  uninstall: snap remove dataspell
   comment: DataSpell
 
 drawio:
@@ -645,7 +662,8 @@ devpack-for-spring-manifest:
   comment: The list of all available content snaps for Spring®
 
 eclipse:
-  snap: eclipse
+  custom: snap install eclipse --classic
+  uninstall: snap remove eclipse
   comment: Extensible Tool Platform and Java IDE
 
 etcd:
@@ -661,7 +679,8 @@ eog:
   comment: Eye of GNOME Image Viewer
 
 eks:
-  snap: eks
+  custom: snap install eks --classic
+  uninstall: snap remove eks
   comment: Amazon EKS Distro (EKS-D) snap
 
 easy-file-organizer:
@@ -670,7 +689,7 @@ easy-file-organizer:
 
 elisa:
   snap: elisa
-  flatpak: org.kde.elisa  
+  flatpak: org.kde.elisa
   comment: Play local music and listen to online radio
 
 enterprise-store:
@@ -690,13 +709,14 @@ flutter-gallery:
   comment: Flutter Gallery
 
 flutter:
-  snap: flutter
+  custom: snap install flutter --classic
+  uninstall: snap remove flutter
   comment: Flutter SDK
 
 firefox:
   snap: firefox
   flatpak: org.mozilla.firefox
-  comment: Fast, Private & Safe Web Browser
+  comment: "Fast, Private & Safe Web Browser"
 
 full-discography:
   snap: full-discography
@@ -704,7 +724,7 @@ full-discography:
 
 falkon:
   snap: falkon
-  flatpak: org.kde.falkon  
+  flatpak: org.kde.falkon
   comment: Web Browser
 
 filmographer:
@@ -713,7 +733,7 @@ filmographer:
 
 francis:
   snap: francis
-  flatpak: org.kde.francis  
+  flatpak: org.kde.francis
   comment: Track your time
 
 foxglove-bridge:
@@ -721,16 +741,18 @@ foxglove-bridge:
   comment: Foxglove WebSocket bridge for ROS and ROS 2.
 
 filelight:
-  snap: filelight
-  comment: View disk usage information
+  flatpak: org.kde.filelight
+  comment: Show disk usage and delete unused files
 
 google-cloud-sdk:
-  snap: google-cloud-sdk
+  custom: snap install google-cloud-sdk --classic
+  uninstall: snap remove google-cloud-sdk
   comment: Google Cloud SDK
 
 gitkraken:
-  snap: gitkraken
-  comment: For repo management, in-app code editing & issue tracking.
+  custom: snap install gitkraken --classic
+  uninstall: snap remove gitkraken
+  comment: "For repo management, in-app code editing & issue tracking."
 
 gluu-server:
   snap: gluu-server
@@ -741,11 +763,13 @@ gitkraken-cli:
   comment: Official CLI for GitKraken
 
 google-cloud-cli:
-  snap: google-cloud-cli
+  custom: snap install google-cloud-cli --classic
+  uninstall: snap remove google-cloud-cli
   comment: Google Cloud CLI
 
 golangci-lint:
-  snap: golangci-lint
+  custom: snap install golangci-lint --classic
+  uninstall: snap remove golangci-lint
   comment: Fast linters runner for Go
 
 gnome-system-monitor:
@@ -761,7 +785,8 @@ gnome-logs:
   comment: A log viewer for the systemd journal
 
 go:
-  snap: go
+  custom: snap install go --classic
+  uninstall: snap remove go
   comment: The Go programming language
 
 graalvm-jdk:
@@ -773,12 +798,13 @@ ghostscript-printer-app:
   comment: Ghostscript Printer Application
 
 goland:
-  snap: goland
+  custom: snap install goland --classic
+  uninstall: snap remove goland
   comment: The Complete IDE Crafted for Gophers
 
 gnome-sudoku:
-  snap: gnome-sudoku
-  comment: Test your logic skills in this number grid puzzle
+  flatpak: org.gnome.Sudoku
+  comment: Test yourself in the classic puzzle
 
 gutenprint-printer-app:
   snap: gutenprint-printer-app
@@ -798,26 +824,27 @@ gnome-clocks:
 
 gazebo:
   snap: gazebo
-  comment: Iterate quickly on design concepts and control strategies with Ignition's rich suite of tools, libraries, and cloud services.
+  comment: "Iterate quickly on design concepts and control strategies with Ignition's rich suite of tools, libraries, and cloud services."
 
 gnome-contacts:
   snap: gnome-contacts
   comment: A contacts manager for GNOME
 
 gcompris:
-  snap: gcompris
-  comment: Multi-Activity Educational game for children 2 to 10
+  flatpak: org.kde.gcompris
+  comment: Educational game for children
 
 gnome-characters:
   snap: gnome-characters
   comment: A character map application
 
 groovy:
-  snap: groovy
-  comment: The Apache Groovy programming language - A multi-faceted language for the Java platform
+  custom: snap install groovy --classic
+  uninstall: snap remove groovy
+  comment: "The Apache Groovy programming language - A multi-faceted language for the Java platform"
 
 granatier:
-  snap: granatier
+  flatpak: org.kde.granatier
   comment: Bomberman clone
 
 ghostwriter:
@@ -836,8 +863,8 @@ gwenview:
   comment: Image Viewer
 
 glaxnimate:
-  snap: glaxnimate
-  comment: Vector animation program
+  flatpak: org.mattbas.Glaxnimate
+  comment: Vector Animation Editor
 
 governor-broker:
   snap: governor-broker
@@ -845,7 +872,7 @@ governor-broker:
 
 gtk-theme-breeze:
   snap: gtk-theme-breeze
-  comment: Breeze is the default theme for KDE plasma;
+  comment: "Breeze is the default theme for KDE plasma;"
 
 gtk2-common-themes:
   snap: gtk2-common-themes
@@ -856,7 +883,8 @@ graphics-test-tools:
   comment: Tools helpful in debugging graphics stacks
 
 heroku:
-  snap: heroku
+  custom: snap install heroku --classic
+  uninstall: snap remove heroku
   comment: CLI client for Heroku
 
 husarion-webui:
@@ -909,7 +937,7 @@ hypernotes:
 
 haruna:
   snap: haruna
-  flatpak: org.kde.haruna  
+  flatpak: org.kde.haruna
   comment: Media player
 
 headscale:
@@ -922,18 +950,20 @@ influx:
 
 irccloud:
   snap: irccloud
-  comment: An IRC client with a future. Stay connected, chat from anywhere, and never miss a message
+  comment: "An IRC client with a future. Stay connected, chat from anywhere, and never miss a message"
 
 influxdb:
   snap: influxdb
   comment: Scalable datastore for metrics, events, and real-time analytics.
 
 intellij-idea-community:
-  snap: intellij-idea-community
+  custom: snap install intellij-idea-community --classic
+  uninstall: snap remove intellij-idea-community
   comment: The IDE for Java and Kotlin enthusiasts
 
 intellij-idea-ultimate:
-  snap: intellij-idea-ultimate
+  custom: snap install intellij-idea-ultimate --classic
+  uninstall: snap remove intellij-idea-ultimate
   comment: IntelliJ IDEA – The IDE for Professional Development in Java and Kotlin
 
 iot-kernel:
@@ -946,14 +976,15 @@ ipp-usb:
 
 intel-npu-driver:
   snap: intel-npu-driver
-  comment: User Mode Driver with Compiler Software for the Intel® NPU (Neural Processing Unit) Accelerator
+  comment: "User Mode Driver with Compiler Software for the Intel® NPU (Neural Processing Unit) Accelerator"
 
 icon-theme-breeze:
   snap: icon-theme-breeze
-  comment: Breeze is the default theme for KDE plasma;
+  comment: "Breeze is the default theme for KDE plasma;"
 
 julia:
-  snap: julia
+  custom: snap install julia --classic
+  uninstall: snap remove julia
   comment: The Julia programming language
 
 juju:
@@ -965,15 +996,17 @@ journey-desktop:
   comment: Capture Every Moment with Journey. Your Trusted Journaling and Diary Companion.
 
 jobbergate-agent:
-  snap: jobbergate-agent
+  custom: snap install jobbergate-agent --classic
+  uninstall: snap remove jobbergate-agent
   comment: The Jobbergate Agent snap
 
 jupyterlab-desktop:
-  snap: jupyterlab-desktop
+  custom: snap install jupyterlab-desktop --classic
+  uninstall: snap remove jupyterlab-desktop
   comment: JupyterLab
 
 juk:
-  snap: juk
+  flatpak: org.kde.juk
   comment: Music Player
 
 jaas:
@@ -981,7 +1014,8 @@ jaas:
   comment: JAAS Plugin
 
 joule-expansion:
-  snap: joule-expansion
+  custom: snap install joule-expansion --classic
+  uninstall: snap remove joule-expansion
   comment: Automate the scaling of applications inside cloud scale groups.
 
 juju-backup-all:
@@ -989,7 +1023,8 @@ juju-backup-all:
   comment: Tool for backing up charms, local juju configs, and juju controllers.
 
 kata-containers:
-  snap: kata-containers
+  custom: snap install kata-containers --classic
+  uninstall: snap remove kata-containers
   comment: Build lightweight VMs that seamlessly plug into the containers ecosystem
 
 krita:
@@ -998,11 +1033,12 @@ krita:
   comment: Digital Painting, Creative Freedom
 
 kstars:
-  snap: kstars
-  comment: KStars is a desktop planetarium for amateur and professional astronomers.
+  flatpak: org.kde.kstars
+  comment: Desktop Planetarium
 
 keepalived:
-  snap: keepalived
+  custom: snap install keepalived --classic
+  uninstall: snap remove keepalived
   comment: High availability VRRP/BFD and load-balancing for Linux
 
 kolourpaint:
@@ -1011,16 +1047,16 @@ kolourpaint:
   comment: Paint Program
 
 kturtle:
-  snap: kturtle
+  flatpak: org.kde.kturtle
   comment: Educational Programming Environment
 
 kmplot:
-  snap: kmplot
+  flatpak: org.kde.kmplot
   comment: Mathematical Function Plotter
 
 klettres:
-  snap: klettres
-  comment: a KDE program to learn the alphabet
+  flatpak: org.kde.klettres
+  comment: Learn The Alphabet
 
 konversation:
   snap: konversation
@@ -1028,59 +1064,59 @@ konversation:
   comment: IRC client
 
 kgeography:
-  snap: kgeography
-  comment: A Geography Learning Program
+  flatpak: org.kde.kgeography
+  comment: Geography learning tool
 
 kbruch:
-  snap: kbruch
+  flatpak: org.kde.kbruch
   comment: Exercise Fractions
 
 kiten:
-  snap: kiten
+  flatpak: org.kde.kiten
   comment: Japanese Reference and Study Tool
 
 kcalc:
-  snap: kcalc
-  comment: Scientific Calculator
+  flatpak: org.kde.kcalc
+  comment: Scientific calculator
 
 kalzium:
-  snap: kalzium
-  comment: KDE Periodic Table of Elements
+  flatpak: org.kde.kalzium
+  comment: Periodic Table of Elements
 
 kalgebra:
-  snap: kalgebra
-  comment: algebraic graphing calculator
+  flatpak: org.kde.kalgebra
+  comment: Graph Calculator
 
 ksudoku:
-  snap: ksudoku
-  comment: KSudoku, Sudoku game & more by KDE
+  flatpak: org.kde.ksudoku
+  comment: Complete a numeric puzzle with the numbers from one to nine
 
 kgoldrunner:
-  snap: kgoldrunner
-  comment: A game of action and puzzle-solving
+  flatpak: org.kde.kgoldrunner
+  comment: Hunt Gold, Dodge Enemies and Solve Puzzles
 
 kate:
-  snap: kate
-  comment: KDE Advanced Text Editor
+  flatpak: org.kde.kate
+  comment: Advanced text editor
 
 kapman:
-  snap: kapman
-  comment: Eat pills escaping ghosts
+  flatpak: org.kde.kapman
+  comment: Pac-Man Clone
 
 kfind:
-  snap: kfind
+  flatpak: org.kde.kfind
   comment: Find Files/Folders
 
 kigo:
-  snap: kigo
+  flatpak: org.kde.kigo
   comment: Go Board Game
 
 kwave:
-  snap: kwave
-  comment: Kwave is a sound editor that can record to, play, open, and edit many file formats.
+  flatpak: org.kde.kwave
+  comment: Sound editor
 
 kcharselect:
-  snap: kcharselect
+  flatpak: org.kde.kcharselect
   comment: Character Selector
 
 kdf:
@@ -1088,39 +1124,39 @@ kdf:
   comment: disk information utility
 
 ktuberling:
-  snap: ktuberling
+  flatpak: org.kde.ktuberling
   comment: A simple constructor game suitable for children and adults alike
 
 kget:
-  snap: kget
+  flatpak: org.kde.kget
   comment: Download manager
 
 kongress:
-  snap: kongress
+  flatpak: org.kde.kongress
   comment: Conference companion
 
 knights:
-  snap: knights
+  flatpak: org.kde.knights
   comment: Chess game
 
 kanagram:
-  snap: kanagram
+  flatpak: org.kde.kanagram
   comment: Letter Order Game
 
 ksnakeduel:
-  snap: ksnakeduel
+  flatpak: org.kde.ksnakeduel
   comment: Tron-like Game
 
 killbots:
-  snap: killbots
-  comment: port of the classic BSD console game robots
+  flatpak: org.kde.killbots
+  comment: Outsmart the killer robots to win
 
 kwordquiz:
   snap: kwordquiz
   comment: A flashcard and vocabulary learning program
 
 kcachegrind:
-  snap: kcachegrind
+  flatpak: org.kde.kcachegrind
   comment: Profiler Frontend
 
 ksystemlog:
@@ -1128,31 +1164,31 @@ ksystemlog:
   comment: system log viewer
 
 khangman:
-  snap: khangman
+  flatpak: org.kde.khangman
   comment: Hangman Game
 
 ksirk:
-  snap: ksirk
-  comment: Risk strategy game
+  flatpak: org.kde.ksirk
+  comment: World Domination Strategy Game
 
 kolf:
-  snap: kolf
+  flatpak: org.kde.kolf
   comment: Miniature Golf
 
 ksquares:
-  snap: ksquares
+  flatpak: org.kde.ksquares
   comment: Connect the dots to create squares
 
 kdevelop:
-  snap: kdevelop
+  flatpak: org.kde.kdevelop
   comment: Featureful, plugin-extensible IDE for C/C++ and other programming languages
 
 konquest:
-  snap: konquest
+  flatpak: org.kde.konquest
   comment: Galactic Strategy Game
 
 kshisen:
-  snap: kshisen
+  flatpak: org.kde.kshisen
   comment: Shisen-Sho Mahjongg-like Tile Game
 
 kpat:
@@ -1164,43 +1200,43 @@ kbackup:
   comment: Create backups as .tar files to a local folder or remote URL
 
 kruler:
-  snap: kruler
+  flatpak: org.kde.kruler
   comment: Screen Ruler
 
 kfourinline:
-  snap: kfourinline
-  comment: Connect Four game
+  flatpak: org.kde.kfourinline
+  comment: KFourInLine is a four-in-a-row game by KDE
 
 kcolorchooser:
-  snap: kcolorchooser
-  comment: color chooser and palette editor
+  flatpak: org.kde.kcolorchooser
+  comment: Color selector and palette editor
 
 klickety:
-  snap: klickety
-  comment: SameGame puzzle game
+  flatpak: org.kde.klickety
+  comment: An adaptation of the "clickomania" game.
 
 kdiamond:
-  snap: kdiamond
-  comment: three-in-a-row game
+  flatpak: org.kde.kdiamond
+  comment: KDiamond is a three-in-a-row game by KDE
 
 kontrast:
-  snap: kontrast
+  flatpak: org.kde.kontrast
   comment: Check color contrast
 
 kmahjongg:
-  snap: kmahjongg
+  flatpak: org.kde.kmahjongg
   comment: Mahjong Solitaire
 
 krdc:
-  snap: krdc
-  comment: Remote Desktop Connection client
+  flatpak: org.kde.krdc
+  comment: Connect with RDP or VNC to another computer
 
 kspaceduel:
   snap: kspaceduel
   comment: Space Arcade Game
 
 kteatime:
-  snap: kteatime
+  flatpak: org.kde.kteatime
   comment: Tea Cooker
 
 klines:
@@ -1208,36 +1244,35 @@ klines:
   comment: color lines game
 
 keysmith:
-  snap: keysmith
+  flatpak: org.kde.keysmith
   comment: Two-factor code generator for Plasma Mobile and Desktop
 
 kubrick:
-  snap: kubrick
-  comment: A 3-D game based on Rubik's Cube
+  flatpak: org.kde.kubrick
+  comment: 3-D Game based on Rubik's Cube
 
 kblackbox:
-  snap: kblackbox
-  flatpak: org.kde.kblackbo  
+  flatpak: org.kde.kblackbox
   comment: Blackbox Logic Game
 
 knetwalk:
-  snap: knetwalk
-  comment: wire puzzle game
+  flatpak: org.kde.knetwalk
+  comment: KNetWalk is a game for system administrators
 
 kalm:
-  snap: kalm
+  flatpak: org.kde.kalm
   comment: Breathing techniques
 
 kreversi:
-  snap: kreversi
+  flatpak: org.kde.kreversi
   comment: Reversi Board Game
 
 kimagemapeditor:
-  snap: kimagemapeditor
+  flatpak: org.kde.kimagemapeditor
   comment: HTML Image Map Editor
 
 katomic:
-  snap: katomic
+  flatpak: org.kde.katomic
   comment: Sokoban-like Logic Game
 
 kdenlive:
@@ -1246,12 +1281,12 @@ kdenlive:
   comment: Video editor
 
 kasts:
-  snap: kasts
+  flatpak: org.kde.kasts
   comment: Podcast application
 
 kbreakout:
-  snap: kbreakout
-  comment: ball and paddle game
+  flatpak: org.kde.kbreakout
+  comment: KBreakOut is a Breakout-like game by KDE
 
 knavalbattle:
   snap: knavalbattle
@@ -1262,28 +1297,28 @@ kdebugsettings:
   comment: Set which debug messages are shown
 
 kblocks:
-  snap: kblocks
+  flatpak: org.kde.kblocks
   comment: Falling Blocks Game
 
 kiriki:
-  snap: kiriki
+  flatpak: org.kde.kiriki
   comment: Yahtzee-like Dice Game
 
 kompare:
-  snap: kompare
+  flatpak: org.kde.kompare
   comment: Diff/Patch Frontend
 
 kjumpingcube:
-  snap: kjumpingcube
-  comment: simple tactical game
+  flatpak: org.kde.kjumpingcube
+  comment: Territory Capture Game
 
 kollision:
-  snap: kollision
+  flatpak: org.kde.kollision
   comment: Casual ball game
 
 kbounce:
-  snap: kbounce
-  comment: Jezzball arcade game
+  flatpak: org.kde.kbounce
+  comment: KBounce is a single player arcade game with the elements of puzzle
 
 kclock:
   snap: kclock
@@ -1307,7 +1342,7 @@ krecorder:
 
 konqueror:
   snap: konqueror
-  comment: KDE File Manager & Web Browser
+  comment: "KDE File Manager & Web Browser"
 
 ktorrent:
   snap: ktorrent
@@ -1333,7 +1368,7 @@ kjournald:
 
 librepcb:
   snap: librepcb
-  flatpak: org.librepcb.LibrePCB  
+  flatpak: org.librepcb.LibrePCB
   comment: EDA software to develop printed circuit boards
 
 lenovo-wwan-dpr:
@@ -1350,7 +1385,7 @@ libreoffice:
   comment: The LibreOffice productivity suite
 
 labplot:
-  snap: labplot
+  flatpak: org.kde.labplot2
   comment: Interactive Data Visualization and Analysis
 
 large-files-finder:
@@ -1370,15 +1405,16 @@ libertine:
   comment: Libertine suite
 
 lokalize:
-  snap: lokalize
+  flatpak: org.kde.lokalize
   comment: Computer-aided translation system
 
 lskat:
-  snap: lskat
+  flatpak: org.kde.lskat
   comment: German card game Skat for two players
 
 license-manager-agent:
-  snap: license-manager-agent
+  custom: snap install license-manager-agent --classic
+  uninstall: snap remove license-manager-agent
   comment: The License Manager Agent snap
 
 linuxptp:
@@ -1418,7 +1454,8 @@ nginx-asg-sync:
   comment: NGINX Plus Integration with Cloud Autoscaling
 
 node:
-  snap: node
+  custom: snap install node --classic
+  uninstall: snap remove node
   comment: Official Node.js Runtime
 
 network-manager:
@@ -1435,7 +1472,8 @@ neochat:
   comment: Chat on Matrix
 
 netbeans:
-  snap: netbeans
+  custom: snap install netbeans --classic
+  uninstall: snap remove netbeans
   comment: Apache NetBeans IDE
 
 node-cert-exporter:
@@ -1479,11 +1517,13 @@ openvino-ai-plugins-gimp:
   comment: Intel's OpenVINO™ AI Plugins for GIMP
 
 o3de:
-  snap: o3de
-  comment: O3DE is an open-source, cross-platform, real time 3D engine that you can use to create high performance interactive experiences
+  custom: snap install o3de --classic
+  uninstall: snap remove o3de
+  comment: "O3DE is an open-source, cross-platform, real time 3D engine that you can use to create high performance interactive experiences"
 
 opentofu:
-  snap: opentofu
+  custom: snap install opentofu --classic
+  uninstall: snap remove opentofu
   comment: OpenTofu lets you declaratively manage your cloud infrastructure.
 
 octave:
@@ -1512,7 +1552,8 @@ opensearch:
   comment: OpenSearch makes it easy to ingest, search, visualize, and analyze your data.
 
 octavia-diskimage-retrofit:
-  snap: octavia-diskimage-retrofit
+  custom: snap install octavia-diskimage-retrofit --classic
+  uninstall: snap remove octavia-diskimage-retrofit
   comment: Turn stock cloud image into Octavia Amphora image
 
 openthread-border-router:
@@ -1520,8 +1561,8 @@ openthread-border-router:
   comment: OpenThread Border Router
 
 openchrom:
-  snap: openchrom
-  comment: Visualization and Analysis of mass spectrometric and chromatographic data.
+  flatpak: com.lablicate.OpenChrom
+  comment: Chromatography Data System
 
 openstackclients:
   snap: openstackclients
@@ -1544,7 +1585,8 @@ postman:
   comment: API Development Environment
 
 parca-agent:
-  snap: parca-agent
+  custom: snap install parca-agent --classic
+  uninstall: snap remove parca-agent
   comment: Parca Agent is an always-on sampling profiler that uses eBPF
 
 plex-desktop:
@@ -1552,27 +1594,31 @@ plex-desktop:
   comment: Plex client for Linux
 
 plex-htpc:
-  snap: plex-htpc
-  comment: Plex HTPC client for Linux
+  flatpak: tv.plex.PlexHTPC
+  comment: Plex HTPC client for the big screen
 
 parca:
   snap: parca
   comment: Parca continuous profiling tool
 
 pycharm-community:
-  snap: pycharm-community
+  custom: snap install pycharm-community --classic
+  uninstall: snap remove pycharm-community
   aliases: [pycharmca, pycharm-ca, pycharm]
 
 phpstorm:
-  snap: phpstorm
+  custom: snap install phpstorm --classic
+  uninstall: snap remove phpstorm
   comment: PhpStorm
 
 powershell:
-  snap: powershell
+  custom: snap install powershell --classic
+  uninstall: snap remove powershell
   comment: PowerShell for every system!
 
 pycharm-professional:
-  snap: pycharm-professional
+  custom: snap install pycharm-professional --classic
+  uninstall: snap remove pycharm-professional
   comment: PyCharm Professional Edition
 
 prometheus:
@@ -1588,19 +1634,21 @@ picard:
   comment: Picard is the official MusicBrainz audio tagger
 
 parley:
-  snap: parley
-  comment: vocabulary trainer
+  flatpak: org.kde.parley
+  comment: Vocabulary Trainer
 
 pycharm-educational:
-  snap: pycharm-educational
-  comment: Easy and Professional Tool to Learn & Teach Programming with Python
+  custom: snap install pycharm-educational --classic
+  uninstall: snap remove pycharm-educational
+  comment: "Easy and Professional Tool to Learn & Teach Programming with Python"
 
 ps-printer-app:
   snap: ps-printer-app
   comment: PostScript Printer Application
 
 powershell-preview:
-  snap: powershell-preview
+  custom: snap install powershell-preview --classic
+  uninstall: snap remove powershell-preview
   comment: PowerShell for every system!
 
 prometheus-alertmanager:
@@ -1644,7 +1692,7 @@ postgresql94:
   comment: PostgreSQL is a powerful, open source object-relational database system.
 
 palapeli:
-  snap: palapeli
+  flatpak: org.kde.palapeli
   comment: Jigsaw puzzle game
 
 pi2:
@@ -1652,7 +1700,7 @@ pi2:
   comment: Raspberry Pi 2 support package
 
 picmi:
-  snap: picmi
+  flatpak: org.kde.picmi
   comment: Puzzle game based on number logic
 
 pc:
@@ -1718,15 +1766,16 @@ rocketchat-server:
 remmina:
   snap: remmina
   flatpak: org.remmina.Remmina
-  aliases: [remina]
   comment: Remote Desktop Client
-  
+  aliases: [remina]
+
 rocketchat-desktop:
   snap: rocketchat-desktop
   aliases: [rocketchat, rocket-chat]
 
 ruby:
-  snap: ruby
+  custom: snap install ruby --classic
+  uninstall: snap remove ruby
   comment: Interpreter for the Ruby programming language
 
 rambox:
@@ -1742,11 +1791,13 @@ ros2-cli:
   comment: ROS 2 command line interface tools
 
 rubymine:
-  snap: rubymine
+  custom: snap install rubymine --classic
+  uninstall: snap remove rubymine
   comment: The Most Intelligent Ruby and Rails IDE
 
 rustup:
-  snap: rustup
+  custom: snap install rustup --classic
+  uninstall: snap remove rustup
   comment: The Rust Language installer
 
 rerun:
@@ -1754,7 +1805,8 @@ rerun:
   comment: Visualize streams of multimodal data
 
 rustrover:
-  snap: rustrover
+  custom: snap install rustrover --classic
+  uninstall: snap remove rustrover
   comment: RustRover
 
 rosbot-xl:
@@ -1846,7 +1898,7 @@ ros-snapd:
   comment: A ROS Node to start and stop snap services.
 
 ruqola:
-  snap: ruqola
+  flatpak: org.kde.ruqola
   comment: Rocket Chat Client
 
 rosbot-xl-teleop:
@@ -1866,7 +1918,8 @@ review-tools:
   comment: Review tools for snappy
 
 rockcraft:
-  snap: rockcraft
+  custom: snap install rockcraft --classic
+  uninstall: snap remove rockcraft
   comment: A craft like experience to create rocks
 
 ros-esm-dependencies-diff-generator:
@@ -1890,7 +1943,8 @@ streamsheets:
   comment: A no-code platform for processing streaming data in a spreadsheet interface
 
 stackit:
-  snap: stackit
+  custom: snap install stackit --classic
+  uninstall: snap remove stackit
   comment: A command-line interface to manage STACKIT resources.
 
 telegram-desktop:
@@ -1927,23 +1981,25 @@ uefi-fw-tools:
 
 vectr:
   snap: vectr
-  comment: Vectr is a free graphics editor used to create vector graphics easily and intuitively.
+  comment: "Vectr is a free graphics editor used to create vector graphics easily and intuitively."
 
 vivaldi:
   snap: vivaldi
+  comment: "Browse the web with desktop-style tabs, block ads and trackers, and sync data between devices safely"
   aliases: [vivaldi-browser]
-  comment: Browse the web with desktop-style tabs, block ads and trackers, and sync data between devices safely
 
 vault:
   snap: vault
   comment: Vault is a tool for securely accessing secrets.
 
 vantage-agent:
-  snap: vantage-agent
+  custom: snap install vantage-agent --classic
+  uninstall: snap remove vantage-agent
   comment: The Vantage Agent snap
 
 webstorm:
-  snap: webstorm
+  custom: snap install webstorm --classic
+  uninstall: snap remove webstorm
   comment: WebStorm
 
 wireless-tools:
@@ -1951,7 +2007,8 @@ wireless-tools:
   comment: Tools for manipulating Linux Wireless Extensions
 
 waveterm:
-  snap: waveterm
+  custom: snap install waveterm --classic
+  uninstall: snap remove waveterm
   comment: An open-source, cross-platform terminal for seamless workflows
 
 webfortran:
@@ -2100,7 +2157,7 @@ feeddeck:
 
 geteduroam:
   flatpak: app.eduroam.geteduroam
-  comment: A geteduroam client for Linux. Geteduroam simplifies the process of connecting to eduroam
+  comment: "A geteduroam client for Linux. Geteduroam simplifies the process of connecting to eduroam"
 
 multiplication-puzzle:
   flatpak: app.drey.MultiplicationPuzzle
@@ -2132,8 +2189,8 @@ bluebubbles:
 
 audio-player:
   flatpak: org.gnome.Decibels
-  aliases: [decibels]
   comment: Play audio files
+  aliases: [decibels]
 
 acronym-decoder:
   flatpak: net.zdechov.app.AcronymDecoder
@@ -2149,7 +2206,7 @@ story-architect-starc:
 
 armcord:
   flatpak: xyz.armcord.ArmCord
-  comment: ArmCord is a custom client designed to enhance your Discord experience while keeping everything lightweight.
+  comment: "ArmCord is a custom client designed to enhance your Discord experience while keeping everything lightweight."
 
 little-adventure:
   flatpak: org.dupot.littleadventure
@@ -2233,7 +2290,7 @@ alpine-client:
 
 antimicrox:
   flatpak: io.github.antimicrox.antimicrox
-  comment: Graphical program used to map gamepad buttons to keyboard, mouse, scripts and macros
+  comment: "Graphical program used to map gamepad buttons to keyboard, mouse, scripts and macros"
 
 pdf-arranger:
   flatpak: com.github.jeromerobert.pdfarranger
@@ -2253,7 +2310,7 @@ speech-note-amd:
 
 the-force-engine-adjustable-hud-mod:
   flatpak: io.github.theforceengine.tfe.Mod.AdjustableHud
-  comment: A “The Force Engine” built‑in mod enabling adjustable floating HUD elements in “STAR WARS™: Dark Forces”
+  comment: "A “The Force Engine” built‑in mod enabling adjustable floating HUD elements in “STAR WARS™: Dark Forces”"
 
 alpaca-amd-support:
   flatpak: com.jeffser.Alpaca.Plugins.AMD
@@ -2285,7 +2342,7 @@ keyboard-app-builder:
 
 dictionary-app-builder:
   flatpak: org.sil.dictionary-app-builder
-  comment: Build dictionary apps: pics & audio
+  comment: "Build dictionary apps: pics & audio"
 
 disk-usage-analyzer:
   flatpak: org.gnome.baobab
@@ -2361,7 +2418,7 @@ meine-ausweiskopie:
 
 an-adventurer-s-gallantry:
   flatpak: games.zetsubou.AnAdventurersGallantry
-  comment: Disgraced knight-in-training Oren gets a second chance at life as an adventurer in this fantasy visual novel
+  comment: "Disgraced knight-in-training Oren gets a second chance at life as an adventurer in this fantasy visual novel"
 
 ftb-electron-app:
   flatpak: dev.ftb.ftb-app
@@ -2389,7 +2446,7 @@ dragon-s-apprentice:
 
 atlauncher:
   flatpak: com.atlauncher.ATLauncher
-  comment: A launcher for Minecraft which integrates multiple different modpacks to allow you to download and install modpacks easily and quickly.
+  comment: "A launcher for Minecraft which integrates multiple different modpacks to allow you to download and install modpacks easily and quickly."
 
 kde-application-platform:
   flatpak: org.kde.Platform
@@ -2397,7 +2454,7 @@ kde-application-platform:
 
 free-pascal-compiler-and-lazarus:
   flatpak: org.freedesktop.Sdk.Extension.freepascal
-  comment: A compiler for the closely related programming-language dialects Pascal and Object Pascal
+  comment: "A compiler for the closely related programming-language dialects Pascal and Object Pascal"
 
 ocr-albanian:
   flatpak: com.github.unrud.djpdf.OCR.Sqi
@@ -2545,7 +2602,7 @@ albasheer:
 
 ntag-audio-file-tag-editor:
   flatpak: com.github.nrittsti.NTag
-  comment: NTag is a cross platform-graphical tag editor focused on everyday life use cases.
+  comment: "NTag is a cross platform-graphical tag editor focused on everyday life use cases."
 
 aqueducts:
   flatpak: com.endlessnetwork.aqueducts
@@ -2613,7 +2670,7 @@ connections:
 
 retrodeck:
   flatpak: net.retrodeck.retrodeck
-  comment: RetroDECK brings an environment to catalog and play your retro games directly on your Steam Deck
+  comment: "RetroDECK brings an environment to catalog and play your retro games directly on your Steam Deck"
 
 speech-note:
   flatpak: net.mkiol.SpeechNote
@@ -2681,7 +2738,7 @@ clock:
 
 al-quran-tafsir-by-word:
   flatpak: org.gtaf.quran
-  comment: Study the Quran through Word by Word Analysis, Colored Tajweed, Tafsir & Audio
+  comment: "Study the Quran through Word by Word Analysis, Colored Tajweed, Tafsir & Audio"
 
 document-scanner:
   flatpak: org.gnome.SimpleScan
@@ -2696,12 +2753,12 @@ devhelp:
   comment: A developer tool for browsing and searching API documentation
 
 calculator:
-  flatpak: dev.edfloreshz.Calculator
-  comment: Beyond the equation
+  flatpak: com.expidusos.calculator
+  comment: ExpidusOS Calculator
 
 contour-terminal-emulator:
   flatpak: org.contourterminal.Contour
-  comment: Contour is a modern and actually fast, modal, virtual terminal emulator, for everyday use
+  comment: "Contour is a modern and actually fast, modal, virtual terminal emulator, for everyday use"
 
 qmidiplayer:
   flatpak: org.chrisoft.qmidiplayer
@@ -2829,11 +2886,11 @@ ymuse:
 
 4ktube:
   flatpak: com.warlordsoftwares.youtube-downloader-4ktube
-  comment: 4K YouTube Downloader – Download HD YouTube Videos, Playlists, and Music Instantly.
+  comment: "4K YouTube Downloader – Download HD YouTube Videos, Playlists, and Music Instantly."
 
 video-downloader-tube2go:
   flatpak: com.warlordsoftwares.tube2go
-  comment: Download HD videos from YouTube, Instagram, TikTok, Facebook, Twitter, and more with Tube2go. Enjoy fast and easy downloads from a wide range of websites.
+  comment: "Download HD videos from YouTube, Instagram, TikTok, Facebook, Twitter, and more with Tube2go. Enjoy fast and easy downloads from a wide range of websites."
 
 toledo1:
   flatpak: com.toledo1.Toledo1
@@ -2853,15 +2910,15 @@ keyvault:
 
 notesnook:
   flatpak: com.notesnook.Notesnook
-  comment: A fully open source & end-to-end encrypted note taking alternative to Evernote
+  comment: "A fully open source & end-to-end encrypted note taking alternative to Evernote"
 
 media-downloader:
-  flatpak: io.github.mhogomchungu.media-downloader
-  comment: A GUI to yt-dlp, gallery-dl, lux.
+  flatpak: com.markopejic.downloader
+  comment: Web video/audio downloader
 
 ultimate-media-downloader:
   flatpak: com.ktechpit.ultimate-media-downloader
-  comment: Online video & audio downloader for Linux, 1400+ websites support
+  comment: "Online video & audio downloader for Linux, 1400+ websites support"
 
 pulseeffects:
   flatpak: com.github.wwmm.pulseeffects
@@ -2892,8 +2949,8 @@ qprompt:
   comment: Personal teleprompter software for all video creators
 
 tally:
-  flatpak: ca.vlacroix.Tally
-  comment: Count anything
+  flatpak: com.cassidyjames.plausible
+  comment: Dashboard for Plausible Analytics
 
 butler:
   flatpak: com.cassidyjames.butler
@@ -3001,11 +3058,11 @@ ocr-serbian:
 
 ocr-spanish-castilian-old:
   flatpak: com.github.unrud.djpdf.OCR.SpaOld
-  comment: OCR extension for Spanish; Castilian - Old (spa_old)
+  comment: "OCR extension for Spanish; Castilian - Old (spa_old)"
 
 ocr-spanish-castilian:
   flatpak: com.github.unrud.djpdf.OCR.Spa
-  comment: OCR extension for Spanish; Castilian (spa)
+  comment: "OCR extension for Spanish; Castilian (spa)"
 
 ocr-slovenian:
   flatpak: com.github.unrud.djpdf.OCR.Slv
@@ -3021,7 +3078,7 @@ ocr-slovak:
 
 ocr-sinhala-sinhalese:
   flatpak: com.github.unrud.djpdf.OCR.Sin
-  comment: OCR extension for Sinhala; Sinhalese (sin)
+  comment: "OCR extension for Sinhala; Sinhalese (sin)"
 
 ocr-vietnamese-script:
   flatpak: com.github.unrud.djpdf.OCR.ScriptVietnamese
@@ -3137,7 +3194,7 @@ ocr-russian:
 
 ocr-romanian-moldavian-moldovan:
   flatpak: com.github.unrud.djpdf.OCR.Ron
-  comment: OCR extension for Romanian; Moldavian; Moldovan (ron)
+  comment: "OCR extension for Romanian; Moldavian; Moldovan (ron)"
 
 ocr-quechua:
   flatpak: com.github.unrud.djpdf.OCR.Que
@@ -3145,11 +3202,11 @@ ocr-quechua:
 
 ocr-pushto-pashto:
   flatpak: com.github.unrud.djpdf.OCR.Pus
-  comment: OCR extension for Pushto; Pashto (pus)
+  comment: "OCR extension for Pushto; Pashto (pus)"
 
 ocr-panjabi-punjabi:
   flatpak: com.github.unrud.djpdf.OCR.Pan
-  comment: OCR extension for Panjabi; Punjabi (pan)
+  comment: "OCR extension for Panjabi; Punjabi (pan)"
 
 ocr-oriya:
   flatpak: com.github.unrud.djpdf.OCR.Ori
@@ -3285,7 +3342,7 @@ ocr-croatian:
 
 ocr-haitian-haitian-creole:
   flatpak: com.github.unrud.djpdf.OCR.Hat
-  comment: OCR extension for Haitian; Haitian Creole (hat)
+  comment: "OCR extension for Haitian; Haitian Creole (hat)"
 
 ocr-gujarati:
   flatpak: com.github.unrud.djpdf.OCR.Guj
@@ -3381,7 +3438,7 @@ ocr-cebuano:
 
 ocr-catalan-valencian:
   flatpak: com.github.unrud.djpdf.OCR.Cat
-  comment: OCR extension for Catalan; Valencian (cat)
+  comment: "OCR extension for Catalan; Valencian (cat)"
 
 ocr-bulgarian:
   flatpak: com.github.unrud.djpdf.OCR.Bul
@@ -3419,21 +3476,9 @@ vinegar:
   flatpak: org.vinegarhq.Vinegar
   comment: Run Roblox Studio on Linux
 
-kimagemapeditor:
-  flatpak: org.kde.kimagemapeditor
-  comment: HTML Image Map Editor
-
-kdiamond:
-  flatpak: org.kde.kdiamond
-  comment: KDiamond is a three-in-a-row game by KDE
-
 iso-image-writer:
   flatpak: org.kde.isoimagewriter
   comment: Write an ISO Image to a USB Disk
-
-granatier:
-  flatpak: org.kde.granatier
-  comment: Bomberman clone
 
 ikona:
   flatpak: org.kde.Ikona
@@ -3575,10 +3620,6 @@ qpwgraph:
   flatpak: org.rncbc.qpwgraph
   comment: A PipeWire Graph Qt GUI Interface
 
-kwave:
-  flatpak: org.kde.kwave
-  comment: Sound editor
-
 jamovi:
   flatpak: org.jamovi.jamovi
   comment: Real-time statistical spreadsheet
@@ -3605,8 +3646,8 @@ prusaslicer:
 
 0-a-d:
   flatpak: com.play0ad.zeroad
-  aliases: [0ad, zeroad]
   comment: Real-time strategy game
+  aliases: [0ad, zeroad]
 
 xournal:
   flatpak: com.github.xournalpp.xournalpp
@@ -3642,7 +3683,7 @@ battle-for-wesnoth:
 
 sober:
   flatpak: org.vinegarhq.Sober
-  comment: Play, chat & explore on Roblox
+  comment: "Play, chat & explore on Roblox"
 
 qsynth:
   flatpak: org.rncbc.qsynth
@@ -3654,7 +3695,7 @@ iaito:
 
 surge-engine:
   flatpak: org.opensurge2d.OpenSurge
-  comment: Fun retro platformer & game creator
+  comment: "Fun retro platformer & game creator"
 
 hushboard:
   flatpak: org.kryogenix.hushboard
@@ -3920,42 +3961,22 @@ tribler:
   flatpak: org.tribler.Tribler
   comment: Towards making Bittorrent anonymous and impossible to shut down.
 
-glaxnimate:
-  flatpak: org.mattbas.Glaxnimate
-  comment: Vector Animation Editor
-
 kicad:
   flatpak: org.kicad.KiCad
   comment: An EDA suite for schematic and circuit board design
 
 keepassxc:
   flatpak: org.keepassxc.KeePassXC
-  aliases: [keepass]
   comment: Community-driven port of the Windows application “KeePass Password Safe”
+  aliases: [keepass]
 
 subtitle-composer:
   flatpak: org.kde.subtitlecomposer
   comment: Video subtitle editor that supports basic and advanced editing operations
 
-lokalize:
-  flatpak: org.kde.lokalize
-  comment: Computer-aided translation system
-
-labplot:
-  flatpak: org.kde.labplot2
-  comment: Interactive Data Visualization and Analysis
-
-ktuberling:
-  flatpak: org.kde.ktuberling
-  comment: A simple constructor game suitable for children and adults alike
-
 kst:
   flatpak: org.kde.kst
   comment: Interactive Data Visualization and Analysis
-
-krdc:
-  flatpak: org.kde.krdc
-  comment: Connect with RDP or VNC to another computer
 
 kde-itinerary:
   flatpak: org.kde.itinerary
@@ -4107,7 +4128,7 @@ makhber:
 
 writernote:
   flatpak: com.github.giacomogroppi.writernote-qt
-  comment: Writernote is a multiplatform application that allows you to take notes by recording audio, translate it later into text, and listen to it in an intelligent way.
+  comment: "Writernote is a multiplatform application that allows you to take notes by recording audio, translate it later into text, and listen to it in an intelligent way."
 
 gabut-download-manager:
   flatpak: com.github.gabutakut.gabutdm
@@ -4131,7 +4152,7 @@ saber:
 
 gnome-software-development-kit-version-48:
   flatpak: org.gnome.Sdk
-  comment: Tools and headers for developing applications using the GNOME application platform
+  comment: "Tools and headers for developing applications using the GNOME application platform"
 
 freedesktop-sdk:
   flatpak: org.freedesktop.Sdk
@@ -4139,7 +4160,7 @@ freedesktop-sdk:
 
 vala-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.vala
-  comment: An object-oriented programming language with a self-hosting compiler that generates C code and uses the GObject system
+  comment: "An object-oriented programming language with a self-hosting compiler that generates C code and uses the GObject system"
 
 rust-nightly-sdk-extension:
   flatpak: org.freedesktop.Sdk.Extension.rust-nightly
@@ -4351,7 +4372,7 @@ syphon:
 
 syntalos:
   flatpak: org.syntalos.syntalos
-  comment: Synchronized data acquisition from diverse sources and flexible experiment control
+  comment: "Synchronized data acquisition from diverse sources and flexible experiment control"
 
 subtitld:
   flatpak: org.subtitld.Subtitld
@@ -4395,7 +4416,7 @@ naev:
 
 thunderbird:
   flatpak: org.mozilla.Thunderbird
-  comment: Thunderbird is a free and open source email, newsfeed, chat, and calendaring client
+  comment: "Thunderbird is a free and open source email, newsfeed, chat, and calendaring client"
 
 webappreader:
   flatpak: org.mintguide.WebAppReader
@@ -4441,69 +4462,21 @@ kontact:
   flatpak: org.kde.kontact
   comment: Handle all your emails, calendars, contacts and more within a single window
 
-knetwalk:
-  flatpak: org.kde.knetwalk
-  comment: KNetWalk is a game for system administrators
-
-klickety:
-  flatpak: org.kde.klickety
-  comment: An adaptation of the "clickomania" game.
-
 klevernotes:
   flatpak: org.kde.klevernotes
   comment: Take and manage your notes
-
-klettres:
-  flatpak: org.kde.klettres
-  comment: Learn The Alphabet
 
 kleopatra:
   flatpak: org.kde.kleopatra
   comment: Certificate manager and cryptography app
 
-kiten:
-  flatpak: org.kde.kiten
-  comment: Japanese Reference and Study Tool
-
-kgoldrunner:
-  flatpak: org.kde.kgoldrunner
-  comment: Hunt Gold, Dodge Enemies and Solve Puzzles
-
-keysmith:
-  flatpak: org.kde.keysmith
-  comment: Two-factor code generator for Plasma Mobile and Desktop
-
 kdiff3:
   flatpak: org.kde.kdiff3
   comment: A file and folder comparison and merge tool
 
-kdevelop:
-  flatpak: org.kde.kdevelop
-  comment: Featureful, plugin-extensible IDE for C/C++ and other programming languages
-
-kcolorchooser:
-  flatpak: org.kde.kcolorchooser
-  comment: Color selector and palette editor
-
-kbounce:
-  flatpak: org.kde.kbounce
-  comment: KBounce is a single player arcade game with the elements of puzzle
-
-kate:
-  flatpak: org.kde.kate
-  comment: Advanced text editor
-
-kasts:
-  flatpak: org.kde.kasts
-  comment: Podcast application
-
 kamoso:
   flatpak: org.kde.kamoso
   comment: Use your webcam to take pictures and make videos
-
-filelight:
-  flatpak: org.kde.filelight
-  comment: Show disk usage and delete unused files
 
 calligra:
   flatpak: org.kde.calligra
@@ -4554,8 +4527,8 @@ emblem:
   comment: Generate project avatars
 
 weather:
-  flatpak: org.kde.kweather
-  comment: View real-time weather forecasts
+  flatpak: org.gnome.Weather
+  comment: Show weather conditions and forecast
 
 swell-foop:
   flatpak: org.gnome.SwellFoop
@@ -4595,7 +4568,7 @@ glxinfo:
 
 clinfo:
   flatpak: org.freedesktop.Platform.ClInfo
-  comment: Print all known information about all available OpenCL platforms and devices in the system
+  comment: "Print all known information about all available OpenCL platforms and devices in the system"
 
 yoga-image-optimizer:
   flatpak: org.flozz.yoga-image-optimizer
@@ -4671,7 +4644,7 @@ outwiker:
 
 squiid:
   flatpak: net.imaginaryinfinity.Squiid
-  comment: Advanced algebraic & RPN calculator
+  comment: "Advanced algebraic & RPN calculator"
 
 stretchly:
   flatpak: net.hovancik.Stretchly
@@ -4807,7 +4780,7 @@ deepqt:
 
 pixyne:
   flatpak: io.github.vinser.pixyne
-  comment: Quickly review photo folders, safely delete bad and similar shots, fix the shooting dates
+  comment: "Quickly review photo folders, safely delete bad and similar shots, fix the shooting dates"
 
 burnfix:
   flatpak: io.github.vinser.burnfix
@@ -4959,7 +4932,7 @@ kasasa:
 
 modular-calculator:
   flatpak: io.github.jordanl2.ModularCalculator
-  comment: A powerful, scriptable, modular calculator aimed at scientific, engineering or computing work.
+  comment: "A powerful, scriptable, modular calculator aimed at scientific, engineering or computing work."
 
 monitorets:
   flatpak: io.github.jorchube.monitorets
@@ -5099,7 +5072,7 @@ quran-companion:
 
 wheel-wizard:
   flatpak: io.github.TeamWheelWizard.WheelWizard
-  comment: Mario Kart Wii Mod Manager & Retro Rewind Auto Updater
+  comment: "Mario Kart Wii Mod Manager & Retro Rewind Auto Updater"
 
 ps2-pnacher:
   flatpak: io.github.Snaggly.PS2_Pnacher
@@ -5115,7 +5088,7 @@ scripted-journeys:
 
 xstreamingdesktop:
   flatpak: io.github.Geocld.XStreamingDesktop
-  comment: XStreaming: Lets you stream Xbox games to your device, supporting Xbox streaming and Xbox Cloud Gaming (XCloud).
+  comment: "XStreaming: Lets you stream Xbox games to your device, supporting Xbox streaming and Xbox Cloud Gaming (XCloud)."
 
 gdevelop:
   flatpak: io.gdevelop.ide
@@ -5131,11 +5104,11 @@ carburetor:
 
 watchflower:
   flatpak: io.emeric.watchflower
-  comment: A plant monitoring application for Bluetooth Low Energy sensors and thermometers like Xiaomi 'Flower Care' or Parrot 'Flower Power'
+  comment: "A plant monitoring application for Bluetooth Low Energy sensors and thermometers like Xiaomi 'Flower Care' or Parrot 'Flower Power'"
 
 komikku:
   flatpak: info.febvre.Komikku
-  comment: Discover and read manga & comics
+  comment: "Discover and read manga & comics"
 
 wikilynx:
   flatpak: in.org.dawn.wikilynx
@@ -5155,7 +5128,7 @@ sable-s-grimoire-demo:
 
 humanity-must-perish:
   flatpak: games.zetsubou.HumanityMustPerish
-  comment: A comedic visual novel about an android dressed as a high school girl as she prepares to destroy humanity
+  comment: "A comedic visual novel about an android dressed as a high school girl as she prepares to destroy humanity"
 
 cosmic-comics:
   flatpak: fr.nytuo.cosmiccomics
@@ -5163,7 +5136,7 @@ cosmic-comics:
 
 whoswho:
   flatpak: fr.masson_informatique.WhosWho
-  comment: Create PDF documents with people pictures and corresponding name, also called "who's who", "yearbook" or "facebook"
+  comment: "Create PDF documents with people pictures and corresponding name, also called \"who's who\", \"yearbook\" or \"facebook\""
 
 vcmi:
   flatpak: eu.vcmi.VCMI
@@ -5307,7 +5280,7 @@ super-productivity:
 
 steam-rom-manager:
   flatpak: com.steamgriddb.steam-rom-manager
-  comment: Steam bulk importer & art manager!
+  comment: "Steam bulk importer & art manager!"
 
 soulfire:
   flatpak: com.soulfiremc.soulfire
@@ -5327,7 +5300,7 @@ rustdesk:
 
 thrive:
   flatpak: com.revolutionarygamesstudio.ThriveLauncher
-  comment: An evolution simulation game. Take control of your species in the environment and edit your species as a whole. Compete with other evolving species for resources on an alien planet.
+  comment: "An evolution simulation game. Take control of your species in the environment and edit your species as a whole. Compete with other evolving species for resources on an alien planet."
 
 blanket:
   flatpak: com.rafaelmardojai.Blanket
@@ -5335,11 +5308,11 @@ blanket:
 
 passky:
   flatpak: com.rabbit_company.passky
-  comment: Passky is a simple, modern, lightweight, open-source and secure password manager.
+  comment: "Passky is a simple, modern, lightweight, open-source and secure password manager."
 
 q-zandronum:
   flatpak: com.qzandronum.Q-Zandronum
-  comment: A Zandronum 3.0 fork with improved netcode, configurable movement and many small tweaks
+  comment: "A Zandronum 3.0 fork with improved netcode, configurable movement and many small tweaks"
 
 pot:
   flatpak: com.pot_app.pot
@@ -5351,7 +5324,7 @@ pokemmo:
 
 ownr-crypto-wallet-visa-card:
   flatpak: com.ownrwallet.wallet
-  comment: Send, receive, withdraw, exchange & buy virtual currencies. Only you control access and assets
+  comment: "Send, receive, withdraw, exchange & buy virtual currencies. Only you control access and assets"
 
 outer-wilds-mod-manager:
   flatpak: com.outerwildsmods.owmods_gui
@@ -5383,7 +5356,7 @@ detwinner:
 
 moonlight:
   flatpak: com.moonlight_stream.Moonlight
-  comment: Stream games and other applications from another PC running Sunshine or GeForce Experience
+  comment: "Stream games and other applications from another PC running Sunshine or GeForce Experience"
 
 extension-manager:
   flatpak: com.mattjakeman.ExtensionManager
@@ -5411,7 +5384,7 @@ jpexs-free-flash-decompiler:
 
 invoice-ninja:
   flatpak: com.invoiceninja.InvoiceNinja
-  comment: Create invoices, accept payments, track expenses & time tasks
+  comment: "Create invoices, accept payments, track expenses & time tasks"
 
 inochi-creator:
   flatpak: com.inochi2d.inochi-creator
@@ -5443,7 +5416,7 @@ sleek:
 
 czkawka:
   flatpak: com.github.qarmin.czkawka
-  comment: Multi functional app to find duplicates, empty folders, similar images, broken files etc.
+  comment: "Multi functional app to find duplicates, empty folders, similar images, broken files etc."
 
 otpclient:
   flatpak: com.github.paolostivanin.OTPClient
@@ -5491,7 +5464,7 @@ pinta:
 
 gittyup:
   flatpak: com.github.Murmele.Gittyup
-  comment: Graphical Git client designed to help you understand and manage your source code history
+  comment: "Graphical Git client designed to help you understand and manage your source code history"
 
 protontricks:
   flatpak: com.github.Matoking.protontricks
@@ -5519,7 +5492,7 @@ feeel:
 
 parlera:
   flatpak: com.enjoyingfoss.Parlera
-  comment: A party game where your friends describe and you guess; or vice versa
+  comment: "A party game where your friends describe and you guess; or vice versa"
 
 the-passage:
   flatpak: com.endlessnetwork.passage
@@ -5562,7 +5535,7 @@ cloudotp:
   comment: Two-Factor Authenticator
 
 clairvoyant:
-  flatpak: com.cassidyjames.clairvoyant
+  flatpak: com.github.cassidyjames.clairvoyant
   comment: Ask questions, get psychic answers
 
 buckets:
@@ -5595,7 +5568,7 @@ feeling-finder:
 
 simplex-chat:
   flatpak: chat.simplex.simplex
-  comment: A private & encrypted open-source messenger without any user IDs (not even random)!
+  comment: "A private & encrypted open-source messenger without any user IDs (not even random)!"
 
 iamb:
   flatpak: chat.iamb.iamb
@@ -5707,7 +5680,7 @@ sidetrack:
 
 udplogger:
   flatpak: com.gitlab.Murmele.UDPLogger
-  comment: UDPLogger is a lightweight high performance Logger of UDP Data. Additional the data can be visualized on plots.
+  comment: "UDPLogger is a lightweight high performance Logger of UDP Data. Additional the data can be visualized on plots."
 
 neothesia:
   flatpak: com.github.polymeilex.neothesia
@@ -5727,7 +5700,7 @@ portproton:
 
 ruffle:
   flatpak: rs.ruffle.Ruffle
-  comment: Play Flash games & movies
+  comment: "Play Flash games & movies"
 
 mousepad:
   flatpak: org.xfce.mousepad
@@ -5767,8 +5740,8 @@ light-video:
 
 prism-launcher:
   flatpak: org.prismlauncher.PrismLauncher
+  comment: "Custom Minecraft Launcher to easily manage multiple Minecraft installations at once"
   aliases: [minecraft, mc]
-  comment: Custom Minecraft Launcher to easily manage multiple Minecraft installations at once
 
 trguing:
   flatpak: org.openscopeproject.TrguiNG
@@ -5776,8 +5749,8 @@ trguing:
 
 onlyoffice-desktop-editors:
   flatpak: org.onlyoffice.desktopeditors
-  aliases: [onlyoffice, only-office]
   comment: Office productivity suite
+  aliases: [onlyoffice, only-office]
 
 tagger:
   flatpak: org.nickvision.tagger
@@ -5819,14 +5792,6 @@ rocs:
   flatpak: org.kde.rocs
   comment: Rocs Graph Theory
 
-parley:
-  flatpak: org.kde.parley
-  comment: Vocabulary Trainer
-
-palapeli:
-  flatpak: org.kde.palapeli
-  comment: Jigsaw puzzle game
-
 massif-visualizer:
   flatpak: org.kde.massif-visualizer
   comment: A visualizer for Valgrind Massif data files
@@ -5851,45 +5816,21 @@ kpatience:
   flatpak: org.kde.kpat
   comment: Solitaire card game
 
-kolf:
-  flatpak: org.kde.kolf
-  comment: Miniature Golf
-
 kmymoney:
   flatpak: org.kde.kmymoney
   comment: Personal finance manager based on double-entry bookkeeping
-
-kmplot:
-  flatpak: org.kde.kmplot
-  comment: Mathematical Function Plotter
 
 kmplayer:
   flatpak: org.kde.kmplayer
   comment: Interface for MPlayer by KDE
 
-kigo:
-  flatpak: org.kde.kigo
-  comment: Go Board Game
-
 kig:
   flatpak: org.kde.kig
   comment: Interactive Geometry
 
-kget:
-  flatpak: org.kde.kget
-  comment: Download manager
-
-kcachegrind:
-  flatpak: org.kde.kcachegrind
-  comment: Profiler Frontend
-
 kbibtex:
   flatpak: org.kde.kbibtex
   comment: BibTeX editor by KDE to edit bibliographies used with LaTeX
-
-kalgebra:
-  flatpak: org.kde.kalgebra
-  comment: Graph Calculator
 
 cantor:
   flatpak: org.kde.cantor
@@ -5938,8 +5879,8 @@ document-viewer:
 
 web:
   flatpak: org.gnome.Epiphany
-  aliases: [gnome-web, epiphany]
   comment: Browse the web
+  aliases: [gnome-web, epiphany]
 
 crosswords:
   flatpak: org.gnome.Crosswords
@@ -5955,12 +5896,12 @@ gnome-chess:
 
 boxes:
   flatpak: org.gnome.Boxes
-  aliases: [gnome-boxes]
   comment: Virtualization made simple
+  aliases: [gnome-boxes]
 
 firedragon:
   flatpak: org.garudalinux.firedragon
-  comment: Floorp fork build using custom branding & settings
+  comment: "Floorp fork build using custom branding & settings"
 
 feeds:
   flatpak: org.gabmus.gfeeds
@@ -5992,7 +5933,7 @@ c-evo-new-horizons:
 
 xmind-2024:
   flatpak: net.xmind.XMind
-  comment: Mind Mapping & Brainstorming
+  comment: "Mind Mapping & Brainstorming"
 
 imhex:
   flatpak: net.werwolv.ImHex
@@ -6140,7 +6081,7 @@ gameoutlet:
 
 oku:
   flatpak: io.github.OkuBrowser.oku
-  comment: Browse & express yourself
+  comment: "Browse & express yourself"
 
 rabbit-remote-control:
   flatpak: io.github.KangLin.RabbitRemoteControl
@@ -6188,7 +6129,7 @@ bottles:
 
 ulaa:
   flatpak: com.ulaa.Ulaa
-  comment: Private, Secure & Fast Browsing
+  comment: "Private, Secure & Fast Browsing"
 
 stremio:
   flatpak: com.stremio.Stremio
@@ -6324,7 +6265,7 @@ cobang:
 
 materialious:
   flatpak: us.materialio.Materialious
-  comment: Materialious is a privacy respecting frontend for YouTube built ontop of Invidious.
+  comment: "Materialious is a privacy respecting frontend for YouTube built ontop of Invidious."
 
 plex:
   flatpak: tv.plex.PlexDesktop
@@ -6364,7 +6305,7 @@ mapollage:
 
 blue-recorder:
   flatpak: sa.sy.bluerecorder
-  comment: A simple screen recorder for Linux desktop. Supports Wayland & Xorg
+  comment: "A simple screen recorder for Linux desktop. Supports Wayland & Xorg"
 
 vacuumtube:
   flatpak: rocks.shy.VacuumTube
@@ -6634,10 +6575,6 @@ tokodon:
   flatpak: org.kde.tokodon
   comment: Browse the Fediverse
 
-ruqola:
-  flatpak: org.kde.ruqola
-  comment: Rocket Chat Client
-
 plasmatube:
   flatpak: org.kde.plasmatube
   comment: Watch YouTube videos
@@ -6645,10 +6582,6 @@ plasmatube:
 pix:
   flatpak: org.kde.pix
   comment: Image Gallery
-
-picmi:
-  flatpak: org.kde.picmi
-  comment: Puzzle game based on number logic
 
 peruse:
   flatpak: org.kde.peruse
@@ -6678,21 +6611,9 @@ marble:
   flatpak: org.kde.marble
   comment: Virtual Globe
 
-lskat:
-  flatpak: org.kde.lskat
-  comment: German card game Skat for two players
-
 kwrite:
   flatpak: org.kde.kwrite
   comment: Text Editor
-
-kubrick:
-  flatpak: org.kde.kubrick
-  comment: 3-D Game based on Rubik's Cube
-
-kturtle:
-  flatpak: org.kde.kturtle
-  comment: Educational Programming Environment
 
 ktrip:
   flatpak: org.kde.ktrip
@@ -6706,41 +6627,9 @@ ktimetracker:
   flatpak: org.kde.ktimetracker
   comment: Personal Time Tracker
 
-kteatime:
-  flatpak: org.kde.kteatime
-  comment: Tea Cooker
-
-ksudoku:
-  flatpak: org.kde.ksudoku
-  comment: Complete a numeric puzzle with the numbers from one to nine
-
-kstars:
-  flatpak: org.kde.kstars
-  comment: Desktop Planetarium
-
-ksquares:
-  flatpak: org.kde.ksquares
-  comment: Connect the dots to create squares
-
-ksnakeduel:
-  flatpak: org.kde.ksnakeduel
-  comment: Tron-like Game
-
-ksirk:
-  flatpak: org.kde.ksirk
-  comment: World Domination Strategy Game
-
-kruler:
-  flatpak: org.kde.kruler
-  comment: Screen Ruler
-
 kronometer:
   flatpak: org.kde.kronometer
   comment: Chronometer
-
-kreversi:
-  flatpak: org.kde.kreversi
-  comment: Reversi Board Game
 
 krename:
   flatpak: org.kde.krename
@@ -6750,33 +6639,9 @@ kphotoalbum:
   flatpak: org.kde.kphotoalbum
   comment: KDE image management software
 
-kontrast:
-  flatpak: org.kde.kontrast
-  comment: Check color contrast
-
-konquest:
-  flatpak: org.kde.konquest
-  comment: Galactic Strategy Game
-
-kongress:
-  flatpak: org.kde.kongress
-  comment: Conference companion
-
-kompare:
-  flatpak: org.kde.kompare
-  comment: Diff/Patch Frontend
-
-kollision:
-  flatpak: org.kde.kollision
-  comment: Casual ball game
-
 photos:
   flatpak: org.kde.koko
   comment: Image Gallery
-
-knights:
-  flatpak: org.kde.knights
-  comment: Chess game
 
 naval-battle:
   flatpak: org.kde.knavalbattle
@@ -6786,33 +6651,13 @@ kmines:
   flatpak: org.kde.kmines
   comment: Minesweeper-like Game
 
-kmahjongg:
-  flatpak: org.kde.kmahjongg
-  comment: Mahjong Solitaire
-
 kolor-lines:
   flatpak: org.kde.klines
   comment: Tactical Game
 
-kjumpingcube:
-  flatpak: org.kde.kjumpingcube
-  comment: Territory Capture Game
-
-kiriki:
-  flatpak: org.kde.kiriki
-  comment: Yahtzee-like Dice Game
-
-killbots:
-  flatpak: org.kde.killbots
-  comment: Outsmart the killer robots to win
-
 kile:
   flatpak: org.kde.kile
   comment: TeX/LaTeX Editor
-
-khangman:
-  flatpak: org.kde.khangman
-  comment: Hangman Game
 
 kgraphviewer:
   flatpak: org.kde.kgraphviewer
@@ -6822,65 +6667,13 @@ kgeotag:
   flatpak: org.kde.kgeotag
   comment: Photo geotagging program
 
-kgeography:
-  flatpak: org.kde.kgeography
-  comment: Geography learning tool
-
-kfind:
-  flatpak: org.kde.kfind
-  comment: Find Files/Folders
-
 kdiskfree:
   flatpak: org.kde.kdf
   comment: View Disk Usage
 
-kcharselect:
-  flatpak: org.kde.kcharselect
-  comment: Character Selector
-
-kcalc:
-  flatpak: org.kde.kcalc
-  comment: Scientific calculator
-
-kbruch:
-  flatpak: org.kde.kbruch
-  comment: Exercise Fractions
-
-kbreakout:
-  flatpak: org.kde.kbreakout
-  comment: KBreakOut is a Breakout-like game by KDE
-
-kblocks:
-  flatpak: org.kde.kblocks
-  comment: Falling Blocks Game
-
-katomic:
-  flatpak: org.kde.katomic
-  comment: Sokoban-like Logic Game
-
-kapman:
-  flatpak: org.kde.kapman
-  comment: Pac-Man Clone
-
-kanagram:
-  flatpak: org.kde.kanagram
-  comment: Letter Order Game
-
-kalzium:
-  flatpak: org.kde.kalzium
-  comment: Periodic Table of Elements
-
-juk:
-  flatpak: org.kde.juk
-  comment: Music Player
-
 index:
   flatpak: org.kde.index
   comment: Manage your files
-
-gcompris:
-  flatpak: org.kde.gcompris
-  comment: Educational game for children
 
 dolphin:
   flatpak: org.kde.dolphin
@@ -6985,10 +6778,6 @@ lorem:
 iotas:
   flatpak: org.gnome.World.Iotas
   comment: Simple note taking
-
-gnome-sudoku:
-  flatpak: org.gnome.Sudoku
-  comment: Test yourself in the classic puzzle
 
 showtime:
   flatpak: org.gnome.Showtime
@@ -7247,8 +7036,7 @@ shuusou-gyoku-engine:
   comment: ReC98 source port of the first Seihou Project game
 
 luanti:
-  flatpak: net.minetest.Minetest
-  aliases: [minetest, minecraft-clone]
+  flatpak: org.luanti.luanti
   comment: Block-based multiplayer game platform
 
 lutris:
@@ -7625,7 +7413,7 @@ openhv:
 
 onionmedia-x:
   flatpak: io.github.onionware_github.onionmedia
-  comment: Free Media Downloader & Converter
+  comment: "Free Media Downloader & Converter"
 
 packet:
   flatpak: io.github.nozwock.Packet
@@ -7993,7 +7781,7 @@ improve-imgsli:
 
 imeditor:
   flatpak: io.github.ImEditor
-  comment: Simple & versatile image editor
+  comment: "Simple & versatile image editor"
 
 hexchat:
   flatpak: io.github.Hexchat
@@ -8041,13 +7829,13 @@ nheko:
 
 fluffychat:
   flatpak: im.fluffychat.Fluffychat
-  aliases: [fluffy-chat]
   comment: Chat with your friends
+  aliases: [fluffy-chat]
 
 dino:
   flatpak: im.dino.Dino
-  aliases: [dino-xmpp]
   comment: Modern XMPP chat client
+  aliases: [dino-xmpp]
 
 nostalgia:
   flatpak: im.bernard.Nostalgia
@@ -8130,8 +7918,8 @@ waycheck:
   comment: Show Wayland compositor details
 
 forecast:
-  flatpak: com.jwestall.Forecast
-  comment: View weather predictions
+  flatpak: dev.salaniLeo.forecast
+  comment: ⛅ Check the weather!
 
 restfox:
   flatpak: dev.restfox.Restfox
@@ -8239,7 +8027,7 @@ cookbook:
 
 barcoder:
   flatpak: cz.ondrejkolin.Barcoder
-  comment: Create barcodes & QR codes
+  comment: "Create barcodes & QR codes"
 
 xpano:
   flatpak: cz.krupkat.Xpano
@@ -8331,7 +8119,7 @@ sticky-notes:
 
 focal:
   flatpak: com.vargary.focal
-  comment: Organize tasks & notes in a tree.
+  comment: "Organize tasks & notes in a tree."
 
 finamp:
   flatpak: com.unicornsonlsd.finamp
@@ -8452,10 +8240,6 @@ forge-sparks:
 volaris:
   flatpak: com.leohanney.Volaris
   comment: Sleek file encryption/decryption
-
-openchrom:
-  flatpak: com.lablicate.OpenChrom
-  comment: Chromatography Data System
 
 wonderwall:
   flatpak: com.ktechpit.wonderwall
@@ -8723,7 +8507,7 @@ discord:
 
 gpu-screen-recorder:
   flatpak: com.dec05eba.gpu_screen_recorder
-  comment: A shadowplay-like screen recorder for Linux. The fastest screen recorder for Linux
+  comment: "A shadowplay-like screen recorder for Linux. The fastest screen recorder for Linux"
 
 corsixth:
   flatpak: com.corsixth.corsixth
@@ -8767,7 +8551,7 @@ pixel-wheels:
 
 karambola:
   flatpak: com.agatanawrot.karambola
-  comment: Help Karambola rescue his emotional fruit people friends from the power of dark thoughts
+  comment: "Help Karambola rescue his emotional fruit people friends from the power of dark thoughts"
 
 metronome:
   flatpak: com.adrienplazas.Metronome
@@ -8791,7 +8575,7 @@ wiliwili:
 
 xivlaunchercn:
   flatpak: cn.ottercorp.xivlaunchercn
-  comment: Launcher & seamless Linux integration for Final Fantasy XIV Online (China version)
+  comment: "Launcher & seamless Linux integration for Final Fantasy XIV Online (China version)"
 
 legacy-launcher:
   flatpak: ch.tlaun.TL
@@ -8825,10 +8609,6 @@ telly-skout:
   flatpak: org.kde.telly-skout
   comment: A convergent Kirigami TV guide
 
-kalm:
-  flatpak: org.kde.kalm
-  comment: Breathing techniques
-
 kaffeine:
   flatpak: org.kde.kaffeine
   comment: Multimedia Player
@@ -8856,7 +8636,7 @@ vscodium:
 vscodium-insiders:
   flatpak: com.vscodium.codium-insiders
   comment: Telemetry-less code editing
-  
+
 aim-train:
   flatpak: io.gitlab.aimtrain.aimtrain
   comment: FPS aim trainer
@@ -8868,10 +8648,6 @@ amsam:
 bouncer:
   flatpak: io.github.justinrdonnelly.bouncer
   comment: Keep the riffraff out!
-
-calculator:
-  flatpak: com.expidusos.calculator
-  comment: ExpidusOS Calculator
 
 calculator-1:
   flatpak: org.gnome.Calculator
@@ -8885,10 +8661,6 @@ chemcanvas:
   flatpak: io.github.ksharindam.chemcanvas
   comment: Chemical structure drawing tool
 
-clairvoyant:
-  flatpak: com.github.cassidyjames.clairvoyant
-  comment: Ask questions, get psychic answers
-
 fingerpaint:
   flatpak: io.github.wazzaps.Fingerpaint
   comment: Draw using your laptop's touchpad
@@ -8896,10 +8668,6 @@ fingerpaint:
 follamac:
   flatpak: io.github.pejuko.follamac
   comment: Work with Ollama from GUI
-
-forecast:
-  flatpak: dev.salaniLeo.forecast
-  comment: ⛅ Check the weather!
 
 gradia:
   flatpak: be.alexandervanhee.gradia
@@ -8925,37 +8693,17 @@ karapulse:
   flatpak: org.karapulse.Karapulse
   comment: Karaoke player with built-in web remote client
 
-kblackbox:
-  flatpak: org.kde.kblackbox
-  comment: Blackbox Logic Game
-
 keep-me-awake:
   flatpak: de.swsnr.keepmeawake
   comment: Keep your desktop awake
-
-kfourinline:
-  flatpak: org.kde.kfourinline
-  comment: KFourInLine is a four-in-a-row game by KDE
 
 kommit:
   flatpak: org.kde.kommit
   comment: Git GUI client
 
-kshisen:
-  flatpak: org.kde.kshisen
-  comment: Shisen-Sho Mahjongg-like Tile Game
-
 lime3ds:
   flatpak: io.github.lime3ds.Lime3DS
   comment: 3DS emulator forked from Citra
-
-luanti:
-  flatpak: org.luanti.luanti
-  comment: Block-based multiplayer game platform
-
-media-downloader:
-  flatpak: com.markopejic.downloader
-  comment: Web video/audio downloader
 
 media-downloader-1:
   flatpak: com.warlordsoftwares.media-downloader
@@ -8992,10 +8740,6 @@ openscad:
 picocrypt:
   flatpak: io.github.picocrypt.Picocrypt
   comment: A very small, very simple, yet very secure encryption tool.
-
-plex-htpc:
-  flatpak: tv.plex.PlexHTPC
-  comment: Plex HTPC client for the big screen
 
 portfolio:
   flatpak: dev.tchx84.Portfolio
@@ -9041,19 +8785,14 @@ stremio-service:
   flatpak: com.stremio.Service
   comment: Freedom to Stream
 
-tally:
-  flatpak: com.cassidyjames.plausible
-  comment: Dashboard for Plausible Analytics
-
 tuned-switcher:
   flatpak: org.easycoding.TunedSwitcher
   comment: Performance profile manager
 
-weather:
-  flatpak: org.gnome.Weather
-  comment: Show weather conditions and forecast
-
 yetty:
   flatpak: dev.aa55.yetty
-  comment: yeTTY is an open source application for embedded developers to view logs from serial port
+  comment: "yeTTY is an open source application for embedded developers to view logs from serial port"
 
+musescore:
+  snap: musescore
+  comment: Create, play and print beautiful sheet music.
