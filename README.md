@@ -9,8 +9,8 @@
 - [Showcase](#showcase)
 - [What happens when a package is not found in the database?](#what-happens-when-a-package-is-not-found-in-the-database)
 - [Contributing](#contributing)
-  - [Example of an app with no official flatpak or snap available](#example-of-an-app-with-no-official-flatpak-or-snap-available)
-  - [Example of an app with official flatpak or snap available](#example-of-an-app-with-official-flatpak-or-snap-available)
+  - [Example 1](#example-of-an-app-with-no-official-flatpak-or-snap-available)
+  - [Example 2](#example-of-an-app-with-official-flatpak-or-snap-available)
 
 
 The point of this tool is to allow you to install software from its official source on Linux. It achieves that by searching a database I put together which contains official snaps and flatpaks, as well as many apps I added manually which can only be installed by going to their websites. 
