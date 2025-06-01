@@ -8856,3 +8856,204 @@ vscodium:
 vscodium-insiders:
   flatpak: com.vscodium.codium-insiders
   comment: Telemetry-less code editing
+  
+aim-train:
+  flatpak: io.gitlab.aimtrain.aimtrain
+  comment: FPS aim trainer
+
+amsam:
+  flatpak: in.co.nandakumar.amsam
+  comment: Preview aspect ratios and crop
+
+bouncer:
+  flatpak: io.github.justinrdonnelly.bouncer
+  comment: Keep the riffraff out!
+
+calculator:
+  flatpak: com.expidusos.calculator
+  comment: ExpidusOS Calculator
+
+calculator-1:
+  flatpak: org.gnome.Calculator
+  comment: Perform arithmetic, scientific or financial calculations
+
+calculator-2:
+  flatpak: org.kde.kalk
+  comment: A feature rich calculator
+
+chemcanvas:
+  flatpak: io.github.ksharindam.chemcanvas
+  comment: Chemical structure drawing tool
+
+clairvoyant:
+  flatpak: com.github.cassidyjames.clairvoyant
+  comment: Ask questions, get psychic answers
+
+fingerpaint:
+  flatpak: io.github.wazzaps.Fingerpaint
+  comment: Draw using your laptop's touchpad
+
+follamac:
+  flatpak: io.github.pejuko.follamac
+  comment: Work with Ollama from GUI
+
+forecast:
+  flatpak: dev.salaniLeo.forecast
+  comment: ⛅ Check the weather!
+
+gradia:
+  flatpak: be.alexandervanhee.gradia
+  comment: Make your screenshots ready for all
+
+grayjay:
+  flatpak: app.grayjay.Grayjay
+  comment: Universal media aggregator
+
+hdos:
+  flatpak: dev.hdos.HDOS
+  comment: High Detail Old School Runescape Client
+
+hunt:
+  flatpak: io.github.swordpuffin.hunt
+  comment: Find every word
+
+ipe:
+  flatpak: org.otfried.Ipe
+  comment: The Ipe extensible drawing editor
+
+karapulse:
+  flatpak: org.karapulse.Karapulse
+  comment: Karaoke player with built-in web remote client
+
+kblackbox:
+  flatpak: org.kde.kblackbox
+  comment: Blackbox Logic Game
+
+keep-me-awake:
+  flatpak: de.swsnr.keepmeawake
+  comment: Keep your desktop awake
+
+kfourinline:
+  flatpak: org.kde.kfourinline
+  comment: KFourInLine is a four-in-a-row game by KDE
+
+kommit:
+  flatpak: org.kde.kommit
+  comment: Git GUI client
+
+kshisen:
+  flatpak: org.kde.kshisen
+  comment: Shisen-Sho Mahjongg-like Tile Game
+
+lime3ds:
+  flatpak: io.github.lime3ds.Lime3DS
+  comment: 3DS emulator forked from Citra
+
+luanti:
+  flatpak: org.luanti.luanti
+  comment: Block-based multiplayer game platform
+
+media-downloader:
+  flatpak: com.markopejic.downloader
+  comment: Web video/audio downloader
+
+media-downloader-1:
+  flatpak: com.warlordsoftwares.media-downloader
+  comment: Download 4k Videos from YouTube
+
+metadata-cleaner:
+  flatpak: fr.romainvigier.MetadataCleaner
+  comment: View and clean metadata in files
+
+mfekglif:
+  flatpak: org.mfek.MFEKglif
+  comment: Glyph editor for the Modular Font Editor K project
+
+mslicer:
+  flatpak: com.connorcode.mslicer
+  comment: Masked stereolithography slicer
+
+multi-scrobbler:
+  flatpak: io.github.foxxmd.multiscrobbler
+  comment: Scrobbles music from many sources
+
+nelson:
+  flatpak: io.github.nelson_lang.Nelson
+  comment: Extensible and Modern numerical computing environment
+
+nx-dump-client:
+  flatpak: org.v1993.NXDumpClient
+  comment: Client for dumping over USB with nxdumptool
+
+openscad:
+  flatpak: org.openscad.OpenSCAD
+  comment: The Programmers Solid 3D CAD Modeller
+
+picocrypt:
+  flatpak: io.github.picocrypt.Picocrypt
+  comment: A very small, very simple, yet very secure encryption tool.
+
+plex-htpc:
+  flatpak: tv.plex.PlexHTPC
+  comment: Plex HTPC client for the big screen
+
+portfolio:
+  flatpak: dev.tchx84.Portfolio
+  comment: Manage files on the go
+
+qcm:
+  flatpak: io.github.hypengw.Qcm
+  comment: Material3 cloud music player
+
+rio:
+  flatpak: com.rioterm.Rio
+  comment: Hardware-accelerated GPU terminal emulator powered by WebGPU
+
+scriptorium:
+  flatpak: io.github.cgueret.Scriptorium
+  comment: Write short stories, novels, or anything in between in an IDE for books.
+
+shm-modbus:
+  flatpak: io.github.shmmodbus.shm-modbus
+  comment: Tools to simulate a Modbus client
+
+smile:
+  flatpak: it.mijorus.smile
+  comment: An emoji picker
+
+speedtest:
+  flatpak: xyz.ketok.Speedtest
+  comment: Measure your internet connection speed
+
+splices:
+  flatpak: io.github.swordpuffin.splices
+  comment: A word making game
+
+startup-configuration:
+  flatpak: best.ellie.StartupConfiguration
+  comment: View and set startup scripts and applications
+
+stream-overlay:
+  flatpak: com.hperrin.StreamOverlay
+  comment: Browser overlays on your screen.
+
+stremio-service:
+  flatpak: com.stremio.Service
+  comment: Freedom to Stream
+
+tally:
+  flatpak: com.cassidyjames.plausible
+  comment: Dashboard for Plausible Analytics
+
+tuned-switcher:
+  flatpak: org.easycoding.TunedSwitcher
+  comment: Performance profile manager
+
+weather:
+  flatpak: org.gnome.Weather
+  comment: Show weather conditions and forecast
+
+yetty:
+  flatpak: dev.aa55.yetty
+  comment: yeTTY is an open source application for embedded developers to view logs from serial port
+
