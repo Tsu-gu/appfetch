@@ -15,7 +15,7 @@
 
 The point of this tool is to allow you to install software from its official source on Linux. It achieves that by searching a database I put together which contains official snaps and flatpaks, as well as many apps I added manually which can only be installed by going to their websites.
 
-**I'm only testing this on Ubuntu.**
+**I'm only testing this on Ubuntu and targetting the install scripts for it. But most apps comes in a distro-agnostic format so you can use this elsewhere if you don't mind a few failed commands.**
 
 If some AppImages aren't launching, install `libfuse2t64` via your package manager. A lot of them still rely on the outdated FUSE library.
 
