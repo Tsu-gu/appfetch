@@ -65,6 +65,11 @@ yt-dlp:
   aliases: [ytdlp, yt]
   comment: Youtube video downloading tool
 
+fastfetch:
+  custom: sudo add-apt-repository ppa:zhangsongcui3371/fastfetch && sudo apt update && sudo apt install fastfetch
+  uninstall: sudo apt remove -y fastfetch
+  comment:  A neofetch-like tool for fetching system information and displaying them in a pretty way
+  
 homebrew:
   custom: sudo apt install git && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   uninstall: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
