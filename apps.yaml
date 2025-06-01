@@ -7037,6 +7037,7 @@ shuusou-gyoku-engine:
 
 luanti:
   flatpak: org.luanti.luanti
+  aliases: [minetest]
   comment: Block-based multiplayer game platform
 
 lutris:
