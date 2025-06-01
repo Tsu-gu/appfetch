@@ -346,8 +346,8 @@ def main():
                     print(f"Converting {snap_name} to classic snap in apps.yaml")
                     changes_to_make[snap_name] = {
                         'snap': 'remove_snap',
-                        'custom': f"add_custom:snap install {snap_name} --classic",
-                        'uninstall': f"add_uninstall:snap remove {snap_name}"
+                        'custom': f"add_custom:sudo snap install {snap_name} --classic",
+                        'uninstall': f"add_uninstall:sudo snap remove {snap_name}"
                     }
                     classic_fixes += 1
                 else:
@@ -362,8 +362,8 @@ def main():
             if snap['classic']:
                 # Classic snap
                 new_entry = {
-                    'custom': f"snap install {snap_name} --classic",
-                    'uninstall': f"snap remove {snap_name}",
+                    'custom': f"sudo snap install {snap_name} --classic",
+                    'uninstall': f"sudo snap remove {snap_name}",
                     'comment': snap['summary']
                 }
             else:
