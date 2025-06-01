@@ -30,12 +30,13 @@ sudo mv /tmp/appfetch /usr/local/bin/appfetch && \
 sudo chmod +x /usr/local/bin/appfetch
 ```
 
+I encountered issues with the script trying to update itself so if you want to update it, re-run the installation command.
+
 ## To update its database:
 
 ```
 appfetch update
 ```
-I encountered issues with the script trying to update itself so if you want to update it, re-run the installation command.
 
 ## Search for apps with:
 
