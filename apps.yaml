@@ -1,258 +1,258 @@
 reaper:
-  custom: "mkdir -p ~/Applications && wget https://www.reaper.fm/files/7.x/reaper739_linux_x86_64.tar.xz -O /tmp/reaper.tar.xz && tar -xf /tmp/reaper.tar.xz -C ~/Applications && cd ~/Applications && cd reaper_linux_x86_64 && sh install-reaper.sh"
+  custom: mkdir -p ~/Applications && wget https://www.reaper.fm/files/7.x/reaper739_linux_x86_64.tar.xz -O /tmp/reaper.tar.xz && tar -xf /tmp/reaper.tar.xz -C ~/Applications && cd ~/Applications && cd reaper_linux_x86_64 && sh install-reaper.sh
   uninstall: sudo rm -rf $HOME/Applications/reaper_linux_x86_64
-  comment: A linux-native DAW
   aliases: [reaperfm]
+  comment: A linux-native DAW
 
 signal:
-  custom: "wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg; cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null; echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | sudo tee /etc/apt/sources.list.d/signal-xenial.list; sudo apt update && sudo apt install signal-desktop"
+  custom: wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg; cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null; echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | sudo tee /etc/apt/sources.list.d/signal-xenial.list; sudo apt update && sudo apt install signal-desktop
   uninstall: sudo apt remove -y signal-desktop
   comment: A private messenger
 
 joplin:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && v=$(curl -s https://api.github.com/repos/laurent22/joplin/releases/latest | grep '\"tag_name\":' | cut -d '\"' -f 4) && curl -L -o \"Joplin-${v#v}.AppImage\" \"https://github.com/laurent22/joplin/releases/download/$v/Joplin-${v#v}.AppImage\""
-  uninstall: "cd ~/Applications && rm -f Joplin-*.AppImage"
-  comment: "The privacy-focused note taking app with sync capabilities for Windows, macOS, Linux, Android and iOS"
+  custom: mkdir -p ~/Applications && cd ~/Applications && v=$(curl -s https://api.github.com/repos/laurent22/joplin/releases/latest | grep '"tag_name":' | cut -d '"' -f 4) && curl -L -o "Joplin-${v#v}.AppImage" "https://github.com/laurent22/joplin/releases/download/$v/Joplin-${v#v}.AppImage"
+  uninstall: cd ~/Applications && rm -f Joplin-*.AppImage
   aliases: [joplin-notes]
+  comment: The privacy-focused note taking app with sync capabilities for Windows, macOS, Linux, Android and iOS
 
 distrobox:
-  custom: "curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh"
-  uninstall: "curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/uninstall | sudo sh"
-  comment: Use any Linux distribution inside your terminal
+  custom: curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
+  uninstall: curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/uninstall | sudo sh
   aliases: [distro-box]
+  comment: Use any Linux distribution inside your terminal
 
 syncplay:
-  custom: "v=$(curl -s https://api.github.com/repos/Syncplay/syncplay/releases/latest | grep '\"tag_name\":' | cut -d '\"' -f 4) && wget \"https://github.com/Syncplay/syncplay/releases/download/$v/syncplay_${v#v}.deb\" && sudo apt install -y $HOME/Downloads/syncplay_${v#v}.deb && sudo rm -f $HOME/Downloads/syncplay_${v#v}.deb"
+  custom: v=$(curl -s https://api.github.com/repos/Syncplay/syncplay/releases/latest | grep '"tag_name":' | cut -d '"' -f 4) && wget "https://github.com/Syncplay/syncplay/releases/download/$v/syncplay_${v#v}.deb" && sudo apt install -y $HOME/Downloads/syncplay_${v#v}.deb && sudo rm -f $HOME/Downloads/syncplay_${v#v}.deb
   uninstall: sudo apt remove syncplay -y
-  comment: "Free software that synchronises media players so that faraway friends can watch videos together"
-
+  comment: Free software that synchronises media players so that faraway friends can watch videos together
+  
 mpm:
-  custom: "mkdir -p \"$HOME/Applications\" && wget -O \"$HOME/Applications/mpm.bin\" https://github.com/kdeldycke/meta-package-manager/releases/latest/download/mpm-linux-x64.bin && chmod +x \"$HOME/Applications/mpm.bin\""
+  custom: mkdir -p "$HOME/Applications" && wget -O "$HOME/Applications/mpm.bin" https://github.com/kdeldycke/meta-package-manager/releases/latest/download/mpm-linux-x64.bin && chmod +x "$HOME/Applications/mpm.bin"
   uninstall: sudo rm -f $HOME/Applications/mpm.bin
-  comment: Wraps all package managers with a unifying CLI
   aliases: [meta-package-manager, metapackagemanager]
+  comment: Wraps all package managers with a unifying CLI
 
 warp:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && curl -L -A \"Mozilla/5.0\" -o warp.AppImage https://app.warp.dev/download?package=appimage && chmod +x warp.AppImage"
+  custom:  mkdir -p ~/Applications && cd ~/Applications && curl -L -A "Mozilla/5.0" -o warp.AppImage https://app.warp.dev/download?package=appimage && chmod +x warp.AppImage
   uninstall: rm -f $HOME/Applications/warp.AppImage
-  comment: Warp combines AI and your dev team’s knowledge in one fast, intuitive terminal
   aliases: [warp-terminal]
-
+  comment: Warp combines AI and your dev team’s knowledge in one fast, intuitive terminal
+  
 pulsar:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && curl -L -A \"Mozilla/5.0\" -o pulsar.tar.gz \"https://download.pulsar-edit.dev/?os=linux&type=linux_tar\" && tar -xvzf pulsar.tar.gz && rm -f pulsar.tar.gz"
+  custom: mkdir -p ~/Applications && cd ~/Applications && curl -L -A "Mozilla/5.0" -o pulsar.tar.gz "https://download.pulsar-edit.dev/?os=linux&type=linux_tar" && tar -xvzf pulsar.tar.gz && rm -f pulsar.tar.gz
   uninstall: rm -rf $HOME/Applications/pulsar*
-  comment: A Community-led Hyper-Hackable Text Editor
   aliases: [pulsar-editor]
+  comment: A Community-led Hyper-Hackable Text Editor
 
 guix:
-  custom: "cd /tmp && wget 'https://git.savannah.gnu.org/gitweb/?p=guix.git;a=blob_plain;f=etc/guix-install.sh;hb=HEAD' && chmod +x guix-install.sh && guix-install.sh"
-  comment: "GNU Guix is a package manager for GNU/Linux systems. It is designed to give users more control over their general-purpose and specialized computing environments"
+  custom: cd /tmp && wget 'https://git.savannah.gnu.org/gitweb/?p=guix.git;a=blob_plain;f=etc/guix-install.sh;hb=HEAD' && chmod +x guix-install.sh && guix-install.sh
   aliases: [gnu-guix]
+  comment: GNU Guix is a package manager for GNU/Linux systems. It is designed to give users more control over their general-purpose and specialized computing environments
 
 flashpoint:
-  custom: "echo \"This is meant to work on Ubuntu 22 and 24 LTS and Debian 12!\" && wget https://raw.githubusercontent.com/Tsu-gu/flashpoint-ubuntu-install/main/flashpoint-ubuntu-installer.sh && chmod +x flashpoint-ubuntu-installer.sh && ./flashpoint-ubuntu-installer.sh"
-  comment: "Flashpoint Archive is a community effort to preserve games and animations from the web"
+  custom: echo "This is meant to work on Ubuntu 22 and 24 LTS and Debian 12!" && wget https://raw.githubusercontent.com/Tsu-gu/flashpoint-ubuntu-install/main/flashpoint-ubuntu-installer.sh && chmod +x flashpoint-ubuntu-installer.sh && ./flashpoint-ubuntu-installer.sh
   aliases: [bluemaxima, bluemaxima-flashpoint]
+  comment: Flashpoint Archive is a community effort to preserve games and animations from the web
 
-session:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://getsession.org/linux && chmod +x session-*.AppImage"
+session: 
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://getsession.org/linux && chmod +x session-*.AppImage
   uninstall: rm -rf $HOME/Applications/session-*.AppImage
   comment: An end-to-end encrypted messenger that protects your personal data
-
+  
 yt-dlp:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp"
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && chmod +x yt-dlp
   uninstall: rm -rf $HOME/Applications/yt-dlp
-  comment: Youtube video downloading tool
   aliases: [ytdlp, yt]
+  comment: Youtube video downloading tool
 
 homebrew:
-  custom: "sudo apt install git && /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
-  uninstall: "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)\""
-  comment: A package manager mainly used on MacOS, but works well on Linux too
+  custom: sudo apt install git && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  uninstall: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
   aliases: [brew]
+  comment: A package manager mainly used on MacOS, but works well on Linux too  
 
 nix:
   custom: sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon
-  uninstall: "sudo systemctl stop nix-daemon.service && sudo systemctl disable nix-daemon.socket nix-daemon.service && sudo systemctl daemon-reload && sudo rm -rf /etc/nix /etc/profile.d/nix.sh /etc/tmpfiles.d/nix-daemon.conf /nix ~root/.nix-channels ~root/.nix-defexpr ~root/.nix-profile && for i in $(seq 1 32); do sudo userdel nixbld$i; done && sudo groupdel nixbld"
-  comment: "A tool that takes a unique approach to package management and system configuration"
+  uninstall: sudo systemctl stop nix-daemon.service && sudo systemctl disable nix-daemon.socket nix-daemon.service && sudo systemctl daemon-reload && sudo rm -rf /etc/nix /etc/profile.d/nix.sh /etc/tmpfiles.d/nix-daemon.conf /nix ~root/.nix-channels ~root/.nix-defexpr ~root/.nix-profile && for i in $(seq 1 32); do sudo userdel nixbld$i; done && sudo groupdel nixbld
   aliases: [nix-package-manager]
+  comment: A tool that takes a unique approach to package management and system configuration
 
 virtualbox:
-  custom: "codename=$(grep -oP '(?<=VERSION_CODENAME=).*' /etc/os-release || lsb_release -cs) && echo \"deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian $codename contrib\" | sudo tee /etc/apt/sources.list.d/virtualbox.list && wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor && sudo apt-get update && sudo apt-get install -y virtualbox-7.1"
+  custom: codename=$(grep -oP '(?<=VERSION_CODENAME=).*' /etc/os-release || lsb_release -cs) && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian $codename contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list && wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor && sudo apt-get update && sudo apt-get install -y virtualbox-7.1
   uninstall: sudo apt remove -y virtualbox-7.1
-  comment: A general-purpose full virtualization software for x86_64 hardware
   aliases: [virtual-box]
+  comment: A general-purpose full virtualization software for x86_64 hardware
 
 element:
-  custom: "sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo \"deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main\" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop"
+  custom: sudo apt install -y wget apt-transport-https && sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list && sudo apt update && sudo apt install element-desktop
   uninstall: sudo apt remove -y element-desktop
-  comment: The main Matrix client
   aliases: [elementio, element-matrix]
+  comment: The main Matrix client  
 
 balena-etcher:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && VERSION=$(curl -s https://github.com/balena-io/etcher/releases | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | sed 's/^v//' | sort -Vr | head -n 1) && if [ -z \"$VERSION\" ]; then echo \"Failed to extract Etcher version.\"; exit 1; fi && echo \"Downloading balenaEtcher version $VERSION...\" && wget https://github.com/balena-io/etcher/releases/download/v$VERSION/balenaEtcher-linux-x64-$VERSION.zip && unzip balenaEtcher-linux-x64-$VERSION.zip && rm -f balenaEtcher-linux-x64-$VERSION.zip"
-  uninstall: rm -rf $HOME/Applications/balenaEtcher-linux-x64
-  comment: "Flash OS images to SD cards & USB drives, safely and easily"
+  custom: mkdir -p ~/Applications && cd ~/Applications && VERSION=$(curl -s https://github.com/balena-io/etcher/releases | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | sed 's/^v//' | sort -Vr | head -n 1) && if [ -z "$VERSION" ]; then echo "Failed to extract Etcher version."; exit 1; fi && echo "Downloading balenaEtcher version $VERSION..." && wget https://github.com/balena-io/etcher/releases/download/v$VERSION/balenaEtcher-linux-x64-$VERSION.zip && unzip balenaEtcher-linux-x64-$VERSION.zip && rm -f balenaEtcher-linux-x64-$VERSION.zip
+  uninstall: rm -rf $HOME/Applications/balenaEtcher-linux-x64 
   aliases: [etcher, balenaetcher]
-
+  comment: Flash OS images to SD cards & USB drives, safely and easily
+  
 aimp:
-  custom: "cd $HOME/Downloads && wget --user-agent=\"Mozilla/5.0\" -O aimp_amd64.deb \"https://www.aimp.ru/?do=download.file&id=26\" && sudo apt install -y $HOME/Downloads/aimp_amd64.deb && rm aimp_amd64.deb"
+  custom: cd $HOME/Downloads && wget --user-agent="Mozilla/5.0" -O aimp_amd64.deb "https://www.aimp.ru/?do=download.file&id=26" && sudo apt install -y $HOME/Downloads/aimp_amd64.deb && rm aimp_amd64.deb
   uninstall: sudo apt remove -y aimp
-  comment: A music player that lets you create your own playlists, runs through wine
   aliases: [aimp-player, aimp-ru]
+  comment: A music player that lets you create your own playlists, runs through wine
 
 dfx:
   custom: sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
-  uninstall: "rm -f \"$HOME/.local/bin/dfxvm\" \"$HOME/.local/bin/dfxvm-init\" && rm -rf \"$HOME/.local/share/dfxvm\" \"$HOME/.cache/dfx\" \"$HOME/.config/dfx\""
-  comment: "The IC SDK is a software development kit used to develop applications on your local machine and to deploy them to ICP"
+  uninstall: rm -f "$HOME/.local/bin/dfxvm" "$HOME/.local/bin/dfxvm-init" && rm -rf "$HOME/.local/share/dfxvm" "$HOME/.cache/dfx" "$HOME/.config/dfx"
   aliases: [dfx-icp]
+  comment: The IC SDK is a software development kit used to develop applications on your local machine and to deploy them to ICP
 
 rust:
-  custom: "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+  custom: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   uninstall: rustup self uninstall
-  comment: A language empowering everyone to build reliable and efficient software
   aliases: [rust-lang]
+  comment: A language empowering everyone to build reliable and efficient software
 
 volta:
-  custom: "curl https://get.volta.sh | bash"
+  custom: curl https://get.volta.sh | bash
   uninstall: rm -rf ~/.volta
-  comment: The Hassle-Free JavaScript Tool Manager
   aliases: [votla, volta-sh]
+  comment: The Hassle-Free JavaScript Tool Manager
 
 pnpm:
-  custom: "curl -fsSL https://get.pnpm.io/install.sh | sh -"
+  custom: curl -fsSL https://get.pnpm.io/install.sh | sh -
   uninstall: rm -rf "$PNPM_HOME"
   comment: Fast, disk space efficient package manager
 
 openttd:
-  custom: "page_content=$(wget -qO- https://www.openttd.org/downloads/openttd-releases/latest) && version=$(echo \"$page_content\" | grep -oP 'Latest stable release in openttd is \K[0-9]+\.[0-9]+') && [ -z \"$version\" ] && echo \"Failed to extract version number.\" && exit 1 || (echo \"Downloading OpenTTD version $version...\" && mkdir -p ~/Applications && wget \"https://cdn.openttd.org/openttd-releases/${version}/openttd-${version}-linux-generic-amd64.tar.xz\" -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications)"
+  custom: page_content=$(wget -qO- https://www.openttd.org/downloads/openttd-releases/latest) && version=$(echo "$page_content" | grep -oP 'Latest stable release in openttd is \K[0-9]+\.[0-9]+') && [ -z "$version" ] && echo "Failed to extract version number." && exit 1 || (echo "Downloading OpenTTD version $version..." && mkdir -p ~/Applications && wget "https://cdn.openttd.org/openttd-releases/${version}/openttd-${version}-linux-generic-amd64.tar.xz" -O /tmp/openttd.tar.xz && tar -xf /tmp/openttd.tar.xz -C ~/Applications)
   uninstall: rm -rf $HOME/Applications/openttd*
-  comment: A well maintained fork of the 90s hit game Tycoon Transport Deluxe
   aliases: [ttd]
+  comment: A well maintained fork of the 90s hit game Tycoon Transport Deluxe
 
 audacity:
-  custom: "page_content=$(wget -qO- https://www.audacityteam.org/download/linux/) && version=$(echo \"$page_content\" | grep -oP 'Current version \K[0-9]+\.[0-9]+\.[0-9]+') && if [ -z \"$version\" ]; then echo \"Failed to extract version number.\"; exit 1; fi && echo \"Downloading Audacity version $version...\" && mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/audacity/audacity/releases/download/Audacity-${version}/audacity-linux-${version}-x64-22.04.AppImage && chmod +x audacity-linux-${version}-x64-22.04.AppImage || page_content=$(wget -qO- https://www.audacityteam.org/download/linux/) && version=$(echo \"$page_content\" | grep -oP 'Current version \K[0-9]+\.[0-9]+\.[0-9]+') && if [ -z \"$version\" ]; then echo \"Failed to extract version number.\"; exit 1; fi && echo \"Downloading Audacity version $version...\" && mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/audacity/audacity/releases/download/Audacity-${version}/audacity-linux-${version}-x64-24.04.AppImage"
+  custom: page_content=$(wget -qO- https://www.audacityteam.org/download/linux/) && version=$(echo "$page_content" | grep -oP 'Current version \K[0-9]+\.[0-9]+\.[0-9]+') && if [ -z "$version" ]; then echo "Failed to extract version number."; exit 1; fi && echo "Downloading Audacity version $version..." && mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/audacity/audacity/releases/download/Audacity-${version}/audacity-linux-${version}-x64-22.04.AppImage && chmod +x audacity-linux-${version}-x64-22.04.AppImage || page_content=$(wget -qO- https://www.audacityteam.org/download/linux/) && version=$(echo "$page_content" | grep -oP 'Current version \K[0-9]+\.[0-9]+\.[0-9]+') && if [ -z "$version" ]; then echo "Failed to extract version number."; exit 1; fi && echo "Downloading Audacity version $version..." && mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/audacity/audacity/releases/download/Audacity-${version}/audacity-linux-${version}-x64-24.04.AppImage
   uninstall: rm -f "$HOME/Applications/audacity-*.AppImage"
   comment: The world's most popular audio editing and recording app
 
 tsubuntu:
-  custom: "wget -q https://raw.githubusercontent.com/Tsu-gu/tsubuntu/main/tsubuntu.sh && chmod +x tsubuntu.sh && ./tsubuntu.sh"
+  custom: wget -q https://raw.githubusercontent.com/Tsu-gu/tsubuntu/main/tsubuntu.sh && chmod +x tsubuntu.sh && ./tsubuntu.sh
   uninstall: echo "This entry doesn't have an uninstall script"
   comment: A script for tweaking Ubuntu. Dont use it if you arent sure what it does.
 
 riseup-vpn:
-  custom: "sudo add-apt-repository ppa:leapcodes/riseup-vpn && sudo apt update && sudo apt install riseup-vpn"
-  uninstall: "sudo apt remove --purge riseup-vpn -y && sudo add-apt-repository --remove ppa:leapcodes/riseup-vpn -y && sudo apt autoremove -y"
-  comment: "Riseup offers Personal VPN service for censorship circumvention, location anonymization and traffic encryption"
+  custom: sudo add-apt-repository ppa:leapcodes/riseup-vpn && sudo apt update && sudo apt install riseup-vpn
+  uninstall: sudo apt remove --purge riseup-vpn -y && sudo add-apt-repository --remove ppa:leapcodes/riseup-vpn -y && sudo apt autoremove -y
   aliases: [riseupvpn]
-
+  comment: Riseup offers Personal VPN service for censorship circumvention, location anonymization and traffic encryption
+  
 obsidian:
   flatpak: md.obsidian.Obsidian
-  comment: Markdown-based knowledge base
   aliases: [obsidianmd, obsidian-notes]
+  comment: Markdown-based knowledge base
 
 mullvad:
-  custom: "wget -O $HOME/Downloads/MullvadVPN.deb https://mullvad.net/en/download/app/deb/latest && sudo apt install -y $HOME/Downloads/MullvadVPN.deb"
+  custom: wget -O $HOME/Downloads/MullvadVPN.deb https://mullvad.net/en/download/app/deb/latest && sudo apt install -y $HOME/Downloads/MullvadVPN.deb
   uninstall: sudo apt remove mullvad-vpn -y
-  comment: A VPN accepting multiple payment methods with a good track record
   aliases: [mull, mullvad-vpn, vpn]
+  comment: A VPN accepting multiple payment methods with a good track record
 
 ollama:
-  custom: "curl -fsSL https://ollama.com/install.sh | sh"
-  uninstall: "sudo rm $(which ollama) && sudo rm -r /usr/share/ollama && sudo userdel ollama sudo groupdel ollama"
-  comment: Get up and running with large language models
+  custom: curl -fsSL https://ollama.com/install.sh | sh
+  uninstall: sudo rm $(which ollama) && sudo rm -r /usr/share/ollama && sudo userdel ollama sudo groupdel ollama
   aliases: [ollama-ai]
+  comment: Get up and running with large language models
 
 filen:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://cdn.filen.io/@filen/desktop/release/latest/Filen_linux_x86_64.AppImage && chmod +x Filen_linux_x86_64.AppImage"
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://cdn.filen.io/@filen/desktop/release/latest/Filen_linux_x86_64.AppImage && chmod +x Filen_linux_x86_64.AppImage
   uninstall: rm -f "$HOME/Applications/Filen*.AppImage"
-  comment: German cloud provider with affordable prices
   aliases: [filen-cloud, filen-io]
+  comment: German cloud provider with affordable prices
 
 godot:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip && unzip Godot_*.zip && rm -rf Godot_*.zip"
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip && unzip Godot_*.zip && rm -rf Godot_*.zip
   uninstall: rm -f "$HOME/Applications/Godot*"
-  comment: Your free, open‑source game engine
   aliases: [godot4, godot-engine]
-
+  comment: Your free, open‑source game engine
+  
 lmms:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/LMMS/lmms/releases/download/v1.2.2/lmms-1.2.2-linux-x86_64.AppImage && chmod +x lmms-*.AppImage"
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/LMMS/lmms/releases/download/v1.2.2/lmms-1.2.2-linux-x86_64.AppImage && chmod +x lmms-*.AppImage
   uninstall: rm -f "$HOME/Applications/lmms-*.AppImage"
   comment: Lets make music with a free, cross-platform tool for your computer
 
 koofr:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://app.koofr.net/dl/apps/linux64 && tar -xvzf koofr-*.tar.gz && rm -rf koofr-*.tar.gz"
-  comment: Slovenian cloud provider
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://app.koofr.net/dl/apps/linux64 && tar -xvzf koofr-*.tar.gz && rm -rf koofr-*.tar.gz
   aliases: [koofr-cloud]
-
+  comment: Slovenian cloud provider
+  
 monero:
-  custom: "sudo apt install bzip2 && mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xjf linux64 && rm linux64"
+  custom: sudo apt install bzip2 && mkdir -p ~/Applications && cd ~/Applications && wget https://downloads.getmonero.org/gui/linux64 && tar -xjf linux64 && rm linux64
   uninstall: rm -rf "$HOME/Applications/monero*"
-  comment: The official monero wallet
   aliases: [monero-wallet, monero-gui-wallet]
+  comment: The official monero wallet
 
 syncthing:
-  custom: "sudo mkdir -p /etc/apt/keyrings && sudo curl -L -o /etc/apt/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg && echo \"deb [signed-by=/etc/apt/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable\" | sudo tee /etc/apt/sources.list.d/syncthing.list > /dev/null && sudo apt-get update && sudo apt-get install -y syncthing"
+  custom: sudo mkdir -p /etc/apt/keyrings && sudo curl -L -o /etc/apt/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg && echo "deb [signed-by=/etc/apt/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list > /dev/null && sudo apt-get update && sudo apt-get install -y syncthing
   uninstall: sudo apt remove -y syncthing
-  comment: Syncing files in a P2P manner
   aliases: [sync-thing]
-
+  comment: Syncing files in a P2P manner 
+  
 mullvad-browser:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && wget -O mullvad-browser.tar.xz https://mullvad.net/en/download/browser/linux-x86_64/latest && tar -xvf mullvad-browser.tar.xz && rm -f mullvad-browser.tar.xz"
+  custom:  mkdir -p ~/Applications && cd ~/Applications && wget -O mullvad-browser.tar.xz https://mullvad.net/en/download/browser/linux-x86_64/latest && tar -xvf mullvad-browser.tar.xz && rm -f mullvad-browser.tar.xz
   uninstall: rm -f "$HOME/Applications/mullvad*"
-  comment: "The Mullvad Browser is developed – in collaboration between Mullvad VPN and the Tor Project – to minimize tracking and fingerprinting."
   aliases: [mullvadbrowser]
+  comment: The Mullvad Browser is developed – in collaboration between Mullvad VPN and the Tor Project – to minimize tracking and fingerprinting. 
 
 palemoon:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && wget --content-disposition \"https://www.palemoon.org/download.php?mirror=eu&bits=64&type=linuxgtk3\" && tar -xvJf palemoon-*.tar.xz && rm -rf palemoon-*.tar.xz"
-  uninstall: rm -rf "$HOME/Applications/palemoon*"
-  comment: "Pale Moon is an Open Source, Goanna-based web browser available for various operating systems including Microsoft Windows, Mac OS and Linux (with contributed other operating system support), focusing on efficiency and customization"
+  custom:  mkdir -p ~/Applications && cd ~/Applications && wget --content-disposition "https://www.palemoon.org/download.php?mirror=eu&bits=64&type=linuxgtk3" && tar -xvJf palemoon-*.tar.xz && rm -rf palemoon-*.tar.xz
+  uninstall: rm -rf "$HOME/Applications/palemoon*"  
   aliases: [pale-moon, palemoon-browser]
-
+  comment: Pale Moon is an Open Source, Goanna-based web browser available for various operating systems including Microsoft Windows, Mac OS and Linux (with contributed other operating system support), focusing on efficiency and customization
+  
 steam:
-  custom: "wget -O $HOME/Downloads/steam.deb https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb && sudo apt install -y $HOME/Downloads/steam.deb"
+  custom: wget -O $HOME/Downloads/steam.deb https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb && sudo apt install -y $HOME/Downloads/steam.deb
   uninstall: sudo apt remove -y steam
+  aliases: [valve]  
   comment: The official steam client
-  aliases: [valve]
 
 waydroid:
-  custom: "sudo apt install curl ca-certificates -y && curl -s https://repo.waydro.id | sudo bash && sudo apt install waydroid -y"
+  custom: sudo apt install curl ca-certificates -y && curl -s https://repo.waydro.id | sudo bash && sudo apt install waydroid -y
   uninstall: sudo apt remove -y waydroid
-  comment: "Waydroid is a container-based approach to boot a full Android system on a regular GNU/Linux system like Ubuntu"
-
+  comment: Waydroid is a container-based approach to boot a full Android system on a regular GNU/Linux system like Ubuntu
+  
 super-tux-kart:
-  custom: "mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/supertuxkart/stk-code/releases/download/1.4/SuperTuxKart-1.4-linux-x86_64.tar.xz && tar -xvJf SuperTuxKart-*.tar.xz && rm -rf SuperTuxKart-*.tar.xz"
-  uninstall: rm -f "$HOME/Applications/SuperTux*"
-  comment: "SuperTuxKart is a 3D open-source arcade racer with a variety characters, tracks, and modes to play"
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://github.com/supertuxkart/stk-code/releases/download/1.4/SuperTuxKart-1.4-linux-x86_64.tar.xz && tar -xvJf SuperTuxKart-*.tar.xz && rm -rf SuperTuxKart-*.tar.xz
+  uninstall: rm -f "$HOME/Applications/SuperTux*"  
   aliases: [supertuxkart, tuxkart, tuxcart, supertuxcart]
-
+  comment: SuperTuxKart is a 3D open-source arcade racer with a variety characters, tracks, and modes to play
+  
 ani-cli:
-  custom: "sudo apt install sed git grep curl mpv ffmpeg fzf patch && git clone \"https://github.com/pystardust/ani-cli.git\" && sudo cp ani-cli/ani-cli /usr/local/bin && rm -rf ani-cli"
+  custom: sudo apt install sed git grep curl mpv ffmpeg fzf patch && git clone "https://github.com/pystardust/ani-cli.git" && sudo cp ani-cli/ani-cli /usr/local/bin && rm -rf ani-cli
   uninstall: sudo rm -f /usr/local/bin/ani-cli
-  comment: Watch anime straight from your terminal
   aliases: [anicli, anime-cli]
+  comment: Watch anime straight from your terminal
 
 threema:
-  custom: "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && flatpak install --from https://releases.threema.ch/flatpak/threema-desktop/ch.threema.threema-desktop.flatpakref && flatpak override ch.threema.threema-desktop --filesystem=host"
+  custom: flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && flatpak install --from https://releases.threema.ch/flatpak/threema-desktop/ch.threema.threema-desktop.flatpakref && flatpak override ch.threema.threema-desktop --filesystem=host
   uninstall: flatpak remove --assumeyes ch.threema.threema-desktop
-  comment: "End-to-end encrypted exchange of messages, calls, and files for businesses, military, authorities, and individuals"
   aliases: [threema-desktop, threema-app]
+  comment: End-to-end encrypted exchange of messages, calls, and files for businesses, military, authorities, and individuals
 
 jami:
   snap: jami
-  comment: "Jami is free software for universal communication that respects the freedom and privacy of its users"
   aliases: [gnu-jami, jami-messenger]
-
+  comment: Jami is free software for universal communication that respects the freedom and privacy of its users
+  
 yacreader:
   flatpak: com.yacreader.YACReader
-  comment: "YACReader offers you the best way to read and manage your digital comics and mangas in epub and pdf"
   aliases: [yac-reader]
+  comment: YACReader offers you the best way to read and manage your digital comics and mangas in epub and pdf
 
 wps:
-  custom: "page_content=$(wget -qO- https://www.wps.com/whatsnew/linux/) && version=$(echo \"$page_content\" | grep -oP '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | head -1) && [ -z \"$version\" ] && echo \"Failed to extract version number.\" && exit 1 || (build_number=$(echo \"$version\" | awk -F. '{print $4}') && filename=\"wps-office_${version}.XA_amd64.deb\" && url=\"https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/${build_number}/${filename}\" && user_agent=\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36\" && echo \"Downloading $filename from $url...\" && cd ~/Downloads && wget --header=\"User-Agent: $user_agent\" -O \"$filename\" \"$url\" && sudo apt install -y ~/Downloads/wps-*.deb)"
+  custom:  page_content=$(wget -qO- https://www.wps.com/whatsnew/linux/) && version=$(echo "$page_content" | grep -oP '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | head -1) && [ -z "$version" ] && echo "Failed to extract version number." && exit 1 || (build_number=$(echo "$version" | awk -F. '{print $4}') && filename="wps-office_${version}.XA_amd64.deb" && url="https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/${build_number}/${filename}" && user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" && echo "Downloading $filename from $url..." && cd ~/Downloads && wget --header="User-Agent: $user_agent" -O "$filename" "$url" && sudo apt install -y ~/Downloads/wps-*.deb)
   uninstall: sudo apt remove -y wps-office
-  comment: "As one of the best Microsoft Office alternatives of 2021, WPS Office is fully compatible with main Linux distributions"
   aliases: [wps-office]
+  comment: As one of the best Microsoft Office alternatives of 2021, WPS Office is fully compatible with main Linux distributions
 
 vlc:
   snap: vlc
