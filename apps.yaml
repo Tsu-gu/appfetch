@@ -157,6 +157,12 @@ mullvad:
   aliases: [mull, mullvad-vpn, vpn]
   comment: A VPN accepting multiple payment methods with a good track record
 
+elixir:
+  install: curl -fsSO https://elixir-lang.org/install.sh && sh install.sh elixir@1.18.4 otp@27.3.4 && installs_dir=$HOME/.elixir-install/installs && export PATH=$installs_dir/otp/27.3.4/bin:$PATH && export PATH=$installs_dir/elixir/1.18.4-otp-27/bin:$PATH && exec iex
+  uninstall: echo "If you can actually use this language, I'm sure you can somehow uninstall it too. Bailing out." 
+  aliases: [elixir-lang]
+  comment: Elixir is a functional, concurrent, high-level general-purpose programming language that runs on the BEAM virtual machine
+
 ollama:
   custom: curl -fsSL https://ollama.com/install.sh | sh
   uninstall: sudo rm $(which ollama) && sudo rm -r /usr/share/ollama && sudo userdel ollama sudo groupdel ollama
