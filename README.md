@@ -13,7 +13,9 @@
   - [Example of an app with official flatpak or snap available](#example-of-an-app-with-official-flatpak-or-snap-available)
 
 
-The point of this tool is to allow you to install software from its official source on Linux. It achieves that by searching a database I put together which contains official snaps and flatpaks, as well as many apps I added manually which can only be installed by going to their websites.
+The point of this tool is to allow you to install software from its official source on Linux. It achieves that by searching a database I put together which contains official snaps and flatpaks, as well as many apps I added manually which can only be installed by going to their websites. 
+
+An exception to this are unverified snaps and flatpaks that are linked on the project's websites and promoted as the official installation methods (an example being YACreader or qtox)
 
 **I'm only testing this on Ubuntu and targetting the install scripts for it. But most apps comes in a distro-agnostic format so you can use this elsewhere if you don't mind a few failed commands.**
 
