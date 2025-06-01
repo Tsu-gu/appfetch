@@ -9,6 +9,11 @@ signal:
   uninstall: sudo apt remove -y signal-desktop
   comment: A private messenger
 
+qtox:
+  flatpak: io.github.qtox.qTox
+  aliases: [qtox-messenger]
+  comment: Easy-to-use software that connects you with friends and family without anyone else listening in
+
 joplin:
   custom: mkdir -p ~/Applications && cd ~/Applications && v=$(curl -s https://api.github.com/repos/laurent22/joplin/releases/latest | grep '"tag_name":' | cut -d '"' -f 4) && curl -L -o "Joplin-${v#v}.AppImage" "https://github.com/laurent22/joplin/releases/download/$v/Joplin-${v#v}.AppImage"
   uninstall: cd ~/Applications && rm -f Joplin-*.AppImage
