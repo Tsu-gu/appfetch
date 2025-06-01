@@ -44,6 +44,12 @@ pulsar:
   aliases: [pulsar-editor]
   comment: A Community-led Hyper-Hackable Text Editor
 
+tailscale:
+  custom: curl -fsSL https://tailscale.com/install.sh | sh
+  uninstall: sudo rm -f /var/lib/tailscale/tailscaled.state
+  aliases: [tailscale-vpn]
+  comment: Fast, seamless device connectivity — no hardware, no firewall rules, no wasted time.
+
 guix:
   custom: cd /tmp && wget 'https://git.savannah.gnu.org/gitweb/?p=guix.git;a=blob_plain;f=etc/guix-install.sh;hb=HEAD' && chmod +x guix-install.sh && guix-install.sh
   aliases: [gnu-guix]
