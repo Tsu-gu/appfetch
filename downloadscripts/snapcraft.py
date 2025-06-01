@@ -8,12 +8,40 @@ import os
 import sys
 from datetime import datetime
 
+def get_snap_sections():
+    """Get list of available snap sections"""
+    sections = [
+        'art-and-design',
+        'books-and-reference', 
+        'development',
+        'devices-and-iot',
+        'education',
+        'entertainment',
+        'featured',
+        'finance',
+        'games',
+        'health-and-fitness',
+        'music-and-audio',
+        'news-and-weather',
+        'personalisation',
+        'photo-and-video',
+        'productivity',
+        'science',
+        'security',
+        'server-and-cloud',
+        'social',
+        'utilities'
+    ]
+    return sections
+
 def get_snap_search_results():
-    """Search through the alphabet and collect all snap results"""
+    """Search through the alphabet and sections to collect all snap results"""
     all_snaps = []
+    seen_snaps = set()  # To avoid duplicates
     
     print("Searching through alphabet for snaps...")
     
+    # Search by alphabet
     for letter in string.ascii_lowercase:
         print(f"Searching for snaps starting with '{letter}'...")
         
@@ -27,13 +55,16 @@ def get_snap_search_results():
                 
                 # Skip header line
                 if len(lines) > 1:
+                    found_count = 0
                     for line in lines[1:]:
                         if line.strip():
                             snap_info = parse_snap_line(line)
-                            if snap_info:
+                            if snap_info and snap_info['name'] not in seen_snaps:
                                 all_snaps.append(snap_info)
+                                seen_snaps.add(snap_info['name'])
+                                found_count += 1
                 
-                print(f"  Found {len([l for l in lines[1:] if l.strip()])} snaps")
+                print(f"  Found {found_count} new snaps")
             else:
                 print(f"  Error searching for '{letter}': {result.stderr}")
                 
@@ -45,7 +76,47 @@ def get_snap_search_results():
         # Be nice to the snap store
         time.sleep(0.5)
     
-    print(f"\nTotal snaps found: {len(all_snaps)}")
+    print(f"\nAlphabet search complete. Found {len(all_snaps)} unique snaps so far.")
+    
+    # Search by sections
+    print("\nSearching through sections for snaps...")
+    sections = get_snap_sections()
+    
+    for section in sections:
+        print(f"Searching section '{section}'...")
+        
+        try:
+            result = subprocess.run([
+                'snap', 'find', f'--section={section}'
+            ], capture_output=True, text=True, timeout=30)
+            
+            if result.returncode == 0:
+                lines = result.stdout.strip().split('\n')
+                
+                # Skip header line
+                if len(lines) > 1:
+                    found_count = 0
+                    for line in lines[1:]:
+                        if line.strip():
+                            snap_info = parse_snap_line(line)
+                            if snap_info and snap_info['name'] not in seen_snaps:
+                                all_snaps.append(snap_info)
+                                seen_snaps.add(snap_info['name'])
+                                found_count += 1
+                
+                print(f"  Found {found_count} new snaps in {section}")
+            else:
+                print(f"  Error searching section '{section}': {result.stderr}")
+                
+        except subprocess.TimeoutExpired:
+            print(f"  Timeout searching section '{section}'")
+        except Exception as e:
+            print(f"  Error searching section '{section}': {e}")
+        
+        # Be nice to the snap store
+        time.sleep(0.5)
+    
+    print(f"\nTotal unique snaps found: {len(all_snaps)}")
     return all_snaps
 
 def parse_snap_line(line):
@@ -201,6 +272,7 @@ def save_new_verified_snaps(new_snaps_data, date_str):
     
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(f"# New verified Snap packages found on {date_str}\n")
+        f.write(f"# Searched through alphabet + all sections\n")
         f.write(f"# Total: {len(new_snaps_data)} packages\n\n")
         
         for app_name in sorted(new_snaps_data.keys()):
@@ -228,7 +300,7 @@ def main():
     
     print(f"Using YAML file: {yaml_path}")
     
-    # Step 1: Get all verified snaps
+    # Step 1: Get all verified snaps (alphabet + sections)
     all_snaps = get_snap_search_results()
     verified_snaps = [snap for snap in all_snaps if snap['verified']]
     
