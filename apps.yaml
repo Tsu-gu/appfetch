@@ -5879,7 +5879,7 @@ document-viewer:
 
 web:
   flatpak: org.gnome.Epiphany
-  aliases: [gnome-web, epiphany]  
+  aliases: [gnome-web, epiphany]
   comment: Browse the web
   
 crosswords:
