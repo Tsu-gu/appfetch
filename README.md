@@ -73,7 +73,9 @@ A tool called [mpm](https://github.com/kdeldycke/meta-package-manager) is used. 
 
 # Contributing
 
-Just make a PR with an entry like what you see in apps.yaml. Be careful about trailing whitespaces.
+If you want to add a missing app/update a broken entry, just make a PR with an entry like what you see in apps.yaml. Be careful about trailing whitespaces, they bit me in the ass several times while trying to figure out what's wrong. I accept any app, proprietary or FOSS.
+
+I'm also aware that many publishers release both .deb and .rpm and this script is only ready to handle one, so any ideas on how to accomplish that without overcomplicating the script/making it slow would be appreciated.
 
 ## Example of an app with no official flatpak or snap available:
 ```
