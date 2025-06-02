@@ -44,7 +44,7 @@ mpm:
   comment: Wraps all package managers with a unifying CLI
 
 warp:
-  custom: mkdir -p ~/Applications && cd ~/Applications && curl -L -A "Mozilla/5.0" -o warp.AppImage https://app.warp.dev/download?package=appimage && chmod +x warp.AppImage
+  custom: mkdir -p ~/Applications && cd ~/Applications && curl -L -A "Mozilla/5.0" -o warp.AppImage https://app.warp.dev/download?package=appimage && chmod +x $HOME/Applications/warp.AppImage
   uninstall: rm -f $HOME/Applications/warp.AppImage
   aliases: [warp-terminal]
   comment: Warp combines AI and your dev team’s knowledge in one fast, intuitive terminal
@@ -72,7 +72,7 @@ flashpoint:
   comment: Flashpoint Archive is a community effort to preserve games and animations from the web
 
 session: 
-  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://getsession.org/linux && chmod +x session-*.AppImage
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://getsession.org/linux && chmod +x $HOME/Applications/session-*.AppImage
   uninstall: rm -rf $HOME/Applications/session-*.AppImage
   comment: An end-to-end encrypted messenger that protects your personal data
 
