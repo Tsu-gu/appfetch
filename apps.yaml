@@ -26,6 +26,12 @@ distrobox:
   aliases: [distro-box]
   comment: Use any Linux distribution inside your terminal
 
+tuta:
+  custom: mkdir -p ~/Applications && cd ~/Applications && wget https://app.tuta.com/desktop/tutanota-desktop-linux.AppImage && chmod +x $HOME/Applications/tutanota-desktop-linux.AppImage
+  uninstall: rm -f $HOME/Applications/tutanota-desktop-linux.AppImage
+  aliases: [tuta-mail]
+  comment: Take back your data with Tuta's encrypted email, calendar and contacts
+
 syncplay:
   custom: v=$(curl -s https://api.github.com/repos/Syncplay/syncplay/releases/latest | grep '"tag_name":' | cut -d '"' -f 4) && wget "https://github.com/Syncplay/syncplay/releases/download/$v/syncplay_${v#v}.deb" && sudo apt install -y $HOME/Downloads/syncplay_${v#v}.deb && sudo rm -f $HOME/Downloads/syncplay_${v#v}.deb
   uninstall: sudo apt remove syncplay -y
