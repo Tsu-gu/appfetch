@@ -93,6 +93,12 @@ homebrew:
   aliases: [brew]
   comment: A package manager mainly used on MacOS, but works well on Linux too  
 
+cd-to-desktop:
+  custom: mkdir -p ~/Applications/cd-to-desktop && curl -sL "https://gitlab.com/api/v4/projects/70635114/packages/generic/cd-to-desktop/1.0.1/cd-to-desktop-1.0.1.tar.gz" | tar -xz -C ~/Applications/cd-to-desktop --strip-components=1 && echo "source ~/Applications/cd-to-desktop/cd-to-desktop.source.sh" >> ~/.bashrc && source ~/.bashrc
+  uninstall: rm -rf ~/Applications/cd-to-desktop/ && sed -i '/source ~\/Applications\/cd-to-desktop\/cd-to-desktop.source.sh/d' ~/.bashrc
+  aliases: [cdtodesktop]
+  comment: A fun hack to make the Bash shells built-in cd command change the working directory to the users Desktop folder by default
+
 nix:
   custom: sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon
   uninstall: sudo systemctl stop nix-daemon.service && sudo systemctl disable nix-daemon.socket nix-daemon.service && sudo systemctl daemon-reload && sudo rm -rf /etc/nix /etc/profile.d/nix.sh /etc/tmpfiles.d/nix-daemon.conf /nix ~root/.nix-channels ~root/.nix-defexpr ~root/.nix-profile && for i in $(seq 1 32); do sudo userdel nixbld$i; done && sudo groupdel nixbld
