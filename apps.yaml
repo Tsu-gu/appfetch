@@ -9075,3 +9075,92 @@ turtlebot3c:
 twist:
   snap: twist
   comment: Twist
+
+calculator:
+  flatpak: dev.edfloreshz.Calculator
+  comment: Beyond the equation
+
+clairvoyant:
+  flatpak: com.cassidyjames.clairvoyant
+  comment: Ask questions, get psychic answers
+
+cuneo:
+  flatpak: io.github.heidefinnischen.cuneo
+  comment: Widget-like Calculator and Conversion tool
+
+forecast:
+  flatpak: com.jwestall.Forecast
+  comment: View weather predictions
+
+gramps:
+  flatpak: org.gramps_project.Gramps
+  comment: Manage genealogical information, perform genealogical research and analysis
+
+jasmine:
+  flatpak: io.github.alamahant.Jasmine
+  comment: Launch websites and sessions
+
+katvan:
+  flatpak: app.katvan.Katvan
+  comment: Editor for Typst files, with a bias for Right-to-Left
+
+klaro:
+  flatpak: io.github.denysmb.klaro
+  comment: Simple and fast translation app for KDE Plasma
+
+labplot:
+  flatpak: org.kde.labplot
+  comment: Data visualization and analysis
+
+linux-theme-store:
+  flatpak: io.github.debasish_patra_1987.linuxthemestore
+  comment: Browse, preview, and install desktop themes
+
+luanti:
+  flatpak: net.minetest.Minetest
+  comment: Block-based multiplayer game platform
+
+mapiah:
+  flatpak: io.github.rsevero.mapiah
+  comment: User friendly multiplatform Therion map editor
+
+media-downloader:
+  flatpak: io.github.mhogomchungu.media-downloader
+  comment: A GUI to yt-dlp, gallery-dl, lux.
+
+pdf-tinkerer:
+  flatpak: io.gitlab.gjwu.pdf-tinkerer
+  comment: Tinker with PDF files
+
+pigment:
+  flatpak: com.jeffser.Pigment
+  comment: Get color palettes from images
+
+pingveno:
+  flatpak: page.codeberg.zynequ.Pingveno
+  comment: Look up Esperanto words
+
+quickdav:
+  flatpak: com.sciactive.QuickDAV
+  comment: Transfer files between devices
+
+stretch-break:
+  flatpak: io.github.pieterdd.StretchBreak
+  comment: Reminds you to take regular breaks
+
+tally:
+  flatpak: ca.vlacroix.Tally
+  comment: Count anything
+
+the-life:
+  flatpak: org.biblemulti.thelife
+  comment: Offline Bible multi languages
+
+tryton-7.6:
+  flatpak: org.tryton.Tryton-76
+  comment: Connect to Tryton
+
+weather:
+  flatpak: org.kde.kweather
+  comment: View real-time weather forecasts
+  
